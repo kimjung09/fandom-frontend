@@ -2,7 +2,9 @@ import React, {useState} from "react";
 import "./style/Body.css"
 import {CgChevronLeft, CgChevronRight} from 'react-icons/cg'
 
-function Body({ id, img }) {
+
+function  Body({ id, img }) {
+console.log('aaa');
     const [clock, setClock] = useState("");
 
     const getTime = () => {
@@ -24,23 +26,22 @@ function Body({ id, img }) {
     return (
         <>
        <div className="SubBody-Container" id="Shop">
-               <div>
                    <h1>
                     LIVE {clock}
                    </h1>
-
-                   <form>
+                   <div className="Container">
                      <h2>제목 title 제목 title title 제목 title 제목 title 제목 title 제목</h2>
-                       <form>
-                           <p className="SubBody-Container Description">구매하시려는 수량을 입력해주세요</p>
-                        <div className="SubBody-Container ButtonContainer">
-                            <input type="text" className="SubBody-Container ButtonContainer body"/>
+                       <img></img>
+                       <form className="Description">
+                           <p>구매하시려는 수량을 입력해주세요</p>
+                        <div className="ButtonContainer">
+                            <input type="text" />
                         </div>
                        </form>
-                       <button type="button"  className="SubBody-Container Button-BTN">
-                           BID-BTN
+                       <button type="button" className="Bid-BTN">
+                           BID-BTN1
                        </button>
-                       <form className="SubBody-Container Form">
+                       <form className="Table">
                            <table className="userTable">
                                <tr>
                                    <th>이름</th>
@@ -55,8 +56,6 @@ function Body({ id, img }) {
                                    <td>개발자</td>
                                </tr>
                            </table>
-
-
                            <table>
                                <td>
                                    <tr>
@@ -109,19 +108,16 @@ function Body({ id, img }) {
                                        <th>Amount</th>
                                    </tr>
                                </td>
-
                            </table>
                        </form>
-                   </form>
-                   <button type="button" className="SubBody-Container Item-Left" >
+                   </div>
+                   <button type="button" className="Item-Left">
                        <CgChevronLeft size={"48px"}/>
                    </button>
-                   <button type="button" className="SubBody-Container Item-Right" >
+                   <button type="button" className="Item-Right" >
                        <CgChevronRight size={"48px"}/>
                    </button>
                </div>
-           </div>
-
         </>
     )
 }

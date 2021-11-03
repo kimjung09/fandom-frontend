@@ -1,8 +1,5 @@
 .SubBody-Container {
     width:100%;
-
-}
-.SubBody-Container > div:nth-child(1) {
     min-height:776px;
     max-width: 1225px;
     color:#000000;
@@ -11,7 +8,10 @@
     display: block;
     margin:auto;
 }
-.SubBody-Container > div:nth-child(1) > h1 {
+.SubBody-Container > div:nth-child(1) {
+
+}
+.SubBody-Container > h1 {
     text-align: center;
     font-size:100px;
     font-weight: 500;
@@ -21,7 +21,7 @@
 
 }
 
-.SubBody-Container > div:nth-child(1) > img {
+.SubBody-Container > .Container > img {
     width:470px;
     min-height: 470px;
     background: url("/src/components/images/main_09.jpg") no-repeat;
@@ -33,7 +33,15 @@
     right:100px;
 
 }
-.SubBody-Container > form:first-child {
+SubBody-Container > .Container > h2 {
+    font-size:38px;
+    margin-bottom: -40px;
+    padding-top: 12px;
+    position:relative;
+    left:-0px;
+}
+
+.Container > .Description {
     width:600px;
     min-height: 142px;
     float:right;
@@ -42,23 +50,33 @@
     font-size: 35px;
     text-transform: uppercase;
     position:relative;
-    bottom:80px;
+    bottom:120px;
     left:37px;
 
 }
-.SubBody-Container > form:first-child > h2 {
-    font-size:38px;
-    margin-bottom: -40px;
-    padding-top: 12px;
-    position:relative;
-    left:-0px;
-}
-.SubBody-Container > form:first-child > form {
+.Container > .Description {
     font-size:14px;
     color:gray;
     font-weight: bold;
 }
-.SubBody-Container > .ButtonContainer  {
+
+.Container > .Description >  p {
+    color:#000;
+    text-align: left;
+}
+.Container > .button {
+    max-width:213px;
+    height: 60px;
+    margin-top:30px;
+    margin-left: -10px;
+    background: #db154a;
+    font-size:28px;
+    font-weight: bold;
+    border:none;
+    color:#fff;
+}
+
+.Description > .ButtonContainer  {
     max-width:318px;
     height:60px;
     margin-bottom: 10px;
@@ -70,9 +88,9 @@
     position:relative;
     left:-10px;
     top: -25px;
-
 }
-.SubBody-Container > .ButtonContainer > .body {
+
+.Description > .ButtonContainer > input {
     width:323px;
     height:60px;
     font-size:22px;
@@ -88,57 +106,45 @@
     background:#ffffff;
     display:flex;
 }
-.SubBody-Container > .ButtonContainer > .Description {
-    color:#000;
-    text-align: left;
-}
-.SubBody-Container > .Button-BTN {
-    max-width:213px;
-    height: 60px;
-    margin-top:30px;
-    margin-left: -10px;
-    background: #db154a;
-    font-size:28px;
-    font-weight: bold;
-    border:none;
-    color:#fff;
-}
-.SubBody-Container > .Button-BTN:hover {
+
+
+.Container > .Bid-BTN:hover {
     opacity: 80%;
 }
 
-
-.SubBody-Container > .Form {
+.SubBody-Container > .Table {
     max-width:592px;
     height: 175px;
     margin-top: 40px;
     margin-left: -40px;
     font-size: 18px;
     margin-right: 35px;
+
+    border:1px solid red;
 }
-.SubBody-Container > .Form > table:first-child > td {
+.SubBody-Container > .Table > .userTable:first-child > td {
     width:587px;
     background:#e3e3e3;
     margin-left: 35px;
 }
-.SubBody-Container > .Form > table:first-child > td > tr > th {
+.SubBody-Container > .Table > .userTable:first-child > td > tr > th {
     width: 587px;
     background: #e3e3e3;
     margin-left: 35px;
     font-size:18px;
 
 }
-.SubBody-Container > .Form > table > td {
+.SubBody-Container > .Form > .userTable > tr {
     width:587px;
     font-size:18px;
     text-transform: capitalize;
     border-bottom: 2px solid #e3e3e3;
 }
-.SubBody-Container > .Form > table > td:first-child {
+.SubBody-Container > .Form > table > tr:first-child {
     width:587px;
     font-size:18px;
 }
-.SubBody-Container > .Form > table > td > tr > th {
+.SubBody-Container > .Form > table > tr > td  {
     width: 587px;
     background: #fff;
     font-weight: 500;
@@ -160,11 +166,11 @@
     margin:auto;
 }
 
-.SubBody-Container > button:nth-child(1) {
+.SubBody-Container > .Item-Left {
     width:110px;
     height:111px;
     float: left;
-    background: #ffffff;
+    background: #000000;
     position:relative;
     right:70px;
     top:20px;
@@ -173,11 +179,11 @@
     user-select: none;
     border:none;
 }
-.SubBody-Container > button:nth-child(1):hover {
+.SubBody-Container > .Item-Left:hover {
     background:#d4d4d4;
     transition:4s;
 }
-.SubBody-Container > button:nth-child(2) {
+.SubBody-Container > .Item-Right {
     width:110px;
     height:111px;
     border: 1px solid #000;
@@ -191,7 +197,7 @@
     opacity: 80%;
 
 }
-.SubBody-Container > button:nth-child(2):hover {
+.SubBody-Container > Item-Right:hover {
     background:#d4d4d4;
 }
 

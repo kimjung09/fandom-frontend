@@ -4,6 +4,7 @@ import MainPage from "./components/MainPage";
 import SubPage from "./components/SubPage";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
+
 function App() {
   return (
       <>

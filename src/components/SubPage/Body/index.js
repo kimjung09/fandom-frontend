@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "./style/Body.css"
 import {CgChevronLeft, CgChevronRight} from 'react-icons/cg'
-import {ItemList} from '../../item.json'
 
 function Body({ id, img }) {
     const [clock, setClock] = useState("");

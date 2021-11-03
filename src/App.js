@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
-import MainPage from "./components/MainPage";
-import SubPage from "./components/SubPage";
+import MainPage from "./components/Home";
+import SubPage from "./components/Info";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 

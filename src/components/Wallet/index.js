@@ -1,41 +1,36 @@
 import {BiWalletAlt} from 'react-icons/bi'
 import {useSelector, useDispatch} from 'react-redux'
-import {setAddress} from '../../stores/global'
+import {setUserAccount} from '../../stores/global'
 import {InjectedConnector} from '@web3-react/injected-connector'
-// import { BscConnector } from '@binance-chain/bsc-connector'
 import {useWeb3React} from "@web3-react/core";
 import {useEffect} from 'react';
 import {setupNetwork} from '../../utils/wallet'
-import { BSC_CHAIN_ID } from 'config'
-
-const btnStyle = {
-    cursor: 'pointer'
-}
+import {BSC_CHAIN_ID} from 'config'
+import {useState} from 'react'
+/* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
 
 
 const WalletBtn = () => {
-    const chainId = parseInt(BSC_CHAIN_ID, 10)
-    const injected = new InjectedConnector({supportedChainIds: [chainId]});
-    // const bscConnector = new BscConnector({ supportedChainIds: [BSC_CHAIN_ID] })
+    const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
+    /* const bscConnector = new BscConnector({ supportedChainIds: [BSC_CHAIN_ID] }) bsc 지갑을 원하면 이걸로 바꿔주자 */
 
+    const userAccount = useSelector((state) => state.global.userAccount)
+    /* 지갑 전역변수에 담음 */
+
+    const [mouseOverCheck, setMouseOverCheck] = useState(false)
     const {active, account, activate, deactivate} = useWeb3React()
-
-    const address = useSelector((state) => state.global.address)
     const dispatch = useDispatch()
 
-
-    async function connect() {
+    const connect = async () => {
         try {
             await setupNetwork();
             await activate(injected)
-            // await activate(bscConnector)
-
         } catch (err) {
             console.log(err)
         }
     }
 
-    async function disconnect() {
+    const disconnect = async () => {
         try {
             deactivate();
         } catch (err) {
@@ -45,25 +40,33 @@ const WalletBtn = () => {
 
     useEffect(
         () => {
-            dispatch(setAddress(account));
+            dispatch(setUserAccount(account))
         },
         [account]
     );
 
+    const ParseAccount = () => {
+        if (mouseOverCheck) {
+            return (<span>Disconnect</span>)
+        }
+        return (<span>{`${account.substring(0, 5)}...${account.substring(account.length - 4)}`}</span>)
+    }
+
     return (
         <>
-            나의 : {address} 입니다.
-
             {active ?
-                <a style={btnStyle} onClick={disconnect}>
-                    <span>{account}</span>
+                <a style={{cursor: 'pointer'}}
+                   onClick={disconnect}
+                   onMouseOver={() => setMouseOverCheck(true)}
+                   onMouseLeave={() => setMouseOverCheck(false)}>
+                    <ParseAccount/>
                 </a>
                 :
-                <a style={btnStyle} onClick={connect}>
+                <a style={{cursor: 'pointer'}} onClick={connect}>
                     <span>
                         <BiWalletAlt/>
                     </span>
-                    Wallet
+                    WALLET
                 </a>
             }
         </>

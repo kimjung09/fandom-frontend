@@ -5,8 +5,8 @@ import SubPage from "./components/Info";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {Web3ReactProvider} from '@web3-react/core'
 import Web3 from 'web3'
-import Header from './components/SubPage/Header/index'
-import Footer from "./components/MainPage/Footer";
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function getLibrary(provider) {
     return new Web3(provider)

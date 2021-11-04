@@ -1,11 +1,10 @@
 import React from 'react';
 import Body from './Body';
 
-
-function MainPage(){
+function MainPage() {
     return (
         <>
-        <Body />
+            <Body/>
         </>
     )
 }

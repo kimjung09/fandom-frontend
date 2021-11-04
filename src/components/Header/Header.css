@@ -1,106 +1,107 @@
 /* Header Conatiner 배경 */
 .Header-container {
-  width:100%;
-  min-height: 111px;
+    width: 100%;
+    min-height: 111px;
     z-index: 1;
-
-    background:#000000;
+    background: #000000;
 }
+
 .Header-container > div {
     max-width: 1350px;
     margin: auto;
-    line-height:32px;
+    line-height: 32px;
     color: #fff;
     z-index: 1;
 
 }
+
 .Header-container > div > a {
-    color:#fff;
+    color: #fff;
     margin: 40px 40px 0px 0px;
-    font-size:28px;
+    font-size: 28px;
     position: relative;
     float: left;
-    text-transform: uppercase;
     z-index: 1;
 }
+
 .Header-container > div > a:nth-child(3) {
-    float:right;
-    width:187px;
-    height:50px;
-    margin:30px 0px 10px 0px;
+    float: right;
+    width: 187px;
+    height: 50px;
+    margin: 30px 0px 10px 0px;
     font-size: 22px;
     line-height: 50px;
-    color:#fff;
+    color: #fff;
     font-weight: bold;
     font-style: normal;
-    text-transform: uppercase;
-    text-align:center;
-    background:#eb1a53;
+    text-align: center;
+    background: #eb1a53;
     border-radius: 24px 0px 0px 0px;
     z-index: 1;
 
 
 }
+
 a:nth-child(3) > .icon {
-    width:30px;
-    height:23px;
-    margin-right:30px;
+    width: 30px;
+    height: 23px;
+    margin-right: 30px;
     margin-left: -20px;
     position: relative;
-    left:20px;
-    top:2px;
+    left: 20px;
+    top: 2px;
     z-index: 1;
 
 }
 
 /* Media Query LapTop(1440px) */
-@media screen and (max-width:1440px) {
+@media screen and (max-width: 1440px) {
     .Header-container {
-        width:100%;
+        width: 100%;
         min-height: 111px;
-        background:#000000;
+        background: #000000;
     }
 
-    .Header-container > div  {
+    .Header-container > div {
         max-width: 1000px;
         margin: auto;
-        line-height:32px;
+        line-height: 32px;
         color: #fff;
     }
+
     .Header-container > div > a {
-        color:#fff;
+        color: #fff;
         margin: 40px 40px 0px 0px;
-        font-size:28px;
+        font-size: 28px;
         position: relative;
         float: left;
-        text-transform: uppercase;
+
     }
 
 
-
-    .Header-container > div > a:nth-child(3)  {
-        float:right;
-        width:187px;
-        height:50px;
-        margin:30px 0px 10px 0px;
+    .Header-container > div > a:nth-child(3) {
+        float: right;
+        width: 187px;
+        height: 50px;
+        margin: 30px 0px 10px 0px;
         font-size: 22px;
         line-height: 50px;
-        color:#fff;
+        color: #fff;
         font-weight: bold;
         font-style: normal;
-        text-transform: uppercase;
-        text-align:center;
-        background:#eb1a53;
+        text-align: center;
+        background: #eb1a53;
         border-radius: 25px 0px 0px 0px;
     }
+
     .Header-Body > span {
-        width:30px;
-        height:23px;
-        margin-right:30px;
+        width: 30px;
+        height: 23px;
+        margin-right: 30px;
         margin-left: -40px;
         position: relative;
-        left:20px;
-        top:2px;
+        left: 20px;
+        top: 2px;
     }
 }
 
@@ -109,51 +110,52 @@ a:nth-child(3) > .icon {
 @media screen and (max-width: 1024px) {
     /* Header Conatiner 배경 */
     .Header-container {
-        width:100%;
+        width: 100%;
         min-height: 111px;
-        background:#000000;
+        background: #000000;
         margin-top: -20px;
     }
 
     .Header-container > div {
         max-width: 950px;
         margin: 14px auto;
-        line-height:32px;
+        line-height: 32px;
         color: #fff;
     }
+
     .Header-container > div > a {
-        color:#fff;
+        color: #fff;
         margin: 40px 50px 0px 0px;
-        font-size:28px;
+        font-size: 28px;
         position: relative;
-        left:10px;
+        left: 10px;
         float: left;
-        text-transform: uppercase;
+
     }
 
     .Header-container > div > a:nth-child(3) {
-        float:right;
-        width:187px;
-        height:50px;
-        margin:30px 0px 10px 0px;
+        float: right;
+        width: 187px;
+        height: 50px;
+        margin: 30px 0px 10px 0px;
         font-size: 22px;
         line-height: 50px;
-        color:#fff;
+        color: #fff;
         font-weight: bold;
         font-style: normal;
-        text-transform: uppercase;
-        text-align:center;
-        background:#eb1a53;
+        text-align: center;
+        background: #eb1a53;
         border-radius: 25px 0px 0px 0px;
     }
+
     .Header-Body > span {
-        width:30px;
-        height:23px;
-        margin-right:30px;
+        width: 30px;
+        height: 23px;
+        margin-right: 30px;
         margin-left: -40px;
         position: relative;
-        left:20px;
-        top:2px;
+        left: 20px;
+        top: 2px;
     }
 }
 
@@ -161,190 +163,202 @@ a:nth-child(3) > .icon {
 @media screen and (max-width: 992px) {
     /* Header Conatiner 배경 */
     .Header-container {
-        width:100%;
+        width: 100%;
         min-height: 111px;
-        background:#000000;
+        background: #000000;
 
     }
+
     .Header-container > div {
         max-width: 892px;
         margin: 14px auto;
-        line-height:32px;
+        line-height: 32px;
         color: #fff;
     }
-    .Header-container > div > a  {
-        color:#fff;
+
+    .Header-container > div > a {
+        color: #fff;
         margin: 40px 40px 0px 0px;
-        font-size:28px;
+        font-size: 28px;
         position: relative;
         float: left;
-        text-transform: uppercase;
+
     }
-    .Header-container > div > a:nth-child(3)   {
-        float:right;
-        width:187px;
-        height:50px;
-        margin:30px 0px 10px 0px;
+
+    .Header-container > div > a:nth-child(3) {
+        float: right;
+        width: 187px;
+        height: 50px;
+        margin: 30px 0px 10px 0px;
         font-size: 22px;
         line-height: 50px;
-        color:#fff;
+        color: #fff;
         font-weight: bold;
         font-style: normal;
-        text-transform: uppercase;
-        text-align:center;
-        background:#eb1a53;
+        text-align: center;
+        background: #eb1a53;
         border-radius: 24px 0px 0px 0px;
     }
-    .Header-Body > span  {
-        width:30px;
-        height:23px;
-        margin-right:30px;
+
+    .Header-Body > span {
+        width: 30px;
+        height: 23px;
+        margin-right: 30px;
         margin-left: 20px;
         position: relative;
-        left:20px;
-        top:2px;
+        left: 20px;
+        top: 2px;
     }
 }
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
     .Header-container {
-        width:100%;
+        width: 100%;
         min-height: 61px;
-        background:#000000;
+        background: #000000;
 
     }
+
     .Header-Body {
         max-width: 692px;
         margin: 14px auto;
-        line-height:32px;
+        line-height: 32px;
         color: #fff;
     }
+
     .Header-Body > .Header-H1 {
-        color:#fff;
+        color: #fff;
         margin: 40px 40px 0px 0px;
-        font-size:28px;
+        font-size: 28px;
         position: relative;
         float: left;
-        text-transform: uppercase;
+
     }
-    .Header-Body > .Header-wallet  {
-        float:right;
-        width:187px;
-        height:50px;
-        margin:30px 0px 10px 0px;
+
+    .Header-Body > .Header-wallet {
+        float: right;
+        width: 187px;
+        height: 50px;
+        margin: 30px 0px 10px 0px;
         font-size: 22px;
         line-height: 50px;
-        color:#fff;
+        color: #fff;
         font-weight: bold;
         font-style: normal;
-        text-transform: uppercase;
-        text-align:center;
-        background:#eb1a53;
+        text-align: center;
+        background: #eb1a53;
         border-radius: 24px 0px 0px 0px;
     }
+
     .Header-Body > .Header-wallet > .bi {
-        width:30px;
-        height:23px;
-        margin-right:30px;
+        width: 30px;
+        height: 23px;
+        margin-right: 30px;
         margin-left: -40px;
         position: relative;
-        left:20px;
-        top:2px;
+        left: 20px;
+        top: 2px;
     }
 }
 
 /** Media Query Tablet (425px) */
 @media screen and (max-width: 425px) {
     .Header-container {
-        width:100%;
+        width: 100%;
         min-height: 111px;
-        background:#000000;
+        background: #000000;
     }
+
     .Header-Body {
         max-width: 380px;
         margin: 14px auto;
-        line-height:32px;
+        line-height: 32px;
         color: #fff;
     }
+
     .Header-Body > .Header-H1 {
-        color:#fff;
+        color: #fff;
         margin: 40px 40px 0px 0px;
-        font-size:20px;
+        font-size: 20px;
         position: relative;
         float: left;
-        text-transform: uppercase;
+
     }
-    .Header-Body > .Header-wallet  {
-        float:right;
-        width:160px;
-        height:50px;
-        margin:30px 0px 10px 0px;
+
+    .Header-Body > .Header-wallet {
+        float: right;
+        width: 160px;
+        height: 50px;
+        margin: 30px 0px 10px 0px;
         font-size: 22px;
         line-height: 50px;
-        color:#fff;
+        color: #fff;
         font-weight: bold;
         font-style: normal;
-        text-transform: uppercase;
-        text-align:center;
-        background:#eb1a53;
+        text-align: center;
+        background: #eb1a53;
         border-radius: 24px 0px 0px 0px;
     }
+
     .Header-Body > .Header-wallet > .bi {
-        width:30px;
-        height:23px;
-        margin-right:30px;
+        width: 30px;
+        height: 23px;
+        margin-right: 30px;
         margin-left: -40px;
         position: relative;
-        left:20px;
-        top:2px;
+        left: 20px;
+        top: 2px;
     }
 }
 
 /*  Media Query iPoneX (375 x 812) */
-@media screen and (max-width:375px) {
+@media screen and (max-width: 375px) {
     .Header-container {
-        width:100%;
+        width: 100%;
         min-height: 111px;
-        background:#000000;
+        background: #000000;
     }
+
     .Header-Body {
         max-width: 300px;
         margin: 14px auto;
-        line-height:32px;
+        line-height: 32px;
         color: #fff;
     }
+
     .Header-Body > .Header-H1 {
-        color:#fff;
+        color: #fff;
         margin: 40px 40px 0px 0px;
-        font-size:20px;
+        font-size: 20px;
         position: relative;
         float: left;
-        text-transform: uppercase;
+
     }
-    .Header-Body > .Header-wallet  {
-        float:right;
-        width:100px;
-        height:50px;
-        margin:30px 0px 10px 0px;
+
+    .Header-Body > .Header-wallet {
+        float: right;
+        width: 100px;
+        height: 50px;
+        margin: 30px 0px 10px 0px;
         font-size: 16px;
         line-height: 50px;
-        color:#fff;
+        color: #fff;
         font-weight: bold;
         font-style: normal;
-        text-transform: uppercase;
-        text-align:center;
-        background:#eb1a53;
+        text-align: center;
+        background: #eb1a53;
         border-radius: 20px 0px 0px 0px;
     }
+
     .Header-Body > .Header-wallet > .bi {
-        width:30px;
-        height:23px;
-        margin-right:30px;
+        width: 30px;
+        height: 23px;
+        margin-right: 30px;
         margin-left: -20px;
         position: relative;
-        left:20px;
-        top:2px;
+        left: 20px;
+        top: 2px;
     }
 }
 

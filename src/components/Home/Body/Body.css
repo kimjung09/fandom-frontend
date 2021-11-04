@@ -827,21 +827,16 @@ form > div > span:hover {
     display:block;
     border:1px solid white;
 }
-
 .Story-container > div {
     max-width:1345px;
     min-height: 1124px;
     margin:auto;
 
 }
-
 .Story-container > .Story-components > .form {
     margin-top:225px;
     font-size: 32px;
 }
-
-
-
 .Story-container > .Story-components > .form > h1 {
     margin-bottom: 20px;
     margin-left:40px;
@@ -863,7 +858,6 @@ form > div > span:hover {
     bottom: 0px;
     width:100%;
 }
-
 .Story-container > .Story-components > .form > p {
     margin-bottom:24px;
     font:  bold 18px/34px arial;
@@ -871,8 +865,6 @@ form > div > span:hover {
     margin-bottom:52px;
     margin-left:50px;
 }
-
-
 .Story-components > .Image-Container {
     width:100%;
     min-height: 400px;
@@ -888,7 +880,6 @@ form > div > span:hover {
     display:none;
 
 }
-
 .Story-components > .Image-Small-Form {
     width:320px;
     min-height:341px;
@@ -901,7 +892,6 @@ form > div > span:hover {
     position:relative;
     left:-0px;
 }
-
 .Story-components > .Story-components > .More-Button {
     text-transform: uppercase;
     float:right;
@@ -916,7 +906,6 @@ form > div > span:hover {
     line-height: 120px;
 
 }
-
 
 
 /* NFT 버튼 */
@@ -1226,7 +1215,6 @@ form > div > span:hover {
     }
 }
 
-
 /** Media Query MoblieL (425px) */
 @media screen and (max-width: 425px) {
     .Story-container {
@@ -1304,8 +1292,6 @@ form > div > span:hover {
         color:#fff;
     }
 }
-
-
 
 /** Media Query Iphone X (375px) */
 @media screen and (max-width:375px) {

@@ -1,12 +1,13 @@
-{
-  "ItemList": [
+[
     {
       "id": 1,
-      "img": "/images/main_09.jpg"
+      "img": "/images/main_09.jpg",
+      "title": "Hello"
     },
     {
       "id": 2,
-      "img": "/images/main_11.jpg"
+      "img": "/images/main_11.jpg",
+      "title": "Hello"
     },
     {
       "id": 3,
@@ -24,5 +25,4 @@
       "id": 6,
       "img": "/images/main_23.jpg"
     }
-  ]
-}
+]

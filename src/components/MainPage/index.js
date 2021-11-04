@@ -5,12 +5,10 @@ import Story from './Story';
 import Footer from "./Footer";
 
 
-function MainPage(){
+function MainPage() {
     return (
         <>
-        <Header />
-        <Body />
-        <Footer />
+            <Body/>
         </>
     )
 }

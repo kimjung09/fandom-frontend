@@ -4,7 +4,6 @@ import {CgChevronLeft, CgChevronRight} from 'react-icons/cg'
 
 
 function  Body({ id, img }) {
-console.log('aaa');
     const [clock, setClock] = useState("");
 
     const getTime = () => {

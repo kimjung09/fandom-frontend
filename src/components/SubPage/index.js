@@ -7,10 +7,8 @@ import Footer from "../MainPage/Footer";
 function SubPage() {
     return (
         <>
-            <Header/>
             <Body/>
             <Bottom/>
-            <Footer/>
         </>
     )
 }

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./style/Header.css";
-import {BiWalletAlt} from 'react-icons/bi'
+import WalletBtn from "../../Wallet";
 
 
 
@@ -16,12 +16,7 @@ function Header() {
                 >
                     Shop
                 </a>
-                <a href="Wallet">
-                    <span>
-                        <BiWalletAlt/>
-                    </span>
-                    Wallet
-                </a>
+                <WalletBtn/>
             </div>
         </header>
     )

@@ -1,12 +1,12 @@
 /* Header Conatiner 배경 */
-header {
+.Header-container {
   width:100%;
   min-height: 111px;
     z-index: 1;
 
     background:#000000;
 }
-header > div {
+.Header-container > div {
     max-width: 1350px;
     margin: auto;
     line-height:32px;
@@ -14,7 +14,7 @@ header > div {
     z-index: 1;
 
 }
-header > div > a {
+.Header-container > div > a {
     color:#fff;
     margin: 40px 40px 0px 0px;
     font-size:28px;
@@ -23,7 +23,7 @@ header > div > a {
     text-transform: uppercase;
     z-index: 1;
 }
-header > div > a:nth-child(3) {
+.Header-container > div > a:nth-child(3) {
     float:right;
     width:187px;
     height:50px;
@@ -41,13 +41,13 @@ header > div > a:nth-child(3) {
 
 
 }
-header > div > a:nth-child(3) > span {
+a:nth-child(3) > .icon {
     width:30px;
     height:23px;
     margin-right:30px;
-    margin-left: -40px;
+    margin-left: -20px;
     position: relative;
-    left:25px;
+    left:20px;
     top:2px;
     z-index: 1;
 
@@ -61,13 +61,13 @@ header > div > a:nth-child(3) > span {
         background:#000000;
     }
 
-    .Header-Body {
+    .Header-container > div  {
         max-width: 1000px;
         margin: auto;
         line-height:32px;
         color: #fff;
     }
-    .Header-Body > .Header-H1 {
+    .Header-container > div > a {
         color:#fff;
         margin: 40px 40px 0px 0px;
         font-size:28px;
@@ -78,7 +78,7 @@ header > div > a:nth-child(3) > span {
 
 
 
-    .Header-Body > .Header-wallet  {
+    .Header-container > div > a:nth-child(3)  {
         float:right;
         width:187px;
         height:50px;
@@ -93,7 +93,7 @@ header > div > a:nth-child(3) > span {
         background:#eb1a53;
         border-radius: 25px 0px 0px 0px;
     }
-    .Header-Body > .Header-wallet > .bi {
+    .Header-Body > span {
         width:30px;
         height:23px;
         margin-right:30px;
@@ -115,13 +115,13 @@ header > div > a:nth-child(3) > span {
         margin-top: -20px;
     }
 
-    .Header-Body {
+    .Header-container > div {
         max-width: 950px;
         margin: 14px auto;
         line-height:32px;
         color: #fff;
     }
-    .Header-Body > .Header-H1 {
+    .Header-container > div > a {
         color:#fff;
         margin: 40px 50px 0px 0px;
         font-size:28px;
@@ -131,7 +131,7 @@ header > div > a:nth-child(3) > span {
         text-transform: uppercase;
     }
 
-    .Header-Body > .Header-wallet  {
+    .Header-container > div > a:nth-child(3) {
         float:right;
         width:187px;
         height:50px;
@@ -146,7 +146,7 @@ header > div > a:nth-child(3) > span {
         background:#eb1a53;
         border-radius: 25px 0px 0px 0px;
     }
-    .Header-Body > .Header-wallet > .bi {
+    .Header-Body > span {
         width:30px;
         height:23px;
         margin-right:30px;
@@ -166,13 +166,13 @@ header > div > a:nth-child(3) > span {
         background:#000000;
 
     }
-    .Header-Body {
+    .Header-container > div {
         max-width: 892px;
         margin: 14px auto;
         line-height:32px;
         color: #fff;
     }
-    .Header-Body > .Header-H1 {
+    .Header-container > div > a  {
         color:#fff;
         margin: 40px 40px 0px 0px;
         font-size:28px;
@@ -180,7 +180,7 @@ header > div > a:nth-child(3) > span {
         float: left;
         text-transform: uppercase;
     }
-    .Header-Body > .Header-wallet  {
+    .Header-container > div > a:nth-child(3)   {
         float:right;
         width:187px;
         height:50px;
@@ -195,7 +195,7 @@ header > div > a:nth-child(3) > span {
         background:#eb1a53;
         border-radius: 24px 0px 0px 0px;
     }
-    .Header-Body > .Header-wallet > .bi {
+    .Header-Body > span  {
         width:30px;
         height:23px;
         margin-right:30px;

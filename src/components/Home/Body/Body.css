@@ -190,12 +190,12 @@ form > div > span:hover {
         min-height: 1250px;
         margin-top: -40px;
     }
-    .Body-Components {
+    .Body-container > div {
         max-width:1440px;
         margin:auto;
     }
 
-    .Body-Components form {
+    .Body-container > div > form {
         margin-top: 40px;
     }
 
@@ -213,7 +213,7 @@ form > div > span:hover {
         margin-top:100px;
     }
 
-    .Body-Video {
+    form > div > div:nth-child(1) {
         max-width: 1008px;
         min-height:500px;
         background-image: url("/src/components/images/background.jpg");;

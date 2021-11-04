@@ -10,14 +10,14 @@ function Bottom () {
                     1st Story
                 </h1>
                 <p>
-                   Fever deream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
+                   Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
                     Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
                 </p>
                 <h1>
                     1st Story
                 </h1>
                 <p>
-                    Fever deream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
+                    Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
                     Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
                 </p>
 
@@ -25,14 +25,14 @@ function Bottom () {
                     1st Story
                 </h1>
                 <p>
-                    Fever deream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
+                    Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
                     Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
                 </p>
                 <h1>
                     1st Story
                 </h1>
                 <p>
-                    Fever deream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
+                    Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
                     Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
                 </p>
 

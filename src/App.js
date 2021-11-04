@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
-import MainPage from "./components/MainPage";
-import SubPage from "./components/SubPage";
+import MainPage from "./components/Home";
+import SubPage from "./components/Info";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {Web3ReactProvider} from '@web3-react/core'
 import Web3 from 'web3'

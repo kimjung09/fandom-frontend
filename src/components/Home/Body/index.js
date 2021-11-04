@@ -1,5 +1,6 @@
 import React, {useState}from "react";
-import "./style/Body.css"
+import "./Body.css"
+import "./Story.css"
 import {FaPlay} from 'react-icons/fa'
 import {ItemList} from "../../item.json";
 
@@ -19,8 +20,6 @@ function Body() {
     });
 
 
-
-
    return (
        <>
       <div className="Body-container">
@@ -30,8 +29,8 @@ function Body() {
                   <h1>special moments!</h1>
                   <p>own the most special moments!</p>
                   <p className="Body-Components time">
-                      <span className="live">LIVE</span>
-                      <span className="clock">00:00:00:00</span>
+                      <span className="live">LIVE1</span>
+                      <span className="clock">{clock}</span>
                   </p>
                   <div>
                       <div>
@@ -56,14 +55,18 @@ function Body() {
                            그녀는 이제 하나의 계단만을 남겨두고 있습니다. 그녀의 WHO벨트 세계 타이틀전을 응원하며, 기념합니다.
                        </p>
                        <div>
+
                            {ItemList.map(item => (
+                               <React.Fragment key={item.id}>
                                <a href={item.id}>
                                    <img
                                        key={item.id}
                                        src={item.img}
                                    />
                                </a>
+                               </React.Fragment>
                            ))}
+
                        </div>
                    </div>
                    <button>

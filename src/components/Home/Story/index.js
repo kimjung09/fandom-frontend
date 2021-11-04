@@ -1,9 +1,9 @@
 import React from "react";
-import "./style/Story.css"
+import "../Body/Story.css"
 import ItemList from '../../item.json'
-import Image from '../../images/main_11.jpg'
 
 function Story(){
+
     return (
         <div className="Story-container" id="Story">
             <div className="Story-components">
@@ -27,7 +27,6 @@ function Story(){
                            />
                            </a>
                            ))}
-
                        <div className="Story-components More-Button">
                                More
                        </div>

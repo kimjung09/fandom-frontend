@@ -1,26 +1,32 @@
-import React, {useState} from "react";
+import React from "react";
 import './App.css';
 import MainPage from "./components/Home";
 import SubPage from "./components/Info";
-import {Switch, Route, BrowserRouter} from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {Web3ReactProvider} from '@web3-react/core'
+import Web3 from 'web3'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
+function getLibrary(provider) {
+    return new Web3(provider)
+}
 
 function App() {
-
-  return (
-      <>
-          <Header/>
-      <BrowserRouter>
-          <Switch>
-              <Route exact path="/" component={MainPage} />
-              <Route exact path="/shop/:id" component={SubPage} />
-          </Switch>
-      </BrowserRouter>
-      <Footer />
-      </>
-  );
+    return (
+        <>
+            <Web3ReactProvider getLibrary={getLibrary}>
+                <Header/>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={MainPage}/>
+                        <Route path="/:id" component={SubPage}/>
+                    </Switch>
+                </Router>
+                <Footer/>
+            </Web3ReactProvider>
+        </>
+    );
 }
 
 export default App;

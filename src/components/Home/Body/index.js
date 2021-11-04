@@ -3,6 +3,7 @@ import "./Body.css"
 import "./Story.css"
 import {FaPlay} from 'react-icons/fa'
 import itemList  from '../../item.json';
+import Image from '../../images/background.jpg'
 
 function Body() {
     const [clock, setClock] = useState("");
@@ -24,7 +25,7 @@ function Body() {
     useEffect(() => {
         setDataList(itemList);
     }, [])
-
+ 
 
     return (
         <>
@@ -34,17 +35,14 @@ function Body() {
                         <h1>own the most</h1>
                         <h1>special moments!</h1>
                         <p>own the most special moments!</p>
-                        <p className="Body-Components time">
-                            <span className="live">LIVE</span>
+                        <p className="time">
+                            <span className="live">LIVE  </span>
                             <span className="clock">{clock}</span>
                         </p>
-                        <div>
-                            <div>
-                                <div className="Body-Video"></div>
-                            </div>
-                            <span >
-                          <FaPlay size={"20"}/>
-                      </span>
+                        <div className="video">
+                            <span>
+                              <FaPlay size={"20"}/>
+                          </span>
                         </div>
                     </form>
                 </div>

@@ -37,7 +37,7 @@
 }
 .Body-container > div > form {
     position:relative;
-    top:20px;
+    top:100px;
     z-index:1;
 }
 
@@ -46,7 +46,7 @@ form > h1 {
     text-transform: uppercase;
     font-size: 52px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
     color:#fff;
     z-index:-999;
 
@@ -55,19 +55,16 @@ form > p {
     text-transform: uppercase;
     font-size:20px;
     font-weight: bold;
-    line-height: 92px;
-    margin-top: -10px;
-    margin-bottom: 14px;
+    line-height: 42px;
+    margin-top: 10px;
+    margin-bottom: 34px;
     text-align: center;
     color:#fff;
 }
-form > p:nth-child(3) {
+form > .time {
     text-transform: uppercase;
-    font-size:80px;
+    font-size:35px;
     font-weight: 400;
-    line-height: 92px;
-    margin-top: -10px;
-    margin-bottom: -20px;
     font-weight:bold;
     text-align: center;
     z-index:1;
@@ -88,62 +85,33 @@ form > p:nth-child(2) > span:nth-child(2) {
     -webkit-text-fill-color: transparent;
 }
 form > p:nth-child(2) > span:nth-child(1) {
-    margin-left:18px;
+    margin-left:28px;
     color:#fff;
 }
 
 form > div  {
     max-width:1130px;
     min-height: 562px;
-
     z-index:1;
 }
-form > div > div:nth-child(1) {
+form > .video  {
     max-width:1100px;
-    min-height:580px;
-    margin-top:80px;
+    max-height:580px;
+    margin-top:20px;
     margin-bottom: -120px;
     position:relative;
     left:80px;
+    top:20px;
     opacity: 90%;
-    background-image: url("/src/components/images/background.jpg");
     background-size:100%;
     background-repeat: no-repeat;
-    z-index: 1;
+    z-index: -999;
+    background-image: url("../../images/background.jpg");
 }
 
 
+form > .video > span {
 
-form > div > div > div:nth-child(1):before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 80px;
-    right: 0px;
-    bottom: 20px;
-    max-width:1110px;
-    min-height:580px;
-    opacity: 80%;
-    background-color: #6e1133;
-}
-
-form > div > div > div:nth-child(1):after {
-    content: "";
-    opacity: 100%;
-    position: absolute;
-    top: -80px;
-    left: -120px;
-    right: 0px;
-    bottom: 10px;
-    max-width:1110px;
-    min-height:580px;
-    opacity: 80%;
-    background: #1e4a4f;
-}
-
-form > div > span {
-    width:120px;
-    height:120px;
     border:none;
     width:110px;
     height: 110px;
@@ -154,9 +122,10 @@ form > div > span {
     opacity: 70%;
     content:"";
     position:relative;
-    z-index:1;
-    left:50%;
-    bottom:200px;
+    left:45%;
+    top:300px;
+    z-index: 1;
+    bottom:0px;
 }
 form > div > span:hover {
     width:120px;
@@ -172,8 +141,7 @@ form > div > span:hover {
     content:"";
     position:relative;
     z-index:1;
-    left:50%;
-    bottom:200px;
+
 
 }
 
@@ -182,6 +150,37 @@ form > div > span:hover {
     text-align: center;
     opacity: 100%;
 }
+
+form > div > div > div:nth-child(1):before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 80px;
+    right: 0px;
+    bottom: 20px;
+    max-width:1110px;
+    min-height:580px;
+    opacity: 80%;
+    background-color: #6e1133;
+    z-index:2;
+}
+
+form > div > div > div:nth-child(1):after {
+    content: "";
+    opacity: 100%;
+    position: absolute;
+    top: 20px;
+    left: -120px;
+    right: 0px;
+    bottom: 10px;
+    max-width:1110px;
+    min-height:580px;
+    opacity: 80%;
+    background: #1e4a4f;
+    z-index:3;
+
+}
+
 
 /* Media Query LafeTop (1440px) */
 @media screen and (max-width: 1440px ) {
@@ -340,7 +339,7 @@ form > div > span:hover {
         max-width:171px;
         border-radius: 5%;
         height: 80px;
-        font:bold 50px/25px arial;
+        font:bold 40px/25px arial;
         padding:0px 20px;
 
     }
@@ -478,7 +477,7 @@ form > div > span:hover {
     }
     .Body-Components > .Body-Components > .time {
         text-transform: uppercase;
-        font-size:60px;
+        font-size:80px;
         font-weight: 400;
         line-height: 92px;
         margin-top: -30px;
@@ -493,7 +492,7 @@ form > div > span:hover {
         border-radius: 5%;
         height: 80px;
         font:bold 50px/25px arial;
-        padding:0px 20px;
+        padding:0px 30px;
 
     }
     .Body-Components > .Body-Components > .time > span {
@@ -827,21 +826,16 @@ form > div > span:hover {
     display:block;
     border:1px solid white;
 }
-
 .Story-container > div {
     max-width:1345px;
     min-height: 1124px;
     margin:auto;
 
 }
-
 .Story-container > .Story-components > .form {
     margin-top:225px;
     font-size: 32px;
 }
-
-
-
 .Story-container > .Story-components > .form > h1 {
     margin-bottom: 20px;
     margin-left:40px;
@@ -863,7 +857,6 @@ form > div > span:hover {
     bottom: 0px;
     width:100%;
 }
-
 .Story-container > .Story-components > .form > p {
     margin-bottom:24px;
     font:  bold 18px/34px arial;
@@ -871,8 +864,6 @@ form > div > span:hover {
     margin-bottom:52px;
     margin-left:50px;
 }
-
-
 .Story-components > .Image-Container {
     width:100%;
     min-height: 400px;
@@ -888,7 +879,6 @@ form > div > span:hover {
     display:none;
 
 }
-
 .Story-components > .Image-Small-Form {
     width:320px;
     min-height:341px;
@@ -901,7 +891,6 @@ form > div > span:hover {
     position:relative;
     left:-0px;
 }
-
 .Story-components > .Story-components > .More-Button {
     text-transform: uppercase;
     float:right;
@@ -916,7 +905,6 @@ form > div > span:hover {
     line-height: 120px;
 
 }
-
 
 
 /* NFT 버튼 */
@@ -1226,7 +1214,6 @@ form > div > span:hover {
     }
 }
 
-
 /** Media Query MoblieL (425px) */
 @media screen and (max-width: 425px) {
     .Story-container {
@@ -1304,8 +1291,6 @@ form > div > span:hover {
         color:#fff;
     }
 }
-
-
 
 /** Media Query Iphone X (375px) */
 @media screen and (max-width:375px) {

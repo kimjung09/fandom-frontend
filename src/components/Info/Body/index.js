@@ -1,19 +1,18 @@
-
-import React  from "react";
+import React from "react";
 import "./style/Body.css"
-import {CgChevronLeft, CgChevronRight} from 'react-icons/cg'
+import {CgChevronLeft, CgChevronRight} from 'react-icons/cg';
 
 
+function Body() {
 
-function  Body({ id, img }) {
     return (
         <>
-       <div className="SubBody-Container" id="Shop">
+       <div className="SubBody-Container">
                 <h1>LIVE : 00:00:00:00</h1>
-                  <div className="Container">
-                       <img className="Image"/>
+                  <div className="Container"  >
+                          <img className="Image"  />
                        <div className="Description">
-                           <h2>제목 title 제목 title title 제목 title 제목 title 제목 title 제목</h2>
+                                <h2>제목</h2>
                            <p>구매하시려는 수량을 입력해주세요</p>
                         <div className="ButtonContainer">
                             <input type="text" />
@@ -64,9 +63,8 @@ function  Body({ id, img }) {
                                </table>
                            </form>
                        </div>
-
                   </div>
-                   <button type="button" className="Item-Left">
+                   <button type="button" className="Item-Left" >
                        <CgChevronLeft size={"48px"}/>
                    </button>
                    <button type="button" className="Item-Right" >

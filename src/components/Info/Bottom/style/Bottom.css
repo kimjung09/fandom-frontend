@@ -1,22 +1,27 @@
 .Bottom-container {
     width:100%;
-    padding-bottom: 124px;
 }
 
 .Bottom-container > form {
-   max-width:1225px;
-   min-height: 1107px;
-    background:#fff;
-    margin:24px auto;
-}
+    max-width: 1225px;
+    min-height: 1211px;
+    background: #fff;
+    margin:-20px auto;
+    position: relative;
+    top:-100px;
 
+
+}
 .Bottom-container > form > div {
     padding:59px;
 }
 
 .Bottom-container > form > div > h1 {
     font-size: 48px;
+
     margin-top:50px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
 
 }
 

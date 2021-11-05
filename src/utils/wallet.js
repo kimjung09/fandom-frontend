@@ -1,7 +1,5 @@
-// Set of helper functions to facilitate wallet setup
 import {BSC_CHAIN_ID} from 'config'
 import {nodes} from './getRpcUrl'
-
 
 export const setupNetwork = async () => {
     const provider = window.ethereum

@@ -8,7 +8,7 @@ import {setupNetwork} from '../../utils/wallet'
 import {BSC_CHAIN_ID} from 'config'
 import {useState} from 'react'
 /* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
-
+import {getGasPrice} from "../../utils/calls";
 
 const WalletBtn = () => {
     const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
@@ -25,6 +25,10 @@ const WalletBtn = () => {
         try {
             await setupNetwork();
             await activate(injected)
+
+            await getGasPrice();
+
+
         } catch (err) {
             console.log(err)
         }

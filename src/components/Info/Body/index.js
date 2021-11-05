@@ -6,8 +6,6 @@ import {CgChevronLeft, CgChevronRight} from 'react-icons/cg'
 
 
 function  Body({ id, img }) {
-console.log('aaa');
-
     return (
         <>
        <div className="SubBody-Container" id="Shop">

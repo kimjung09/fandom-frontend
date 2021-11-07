@@ -1,10 +1,10 @@
 import React from 'react';
 import Body from './Body';
 
-function MainPage() {
+const MainPage = (match) => {
     return (
         <>
-            <Body/>
+            <Body match={match} />
         </>
     )
 }

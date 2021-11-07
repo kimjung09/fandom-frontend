@@ -2,10 +2,10 @@ import React from "react";
 import Body from './Body';
 import Bottom from "../Info/Bottom";
 
-function SubPage() {
+const SubPage = ({ match }) => {
     return (
         <>
-            <Body />
+            <Body match={match} />
             <Bottom/>
         </>
     )

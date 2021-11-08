@@ -6,7 +6,7 @@ const SubPage = ({ match }) => {
     return (
         <>
             <Body match={match} />
-            <Bottom/>
+            <Bottom match={match}/>
         </>
     )
 }

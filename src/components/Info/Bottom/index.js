@@ -1,44 +1,27 @@
 import React from "react";
 import "./style/Bottom.css"
+import ItemList from '../../item.json';
 
-function Bottom () {
+const Bottom = ({match}) => {
+    // itemList match 함수를 불러 ItemList json 파일에 배치된 id 값을 숫자로 불러 - 1씩 뺸 값을 불러온다.
+    const item = ItemList[parseInt(match.params.id) - 1];
   return (
+      <>
       <div className="Bottom-container" id="Story">
          <form>
             <div>
-                <h1>
-                    1st Story
-                </h1>
-                <p>
-                   Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
-                    Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
-                </p>
-                <h1>
-                    1st Story
-                </h1>
-                <p>
-                    Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
-                    Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
-                </p>
-
-                <h1>
-                    1st Story
-                </h1>
-                <p>
-                    Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
-                    Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
-                </p>
-                <h1>
-                    1st Story
-                </h1>
-                <p>
-                    Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it)
-                    Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)
-                </p>
-
+               <h1>{item.story + 1}</h1>
+                <p>{item.description}</p>
+                <h1>{item.story + 2}</h1>
+                <p>{item.description}</p>
+                <p>{item.description}</p>
+                <p>{item.description}</p>
+                <h1>{item.story + 3}</h1>
+                <p>{item.description}</p>
             </div>
          </form>
       </div>
+      </>
   )
 }
 

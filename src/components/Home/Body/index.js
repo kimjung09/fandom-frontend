@@ -3,9 +3,9 @@ import "./Body.css"
 import "./Story.css"
 import {FaPlay} from 'react-icons/fa'
 import itemList  from '../../item.json';
-import Image from '../../images/background.jpg'
 
-function Body() {
+
+const Body = (match) => {
     const [clock, setClock] = useState("");
     const getTime = () => {
         const date = new Date();
@@ -25,7 +25,8 @@ function Body() {
     useEffect(() => {
         setDataList(itemList);
     }, [])
- 
+
+    console.log(match.params);
 
     return (
         <>
@@ -36,12 +37,12 @@ function Body() {
                         <h1>special moments!</h1>
                         <p>own the most special moments!</p>
                         <p className="time">
-                            <span className="live">LIVE  </span>
+                            <span className="live">LIVE</span>
                             <span className="clock">{clock}</span>
                         </p>
                         <div className="video">
                             <span>
-                              <FaPlay size={"20"}/>
+                              <FaPlay size={"40"}/>
                           </span>
                         </div>
                     </form>

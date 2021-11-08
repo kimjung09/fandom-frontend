@@ -7,24 +7,19 @@
     display:block;
     border:1px solid white;
 }
-
 .Story-container > .Story-components {
     max-width:1345px;
     min-height: 1124px;
     margin:auto;
 
 }
-
 .Story-container > .Story-components > div:nth-child(1) {
     margin-top:225px;
     font-size: 32px;
 }
-
-
-
 .Story-container > .Story-components > div:nth-child(1) > h1 {
     margin-bottom: 20px;
-    margin-left:40px;
+    margin-left:72px;
     text-transform: uppercase;
     color:#eb1a53;
     text-shadow: 5px -5px #93f7f3;
@@ -43,16 +38,13 @@
     bottom: 0px;
     width:100%;
 }
-
 .Story-container > .Story-components > div:nth-child(1) > p {
     margin-bottom:24px;
     font:  bold 18px/34px arial;
     font-family: -apple-system;
     margin-bottom:52px;
-    margin-left:50px;
+    margin-left:72px;
 }
-
-
 .Story-container > .Story-components > div:nth-child(1) > div {
     width:100%;
     min-height: 400px;
@@ -60,7 +52,6 @@
     max-width:1223px;
 
 }
-
 .Story-container > .Story-components > div:nth-child(1) > div > a > img {
     width:320px;
     min-height:341px;
@@ -71,28 +62,27 @@
     margin-right: -20px;
     margin-bottom:20px;
     position:relative;
-    left:-0px;
+    left:20px;
 }
-
-
-
+.Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
 /* NFT 버튼 */
 .Story-container > .Story-components >  button {
     width:271px;
     height:63px;
-    background:#db154a;
-    background: linear-gradient(135deg, transparent 15px, #db154a 0) top left;
+    background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
     margin:78px 0px 91px 0px;
-    border: none;
+    border-radius: 34px 34px 34px 34px;
+    border: 2px solid #db154a;
     position:relative;
     left:-600px;
-    top:350px;
+    top:300px;
     font-size:30px;
     font-weight: bold;
-    color:#fff;
+    color:#db154a;
     text-transform: uppercase;
-
-
 }
 .NFT-Button-container > .Link {
     color:#fff;
@@ -103,100 +93,82 @@
 @media screen and (max-width: 1440px) {
     .Story-container {
         width:100%;
-        min-height: 1409px;
+        min-height: 1209px;
+        overflow: hidden;
     }
 
     .Story-container > .Story-components {
         max-width:1200px;
-        min-height: 1124px;
+        min-height: 924px;
         margin:auto;
     }
 
-    .Story-container > .Story-components > .form {
-        margin-top:50px;
-        font-size: 32px;
-        padding-top:150px;
+    .Story-container > .Story-components > div:nth-child(1) {
+        margin-top:10px;
+        font-size: 30px;
+        padding-top:100px;
     }
 
-    .Story-container > .Story-components > .form > h1 {
+    .Story-container > .Story-components > div:nth-child(1) > h1 {
         color:red;
-        margin-top:100px;
+        margin-top:10px;
         margin-bottom: 20px;
-        margin-left: 100px;
+        margin-left: 120px;
+
     }
-    .Story-container > .Story-components > .form > p {
+    .Story-container > .Story-components > div:nth-child(1) > p {
         margin-bottom:24px;
         font:  bold 18px/34px arial;
-        margin-left:100px;
+        margin-left:120px;
         font-family: -apple-system;
         margin-bottom:52px;
     }
 
-    .Story-components > .Story-components > .form > span {
+    .Story-container > .Story-components > div:nth-child(1) > div {
         width:100%;
         display:block;
         max-width:1223px;
     }
 
 
-    .Story-components > .Image-Container {
-        width:100%;
-        min-height: 400px;
-        display:block;
-
-        margin:auto;
-
-
-    }
-    .Story-components > .Image-Form {
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img{
         max-width:900px;
-        height: 400px;
+        height: 250px;
         border:1px solid red;
-
-    }
-    .Story-components > .Image-Small-Form {
-        max-width:150px;
-        min-height:325px;
-        float:left;
-        margin-left: 150px;
-        margin-right: 50px;
+        grid-template-columns: 150px 150px 150px;
+        margin-left:50px;
+        margin-right: -20px;
+        margin-bottom:20px;
         position:relative;
-        left:-50px;
+        left:60px;
+
     }
 
-    .Story-components > .Image-Small-Form:hover {
-        background:red;
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
     }
-
-    .Story-components > .Story-components > .More-Button {
-        text-transform: uppercase;
-        float:right;
-        width:131px;
-        height:133px;
-        position: relative;
-        bottom:102px;
-        text-align:center;
-        color:#787878;
-        line-height: 120px;
-    }
-
     /* NFT 버튼 */
-    .NFT-Button-container {
-        width:268px;
-        height:90px;
-        background:#db154a;
-        margin:60px -150px auto;
-        border: none;
+    .Story-container > .Story-components >  button {
+        width:271px;
+        height:63px;
+        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        border: 2px solid #db154a;
         position:relative;
-        left:-500px;
-        top:300px;
+        left:480px;
+        top:20px;
         font-size:30px;
-        color:#fff;
-
+        font-weight: bold;
+        color:#db154a;
+        text-transform: uppercase;
     }
     .NFT-Button-container > .Link {
         color:#fff;
+
     }
+
 }
 
 /** Media Query LatTop (1024px) */
@@ -208,22 +180,22 @@
     }
     .Story-container > .Story-components {
         max-width:1200px;
-        min-height: 1344px;
+        min-height: 1200px;
         margin:auto;
     }
-    .Story-container > .Story-components > .form {
+    .Story-container > .Story-components > div:nth-child(1) {
         margin-top:13px;
         font-size: 28px;
-        padding-top:129px;
+        padding-top:50px;
     }
-    .Story-container > .Story-components > .form > h1 {
+    .Story-container > .Story-components > div:nth-child(1) > h1 {
         margin-top:100px;
         margin-bottom: 20px;
-        margin-left: 80px;
+        margin-left: 100px;
     }
-    .Story-container > .Story-components > .form > p {
+    .Story-container > .Story-components > div:nth-child(1) > p {
         font:  bold 18px/34px arial;
-        margin-left:80px;
+        margin-left:100px;
         font-family: -apple-system;
         margin-bottom:52px;
     }
@@ -232,57 +204,48 @@
         display:block;
         max-width:1223px;
     }
-    .Story-components > .Image-Container {
+    .Story-container > .Story-components > div:nth-child(1) > div {
         width:100%;
         min-height: 400px;
         display:block;
         margin:auto;
     }
 
-    .Story-components > .Image-Small-Form {
+    .Story-container > .Image-Small-Form {
         width:320px;
         float:left;
-        margin-left: 100px;
-        margin-right: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
         position:relative;
         left:-0px;
     }
-    .Story-components > .Image-Small-Form > img {
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img {
         width:250px;
+        min-height:300px;
         float:left;
-        margin-right: 20px;
+        margin-right: -20px;
         position:relative;
 
     }
 
-    .Story-components > .Story-components > .More-Button {
+    .Story-container > .Story-components >  button {
+        width:271px;
+        height:63px;
+        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
+        margin:58px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        border: 2px solid #db154a;
+        position:relative;
+        left:380px;
+        top:0px;
+        font-size:30px;
+        font-weight: bold;
+        color:#db154a;
         text-transform: uppercase;
-        float:right;
-        width:131px;
-        height:133px;
-        position: relative;
-        bottom:0px;
-        top:50px;
-        left:200px;
-        text-align:center;
-        color:#787878;
-        line-height: 120px;
     }
 
     /* NFT 버튼 */
-    .NFT-Button-container {
-        width:268px;
-        height:90px;
-        background:#db154a;
-        margin:10px -150px auto;
-        border: none;
-        position:relative;
-        left:-300px;
-        top:300px;
-        font-size:30px;
-        color:#fff;
 
-    }
     .NFT-Button-container > .Link {
         color:#fff;
     }
@@ -292,95 +255,81 @@
 @media screen and (max-width: 768px) {
     .Story-container {
         width:100%;
-        min-height: 640px;
-
+        min-height: 1422px;
+        overflow: hidden;
     }
+
     .Story-container > .Story-components {
-        max-width:1200px;
-        min-height: 1544px;
+        max-width:748px;
+        min-height: 924px;
         margin:auto;
     }
-    .Story-container > .Story-components > .form {
-        margin-top:13px;
-        font-size: 28px;
-        padding-top:20px;
+
+    .Story-container > .Story-components > div:nth-child(1) {
+        margin-top:165px;
+        font-size: 30px;
     }
-    .Story-container > .Story-components > .form > h1 {
-        margin-top:100px;
+
+    .Story-container > .Story-components > div:nth-child(1) > h1 {
+        color:red;
+        margin-top:10px;
         margin-bottom: 20px;
-        margin-left: 50px;
+        margin-left: 45px;
+
     }
-    .Story-container > .Story-components > .form > p {
+    .Story-container > .Story-components > div:nth-child(1) > p {
+        margin-bottom:24px;
         font:  bold 18px/34px arial;
-        margin-left:50px;
+        margin-left: 45px;
         font-family: -apple-system;
         margin-bottom:52px;
     }
-    .Story-components > .Story-components > .form > span {
+
+    .Story-container > .Story-components > div:nth-child(1) > div {
         width:100%;
-        display:block;
-        max-width:1223px;
+        display:flex;
+        max-width:750px;
+        overflow-x: scroll;
+        margin:0px 40px 0px 0px ;
     }
-    .Story-components > .Image-Container {
-        width:100%;
-        min-height: 300px;
-        display:block;
-        max-width:960px;
-        margin:20px auto;
 
-    }
-    .Story-components > .Image-Form {
-        max-width:360px;
-        height: 450px;
-        background: #d4d4d4;
 
-    }
-    .Story-components > .Image-Small-Form {
-        width:320px;
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img{
+        max-width:750px;
+        height: 563px;
+        width:584px;
+        margin-bottom:20px;
         float:left;
-        margin-left: 100px;
-        margin-right: 20px;
-        position:relative;
-        left:-0px;
-    }
-    .Story-components > .Image-Small-Form > img {
-        width:250px;
-        float:left;
-        margin-right: 20px;
-        position:relative;
+        border:none;
+        overflow-x: scroll;
 
     }
 
-    .Story-components > .Story-components > .More-Button {
-        text-transform: uppercase;
-        float:right;
-        width:131px;
-        height:133px;
-        position: relative;
-        bottom:0px;
-        top:50px;
-        left:200px;
-        text-align:center;
-        color:#787878;
-        line-height: 120px;
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
     }
-
     /* NFT 버튼 */
-    .NFT-Button-container {
-        width:268px;
-        height:90px;
-        background:#db154a;
-        margin:10px -150px auto;
-        border: none;
+    .Story-container > .Story-components >  button {
+        width:271px;
+        height:63px;
+        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        border: 2px solid #db154a;
         position:relative;
-        left:-150px;
-        top:650px;
+        left:250px;
+        top:20px;
         font-size:30px;
-        color:#fff;
+        font-weight: bold;
+        color:#db154a;
+        text-transform: uppercase;
     }
     .NFT-Button-container > .Link {
         color:#fff;
+
     }
+
 }
 
 

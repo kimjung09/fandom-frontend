@@ -2,27 +2,76 @@
     {
       "id": 1,
       "img": "/images/main_09.jpg",
-      "title": "Hello"
+      "title": "killing me slow, out thewindow i'm always",
+      "subTitle": "Amount you want to buy",
+      "amount": "100.12 SOL",
+      "price": "$3,3333",
+      "time": "1 Hour Ago",
+      "bidding": "0x2732300...",
+      "story": "Title",
+      "description": "Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right,Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right I want it) Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)"
     },
     {
       "id": 2,
       "img": "/images/main_11.jpg",
-      "title": "Hello"
+      "title": "killing me slow, out thewindow i'm always",
+      "subTitle": "Amount you want to buy",
+      "amount": "100.12 SOL",
+      "price": "$3,3333",
+      "time": "1 Hour Ago",
+      "bidding": "0x2732300...",
+      "story": "1st Story",
+      "description": "Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it) Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)"
     },
     {
       "id": 3,
-      "img": "/images/main_13.jpg"
+      "img": "/images/main_13.jpg",
+      "title": "killing me slow, out thewindow i'm always",
+      "subTitle": "Amount you want to buy",
+      "amount": "100.12 SOL",
+      "price": "$3,3333",
+      "time": "1 Hour Ago",
+      "bidding": "0x2732300...",
+      "story": "1st Story",
+      "description": "Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it) Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)"
     },
     {
       "id": 4,
-      "img": "/images/main_25.jpg"
+      "img": "/images/main_25.jpg",
+      "title": "killing me slow, out thewindow i'm always",
+      "subTitle": "Amount you want to buy",
+      "amount": "100.12 SOL",
+      "price": "$3,3333",
+      "time": "1 Hour Ago",
+      "bidding": "0x2732300...",
+      "story": "1st Story",
+      "description": "Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it) Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)"
+
     },
     {
       "id": 5,
-      "img": "/images/main_27.jpg"
+      "img": "/images/main_27.jpg",
+      "title": "killing me slow, out thewindow i'm always",
+      "subTitle": "Amount you want to buy",
+      "amount": "100.12 SOL",
+      "price": "$3,3333",
+      "time": "1 Hour Ago",
+      "bidding": "0x2732300...",
+      "story": "1st Story",
+      "description": "Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it) Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)"
+
     },
     {
       "id": 6,
-      "img": "/images/main_23.jpg"
+      "img": "/images/main_23.jpg",
+      "title": "killing me slow, out thewindow i'm always",
+      "subTitle": "Amount you want to buy",
+      "amount": "100.12 SOL",
+      "price": "$3,3333",
+      "time": "1 Hour Ago",
+      "bidding": "0x2732300...",
+      "story": "1st Story",
+      "description": "Fever dream high in the quiet of the night You know that I caught it (Oh yeah, you're right, I want it) Bad,bad boy, shiny toy with a price You know that i bought it (Oh yeah you're right, I want it)"
+
     }
 ]

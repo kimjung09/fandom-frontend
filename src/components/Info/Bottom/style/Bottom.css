@@ -127,9 +127,30 @@
     .Bottom-container > form > div > p  {
         font-size:20px;
         font-weight: bold;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         line-height: 40px;
         margin-left: 7px;
+    }
+
+    .Bottom-container > form > div > h1 {
+        font-size: 28px;
+        margin-top:50px;
+    }
+    .Bottom-container > form > div > p:nth-child(4) {
+        font-size:15px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        line-height: 36px;
+        margin-left: 7px;
+        max-width: 767px;
+    }
+    .Bottom-container > form > div > p:nth-child(5) {
+        font-size:15px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        line-height: 36px;
+        margin-left: 7px;
+        max-width: 767px;
     }
 }
 
@@ -139,27 +160,22 @@
     .Bottom-container {
         width:100%;
         margin-top: 43px;
-        padding-bottom: 104px;
+        padding-bottom: 44px;
     }
 
-    .Bottom-container > .Bottom-Components {
+    .Bottom-container > form  {
         max-width:680px;
         min-height: 1107px;
         background:#fff;
         margin:20px auto;
     }
 
-    .Bottom-container > .Bottom-Components > .Bottom-description {
+    .Bottom-container > form > div {
         padding:25px;
     }
 
-    .Bottom-container > .Bottom-Components > .Bottom-description > .h1 {
-        font-size: 40px;
-        margin-top:60px;
 
-    }
-
-    .Bottom-container > .Bottom-Components > .Bottom-description > p {
+    .Bottom-container > form > div > p {
         font-size:20px;
         font-weight: bold;
         margin-bottom: 60px;
@@ -173,31 +189,46 @@
     .Bottom-container {
         width:100%;
         margin-top: 43px;
-        padding-bottom: 54px;
+        padding-bottom: 14px;
     }
 
-    .Bottom-container > .Bottom-Components {
-        max-width:400px;
-        min-height: 1107px;
+    .Bottom-container > form {
+        max-width:375px;
+        min-height: 1530px;
         background:#fff;
         margin:20px auto;
     }
 
-    .Bottom-container > .Bottom-Components > .Bottom-description {
+    .Bottom-container > form > div {
         padding:25px;
     }
 
-    .Bottom-container > .Bottom-Components > .Bottom-description > .h1 {
-        font-size: 40px;
-        margin-top:60px;
 
-    }
-
-    .Bottom-container > .Bottom-Components > .Bottom-description > p {
+    .Bottom-container > form > div > p {
         font-size:20px;
         font-weight: bold;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         line-height: 40px;
         margin-left: 7px;
+    }
+    .Bottom-container > form > div > h1 {
+        font-size: 28px;
+        margin-top:50px;
+    }
+    .Bottom-container > form > div > p:nth-child(4) {
+        font-size:15px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        line-height: 36px;
+        margin-left: 7px;
+        max-width: 767px;
+    }
+    .Bottom-container > form > div > p:nth-child(5) {
+        font-size:15px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        line-height: 36px;
+        margin-left: 7px;
+        max-width: 767px;
     }
 }

@@ -197,33 +197,48 @@
 @media screen and (max-width: 425px) {
     .Footer {
         width: 100%;
-        min-height: 280px;
+        min-height: 180px;
         background:#000000;
 
     }
 
-    .Footer-Container {
-        max-width:420px;
+    .Footer > div {
+        max-width:300px;
         margin:auto;
     }
 
-    .Footer-Container > .Link {
-        margin-right: 10px;
+    .Footer > div >  a {
+        margin-right: 20px;
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 18px/138px arial;
+        display: none;
+        font:bold 17px/138px arial;
     }
 
-    .Footer-Container > .Footer-Image {
+    .Footer > div > img  {
         float:right;
-        margin-right:7px;
+        margin-right:10px;
         margin-top: 73px;
-        width:40px;
-        height: 40px;
+        width:45px;
+        height: 48px;
         position:relative;
-        top:50px;
-        left:-80px;
-        background:#d8d8d8;
+
+        top:0px;
+        left:0px;
+        background:#4d4d4d;
+    }
+    .Footer >  div > button {
+        background:#787878;
+        position:fixed;
+        left:85%;
+        bottom:400px;
+        z-index:1;
+        width:73px;
+        float:right;
+        justify-self: start;
+        height:75px;
+        border:0;
+        padding:0;
     }
 }
 
@@ -237,7 +252,7 @@
     }
 
     .Footer-Container {
-        max-width:380px;
+        max-width:200px;
         margin:auto;
     }
 
@@ -252,11 +267,11 @@
         float:right;
         margin-right:5px;
         margin-top: 73px;
-        width:35px;
-        height: 40px;
+        width:25px;
+        height: 20px;
         position:relative;
         top:50px;
-        left:-80px;
+        left:-20px;
         background:#d8d8d8;
     }
 }

@@ -7,8 +7,9 @@ import {useEffect} from 'react';
 import {setupNetwork} from '../../utils/wallet'
 import {BSC_CHAIN_ID} from 'config'
 import {useState} from 'react'
+
 /* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
-import {getGasPrice} from "../../utils/calls";
+import {store,getBlockNumber} from "../../utils/calls";
 
 const WalletBtn = () => {
     const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
@@ -18,16 +19,16 @@ const WalletBtn = () => {
     /* 지갑 전역변수에 담음 */
 
     const [mouseOverCheck, setMouseOverCheck] = useState(false)
-    const {active, account, activate, deactivate} = useWeb3React()
+    const {active, account, activate, deactivate, library} = useWeb3React()
     const dispatch = useDispatch()
 
     const connect = async () => {
         try {
             await setupNetwork();
-            await activate(injected)
-
-            await getGasPrice();
-
+            await activate(injected);
+            // await getGasPrice();
+            await getBlockNumber();
+            // localStorage.setItem('login-account',account)
 
         } catch (err) {
             console.log(err)
@@ -36,14 +37,28 @@ const WalletBtn = () => {
 
     const disconnect = async () => {
         try {
+            localStorage.removeItem('local-account');
             deactivate();
         } catch (err) {
             console.log(err)
         }
     }
+    const test = async () => {
+        // const provider = window.web3.currentProvider
+        //
+        // console.log(provider)
+        console.log(await store(account));
+    }
 
     useEffect(
-        () => {
+        async () => {
+            if (!account) {
+                if (!!localStorage.getItem('local-account')) {
+                    await activate(injected);
+                }
+                return;
+            }
+            localStorage.setItem('local-account', account);
             dispatch(setUserAccount(account))
         },
         [account]
@@ -73,6 +88,10 @@ const WalletBtn = () => {
                     WALLET
                 </a>
             }
+            <a style={{cursor: 'pointer'}}
+               onClick={test}>
+                TEST BTN
+            </a>
         </>
     )
 }

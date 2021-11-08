@@ -1,7 +1,4 @@
-// export const BSC_BLOCK_TIME = 3
-// export const BASE_BSC_SCAN_URLS = {
-//     56: 'https://bscscan.com',
-//     97: 'https://testnet.bscscan.com',
-// }
+export const BSC_CHAIN_ID = process.env.REACT_APP_BSC_CHAIN_ID
 
-export const BSC_CHAIN_ID = "56"
+export const storage_contract_address= process.env.REACT_APP_CONTRACT_STORAGE
+

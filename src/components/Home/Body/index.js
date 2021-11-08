@@ -37,12 +37,12 @@ const Body = (match) => {
                         <h1>special moments!</h1>
                         <p>own the most special moments!</p>
                         <p className="time">
-                            <span className="live">LIVE  </span>
+                            <span className="live">LIVE</span>
                             <span className="clock">{clock}</span>
                         </p>
                         <div className="video">
                             <span>
-                              <FaPlay size={"20"}/>
+                              <FaPlay size={"40"}/>
                           </span>
                         </div>
                     </form>

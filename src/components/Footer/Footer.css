@@ -56,28 +56,91 @@
 
     }
 
-    .Footer-Container {
-        max-width:900px;
+    .Footer > div {
+        max-width:1200px;
         margin:auto;
     }
 
-    .Footer-Container > .Link {
-        margin-right: 60px;
+    .Footer > div >  a {
+
         color:#ffffff;
         text-transform: uppercase;
         font:bold 18px/138px arial;
+        margin-left: 80px;
+        margin-right: 10px;
     }
 
-    .Footer-Container > .Footer-Image {
+    .Footer > div > img {
         float:right;
-        margin-right:28px;
+        margin-right:18px;
         margin-top: 73px;
         width:40px;
         height: 40px;
         position:relative;
-        top:50px;
-        left:-300px;
+        top:40px;
+        left:-420px;
         background:#d8d8d8;
+    }
+    .Footer >  div > button {
+        background:#787878;
+        position:fixed;
+        left:85%;
+        bottom:400px;
+        z-index:1;
+        width:50px;
+        float:right;
+        justify-self: start;
+        height:50px;
+        border:0;
+        padding:0;
+    }
+}
+/** Media Query LatTop L(1024) */
+@media screen and (max-width: 1024px){
+    .Footer {
+        width: 100%;
+        min-height: 200px;
+        background:#000000;
+
+    }
+
+    .Footer > div {
+        max-width:1200px;
+        margin:auto;
+    }
+
+    .Footer > div >  a {
+
+        color:#ffffff;
+        text-transform: uppercase;
+        font:bold 18px/138px arial;
+        margin-left: 50px;
+        margin-right: 10px;
+    }
+
+    .Footer > div > img {
+        float:right;
+        margin-right:18px;
+        margin-top: 73px;
+        width:40px;
+        height: 40px;
+        position:relative;
+        top:40px;
+        left:-350px;
+        background:#d8d8d8;
+    }
+    .Footer >  div > button {
+        background:#787878;
+        position:fixed;
+        left:85%;
+        bottom:400px;
+        z-index:1;
+        width:50px;
+        float:right;
+        justify-self: start;
+        height:50px;
+        border:0;
+        padding:0;
     }
 }
 
@@ -85,33 +148,48 @@
 @media screen and (max-width: 768px) {
     .Footer {
         width: 100%;
-        min-height: 250px;
+        min-height: 247px;
         background:#000000;
 
     }
 
-    .Footer-Container {
+    .Footer > div {
         max-width:500px;
         margin:auto;
     }
 
-    .Footer-Container > .Link {
+    .Footer > div >  a {
         margin-right: 20px;
         color:#ffffff;
         text-transform: uppercase;
+        display: none;
         font:bold 18px/138px arial;
     }
 
-    .Footer-Container > .Footer-Image {
+    .Footer > div > img  {
         float:right;
         margin-right:18px;
         margin-top: 73px;
-        width:40px;
-        height: 40px;
+        width:73px;
+        height: 75px;
         position:relative;
-        top:50px;
-        left:-100px;
-        background:#d8d8d8;
+        border:none;
+        top:0px;
+        left:0px;
+        background:#4d4d4d;
+    }
+    .Footer >  div > button {
+        background:#787878;
+        position:fixed;
+        left:85%;
+        bottom:400px;
+        z-index:1;
+        width:73px;
+        float:right;
+        justify-self: start;
+        height:75px;
+        border:0;
+        padding:0;
     }
 }
 

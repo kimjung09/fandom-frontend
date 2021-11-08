@@ -2,32 +2,35 @@ import React from "react";
 import "./style/Body.css"
 import {CgChevronLeft, CgChevronRight} from 'react-icons/cg';
 import ItemList from '../../item.json'
+import {MdLocalOffer} from 'react-icons/md'
 
 const Body = ({match}) => {
     // ItemList.find(item => item.id === match.params.id);
     console.log(match, "hihih")
-    const item = ItemList[parseInt(match.params.id) - 1];
 
+    // itemList match 함수를 불러 ItemList json 파일에 배치된 id 값을 숫자로 불러 - 1씩 뺸 값을 불러온다.
+    const item = ItemList[parseInt(match.params.id) - 1];
 
     return (
         <>
             <div className="SubBody-Container">
-                <h1>LIVE : 00:00:00:00</h1>
+                <h1><span>LIVE</span> 00:00:00:00</h1>
                 <div className="Container">
                     <img className="Image"
-                         src={item.img}
-                    />
+                         src={item.img}/>
                     <div className="Description">
                         <h2>{item.title}</h2>
-                        <p>구매하시려는 수량을 입력해주세요</p>
+                        <p>{item.subTitle}</p>
                         <div className="ButtonContainer">
-                            <input type="text"/>
+                            <input type="text"  name='name' placeholder="ETH"/>
                             <button type="button">
-                                BID-BTN
+                                <span>
+                                    <MdLocalOffer />
+                                </span>Make Offer
                             </button>
                         </div>
-                        <form className="TableContainer">
-                            <table className="Table">
+                        <form >
+                            <table>
                                 <thead>
                                 <tr>
                                     <th className="bold">Amount</th>
@@ -38,10 +41,10 @@ const Body = ({match}) => {
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>100.11 SOL</th>
-                                    <th>$3,333</th>
-                                    <th>1 hour ago</th>
-                                    <th>0x2732300...</th>
+                                    <th className="bold"><i className="fas fa-user"></i>{item.amount}</th>
+                                    <th>{item.price}</th>
+                                    <th>{item.time}</th>
+                                    <th>{item.bidding}</th>
                                 </tr>
                                 <tr>
                                     <th className="bold"><i className="fas fa-user"></i>100.11 SOL</th>
@@ -62,10 +65,10 @@ const Body = ({match}) => {
                                     <th>0x2732300...</th>
                                 </tr>
                                 <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>100.11 SOL</th>
-                                    <th>$3,333</th>
-                                    <th>1 hour ago</th>
-                                    <th>0x2732300...</th>
+                                    <th className="bold"><i className="fas fa-user"></i>{item.amount}</th>
+                                    <th>{item.price}</th>
+                                    <th>{item.time}</th>
+                                    <th>{item.bidding}</th>
                                 </tr>
                                 </tbody>
                             </table>
@@ -73,10 +76,10 @@ const Body = ({match}) => {
                     </div>
                 </div>
                 <button type="button" className="Item-Left">
-                    <CgChevronLeft size={"48px"}/>
+                    <span> <CgChevronLeft size={"48px"}/></span>
                 </button>
                 <button type="button" className="Item-Right">
-                    <CgChevronRight size={"48px"}/>
+                    <span><CgChevronRight size={"48px"}/></span>
                 </button>
             </div>
         </>

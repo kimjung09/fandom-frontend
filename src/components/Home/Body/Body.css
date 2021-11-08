@@ -6,12 +6,10 @@
     background-size: cover;
     z-index:-9999;
 }
-
 .Body-container::before {
     background: #000000;
     z-index:-9999;
 }
-
 .Body-container::after {
     content: "";
     opacity: 0.5;
@@ -30,7 +28,6 @@
     background-position-x: center;
     background-position-y: center;
 }
-
 .Body-container > div {
     max-width: 1363px;
     margin: auto;
@@ -40,11 +37,11 @@
     top:100px;
     z-index:1;
 }
-
 form > h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 52px;
+    font-size: 60px;
+    line-height: 50px;
     font-weight: 500;
     margin-top: 10px;
     color:#fff;
@@ -56,20 +53,31 @@ form > p {
     font-size:20px;
     font-weight: bold;
     line-height: 42px;
-    margin-top: 10px;
-    margin-bottom: 34px;
+    margin-top: 30px;
+    margin-bottom: 84px;
     text-align: center;
     color:#fff;
 }
+form > .time > .live {
+    max-width:169px;
+    height:43px;
+    margin-right: 32px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: -40px;
+    padding-bottom: -10px;
+    line-height: 14px;
+    background:#db154a;
+    border-radius: 24px 24px 24px 24px;
+}
 form > .time {
     text-transform: uppercase;
-    font-size:35px;
+    font-size:80px;
     font-weight: 400;
     font-weight:bold;
     text-align: center;
     z-index:1;
 }
-
 form > p:nth-child(2) > span {
     background:#db154a;
     max-width:171px;
@@ -78,7 +86,6 @@ form > p:nth-child(2) > span {
     font:bold 60px/23px arial;
     padding:0px 20px;
 }
-
 form > p:nth-child(2) > span:nth-child(2) {
     background: linear-gradient(to right, #ffffff, #ffffff);
     -webkit-background-clip: text;
@@ -88,7 +95,6 @@ form > p:nth-child(2) > span:nth-child(1) {
     margin-left:28px;
     color:#fff;
 }
-
 form > div  {
     max-width:1130px;
     min-height: 562px;
@@ -108,17 +114,34 @@ form > .video  {
     z-index: -999;
     background-image: url("../../images/background.jpg");
 }
-
-
 form > .video > span {
-
     border:none;
-    width:110px;
-    height: 110px;
+    width:117px;
+    height: 103px;
     border-radius: 100%;
     color:#fff;
-    background: #592e25;
-    padding:35px;
+    background: #02050d;
+    padding:45px 20px 20px 30px;
+    opacity: 70%;
+    content:"";
+    position:relative;
+    left:44%;
+    top:280px;
+    z-index: 1;
+    bottom:0px;
+}
+form > .video > span:before {
+    position:relative;
+    left:45%;
+    top:200px;
+}
+form > div > span:hover {
+    width:117px;
+    height: 103px;
+    border-radius: 100%;
+    color:#fff;
+    background: #ffffff;
+    padding:45px 20px 20px 30px;
     opacity: 70%;
     content:"";
     position:relative;
@@ -126,31 +149,14 @@ form > .video > span {
     top:300px;
     z-index: 1;
     bottom:0px;
-}
-form > div > span:hover {
-    width:120px;
-    height:120px;
-    border:none;
-    width:110px;
-    height: 110px;
-    border-radius: 100%;
-    color:#fff;
-    background: #000000;
-    padding:35px;
-    opacity: 70%;
-    content:"";
-    position:relative;
-    z-index:1;
 
 
 }
-
 .play-button {
     margin:auto;
     text-align: center;
     opacity: 100%;
 }
-
 form > div > div > div:nth-child(1):before {
     content: "";
     position: absolute;
@@ -164,7 +170,6 @@ form > div > div > div:nth-child(1):before {
     background-color: #6e1133;
     z-index:2;
 }
-
 form > div > div > div:nth-child(1):after {
     content: "";
     opacity: 100%;
@@ -186,18 +191,14 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 1440px ) {
     .Body-container {
         width:100%;
-        min-height: 1250px;
-        margin-top: -40px;
+        min-height: 1480px;
+        margin-top: -10px;
+        border: 1px solid red;
     }
-    .Body-container > div {
-        max-width:1440px;
-        margin:auto;
+    .Body-container::before {
+        background: #000000;
+        z-index:-9999;
     }
-
-    .Body-container > div > form {
-        margin-top: 40px;
-    }
-
     .Body-container::after {
         content: "";
         opacity: 0.5;
@@ -211,83 +212,174 @@ form > div > div > div:nth-child(1):after {
         background-color: #000;
         margin-top:100px;
     }
+    .Body-container > div {
+        max-width:1000px;
+        margin:auto;
+    }
+    .Body-container > div > form {
+        margin-top: 0px;
+    }
+    form > h1 {
+         text-align: center;
+         text-transform: uppercase;
+         font-size: 65px;
+         line-height: 60px;
+         font-weight: 500;
+         margin-top: 10px;
+         color:#fff;
+         z-index:-999;
 
+     }
+    form > p {
+        text-transform: uppercase;
+        font-size:20px;
+        font-weight: bold;
+        line-height: 42px;
+        margin-top: 30px;
+        margin-bottom: 54px;
+        text-align: center;
+        color:#fff;
+    }
+    form > .time > .live {
+        max-width:169px;
+        height:43px;
+        margin-right: 32px;
+        padding-left:20px;
+        padding-right: 20px;
+        padding-top: -40px;
+        padding-bottom: -10px;
+        line-height: 14px;
+        background:#db154a;
+        border-radius: 24px 24px 24px 24px;
+    }
+    form > .time {
+        text-transform: uppercase;
+        font-size:60px;
+        font-weight: 400;
+        font-weight:bold;
+        text-align: center;
+        z-index:1;
+    }
+    form > p:nth-child(2) > span {
+        background:#db154a;
+        max-width:171px;
+        border-radius: 5%;
+        height: 80px;
+        font:bold 60px/23px arial;
+        padding:0px 20px;
+    }
+    form > p:nth-child(2) > span:nth-child(2) {
+        background: linear-gradient(to right, #ffffff, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    form > p:nth-child(2) > span:nth-child(1) {
+        margin-left:28px;
+        color:#fff;
+    }
+    form > div  {
+        max-width:1130px;
+        min-height: 562px;
+        z-index:1;
+    }
+    form > .video  {
+        max-width:1100px;
+        max-height:580px;
+        margin-top:20px;
+        margin-bottom: -120px;
+        position:relative;
+        left:20px;
+        top:20px;
+        opacity: 90%;
+        background-size:100%;
+        background-repeat: no-repeat;
+        z-index: -999;
+        background-image: url("../../images/background.jpg");
+    }
+    form > .video > span {
+        border:none;
+        width:117px;
+        height: 103px;
+        border-radius: 100%;
+        color:#fff;
+        background: #02050d;
+        padding:45px 20px 20px 30px;
+        opacity: 70%;
+        content:"";
+        position:relative;
+        left:44%;
+        top:280px;
+        z-index: 1;
+        bottom:0px;
+    }
+    form > .video > span:before {
+        position:relative;
+        left:45%;
+        top:200px;
+    }
+    form > div > span:hover {
+        border:none;
+        width:117px;
+        height: 103px;
+        border-radius: 100%;
+        color:#fff;
+        background: #ffffff;
+        padding:45px 20px 20px 30px;
+        opacity: 70%;
+        content:"";
+        position:relative;
+        left:45%;
+        top:300px;
+        z-index: 1;
+        bottom:0px;
+
+
+    }
+    .play-button {
+        margin:auto;
+        text-align: center;
+        opacity: 100%;
+    }
+    form > div > div > div:nth-child(1):before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 80px;
+        right: 0px;
+        bottom: 20px;
+        max-width:1110px;
+        min-height:580px;
+        opacity: 80%;
+        background-color: #6e1133;
+        z-index:2;
+    }
+    form > div > div > div:nth-child(1):after {
+        content: "";
+        opacity: 100%;
+        position: absolute;
+        top: 20px;
+        left: -120px;
+        right: 0px;
+        bottom: 10px;
+        max-width:1110px;
+        min-height:580px;
+        opacity: 80%;
+        background: #1e4a4f;
+        z-index:3;
+
+    }
     form > div > div:nth-child(1) {
         max-width: 1008px;
         min-height:500px;
-        background-image: url("/src/components/images/background.jpg");;
+
         z-index:1;
         position:relative;
-        left:-5px;
+        left:10px;
         top:50%;
         margin: 58px auto;
 
     }
 
-    .Body-VideoBackground:after {
-        content: "";
-        opacity: 100%;
-        position: absolute;
-        top: 350px;
-        left: 200px;
-        right: 0px;
-        bottom: 10px;
-        max-width:980px;
-        min-height:550px;
-        opacity: 80%;
-        background-color: #6e1133;
-    }
-    .Body-VideoBackground:before {
-        content: "";
-        position: absolute;
-        top: 340px;
-        left:270px;
-        right: 0px;
-        bottom: 20px;
-        max-width:1000px;
-        min-height:550px;
-        opacity: 80%;
-        background-color: #1e4a4f;
-    }
-
-    .Body-VideoPlay {
-        background: none;
-        width:120px;
-        height:120px;
-        border:none;
-        width:110px;
-        height: 110px;
-        border-radius: 100%;
-        color:#fff;
-        background: #592e25;
-        padding:35px;
-        opacity: 70%;
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:45%;
-        bottom:200px;
-    }
-    .Body-VideoPlay:hover {
-        background: none;
-        width:120px;
-        height:120px;
-        border:none;
-        width:110px;
-        height: 110px;
-        border-radius: 100%;
-        color:#fff;
-        background: #000000;
-        padding:35px;
-        opacity: 80%;
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:45%;
-
-        bottom:200px;
-        transition: 1.5s;
-    }
 
 }
 
@@ -297,25 +389,25 @@ form > div > div > div:nth-child(1):after {
         width:100%;
         z-index:1;
         min-height: 1248px;
-        margin-top: -80px;
+        margin-top: -20px;
     }
-    .Body-Components {
+    .Body-container > div  {
         max-width: 870px;
         margin:auto;
     }
-    .Body-Components form {
-        margin-top: 80px;
+    .Body-container > div > form  {
+        margin-top: 0px;
     }
-    .Body-Components > h1 {
+    form > h1 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 48px;
+        font-size: 60px;
         font-weight: 500;
         color:#fff;
     }
-    .Body-Components > .Body-Components > .p {
+    form > p {
         text-transform: uppercase;
-        font-size:30px;
+        font-size:26px;
         font-weight: 600;
         line-height: 92px;
         margin-top: -10px;
@@ -323,18 +415,18 @@ form > div > div > div:nth-child(1):after {
         text-align: center;
         color:#fff;
     }
-    .Body-Components > .Body-Components > .time {
+    form > .time {
         text-transform: uppercase;
-        font-size:60px;
+        font-size:50px;
         font-weight: 400;
-        line-height: 92px;
+        line-height: 72px;
         margin-top: -10px;
         margin-bottom: -20px;
         font-weight:bold;
         color:#fff;
         text-align: center;
     }
-    .Body-Components > .Body-Components > .time > .live {
+    form > .time > .live {
         background:#db154a;
         max-width:171px;
         border-radius: 5%;
@@ -343,33 +435,21 @@ form > div > div > div:nth-child(1):after {
         padding:0px 20px;
 
     }
-    .Body-Components > .Body-Components > .time > span {
+    form > p:nth-child(2) > span {
         margin-left:18px;
         color:#fff;
     }
-    .Body-Video {
+    form > .video {
         max-width: 980px;
-        min-height:500px;
+        min-height:400px;
         background-image: url("/src/components/images/background.jpg");
         background-size:cover;
-        margin-top:60px;
+        margin-top:40px;
         margin-bottom: 10px;
         z-index:1;
         left:0px;
     }
-    .Body-VideoBackground:after {
-        content: "";
-        position: absolute;
-        top: 360px;
-        left:0px;
-        right: 0px;
-        bottom: 20px;
-        width:880px;
-        min-height:450px;
-        opacity: 80%;
-        background-color: #6e1133;
-    }
-    .Body-VideoBackground:before {
+    form > .video:before {
         content: "";
         position: absolute;
         top: 340px;
@@ -379,11 +459,22 @@ form > div > div > div:nth-child(1):after {
         width:900px;
         min-height:450px;
         opacity: 80%;
-        background-color: #1e4a4f;
+    }
+    form > .video:after {
+        content: "";
+        position: absolute;
+        top: 360px;
+        left:20px;
+        right: 0px;
+        bottom: 20px;
+        width:880px;
+        min-height:450px;
+        opacity: 80%;
     }
 
-    .Body-VideoPlay {
-        background: none;
+
+    form > .video > span {
+        background: red;
         width:120px;
         height:120px;
         border:none;
@@ -391,14 +482,15 @@ form > div > div > div:nth-child(1):after {
         height: 110px;
         border-radius: 100%;
         color:#fff;
-        background: #592e25;
+
         padding:35px;
         opacity: 70%;
         content:"";
         position:absolute;
         z-index:1;
-        left:40%;
-        bottom:200px;
+        left:42%;
+        top:190px;
+        bottom:10px;
     }
     .Body-VideoPlay:hover {
         background: none;
@@ -416,10 +508,16 @@ form > div > div > div:nth-child(1):after {
         position:absolute;
         z-index:1;
         left:45%;
-
-        bottom:200px;
+        bottom:10px;
         transition: 1.5s;
     }
+    .play-button {
+        margin:auto;
+        text-align: center;
+        opacity: 100%;
+    }
+
+
 
 }
 
@@ -432,16 +530,15 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 768px) {
     .Body-container {
         width:100%;
-
         min-height: 1228px;
-        margin-top: -10px;
+        margin-top: 60px;
     }
-    .Body-Components {
+    .Body-container > div {
         max-width: 680px;
         margin:auto;
     }
-    .Body-Components form {
-        margin-top: 55px;
+    .Body-container > div > form {
+        margin-top: -35px;
     }
     .Body-container::after {
         content: "";
@@ -458,58 +555,69 @@ form > div > div > div:nth-child(1):after {
     }
 
 
-    .Body-Components > h1 {
+    form > h1 {
         text-align: center;
         text-transform: uppercase;
         font-size: 48px;
+        line-height: 55px;
         font-weight: 500;
         color:#fff;
     }
-    .Body-Components > .Body-Components > .p {
+    form > p {
         text-transform: uppercase;
-        font-size:30px;
+        font-size:18px;
         font-weight: 600;
         line-height: 92px;
         margin-top: -10px;
-        margin-bottom: 10px;
+        margin-bottom: 80px;
         text-align: center;
+        display:block;
         color:#fff;
     }
-    .Body-Components > .Body-Components > .time {
+
+    form > .time > .live {
+        background:#db154a;
+        max-width:120px;
+        border-radius: 5%;
+        height: 59px;
+        font:bold 30px/25px arial;
+        padding:0px 30px;
+        position:relative;
+        left:280px;
+        bottom:100px;
+
+    }
+    form > .time > .clock {
         text-transform: uppercase;
-        font-size:80px;
+        font-size: 90px;
         font-weight: 400;
         line-height: 92px;
         margin-top: -30px;
         margin-bottom: -40px;
         font-weight:bold;
         color:#fff;
+        position:relative;
+        bottom:0px;
+        left:-55px;
         text-align: center;
     }
-    .Body-Components > .Body-Components > .time > .live {
-        background:#db154a;
-        max-width:171px;
-        border-radius: 5%;
-        height: 80px;
-        font:bold 50px/25px arial;
-        padding:0px 30px;
 
-    }
-    .Body-Components > .Body-Components > .time > span {
+    form > p:nth-child(2) > span {
         margin-left:18px;
         color:#fff;
     }
 
 
-    .Body-Video {
+    form > .video {
         max-width: 980px;
-        min-height:350px;
+        min-height:364px;
         background-image: url("/src/components/images/background.jpg");
         background-size:cover;
         margin-top:60px;
         margin-bottom: 10px;
         z-index:1;
-        left:0px;
+        left:10px;
+        top:0px;
 
     }
 
@@ -525,7 +633,6 @@ form > div > div > div:nth-child(1):after {
         left:0px;
         right: 0px;
         bottom: 0px;
-
         width:700px;
         min-height:400px;
         opacity: 80%;
@@ -544,25 +651,29 @@ form > div > div > div:nth-child(1):after {
         opacity: 80%;
         background-color: #6e1133;
     }
-
-    .Body-VideoPlay {
-        background: none;
-        width:100px;
-        height:100px;
+    form > .video > span {
         border:none;
+        width:117px;
+        height: 103px;
         border-radius: 100%;
         color:#fff;
-        background: #592e25;
-        padding:35px;
+        background: #02050d;
+        padding:45px 20px 20px 30px;
         opacity: 70%;
         content:"";
-        position:absolute;
-        z-index:1;
-        left:40%;
-        bottom:100px;
+        position:relative;
+        left:44%;
+        top:150px;
+        z-index: 1;
+        bottom:0px;
     }
-    .Body-VideoPlay:hover {
-        background: none;
+    form > .video > span:before {
+        position:relative;
+        left:45%;
+        top:200px;
+    }
+    form > .video > span:hover {
+
         width:100px;
         height:100px;
         border:none;
@@ -575,7 +686,8 @@ form > div > div > div:nth-child(1):after {
         position:absolute;
         z-index:1;
         left:40%;
-        bottom:100px;
+        top:150px;
+
     }
 
 }

@@ -20,7 +20,7 @@ function App() {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={MainPage}/>
-                        <Route path="/:id" component={SubPage}/>
+                        <Route exact path="/shop/:id" component={SubPage}/>
                     </Switch>
                 </Router>
                 <Footer/>

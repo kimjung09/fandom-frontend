@@ -62,7 +62,7 @@ function Body() {
                             {
                                 dataList ? dataList.map((item, index) => (
                                 <React.Fragment key={index}>
-                                    <a href={`shop/${item.id}`}>
+                                    <a href={`/shop/${item.id}`}>
                                         <img
                                             key={item.id}
                                             id={item.id}

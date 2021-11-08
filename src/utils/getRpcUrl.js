@@ -1,10 +1,9 @@
 import sample from 'lodash/sample'
 
-
 export const nodes = [
-    "https://bsc-dataseed1.ninicoin.io",
-    "https://bsc-dataseed1.defibit.io",
-    "https://bsc-dataseed.binance.org"
+    process.env.REACT_APP_BSC_NODE_1,
+    process.env.REACT_APP_BSC_NODE_2,
+    process.env.REACT_APP_BSC_NODE_3
 ]
 
 const getNodeUrl = () => {

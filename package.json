@@ -19,7 +19,8 @@
     "web3": "^1.6.0",
     "ethers": "^5.1.4",
     "lodash": "^4.17.21",
-    "bignumber.js": "^9.0.0"
+    "bignumber.js": "^9.0.0",
+    "@ethersproject/experimental": "^5.0.1"
   },
   "scripts": {
     "start": "export PORT=3000 && react-scripts start",

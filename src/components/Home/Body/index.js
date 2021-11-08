@@ -7,6 +7,7 @@ import itemList  from '../../item.json';
 
 const Body = (match) => {
     const [clock, setClock] = useState("");
+
     const getTime = () => {
         const date = new Date();
         const days = date.getDay();
@@ -68,6 +69,7 @@ const Body = (match) => {
                                             key={item.id}
                                             id={item.id}
                                             src={item.img}
+
                                         />
                                     </a>
                                 </React.Fragment>

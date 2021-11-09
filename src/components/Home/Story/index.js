@@ -1,6 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Body/Story.css"
 import ItemList from '../../item.json'
+import axios from "axios";
+
+
+const getItems = async() => {
+    try{
+        return await axios.get();
+    } catch(error) {
+        console.error(error);
+    }
+};
+
+
+const [item, setItem] = useState('');
+
+
+useEffect(() => {
+
+})
 
 function Story(){
     return (

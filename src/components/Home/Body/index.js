@@ -3,11 +3,12 @@ import "./Body.css"
 import "./Story.css"
 import {FaPlay} from 'react-icons/fa'
 import itemList  from '../../item.json';
+import { detailPage } from "../../../utils/api/api";
 
 
 const Body = (match) => {
-    const [clock, setClock] = useState("");
 
+    const [clock, setClock] = useState("");
     const getTime = () => {
         const date = new Date();
         const days = date.getDay();
@@ -20,6 +21,10 @@ const Body = (match) => {
     React.useEffect(() => {
         setInterval(getTime, 1000);
     });
+
+
+
+
 
     const [dataList, setDataList] = useState([]);
 

@@ -3,13 +3,13 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-
 }
 body {
     background: #000000;
     overflow-x: hidden;
     overflow-y: hidden;
     width:100%;
+
 
 }
 

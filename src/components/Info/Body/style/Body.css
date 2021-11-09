@@ -141,9 +141,10 @@
     margin-right: 14px;
     color:#dfdfdf;
 }
-.Container > .Description  > button:hover {
+.Description > .ButtonContainer   > button:hover {
     opacity: 80%;
     color:#ffffff;
+    background: red;
 }
 /* table 컨텐츠 */
 .Container > .Description > form {
@@ -379,6 +380,9 @@
 
         top: -55px;
     }
+    .Description > .ButtonContainer   > button:hover {
+        background:red;
+    }
     .Description > .ButtonContainer   > button > span {
         margin-right: 14px;
         color:#dfdfdf;
@@ -386,6 +390,8 @@
     .Container > .Description  > button:hover {
         opacity: 80%;
         color:#ffffff;
+
+
     }
     /* table 컨텐츠 */
     .Container > .Description > form {
@@ -720,7 +726,7 @@
     .SubBody-Container {
         width:100%;
         max-width: 680px;
-        min-height:1124px;
+        min-height:990px;
         color:#000000;
         background:#ffffff;
         border:none;
@@ -728,6 +734,7 @@
         margin:240px auto;
         position: relative;
         top:10px;
+        padding-bottom: 20px;
     }
     .SubBody-Container > h1 {
         text-align: center;
@@ -740,6 +747,7 @@
         color:#ffffff;
     }
 
+
     .SubBody-Container > h1 > span {
         background: red;
         padding:0px 24px;
@@ -748,12 +756,13 @@
         font-size:70px;
         height:12px;
         border-radius: 24px 24px 24px 24px;
+        display:none;
     }
     .SubBody-Container > .Container {
         max-width:680px;
         height:140px;
         position: relative;
-        bttom:100px;
+
 
     }
     .SubBody-Container > .Container > img {
@@ -778,87 +787,90 @@
         top:280px;
         left:-100px;
 
-
     }
     .Container > .Description > h2 {
         font-size:30px;
+        margin-top: 33px;
+        line-height: 40px;
+        text-align: center;
         margin-bottom: 28px;
         color:#000000;
     }
     .Container > .Description >  p {
         color:#dfdfdf;
         text-align: left;
-        font-size:14px;
+        font-size:12px;
         font-weight: bold;
         margin-left: 10px;
+        z-index:1;
+        position:absolute;
+        bottom:340px;
+        display:none;
 
     }
     .Container > .Description > .ButtonContainer {
-        max-width:150px;
-        min-height: 60px;
+        width:1000px;
+        height: 20px;
+        padding:100px;
         margin-top:-75px;
         margin-left: 10px;
         font-size:28px;
         font-weight: bold;
-        border:none;
         color:#fff;
+        z-index:1;
+        position:absolute;
+        bottom:300px;
     }
-    .Container > .Description > .ButtonContainer  {
-        max-width:150px;
-        height:120px;
-        margin-bottom: 10px;
-        outline: none;
-        border:none;
-        font-size: 28px;
-        border: none;
-        float:left;
-        position:relative;
-        left:-0px;
-        top: 80px;
-    }
+
     .Description > .ButtonContainer > input {
-        width:250px;
-        height:55px;
-        font-size:22px;
+        width:450px;
+        min-height:58px;
+
         text-transform: uppercase;
         color:#000000;
         text-align: right;
-        padding-right: 10px;
+
         margin-top: 10px;
         font-weight: bold;
-        opacity: 60%;
-        border:2px solid #000000;
-        background:#ffffff;
-        display:flex;
+        opacity: 100%;
+        border:3px solid #000000;
+        background: #ffffff;
+        z-index:1;
+        position:absolute;
+        display:none;
     }
     .Description > .ButtonContainer   > button {
-        width:150px;
-        height: 55px;
+        width:768px;
+        height:120px;
         margin-left: 15px;
-        background: #db154a;
-        font-size:18px;
+        font-size:40px;
         font-weight: bold;
         border:none;
         color:#ffffff;
-        position:relative;
-        left:250px;
-        top: -55px;
+        position:absolute;
+        left:-165px;
+        margin-top: 80px;
+
+        top:1280px;
+
     }
     .Description > .ButtonContainer   > button > span {
-        margin-right: 14px;
-        color:#dfdfdf;
+        margin-right: 20px;
+        color:#000000;
     }
-    .Container > .Description  > button:hover {
-        opacity: 80%;
+    .Description > .ButtonContainer   > button:hover {
         color:#ffffff;
+        opacity: 80%;
+
     }
     /* table 컨텐츠 */
     .Container > .Description > form {
-        max-width:420px;
-        min-height: 195px;
-        margin-top: 120px;
-        margin-left: 10px;
+        max-width:602px;
+        min-height: 171px;
+        margin-top: 50px;
+        margin-left:-20px;
     }
+
     .Container > .Description  > form > table {
         border-collapse: separate;
         border-spacing: 0 0px;
@@ -868,6 +880,7 @@
         width:507px;
         padding:0;
         margin-top: 30px;
+
 
     }
     .Container > .Description  > form > table > thead > tr:first-child {
@@ -880,7 +893,7 @@
     }
     .Container > .Description  > form > table > thead  > tr > th {
         width:500px;
-        font-size:15px;
+        font-size:18px;
         line-height: 32px;
         font-weight: normal;
         text-transform: capitalize;
@@ -890,14 +903,24 @@
         width:500px;
         padding:0;
         margin-top: 30px;
+
     }
+
     .Container > .Description  > form > table > tbody > tr > th {
         width:500px;
+        min-height: 176px;
         font-size:15px;
         line-height: 32px;
         font-weight: normal;
         text-transform: capitalize;
         border-bottom: 1px solid #000000;
+
+    }
+    .Container > .Description  > form > table > tbody > tr:nth-child(3) {
+        display:none;
+    }
+    .Container > .Description  > form > table > tbody > tr:nth-child(4) {
+        display:none;
     }
     .TableContainer > .Slider {
         max-width: 1225px;

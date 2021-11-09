@@ -1,8 +1,9 @@
 .Footer {
     width: 100%;
-    min-height: 209px;
+    min-height: 151px;
     background:#000000;
-    padding-bottom: 90px;
+    padding-bottom: 0px;
+
 }
 
 .Footer > div {
@@ -11,41 +12,47 @@
 }
 
 .Footer > div >  a {
-    margin-right: 80px;
+    margin-right:20px;
     color:#ffffff;
     text-transform: uppercase;
     text-align: center;
-    font:bold 18px/138px arial;
+    font:18px/108px arial;
     position: relative;
     left:35%;
 
 }
+.Footer > div:nth-child(1) >  a:nth-child(1) {
+    border-right: 2px solid red;
+    padding-right: 30px;
+}
 
-.Footer > div > img {
-    float:right;
-    margin-right:20px;
-    margin-top: 73px;
-    width:40px;
-    height: 40px;
+
+.Footer > div:nth-child(2) {
+    margin:auto;
+
+}
+.Footer > div:nth-child(2) > a > span {
+    width:100px;
+    height: 45px;
     position:relative;
-    top:50px;
-    left:-565px;
-    background:#d8d8d8;
+    top:-20px;
+    left:-4%;
+    padding:15px;
+    border:none;
+    background:#ffffff;
+    line-height: 80px;
+    border-radius: 100%;
+}
+.Footer > div:nth-child(2) > a:nth-child(3) > span {
+    background: #24a1df;
+}
+.Footer > div:nth-child(2) > a:nth-child(4) > span {
+    background:#7289d9;
+}
+.Footer > div:nth-child(2) > a:nth-child(5) > span {
+    background:#ffc017;
 }
 
-.Footer >  div > button {
-    background:#787878;
-    position:fixed;
-    left:85%;
-    bottom:400px;
-    z-index:1;
-    width:50px;
-    float:right;
-    justify-self: start;
-    height:50px;
-    border:0;
-    padding:0;
-}
 
 /** Media Query LatTop L(1440px) */
 @media screen and (max-width: 1440px){
@@ -66,34 +73,44 @@
         color:#ffffff;
         text-transform: uppercase;
         font:bold 18px/138px arial;
-        margin-left: 80px;
-        margin-right: 10px;
+        margin-left: 70px;
+        border-right: 1px solid #333333;
+        margin-right: -40px;
+
     }
 
-    .Footer > div > img {
-        float:right;
-        margin-right:18px;
-        margin-top: 73px;
-        width:40px;
-        height: 40px;
+    .Footer > div:nth-child(1) >  a:nth-child(1) {
+        border-right: 2px solid red;
+        padding-right: 40px;
+    }
+
+
+    .Footer > div:nth-child(2) {
+        margin:auto;
+
+    }
+    .Footer > div:nth-child(2) > a > span {
+        width:100px;
+        height: 45px;
         position:relative;
-        top:40px;
-        left:-420px;
-        background:#d8d8d8;
+        top:-30px;
+        left:-6%;
+        padding:15px;
+        border:none;
+        background:#ffffff;
+        line-height: 80px;
+        border-radius: 100%;
     }
-    .Footer >  div > button {
-        background:#787878;
-        position:fixed;
-        left:85%;
-        bottom:400px;
-        z-index:1;
-        width:50px;
-        float:right;
-        justify-self: start;
-        height:50px;
-        border:0;
-        padding:0;
+    .Footer > div:nth-child(2) > a:nth-child(3) > span {
+        background: #24a1df;
     }
+    .Footer > div:nth-child(2) > a:nth-child(4) > span {
+        background:#7289d9;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(5) > span {
+        background:#ffc017;
+    }
+
 }
 /** Media Query LatTop L(1024) */
 @media screen and (max-width: 1024px){
@@ -114,33 +131,41 @@
         color:#ffffff;
         text-transform: uppercase;
         font:bold 18px/138px arial;
-        margin-left: 50px;
-        margin-right: 10px;
+        margin-left: 70px;
+        margin-right: -60px;
     }
 
-    .Footer > div > img {
-        float:right;
-        margin-right:18px;
-        margin-top: 73px;
-        width:40px;
-        height: 40px;
-        position:relative;
-        top:40px;
-        left:-350px;
-        background:#d8d8d8;
+    .Footer > div:nth-child(1) >  a:nth-child(1) {
+        border-right: 2px solid red;
+        padding-right: 10px;
     }
-    .Footer >  div > button {
-        background:#787878;
-        position:fixed;
-        left:85%;
-        bottom:400px;
-        z-index:1;
-        width:50px;
-        float:right;
-        justify-self: start;
-        height:50px;
-        border:0;
-        padding:0;
+
+
+    .Footer > div:nth-child(2) {
+        margin:auto;
+
+    }
+    .Footer > div:nth-child(2) > a > span {
+        width:100px;
+        height: 45px;
+        position:relative;
+        top:-45px;
+        left:-8%;
+        padding:15px;
+        border:none;
+        background:#ffffff;
+        line-height: 80px;
+        margin:5px;
+        border-radius: 100%;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(3) > span {
+        background: #24a1df;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(4) > span {
+        background:#7289d9;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(5) > span {
+        background:#ffc017;
     }
 }
 
@@ -148,7 +173,7 @@
 @media screen and (max-width: 768px) {
     .Footer {
         width: 100%;
-        min-height: 247px;
+        min-height: 196px;
         background:#000000;
 
     }
@@ -159,37 +184,46 @@
     }
 
     .Footer > div >  a {
-        margin-right: 20px;
+
+
         color:#ffffff;
         text-transform: uppercase;
-        display: none;
         font:bold 18px/138px arial;
+        border:none;
     }
 
-    .Footer > div > img  {
-        float:right;
-        margin-right:18px;
-        margin-top: 73px;
-        width:73px;
-        height: 75px;
-        position:relative;
-        border:none;
-        top:0px;
-        left:0px;
-        background:#4d4d4d;
+    .Footer > div:nth-child(1) >  a {
+        border-right: 2px solid red;
+        padding-right: 10px;
+        display: none;
+
     }
-    .Footer >  div > button {
-        background:#787878;
-        position:fixed;
-        left:85%;
-        bottom:400px;
-        z-index:1;
-        width:73px;
-        float:right;
-        justify-self: start;
-        height:75px;
-        border:0;
-        padding:0;
+
+
+    .Footer > div:nth-child(2) {
+        margin:auto;
+    }
+    .Footer > div:nth-child(2) > a > span {
+        width:100px;
+        height: 45px;
+        position:relative;
+        top:15px;
+        left:-35%;
+        padding:20px;
+        border:none;
+        background:#ffffff;
+        line-height: 80px;
+
+        border-radius: 100%;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(3) > span {
+        background: #24a1df;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(4) > span {
+        background:#7289d9;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(5) > span {
+        background:#ffc017;
     }
 }
 
@@ -199,46 +233,61 @@
         width: 100%;
         min-height: 180px;
         background:#000000;
+        border:1px solid red;
 
     }
 
     .Footer > div {
-        max-width:300px;
+        max-width:400px;
         margin:auto;
     }
 
     .Footer > div >  a {
-        margin-right: 20px;
+        margin-right: -50px;
+        margin-left: 50px;
         color:#ffffff;
         text-transform: uppercase;
-        display: none;
         font:bold 17px/138px arial;
-    }
-
-    .Footer > div > img  {
-        float:right;
-        margin-right:10px;
-        margin-top: 73px;
-        width:45px;
-        height: 48px;
         position:relative;
-
-        top:0px;
-        left:0px;
-        background:#4d4d4d;
+        left:-0px;
     }
-    .Footer >  div > button {
-        background:#787878;
-        position:fixed;
-        left:85%;
-        bottom:400px;
-        z-index:1;
-        width:73px;
-        float:right;
-        justify-self: start;
-        height:75px;
-        border:0;
-        padding:0;
+    .Footer > div >  a:nth-child(4) {
+        margin-right: -50px;
+    }
+
+    .Footer > div:nth-child(1) >  a {
+
+
+
+    }
+
+
+    .Footer > div:nth-child(2) {
+        margin:auto;
+
+    }
+    .Footer > div:nth-child(2) > a > span {
+        width:78px;
+        height: 20px;
+        position:relative;
+        top:15px;
+        left:-30px;
+        padding:20px;
+        border:none;
+        background:#ffffff;
+        line-height: 80px;
+
+
+        border-radius: 100%;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(3) > span {
+        background: #24a1df;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(4) > span {
+        background:#7289d9;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(5) > span {
+        background:#ffc017;
     }
 }
 
@@ -252,41 +301,54 @@
     }
 
     .Footer > div {
-        max-width:300px;
+        max-width:330px;
         margin:auto;
     }
 
+
     .Footer > div >  a {
-        margin-right: 20px;
+        margin-right: -35px;
+        margin-left: 30px;
         color:#ffffff;
         text-transform: uppercase;
-        display: none;
-        font:bold 17px/24px arial;
-    }
-
-    .Footer > div > img  {
-        float:right;
-        margin-right:10px;
-        margin-top: 73px;
-        width:45px;
-        height: 48px;
+        font:bold 14px/138px arial;
         position:relative;
-
-        top:0px;
-        left:0px;
-        background:#4d4d4d;
+        left:-0px;
     }
-    .Footer >  div > button {
-        background:#787878;
-        position:fixed;
-        left:85%;
-        bottom:400px;
-        z-index:1;
-        width:73px;
-        float:right;
-        justify-self: start;
-        height:75px;
-        border:0;
-        padding:0;
+    .Footer > div >  a:nth-child(4) {
+        margin-right: -35px;
+    }
+
+    .Footer > div:nth-child(1) >  a {
+
+
+
+    }
+
+
+    .Footer > div:nth-child(2) {
+        margin:auto;
+
+    }
+    .Footer > div:nth-child(2) > a > span {
+        width:15px;
+        height: 15px;
+        position:relative;
+        top:15px;
+        left:-20px;
+        padding:17px;
+        border:none;
+        background:#ffffff;
+        line-height: 80px;
+        border-radius: 100%;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(3) > span {
+        background: #24a1df;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(4) > span {
+        background:#7289d9;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(5) > span {
+        background:#ffc017;
     }
 }

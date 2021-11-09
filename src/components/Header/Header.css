@@ -365,8 +365,56 @@
     }
 }
 
-/* Media Query iPenXL (411 x 823) */
+/** Media Query Galxy Fold(280 x 653) */
+ @media screen and (max-width: 280px){
+    .Header-container {
+        width: 100%;
+        min-height: 41px;
+        background: #000000;
+    }
 
+    .Header-container > div  {
+        max-width: 260px;
+        margin: 14px auto;
+        line-height: 32px;
+        color: #fff;
+    }
 
-/* Media Query ipone 6/7/8 (375 x 667) */
+    .Header-container > div > a {
+        color: #fff;
+        margin: 40px 7px 0px 0px;
+        font-size: 14px;
+        position: relative;
+        font-weight: bold;
+        float: left;
+        left:2px;
+
+    }
+
+    .Header-container > div > a:nth-child(3) {
+        float: right;
+        width: 80px;
+        height: 40px;
+        margin: 40px 10px 10px 0px;
+        font-size: 10px;
+        line-height: 40px;
+        color: #fff;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+        background: #eb1a53;
+        border-radius: 24px 20px 24px 24px;
+    }
+
+    .Header-Body > span {
+        width: 10px;
+        display: none;
+        height: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        position: relative;
+        left: 50px;
+        top: 30px;
+    }
+}
 

@@ -864,13 +864,12 @@ form > div > div > div:nth-child(1):after {
     .Body-container {
         width:100%;
         min-height: 1016px;
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .Body-container > div {
         margin:auto;
         max-width: 300px;
         text-align: center;
-        border:1px solid red;
     }
     .Body-container > div > form {
           margin-top: -50px;
@@ -1516,6 +1515,100 @@ form > div > div > div:nth-child(1):after {
     .Story-container > .Story-components {
         max-width:300px;
         min-height: 960px;
+
+    }
+    .Story-container > .Story-components > .form {
+        margin-top:-93px;
+        font-size: 28px;
+        padding-top:0px;
+
+    }
+    .Story-container > .Story-components > .form > h1 {
+        margin-top:0px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    .Story-container > .Story-components > .form > p {
+        font:  bold 14px/30px arial;
+        margin-left:30px;
+        font-family: -apple-system;
+        margin-bottom:52px;
+    }
+    .Story-components > .Story-components > .form > span {
+        width:100%;
+        display:block;
+        max-width:1223px;
+    }
+    .Story-components > .Image-Container {
+        width:100%;
+        min-height: 250px;
+        display:block;
+        max-width:960px;
+        margin:10px auto;
+
+    }
+    .Story-components > .Image-Form {
+        max-width:180px;
+        height: 450px;
+        background: #d4d4d4;
+
+    }
+    .Story-components > .Image-Small-Form {
+        width:160px;
+        min-height:200px;
+        background: #d4d4d4;
+        float:left;
+        margin-left:10px;
+        margin-right: 0px;
+        margin-bottom:20px;
+        position:relative;
+        left:10px;
+
+    }
+
+    .Story-components > .Story-components > .More-Button {
+        text-transform: uppercase;
+        float:right;
+        width:100px;
+        height:133px;
+        position: relative;
+        bottom:0px;
+        left:20px;
+        text-align:center;
+        color:#787878;
+        line-height: 120px;
+    }
+
+    /* NFT 버튼 */
+    .NFT-Button-container {
+        width:200px;
+        height:70px;
+        background:#db154a;
+        margin:50px -150px auto;
+        border: none;
+        position:relative;
+        left:-100px;
+        top:350px;
+        font-size:30px;
+        color:#fff;
+
+    }
+    .NFT-Button-container > .Link {
+        color:#fff;
+    }
+}
+
+/** Media Query Galxy Fold(280 x 653) */
+@media screen and (max-width: 280px) {
+    .Story-container {
+        width:100%;
+        min-height: 540px;
+
+    }
+    .Story-container > .Story-components {
+        max-width:250px;
+        min-height: 960px;
+        border:1px solid red;
 
     }
     .Story-container > .Story-components > .form {

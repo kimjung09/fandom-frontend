@@ -427,91 +427,81 @@
 @media screen and (max-width:375px) {
     .Story-container {
         width:100%;
-        min-height: 540px;
-
+        min-height: 920px;
+        overflow: hidden;
     }
+
     .Story-container > .Story-components {
-        max-width:960px;
-        min-height: 1124px;
-        margin: auto;
+        max-width:375px;
+        min-height: 940px;
+        margin:auto;
     }
-    .Story-container > .Story-components > .form {
-        margin-top:3px;
-        font-size: 28px;
-        padding-top:0px;
+
+    .Story-container > .Story-components > div:nth-child(1) {
+        margin-top:49px;
+        font-size: 20px;
+    }
+
+    .Story-container > .Story-components > div:nth-child(1) > h1 {
+        color:red;
+        margin-top:10px;
+        margin-bottom: 20px;
+        margin-left: 24px;
 
     }
-    .Story-container > .Story-components > .form > h1 {
-        margin-top:60px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-    }
-    .Story-container > .Story-components > .form > p {
-        font:  bold 14px/30px arial;
-        margin-left:30px;
+    .Story-container > .Story-components > div:nth-child(1) > p {
+        font:  bold 15px/38px arial;
+        margin-left: 24px;
         font-family: -apple-system;
         margin-bottom:52px;
     }
-    .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
-    }
-    .Story-components > .Image-Container {
-        width:100%;
-        min-height: 250px;
-        display:block;
-        max-width:960px;
-        margin:10px auto;
+
+    .Story-container > .Story-components > div:nth-child(1) > div {
+        max-width:400px;
+        min-height: 200px;
+        display:flex;
+        margin-left:-50px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        overflow-scrolling: touch;
 
     }
-    .Story-components > .Image-Form {
-        max-width:180px;
-        height: 450px;
-        background: #d4d4d4;
 
-    }
-    .Story-components > .Image-Small-Form {
-        width:160px;
-        min-height:200px;
-        background: #d4d4d4;
-        float:left;
-        margin-left:10px;
-        margin-right: 0px;
+
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img{
+        max-width:300px;
+        height: 200px;
         margin-bottom:20px;
-        position:relative;
-        left:10px;
+        float:left;
+        border:none;
+        overflow-x: scroll;
+        margin-left: 80px;
+        margin-right: 20px;
 
     }
 
-    .Story-components > .Story-components > .More-Button {
-        text-transform: uppercase;
-        float:right;
-        width:100px;
-        height:133px;
-        position: relative;
-        bottom:0px;
-        left:20px;
-        text-align:center;
-        color:#787878;
-        line-height: 120px;
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
     }
-
     /* NFT 버튼 */
-    .NFT-Button-container {
-        width:200px;
-        height:70px;
-        background:#db154a;
-        margin:50px -150px auto;
-        border: none;
+    .Story-container > .Story-components >  button {
+        width:160px;
+        height:63px;
+        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        border: 2px solid #db154a;
         position:relative;
-        left:-100px;
-        top:350px;
-        font-size:30px;
-        color:#fff;
-
+        left:100px;
+        top:20px;
+        font-size:20px;
+        font-weight: bold;
+        color:#db154a;
+        text-transform: uppercase;
     }
     .NFT-Button-container > .Link {
         color:#fff;
+
     }
 }

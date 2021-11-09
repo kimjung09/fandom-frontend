@@ -9,7 +9,7 @@ import {BSC_CHAIN_ID} from 'config'
 import {useState} from 'react'
 
 /* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
-import {store,getBlockNumber} from "../../utils/calls";
+import {store,getBlockNumber, bidAction} from "../../utils/calls";
 
 const WalletBtn = () => {
     const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
@@ -47,7 +47,8 @@ const WalletBtn = () => {
         // const provider = window.web3.currentProvider
         //
         // console.log(provider)
-        console.log(await store(account));
+        // console.log(await store(account));
+        await bidAction(account)
     }
 
     useEffect(

@@ -27,8 +27,6 @@ const Body = (match) => {
         setDataList(itemList);
     }, [])
 
-    console.log(match.params);
-
     return (
         <>
             <div className="Body-container">

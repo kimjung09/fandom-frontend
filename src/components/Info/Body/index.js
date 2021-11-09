@@ -6,7 +6,6 @@ import {MdLocalOffer} from 'react-icons/md'
 
 const Body = ({match}) => {
     // ItemList.find(item => item.id === match.params.id);
-    console.log(match, "hihih")
 
     // itemList match 함수를 불러 ItemList json 파일에 배치된 id 값을 숫자로 불러 - 1씩 뺸 값을 불러온다.
     const item = ItemList[parseInt(match.params.id) - 1];

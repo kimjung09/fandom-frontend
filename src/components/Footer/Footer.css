@@ -182,10 +182,7 @@
         max-width:500px;
         margin:auto;
     }
-
     .Footer > div >  a {
-
-
         color:#ffffff;
         text-transform: uppercase;
         font:bold 18px/138px arial;
@@ -198,8 +195,6 @@
         display: none;
 
     }
-
-
     .Footer > div:nth-child(2) {
         margin:auto;
     }
@@ -233,7 +228,6 @@
         width: 100%;
         min-height: 180px;
         background:#000000;
-        border:1px solid red;
 
     }
 
@@ -295,7 +289,7 @@
 @media screen and (max-width: 375px) {
     .Footer {
         width: 100%;
-        min-height: 180px;
+        max-height: 180px;
         background:#000000;
 
     }

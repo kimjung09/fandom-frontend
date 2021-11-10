@@ -1,8 +1,10 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import "./style/Body.css"
 import {CgChevronLeft, CgChevronRight} from 'react-icons/cg';
 import ItemList from '../../item.json'
 import {MdLocalOffer} from 'react-icons/md'
+import {AiOutlineClose} from 'react-icons/ai'
+import {AiOutlineIssuesClose} from 'react-icons/ai'
 
 const Body = ({match}) => {
     // ItemList.find(item => item.id === match.params.id);
@@ -11,12 +13,25 @@ const Body = ({match}) => {
     // itemList match 함수를 불러 ItemList json 파일에 배치된 id 값을 숫자로 불러 - 1씩 뺸 값을 불러온다.
     const item = ItemList[parseInt(match.params.id) - 1];
 
+    const [showModal, setShowModal] = useState(false);
+    const openModal = () => {
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+    }
+
+    const [isVisible, setIsVisible] = useState(false);
+    const onSetIsVisible = (active) => {
+        setIsVisible(false);
+    }
 
 
 
     return (
         <>
-            <div className="SubBody-Container">
+
+            <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
                 <h1><span>LIVE</span> 00:00:00:00</h1>
                 <div className="Container">
                     <img className="Image"
@@ -25,13 +40,12 @@ const Body = ({match}) => {
                         <h2>{item.title}</h2>
                         <p>{item.subTitle}</p>
                         <div className="ButtonContainer">
-                            <input type="text"  name='name' placeholder="ETH"/>
-                            <button type="button">
+                            <input type="text"  name='inputNum' placeholder="BSC"/>
+                            <button type="button" onClick={openModal}>
                                 <span>
                                     <MdLocalOffer />
                                 </span>Make Offer
                             </button>
-
                         </div>
                         <form >
                             <table>
@@ -77,13 +91,42 @@ const Body = ({match}) => {
                                 </tbody>
                             </table>
                         </form>
+                        {
+                            showModal ?
+                                <div className="Modal">
+                                 <div>
+                                    <h1>bid now</h1>
+                                    <button onClick={closeModal}>
+                                        <span>
+                                        <AiOutlineClose size={40} />
+                                        </span>
+                                    </button>
+                                    <p>{item.subTitle}</p>
+                                    <input type="text"  name='bsc'  placeholder="0.00001" required/>
+                                     <span className="number">
+                                         ETH
+                                     </span>
+                                     <span className="icon">
+                                     <AiOutlineIssuesClose />
+                                     </span>
+                                    <button type="button" onClick={closeModal}>
+                                        Make Offer
+                                    </button>
+                                 </div>
+                                </div>
+                                : null
+                        }
                     </div>
                 </div>
                 <button type="button" className="Item-Left">
-                    <span> <CgChevronLeft size={"48px"}/></span>
+                    <div>
+                        <CgChevronLeft size={"48px"}/>
+                    </div>
                 </button>
                 <button type="button" className="Item-Right">
-                    <span><CgChevronRight size={"48px"}/></span>
+                    <div>
+                        <CgChevronRight size={"48px"}/>
+                    </div>
                 </button>
             </div>
         </>

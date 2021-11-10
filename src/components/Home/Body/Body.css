@@ -1431,7 +1431,7 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 425px) {
     .Story-container {
         width:100%;
-        min-height: 540px;
+        min-height: 480px;
 
     }
     .Story-container > .Story-components {

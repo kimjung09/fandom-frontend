@@ -3,7 +3,7 @@ import "./Body.css"
 import "./Story.css"
 import {FaPlay} from 'react-icons/fa'
 import itemList  from '../../item.json';
-import { detailPage } from "../../../utils/api/api";
+// import { detailPage } from "../../../utils/api/api";
 
 
 const Body = (match) => {
@@ -31,8 +31,6 @@ const Body = (match) => {
     useEffect(() => {
         setDataList(itemList);
     }, [])
-
-    console.log(match.params);
 
     return (
         <>

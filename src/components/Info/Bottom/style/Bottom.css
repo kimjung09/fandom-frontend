@@ -161,18 +161,22 @@
     .Bottom-container {
         width:100%;
         margin-top: 43px;
-        padding-bottom: -10px;
+        padding-bottom: 10px;
+        z-index:-999;
     }
 
     .Bottom-container > form  {
         max-width:680px;
-        min-height: 726px;
+        min-height: 646px;
         background:#fff;
-        margin:-90px auto;
+        margin:-100px auto;
+        z-index:-999;
+
     }
 
     .Bottom-container > form > div {
         padding:15px;
+        z-index:-999;
     }
 
 
@@ -180,14 +184,30 @@
         font-size:14px;
         font-weight: bold;
         margin-bottom: 10px;
-        line-height: 32px;
+        line-height: 24px;
         margin-left: 7px;
+        z-index:-999;
     }
-    .Bottom-container > form > div > h1:nth-child(1) {
-        display: none;
+    .Bottom-container > form > div > p:nth-child(4) {
+        font-size:15px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-left: 7px;
+        max-width: 767px;
+        display:none;
+
     }
+    .Bottom-container > form > div > p:nth-child(5) {
+        font-size:15px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        line-height: 36px;
+        margin-left: 7px;
+        max-width: 767px;
+        display:none;
+    }
+
     .Bottom-container > form > div > p:nth-child(2) {
-        display: none;
     }
 }
 
@@ -200,10 +220,10 @@
     }
 
     .Bottom-container > form {
-        max-width:375px;
-        min-height: 1530px;
+        max-width:380px;
+        min-height: 741px;
         background:#fff;
-        margin:20px auto;
+        margin:-60px auto;
     }
 
     .Bottom-container > form > div {
@@ -212,10 +232,9 @@
 
 
     .Bottom-container > form > div > p {
-        font-size:20px;
-        font-weight: bold;
-        margin-bottom: 60px;
-        line-height: 40px;
+        font-size:14px;
+        margin-bottom: 20px;
+        line-height: 20px;
         margin-left: 7px;
     }
     .Bottom-container > form > div > h1 {
@@ -244,8 +263,8 @@
 @media screen and (max-width: 375px) {
     .Bottom-container {
         width:100%;
-        margin-top: 43px;
-        padding-bottom: 0px;
+        margin-top: 13px;
+        padding-bottom: -14px;
     }
 
     .Bottom-container > form {
@@ -253,6 +272,7 @@
         min-height: 930px;
         background:#fff;
         margin:10px auto;
+        padding-bottom:-100px;
     }
 
     .Bottom-container > form > div {
@@ -264,7 +284,7 @@
         margin-top:20px;
     }
     .Bottom-container > form > div > p {
-        font-size:14px;
+        font-size:12px;
         font-weight: bold;
         margin-bottom: 10px;
         line-height: 24px;

@@ -10,8 +10,14 @@ body {
     overflow-y: hidden;
     width:100%;
 
-
 }
+@media screen and (min-width:400px){
+  body {
+      min-height: 2300px;
+
+  }
+}
+
 
 html {
     overflow-x: hidden;

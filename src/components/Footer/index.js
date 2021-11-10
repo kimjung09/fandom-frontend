@@ -14,27 +14,27 @@ import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
           <div>
               <a href="#">
                   <span>
-                   <FaHome color={"#db154a"} size={"23"}/>
+                   <FaHome color={"#db154a"} size={"25"}/>
                   </span>
               </a>
               <a href="#">
                    <span>
-                   <FaTwitter color={"#1e9cf1"} size={"23"}/>
+                   <FaTwitter color={"#1e9cf1"} size={"25"}/>
                   </span>
               </a>
               <a href="#">
                     <span>
-                   <FaTelegramPlane color={"#fff"} size={"23"} />
+                   <FaTelegramPlane color={"#fff"} size={"25"} />
                   </span>
               </a>
               <a href="#">
                    <span>
-                   <FaDiscord color={"#fff"} size={"23"}/>
+                   <FaDiscord color={"#fff"} size={"25"}/>
                   </span>
               </a>
               <a href="#">
                   <span>
-                   <FaHome color={"#000000"} size={"23"}/>
+                   <FaHome color={"#000000"} size={"25"}/>
                   </span>
               </a>
           </div>

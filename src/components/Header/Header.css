@@ -3,7 +3,7 @@
     width: 100%;
     min-height: 111px;
     z-index: 1;
-    background: #000000;
+    background: transparent;
 }
 
 .Header-container > div {
@@ -18,10 +18,17 @@
 .Header-container > div > a {
     color: #fff;
     margin: 40px 40px 0px 0px;
-    font-size: 28px;
+    font-size: 27px;
     position: relative;
+    line-height: 38px;
+    font-weight: 600;
     float: left;
     z-index: 1;
+}
+.Header-container > div > a > .icon {
+    margin-left: 10px;
+    padding-right: 10px;
+    font-size:30px;
 }
 
 .Header-container > div > a:nth-child(3) {
@@ -72,7 +79,7 @@
     .Header-container > div > a {
         color: #fff;
         margin: 40px 40px 0px 0px;
-        font-size: 28px;
+        font-size: 26px;
         position: relative;
         float: left;
 
@@ -126,7 +133,7 @@
     .Header-container > div > a {
         color: #fff;
         margin: 40px 50px 0px 0px;
-        font-size: 28px;
+        font-size: 18px;
         position: relative;
         left: 10px;
         float: left;

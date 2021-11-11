@@ -31,23 +31,25 @@
     margin:auto;
 
 }
+
 .Footer > div:nth-child(2) > a > span {
     width:100px;
     height: 45px;
     position:relative;
     top:-20px;
     left:-4%;
-    padding:15px;
+    padding:20px;
     border:none;
     background:#ffffff;
-    line-height: 80px;
+    line-height: 90px;
     border-radius: 100%;
 }
 .Footer > div:nth-child(2) > a:nth-child(3) > span {
-    background: #24a1df;
+    background: #ffffff;
+
 }
 .Footer > div:nth-child(2) > a:nth-child(4) > span {
-    background:#7289d9;
+    background:#ffffff;
 }
 .Footer > div:nth-child(2) > a:nth-child(5) > span {
     background:#ffc017;

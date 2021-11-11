@@ -9,7 +9,7 @@
 }
 .Story-container > .Story-components {
     max-width:1345px;
-    min-height: 1124px;
+    min-height: 1324px;
     margin:auto;
 
 }
@@ -20,6 +20,7 @@
 .Story-container > .Story-components > div:nth-child(1) > h1 {
     margin-bottom: 20px;
     margin-left:72px;
+    text-align: center;
     text-transform: uppercase;
     color:#eb1a53;
     text-shadow: 5px -5px #93f7f3;
@@ -43,6 +44,7 @@
     font:  bold 18px/34px arial;
     font-family: -apple-system;
     margin-bottom:52px;
+    text-align: center;
     margin-left:72px;
 }
 .Story-container > .Story-components > div:nth-child(1) > div {
@@ -68,26 +70,54 @@
     transform: scale(1.05);
     transition: 0.5s;
 }
-/* NFT 버튼 */
-.Story-container > .Story-components >  button {
-    width:271px;
+.Story-container > .Story-components > div >  button  {
+    width:340px;
     height:63px;
-    background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
-    margin:78px 0px 91px 0px;
+    margin-bottom:44px;
     border-radius: 34px 34px 34px 34px;
     border: 2px solid #db154a;
     position:relative;
-    left:-600px;
-    top:300px;
+    background:red;
+    color:#ffffff;
+    left:450px;
     font-size:30px;
     font-weight: bold;
-    color:#db154a;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.Story-container > .Story-components > div > button:first-child > a {
+    color:#ffffff;
+}
+
+
+    /* NFT 버튼 */
+.Story-container > .Story-components >  div > button:last-child  {
+    width:271px;
+    height:63px;
+    background: #ffffff;
+    margin:78px 0px 91px 0px;
+    border-radius: 34px 34px 34px 34px;
+    position:relative;
+    left:450px;
+    top:0px;
+    font-size:30px;
+    font-weight: bold;
     text-transform: uppercase;
 }
-.NFT-Button-container > .Link {
-    color:#fff;
 
+.Story-container > .Story-components >  div > button:last-child:hover {
+    color:#ffffff;
+    background: red;
+    transition: 1.5s;
 }
+.Story-container > .Story-components >  div > button:last-child > a {
+    color:red;
+}
+.Story-container > .Story-components >  div > button:last-child:hover > a {
+   color:#ffffff;
+}
+
 
 /** Media Query LatTop L(1440px) */
 @media screen and (max-width: 1440px) {
@@ -289,7 +319,7 @@
 
         display:flex;
         max-width:700px;
-        overflow-x: hidden;
+        overflow-x: scroll;
         scroll-behavior: smooth;
         overflow-scrolling: touch;
         margin:0px 80px 0px 0px ;
@@ -390,6 +420,7 @@
         float:left;
         border:none;
         overflow-x: scroll;
+
         margin-left: -20px;
         margin-right: 80px;
 

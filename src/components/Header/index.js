@@ -1,19 +1,25 @@
 import React from 'react';
 import "./Header.css";
 import WalletBtn from "../Wallet";
+import {FaTiktok} from 'react-icons/fa'
 
 function Header() {
     return (
         <div className="Header-container">
             <div>
-                <a href="/">Home
+                <a href="/">
+                    <FaTiktok className="icon" />
+                    fandom
                 </a>
                 <a
-                    href="Shop"
+                    href=""
                     className="Header-H1"
                 >
-                    Shop
+                    <FaTiktok className="icon" />
+
+                    TikTok
                 </a>
+
                 <WalletBtn/>
             </div>
         </div>

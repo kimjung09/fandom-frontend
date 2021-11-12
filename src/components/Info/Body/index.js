@@ -7,7 +7,10 @@ import {AiOutlineClose} from 'react-icons/ai'
 import {AiOutlineIssuesClose} from 'react-icons/ai'
 
 
-const Body = ({match,props}) => {
+
+const Body = ({match, id}) => {
+
+
     // ItemList.find(item => item.id === match.params.id);
     // itemList match 함수를 불러 ItemList json 파일에 배치된 id 값을 숫자로 불러 - 1씩 뺸 값을 불러온다.
     const item = ItemList[parseInt(match.params.id) - 1];
@@ -27,12 +30,21 @@ const Body = ({match,props}) => {
     }
 
 
+    const [showPopup, setShowPopup] = useState(false);
+
+    const togglePopup = (event) => {
+        setShowPopup(event.target.value);
+    }
+
+
+
+
 
 
 
     return (
         <>
-
+           <div className="background">
             <div className="SubBody-Container" onClick={() => onSetIsVisible(true)} >
                 <h1><span>LIVE</span> 00:00:00:00</h1>
                 <div className="Container">
@@ -43,12 +55,13 @@ const Body = ({match,props}) => {
                         <p>{item.subTitle}</p>
                         <div className="ButtonContainer">
                             <input type="text"  name='inputNum' placeholder="BSC"/>
-                            <button type="button" onClick={openModal}>
+                            <button type="button" onClick={openModal} value='false'>
                                 <span>
                                     <MdLocalOffer />
                                 </span>Make Offer
                             </button>
                         </div>
+
                         <form >
                             <table>
                                 <thead>
@@ -96,28 +109,38 @@ const Body = ({match,props}) => {
                         {
                             showModal ?
                                 <div className="Modal">
-                                 <div>
-                                    <h1>bid now</h1>
-                                    <button onClick={closeModal}>
+                                    <div>
+                                        <h1>bid now</h1>
+                                        <button onClick={closeModal}>
                                         <span>
                                         <AiOutlineClose size={40} />
                                         </span>
-                                    </button>
-                                    <p>{item.subTitle}</p>
-                                    <input type="text"  name='bsc'  placeholder="0.00001" required/>
-                                     <span className="number">
+                                        </button>
+                                        <p>{item.subTitle}</p>
+                                        <input type="text"  name='bsc'  placeholder="0.00001" required/>
+                                        <span className="number">
                                          ETH
                                      </span>
-                                     <span className="icon">
+                                        <span className="icon">
                                      <AiOutlineIssuesClose />
                                      </span>
-                                    <button type="button" onClick={closeModal}>
-                                        Make Offer
-                                    </button>
-                                 </div>
+                                        <button type="button" onClick={closeModal}>
+                                            Make Offer
+                                        </button>
+                                    </div>
                                 </div>
                                 : null
                         }
+
+                        {
+                            showPopup ? (
+                                <div className="popup">
+                                    <div className="popup_inner">
+                                        dsadsdk
+                                    </div>
+                                </div>
+                            ): null}
+
                     </div>
                 </div>
                 <button type="button" className="Item-Left">
@@ -131,6 +154,7 @@ const Body = ({match,props}) => {
                     </div>
                 </button>
             </div>
+           </div>
         </>
     )
 }

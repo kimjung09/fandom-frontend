@@ -5,6 +5,7 @@
     opacity: 100%;
     background-size: cover;
     z-index:-9999;
+
 }
 .Body-container::before {
     background: #000000;
@@ -39,7 +40,7 @@ form > h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 60px;
-    line-height: 50px;
+    line-height: 30px;
     font-weight: bold;
     margin-top: 10px;
     color:#fff;
@@ -58,19 +59,17 @@ form > p {
 form > .time > .live {
     max-width:169px;
     height:33px;
-    margin-rght: 32px;
-    padding-left:20px;
-    padding-right: 20px;
-    padding-top: -50px;
-    padding-bottom: -10px;
+    margin-rght: 92px;
     line-height: 14px;
     background:#db154a;
     border-radius: 14px 14px 14px 14px;
+    margin:20px;
 }
 form > .time {
     text-transform: uppercase;
-    font-size:80px;
+    font-size:85px;
     font-weight: 400;
+
     font-weight:bold;
     text-align: center;
     z-index:1;
@@ -80,8 +79,8 @@ form > p:nth-child(2) > span {
     max-width:171px;
     border-radius: 5%;
     height: 80px;
-    font:bold 60px/23px arial;
-    padding:0px 20px;
+    font:bold 40px/23px arial;
+    padding:0px 80px;
 }
 form > p:nth-child(2) > span:nth-child(2) {
     background: linear-gradient(to right, #ffffff, #ffffff);

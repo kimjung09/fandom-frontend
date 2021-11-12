@@ -10,9 +10,18 @@ body {
     overflow-y: hidden;
     width:100%;
     background: #000000;
-
-
 }
+
+.SubPage {
+    background-image: url("/src/components/images/background3.jpg");
+    background-size: cover;
+    min-height: 1000px;
+    background-repeat: no-repeat;
+    background-position: 0px -50px;
+    position:relative;;
+    bottom:240px;
+}
+
 @media screen and (min-width:400px){
   body {
       min-height: 2300px;

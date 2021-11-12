@@ -8,18 +8,23 @@ const Bottom = ({match}) => {
   return (
       <>
       <div className="Bottom-container" id="Story">
-         <form>
-            <div>
+            <form>
+                <div>
                <h1>{item.story + 1}</h1>
                 <p>{item.description}</p>
+                <p>{item.description}</p>
+
                 <h1>{item.story + 2}</h1>
                 <p>{item.description}</p>
                 <p>{item.description}</p>
                 <p>{item.description}</p>
-                <h1>{item.story + 3}</h1>
-                <p>{item.description}</p>
-            </div>
-         </form>
+
+                </div>
+                <img src={item.img} />
+                <img src={item.img}/>
+
+            </form>
+
       </div>
       </>
   )

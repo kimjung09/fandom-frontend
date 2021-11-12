@@ -2,8 +2,8 @@
 .Header-container {
     width: 100%;
     min-height: 111px;
-    z-index: 1;
-    background: transparent;
+    background: #000000;
+
 }
 
 .Header-container > div {

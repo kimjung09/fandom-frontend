@@ -95,7 +95,6 @@
 .Story-container > .Story-components >  div > button:last-child  {
     width:271px;
     height:63px;
-    background: #ffffff;
     margin:78px 0px 91px 0px;
     border-radius: 34px 34px 34px 34px;
     position:relative;
@@ -104,6 +103,8 @@
     font-size:30px;
     font-weight: bold;
     text-transform: uppercase;
+    background: red;
+
 }
 
 .Story-container > .Story-components >  div > button:last-child:hover {
@@ -112,7 +113,7 @@
     transition: 1.5s;
 }
 .Story-container > .Story-components >  div > button:last-child > a {
-    color:red;
+    color:#ffffff;
 }
 .Story-container > .Story-components >  div > button:last-child:hover > a {
    color:#ffffff;

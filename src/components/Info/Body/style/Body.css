@@ -296,7 +296,7 @@
         max-width:1200px;
         height:140px;
         position: relative;
-        bttom:100px;
+        bottom:500px;
 
     }
     .SubBody-Container > .Container > img {
@@ -305,8 +305,8 @@
         float:left;
         padding:0;
         position:relative;
-        top:400px;
-        left:50px;
+        top:850px;
+        right:350px;
     }
     .Container > .Description {
         width:550px;
@@ -545,7 +545,7 @@
         max-width:1200px;
         height:140px;
         position: relative;
-        bttom:100px;
+        bottom:20px;
 
     }
     .SubBody-Container > .Container > img {
@@ -744,6 +744,244 @@
 
     }
 }
+
+@media screen and (max-width:1024px) {
+    .SubBody-Container {
+        width:100%;
+        max-width: 960px;
+        min-height:680px;
+        color:#000000;
+        background:#ffffff;
+        border:none;
+        display: block;
+        margin:220px auto;
+        position: relative;
+        top:10px;
+    }
+    .SubBody-Container > h1 {
+        text-align: center;
+        font-size:80px;
+        font-weight: 500;
+        margin-bottom:-500px;
+        line-height: 150px;
+        position: relative;
+        bottom:200px;
+        color:#ffffff;
+    }
+
+    .SubBody-Container > h1 > span {
+        background: red;
+        padding:0px 24px;
+        max-width:170px;
+        line-height:24px;
+        font-size:70px;
+        height:12px;
+        border-radius: 24px 24px 24px 24px;
+    }
+    .SubBody-Container > .Container {
+        max-width:1200px;
+        height:140px;
+        position: relative;
+        bottom:20px;
+
+    }
+    .SubBody-Container > .Container > img {
+        width:420px;
+        min-height: 400px;
+        float:left;
+        padding:0;
+        position:relative;
+        top:350px;
+        right:-20px;
+    }
+    .Container > .Description {
+        width:450px;
+        min-height: 142px;
+        float:right;
+        margin-right: 34px;
+        margin-top:30px;
+        font-size: 35px;
+        text-transform: uppercase;
+        position:relative;
+        bottom:-300px;
+
+
+
+    }
+    .Container > .Description > h2 {
+        font-size:30px;
+        margin-bottom: 28px;
+        color:#000000;
+    }
+    .Container > .Description >  p {
+        color:#dfdfdf;
+        text-align: left;
+        font-size:14px;
+        font-weight: bold;
+        margin-left: 10px;
+
+    }
+    .Container > .Description > .ButtonContainer {
+        max-width:150px;
+        min-height: 60px;
+        margin-top:-75px;
+        margin-left: 10px;
+        font-size:28px;
+        font-weight: bold;
+        border:none;
+        color:#fff;
+    }
+    .Container > .Description > .ButtonContainer  {
+        max-width:150px;
+        height:120px;
+        margin-bottom: 10px;
+        outline: none;
+        border:none;
+        font-size: 28px;
+        border: none;
+        float:left;
+        position:relative;
+        left:-0px;
+        top: 80px;
+    }
+    .Description > .ButtonContainer > input {
+        width:250px;
+        height:55px;
+        font-size:22px;
+        text-transform: uppercase;
+        color:#000000;
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+        opacity: 60%;
+        border:2px solid #000000;
+        background:#ffffff;
+        display:flex;
+    }
+    .Description > .ButtonContainer   > button {
+        width:150px;
+        height: 55px;
+        margin-left: 15px;
+        background: #db154a;
+        font-size:18px;
+        font-weight: bold;
+        border:none;
+        color:#ffffff;
+        position:relative;
+        left:250px;
+        top: -55px;
+    }
+    .Description > .ButtonContainer   > button > span {
+        margin-right: 14px;
+        color:#dfdfdf;
+    }
+    .Container > .Description  > button:hover {
+        opacity: 80%;
+        color:#ffffff;
+    }
+    /* table 컨텐츠 */
+    .Container > .Description > form {
+        max-width:420px;
+        min-height: 195px;
+        margin-top: 120px;
+        margin-left: 10px;
+    }
+    .Container > .Description  > form > table {
+        border-collapse: separate;
+        border-spacing: 0 0px;
+        overflow-scrolling: touch;
+    }
+    .Container > .Description  > form > table > thead > tr  {
+        width:507px;
+        padding:0;
+        margin-top: 30px;
+
+    }
+    .Container > .Description  > form > table > thead > tr:first-child {
+        background: #efefef;
+        text-transform: uppercase;
+    }
+    .Container > .Description  > form > table > thead > tr:first-child > th {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .Container > .Description  > form > table > thead  > tr > th {
+        width:500px;
+        font-size:15px;
+        line-height: 32px;
+        font-weight: normal;
+        text-transform: capitalize;
+        border-bottom: 1px solid #000000;
+    }
+    .Container > .Description  > form > table > tbody  {
+        width:500px;
+        padding:0;
+        margin-top: 30px;
+    }
+    .Container > .Description  > form > table > tbody > tr > th {
+        width:500px;
+        font-size:15px;
+        line-height: 32px;
+        font-weight: normal;
+        text-transform: capitalize;
+        border-bottom: 1px solid #000000;
+    }
+    .TableContainer > .Slider {
+        max-width: 1225px;
+        min-height: 91px;
+        border: 1px solid red;
+        margin: auto;
+    }
+    .SubBody-Container > .Item-Left {
+        width:110px;
+        height:111px;
+        float: left;
+        background: #ffffff;
+        position:relative;
+        right:40px;
+        top:120px;
+        opacity: 80%;
+        user-select: none;
+        border:none;
+    }
+    .SubBody-Container > button:nth-child(2):hover {
+        color:#fff;
+    }
+    .SubBody-Container > .Item-Left:hover {
+        background:#db154a;
+        transition:1s;
+        color:#ffffff;
+    }
+    .SubBody-Container > .Item-Right {
+        width:110px;
+        height:111px;
+        background: #ffffff;
+        float:right;
+        border:none;
+        position:relative;
+        left:530px;
+        top:100px;
+        opacity: 80%;
+
+    }
+    .SubBody-Container > .Item-Right:hover {
+        background:#db154a;
+        transition:1s;
+        color:#ffffff;
+    }
+
+    .SubBody-Container > .Item-Left > div {
+        transform: rotate( 40deg );
+
+    }
+    .SubBody-Container > .Item-Right > div {
+        user-select: none;
+        transform: rotate( 40deg );
+
+    }
+}
+
 
 /* Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {

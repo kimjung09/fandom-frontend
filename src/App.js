@@ -9,6 +9,7 @@ import Web3 from 'web3'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+
 function getLibrary(provider) {
     return new Web3(provider)
 }
@@ -17,12 +18,15 @@ function App() {
     return (
         <>
             <Web3ReactProvider getLibrary={getLibrary}>
-                <Header/>
+                 <Header/>
                 <Router>
                     <Switch>
                         <Route exact path="/" component={MainPage}/>
-                        <Route exact path="/whitelist" component={WhiteList} />
                         <Route exact path="/fandom/:id" component={SubPage}/>
+                    </Switch>
+                    <Switch>
+                        <Route exact path="/whitelist" component={WhiteList} />
+
                     </Switch>
                 </Router>
                 <Footer/>

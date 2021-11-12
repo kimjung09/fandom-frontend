@@ -66,10 +66,14 @@
     position:relative;
     left:20px;
 }
+
+/* 이미지 마우스 올릴때 크기*/
 .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
     transform: scale(1.05);
     transition: 0.5s;
 }
+
+/* 버튼 기본 스타일 */
 .Story-container > .Story-components > div >  button  {
     width:340px;
     height:63px;
@@ -77,7 +81,7 @@
     border-radius: 34px 34px 34px 34px;
     border: 2px solid #db154a;
     position:relative;
-    background:red;
+    background:#db154a;
     color:#ffffff;
     left:450px;
     font-size:30px;
@@ -85,13 +89,22 @@
     text-transform: uppercase;
     z-index: 1;
 }
+.Story-container > .Story-components > div >  button:hover {
+    background: #ffffff;
+    border:2px solid #db154a;
+    color:#db154a;
 
+}
+.Story-container > .Story-components > div >  button:first-child:hover > a {
+    color:#db154a;
+}
 .Story-container > .Story-components > div > button:first-child > a {
     color:#ffffff;
 }
 
 
-    /* NFT 버튼 */
+
+/* NFT 버튼 Bid-Node 버튼 */
 .Story-container > .Story-components >  div > button:last-child  {
     width:271px;
     height:63px;
@@ -103,20 +116,21 @@
     font-size:30px;
     font-weight: bold;
     text-transform: uppercase;
-    background: red;
+    background: #db154a;
+}
+.Story-container > .Story-components >  div > button:last-child > a {
 
 }
 
 .Story-container > .Story-components >  div > button:last-child:hover {
-    color:#ffffff;
-    background: red;
-    transition: 1.5s;
+    color:#db154a;
+    background: #ffffff;
 }
 .Story-container > .Story-components >  div > button:last-child > a {
     color:#ffffff;
 }
 .Story-container > .Story-components >  div > button:last-child:hover > a {
-   color:#ffffff;
+   color: #db154a;
 }
 
 

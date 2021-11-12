@@ -28,8 +28,6 @@ const Body = ({match,connect}) => {
     }
 
 
-
-
     return (
         <>
 

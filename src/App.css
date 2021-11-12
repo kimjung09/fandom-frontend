@@ -3,12 +3,14 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+
 }
 body {
-    background: #000000;
     overflow-x: hidden;
     overflow-y: hidden;
     width:100%;
+    background: #000000;
+
 
 }
 @media screen and (min-width:400px){
@@ -28,13 +30,4 @@ html {
 
 h1,h2,h3,h4, a {
     text-decoration: none;
-}
-
-.Header-container {
-    width:100%;
-   background: #cccccc;
-}
-
-.Header-container > Header-Body >  a {
-    color:#fff;
 }

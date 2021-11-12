@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "img": "/images/main_09.jpg",
+      "img": "/images/image1.jpg",
       "title": "killing me slow, out thewindow i'm always",
       "subTitle": "Amount you want to buy",
       "amount": "100.12 SOL",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "img": "/images/main_11.jpg",
+      "img": "/images/image2.jpg",
       "title": "killing me slow, out thewindow i'm always",
       "subTitle": "Amount you want to buy",
       "amount": "100.12 SOL",
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "img": "/images/main_13.jpg",
+      "img": "/images/image3.jpg",
       "title": "killing me slow, out thewindow i'm always",
       "subTitle": "Amount you want to buy",
       "amount": "100.12 SOL",
@@ -37,7 +37,7 @@
     },
     {
       "id": 4,
-      "img": "/images/main_25.jpg",
+      "img": "/images/image4.jpg",
       "title": "killing me slow, out thewindow i'm always",
       "subTitle": "Amount you want to buy",
       "amount": "100.12 SOL",
@@ -50,7 +50,7 @@
     },
     {
       "id": 5,
-      "img": "/images/main_27.jpg",
+      "img": "/images/image5.jpg",
       "title": "killing me slow, out thewindow i'm always",
       "subTitle": "Amount you want to buy",
       "amount": "100.12 SOL",
@@ -63,7 +63,7 @@
     },
     {
       "id": 6,
-      "img": "/images/main_23.jpg",
+      "img": "/images/image6.jpg",
       "title": "killing me slow, out thewindow i'm always",
       "subTitle": "Amount you want to buy",
       "amount": "100.12 SOL",

@@ -1,27 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import "./Body.css"
 import "./Story.css"
-import {FaPlay} from 'react-icons/fa'
+import {FaPlay,FaGift,} from 'react-icons/fa'
 import itemList  from '../../item.json';
 // import { detailPage } from "../../../utils/api/api";
 import {getNftList, getNftInfo} from "../../../utils/axios";
 
 
 const Body = (match) => {
-    const [clock, setClock] = useState("");
-    const getTime = () => {
-        const date = new Date();
-        const days = date.getDay();
-        const hours = date.getHours();
-        let minutes = date.getMinutes();
-        let sec = date.getSeconds();
-        let currentTime = `${days < 10 ? `0${days}` : days}:${hours < 10 ? `0${hours}`:hours}:${minutes < 10 ? `0${minutes}`: minutes}:${sec < 10 ? `0${sec}` : sec}`;
-        setClock(currentTime);
-    }
-    React.useEffect(() => {
-        setInterval(getTime, 1000);
-    });
-
     const [dataList, setDataList] = useState([]);
     const [change, setChange] = useState(true);
 
@@ -45,6 +31,42 @@ const Body = (match) => {
     useEffect(() => {
         setDataList(itemList);
     }, [])
+    const [hours, setHours] = useState(24);
+    const [minutes, setMinutes] = useState(60);
+    const [seconds, setSeconds] = useState(0);
+    useEffect(() => {
+        const countdown = setInterval(() => {
+            if (parseInt(seconds) > 0) {
+                setSeconds(parseInt(seconds) - 1);
+            }
+
+            if (parseInt(seconds) === 0) {
+                if (parseInt(minutes) === 0) {
+                    clearInterval(countdown);
+                } else {
+                    setMinutes(parseInt(minutes) - 1);
+                    setSeconds(59);
+                }
+            }
+
+            if (parseInt(seconds) === 0) {
+                if (parseInt(minutes) === 0) {
+                    clearInterval(countdown);
+                } else {
+                    setMinutes(parseInt(minutes) - 1);
+                    setSeconds(59);
+                }
+            }
+        }, 1000);
+        return () => clearInterval(countdown);
+    }, [hours,minutes, seconds]);
+
+
+    // 컴포넌트 전환
+    const [viewChange, setViewChange] = useState(true);
+
+
+
 
     return (
         <>
@@ -56,7 +78,7 @@ const Body = (match) => {
                         <p>own the most special moments!</p>
                         <p className="time">
                             <span className="live">LIVE</span>
-                            <span className="clock">{clock}</span>
+                            <span className="clock"> {hours}: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</span>
                         </p>
                         <div className="video">
                             <span>
@@ -71,7 +93,7 @@ const Body = (match) => {
                     <div>
                         <button onClick={() => setChange(true)}>
                             <a href="whitelist">
-                                white listing
+                                white listing <FaGift color={"none"} />
                             </a>
                         </button>
                         <h1 onClick={() => setChange(true)}>

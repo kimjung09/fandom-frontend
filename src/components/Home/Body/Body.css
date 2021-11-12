@@ -385,7 +385,7 @@ form > div > div > div:nth-child(1):after {
         width:100%;
         z-index:1;
         min-height: 1248px;
-        margin-top: -20px;
+        margin-top: -10px;
     }
     .Body-container > div  {
         max-width: 870px;
@@ -692,7 +692,7 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 425px) {
     .Body-container {
         width:100%;
-        min-height: 1016px;
+        min-height: 1116px;
         margin-top: 60px;
     }
     .Body-container > div {
@@ -719,7 +719,7 @@ form > div > div > div:nth-child(1):after {
     form > h1 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 34px;
+        font-size: 26px;
         line-height: 45px;
         font-weight: 500;
 
@@ -1427,7 +1427,7 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 425px) {
     .Story-container {
         width:100%;
-        min-height: 480px;
+        min-height: 500px;
 
     }
     .Story-container > .Story-components {

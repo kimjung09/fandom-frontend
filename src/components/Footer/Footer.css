@@ -76,8 +76,7 @@
         text-transform: uppercase;
         font:bold 18px/138px arial;
         margin-left: 70px;
-        border-right: 1px solid #333333;
-        margin-right: -40px;
+        margin-right: -50px;
 
     }
 
@@ -151,13 +150,12 @@
         width:100px;
         height: 45px;
         position:relative;
-        top:-45px;
-        left:-8%;
-        padding:40px 20px 20px 20px;
+        top:-30px;
+        left:-6%;
+        padding:30px 20px 20px 20px;
         border:none;
         background:#ffffff;
         line-height: 80px;
-        margin:5px;
         border-radius: 100%;
     }
     .Footer > div:nth-child(2) > a:nth-child(3) > span {
@@ -175,7 +173,7 @@
 @media screen and (max-width: 768px) {
     .Footer {
         width: 100%;
-        min-height: 196px;
+        min-height: 166px;
         background:#000000;
 
     }
@@ -187,13 +185,13 @@
     .Footer > div >  a {
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 18px/138px arial;
+        font:bold 18px/140px arial;
         border:none;
     }
 
     .Footer > div:nth-child(1) >  a {
         border-right: 2px solid red;
-        padding-right: 10px;
+        padding-right: 20px;
         display: none;
 
     }
@@ -202,15 +200,14 @@
     }
     .Footer > div:nth-child(2) > a > span {
         width:100px;
-        height: 45px;
+        height: 15px;
         position:relative;
         top:15px;
-        left:-35%;
-        padding:20px;
+        left:-30%;
+        padding:30px 20px 20px 20px;
         border:none;
         background:#ffffff;
-        line-height: 80px;
-
+        line-height: 120px;
         border-radius: 100%;
     }
     .Footer > div:nth-child(2) > a:nth-child(3) > span {
@@ -243,7 +240,7 @@
         margin-left: 50px;
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 17px/138px arial;
+        font:bold 14px/18px arial;
         position:relative;
         left:-0px;
     }
@@ -263,17 +260,16 @@
 
     }
     .Footer > div:nth-child(2) > a > span {
-        width:78px;
+        width:40px;
         height: 20px;
         position:relative;
-        top:15px;
-        left:-30px;
-        padding:20px;
+        top:20px;
+        margin-left: 10px;
+        left:-10px;
+        padding:30px 20px 20px 20px;
         border:none;
         background:#ffffff;
         line-height: 80px;
-
-
         border-radius: 100%;
     }
     .Footer > div:nth-child(2) > a:nth-child(3) > span {
@@ -332,7 +328,7 @@
         position:relative;
         top:15px;
         left:-20px;
-        padding:17px;
+        padding:30px 20px 20px 20px;
         border:none;
         background:#ffffff;
         line-height: 80px;

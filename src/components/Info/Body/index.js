@@ -94,7 +94,7 @@ const Body = ({match}) => {
                                 </tr>
                                 </thead>
                                 {ItemList.map((res,index) =>
-                                    <tbody  key={index}>
+                                    <tbody key={index}>
                                     <tr>
                                         <th className="bold"><i className="fas fa-user"></i>{res.amount}</th>
                                         <th>{res.price}</th>

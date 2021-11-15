@@ -1,10 +1,10 @@
 import React from 'react';
 import Body from './Body';
 
-const WhiteList = ({match}) => {
+const WhiteList = () => {
     return (
         <>
-            <Body match={match} />
+            <Body  />
         </>
     )
 }

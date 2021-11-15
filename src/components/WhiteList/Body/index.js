@@ -78,13 +78,16 @@ const Body = (match) => {
                         <p>{whiteList.subTitle}<br /></p>
                         <div className="subscribe">
                                 {whiteList ? dataList.map((res, index) =>
-                                        <div className="subscribe" >
+                                        <div >
                                         <React.Fragment key={index}>
                                                 <button type="submit">
                                                     <FaRetweet className='icon' />
                                                 </button>
+
                                             <h1>{whiteList.title}</h1>
+                                            <button>Click</button>
                                         </React.Fragment>
+
                                         </div>
                                         ) : (
                                         <React.Fragment>
@@ -94,10 +97,11 @@ const Body = (match) => {
                                         </React.Fragment>
                                 )
                                 }
-                            <div>
-                        </div>
+
                       </div>
                     </div>
+                    <button>Submit</button>
+
                 </div>
             </div>
         </>

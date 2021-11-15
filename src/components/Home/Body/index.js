@@ -23,7 +23,6 @@ const Body = () => {
                             <Timer/>
                         </p>
                         <div className="video">
-
                             <span>
                               <FaPlay size={"40"}/>
                           </span>

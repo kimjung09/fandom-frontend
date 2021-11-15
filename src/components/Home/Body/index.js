@@ -8,7 +8,7 @@ import {getNftList, getNftInfo} from "../../../utils/axios";
 
 
 const Body = () => {
-    const [dataList, setDataList] = useState([]);
+    const [datalist, setDataList] = useState([]);
     const [change, setChange] = useState(true);
 
 
@@ -112,9 +112,9 @@ const Body = () => {
                             그녀는 이제 하나의 계단만을 남겨두고 있습니다. 그녀의 WHO벨트 세계 타이틀전을 응원하며, 기념합니다.
                             </p>
                             <div>
-                                {dataList ? itemList.map((res, index) =>
+                                {datalist ? itemList.map((res, index) =>
                                         <React.Fragment key={index}>
-                                            <a href={`/fandom/${res.id}`} onClick={connect} dataList={dataList}>
+                                            <a href={`/fandom/${res.id}`} onClick={connect} datalist={datalist}>
                                                 <img key={res.id} id={res.id} src={res.img}/>
                                             </a>
                                         </React.Fragment>

@@ -9,22 +9,24 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     width:100%;
-    background: #000000;
+    background: rgba(0,0,0,1.0);
+    z-index: -99999;
 }
 
 .SubPage {
     background-image: url("/src/components/images/background3.jpg");
     background-size: cover;
-    min-height: 1000px;
+    min-height: 1300px;
+    width:100%;
     background-repeat: no-repeat;
-    background-position: 0px -50px;
+    background-position: 0px -300px;
     position:relative;;
-    bottom:240px;
+    bottom:250px;
 }
 
-@media screen and (min-width:400px){
+@media screen and (min-width:425px){
   body {
-      min-height: 2300px;
+      min-height: 1300px;
 
   }
 }

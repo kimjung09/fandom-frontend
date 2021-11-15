@@ -1,5 +1,4 @@
 import React from "react";
-import './App.css';
 import MainPage from "./components/Home";
 import WhiteList from "./components/WhiteList";
 import SubPage from "./components/Info";
@@ -23,8 +22,6 @@ function App() {
                     <Switch>
                         <Route exact path="/" component={MainPage}/>
                         <Route exact path="/fandom/:id" component={SubPage}/>
-                    </Switch>
-                    <Switch>
                         <Route exact path="/whitelist" component={WhiteList} />
 
                     </Switch>

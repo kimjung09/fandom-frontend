@@ -14,10 +14,11 @@ const SubPage = ({ match }) => {
     return (
         <>
             <div className="SubPage">
-            <Body match={match} connect={connect} />
+                <Body match={match} key={getNftList.id} connect={connect}  />
             </div>
-
             <Bottom match={match} connect={connect} />
+
+
         </>
 
     )

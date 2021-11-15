@@ -2,15 +2,13 @@
     width:100%;
     min-height: 1412px;
     margin-top: -10px;
-    opacity: 100%;
     background-size: cover;
-    z-index:-9999;
 
 }
 .Body-container::before {
     background: #000000;
-    z-index:-9999;
 }
+
 .Body-container::after {
     content: "";
     opacity: 0.5;
@@ -20,7 +18,6 @@
     right: 0px;
     bottom: 0px;
     width:100%;
-    z-index:-9999;
     height: 925px;
     margin-top:100px;
     background-image: url("/src/components/images/background3.jpg");
@@ -40,7 +37,7 @@ form > h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 60px;
-    line-height: 30px;
+    line-height: 40px;
     font-weight: bold;
     margin-top: 10px;
     color:#fff;
@@ -59,7 +56,7 @@ form > p {
 form > .time > .live {
     max-width:169px;
     height:33px;
-    margin-rght: 92px;
+    margin-right: 92px;
     line-height: 14px;
     background:#db154a;
     border-radius: 14px 14px 14px 14px;
@@ -80,7 +77,7 @@ form > p:nth-child(2) > span {
     border-radius: 5%;
     height: 80px;
     font:bold 40px/23px arial;
-    padding:0px 80px;
+    padding:0px 90px;
 }
 form > p:nth-child(2) > span:nth-child(2) {
     background: linear-gradient(to right, #ffffff, #ffffff);
@@ -578,7 +575,7 @@ form > div > div > div:nth-child(1):after {
         font:bold 30px/25px arial;
         padding:0px 30px;
         position:relative;
-        left:280px;
+        left:200px;
         bottom:100px;
 
     }
@@ -593,7 +590,7 @@ form > div > div > div:nth-child(1):after {
         color:#fff;
         position:relative;
         bottom:0px;
-        left:-55px;
+        left:-75px;
         text-align: center;
     }
 
@@ -718,8 +715,8 @@ form > div > div > div:nth-child(1):after {
     form > h1 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 26px;
-        line-height: 45px;
+        font-size: 24px;
+        line-height: 18px;
         font-weight: 500;
 
         color:#fff;
@@ -744,7 +741,7 @@ form > div > div > div:nth-child(1):after {
         font:bold 24px/25px arial;
         padding:0px 30px;
         position:relative;
-        left:150px;
+        left:100px;
         bottom:100px;
 
     }
@@ -759,7 +756,7 @@ form > div > div > div:nth-child(1):after {
         color:#fff;
         position:relative;
         bottom:40px;
-        left:-55px;
+        left:-70px;
         text-align: center;
     }
 
@@ -952,7 +949,7 @@ form > div > div > div:nth-child(1):after {
         margin-top:40px;
         margin-bottom: 10px;
         z-index:1;
-        left:0px;
+        left:40px;
         top:-80px;
 
     }
@@ -1426,7 +1423,7 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 425px) {
     .Story-container {
         width:100%;
-        min-height: 500px;
+        min-height: 300px;
 
     }
     .Story-container > .Story-components {
@@ -1437,7 +1434,7 @@ form > div > div > div:nth-child(1):after {
     .Story-container > .Story-components > .form {
         margin-top:3px;
         font-size: 28px;
-        padding-top:0px;
+
 
     }
     .Story-container > .Story-components > .form > h1 {

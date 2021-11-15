@@ -1,10 +1,4 @@
 /* Container */
-.background {
-
-
-
-}
-
 .SubBody-Container {
     width:100%;
     min-height:706px;
@@ -28,7 +22,6 @@
     bottom:200px;
     color:#ffffff;
 }
-
 .SubBody-Container > h1 > span {
     background: red;
     padding:0px 24px;
@@ -663,7 +656,7 @@
         max-width:1200px;
         height:140px;
         position: relative;
-        bottom:20px;
+        bottom:100px;
 
     }
     .SubBody-Container > .Container > img {
@@ -900,7 +893,7 @@
         max-width:1200px;
         height:140px;
         position: relative;
-        bottom:20px;
+        bottom:-20px;
 
     }
     .SubBody-Container > .Container > img {
@@ -1255,12 +1248,12 @@
     .Description > .Modal {
         height:2490px;
         width: 1900px;
-        bottom:-140px;
-        right:-200px;
+
         z-index: 999;
         position:fixed;
-        background: #000000;
-        opacity: 0.9;
+        bottom:-140px;
+        left:-200px;
+        opacity: 9;
 
     }
 
@@ -1507,7 +1500,7 @@
         display: block;
         margin:200px auto;
         position: relative;
-        top:200px;
+        top:280px;
     }
     .SubBody-Container > h1 {
         text-align: center;

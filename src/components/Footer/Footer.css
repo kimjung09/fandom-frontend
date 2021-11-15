@@ -97,7 +97,7 @@
         position:relative;
         top:-30px;
         left:-6%;
-        padding:15px;
+        padding:30px 20px 20px 20px;
         border:none;
         background:#ffffff;
         line-height: 80px;
@@ -153,7 +153,7 @@
         position:relative;
         top:-45px;
         left:-8%;
-        padding:15px;
+        padding:40px 20px 20px 20px;
         border:none;
         background:#ffffff;
         line-height: 80px;
@@ -228,7 +228,7 @@
 @media screen and (max-width: 425px) {
     .Footer {
         width: 100%;
-        min-height: 180px;
+        min-height: 120px;
         background:#000000;
 
     }

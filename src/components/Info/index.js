@@ -1,30 +1,20 @@
 import "App.css"
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import "./style/Info.css"
 import "./style/Bottom.css"
 import {CgChevronLeft, CgChevronRight} from 'react-icons/cg';
-import ItemList from '../item.json'
 import {MdLocalOffer} from 'react-icons/md'
 import {AiOutlineClose} from 'react-icons/ai'
 import {AiOutlineIssuesClose} from 'react-icons/ai'
-import {getNftInfo, getNftList} from "../../utils/axios";
+import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "./Timer";
-import itemList from "../item.json";
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
 const InfoPage = ({match}) => {
     const asyncData = useAsync(getNftInfo, [match.params.id]);
     const item = asyncData.result
-
-    //
-    console.log(item)
-
-
-    // const item = ItemList[parseInt(match.params.id) - 1];
-    // ItemList.find(item => item.id === match.params.data);
-
 
     const [showModal, setShowModal] = useState(false);
     const openModal = () => {

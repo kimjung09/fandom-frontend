@@ -148,13 +148,13 @@
     .Story-container > .Story-components > div:nth-child(1) {
         margin-top:10px;
         font-size: 40px;
-        padding-top:100px;
+        padding-top:150px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > h1 {
         color:red;
         margin-top:10px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         margin-left: 120px;
 
     }
@@ -189,25 +189,32 @@
         transform: scale(1.05);
         transition: 0.5s;
     }
-    /* NFT 버튼 */
-    .Story-container > .Story-components >  button {
+    .Story-container > .Story-components >  div > button:last-child  {
         width:271px;
         height:63px;
-        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
         margin:78px 0px 91px 0px;
         border-radius: 34px 34px 34px 34px;
-        border: 2px solid #db154a;
         position:relative;
-        left:480px;
-        top:20px;
+        left:460px;
+        top:0px;
         font-size:30px;
         font-weight: bold;
-        color:#db154a;
         text-transform: uppercase;
+        background: #db154a;
     }
-    .NFT-Button-container > .Link {
-        color:#fff;
+    .Story-container > .Story-components >  div > button:last-child > a {
 
+    }
+
+    .Story-container > .Story-components >  div > button:last-child:hover {
+        color:#db154a;
+        background: #ffffff;
+    }
+    .Story-container > .Story-components >  div > button:last-child > a {
+        color:#ffffff;
+    }
+    .Story-container > .Story-components >  div > button:last-child:hover > a {
+        color: #db154a;
     }
 
 }
@@ -218,22 +225,21 @@
         width:100%;
         min-height: 640px;
 
-
     }
     .Story-container > .Story-components {
         max-width:1200px;
-        min-height: 1400px;
+        min-height: 1300px;
         margin:auto;
     }
     .Story-container > .Story-components > div:nth-child(1) {
         margin-top:23px;
         font-size: 28px;
-        padding-top:50px;
+        padding-top:60px;
         margin-right: 20px;
     }
     .Story-container > .Story-components > div:nth-child(1) > h1 {
         margin-bottom: 40px;
-        margin-top: 80px;
+        margin-top: 100px;
         margin-right: 100px;
         text-align: center;
         text-transform: uppercase;
@@ -255,7 +261,7 @@
         width:100%;
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
-        font:  bold 17px/34px arial;
+        font:  bold 16px/34px arial;
         margin-left:40px;
         font-family: -apple-system;
         margin-bottom:52px;
@@ -281,7 +287,7 @@
     }
     .Story-container > .Story-components > div:nth-child(1) > div > a > img {
         width:250px;
-        min-height:300px;
+        min-height:280px;
         float:left;
         margin-right: -20px;
         position:relative;
@@ -355,7 +361,7 @@
 @media screen and (max-width: 768px) {
     .Story-container {
         width:100%;
-        min-height: 1422px;
+        min-height: 1300px;
 
 
     }
@@ -367,7 +373,7 @@
 
     .Story-container > .Story-components > div:nth-child(1) {
         margin-top:165px;
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > h1 {
@@ -379,10 +385,9 @@
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
         margin-bottom:24px;
-        font:  bold 16px/34px arial;
+        font:  bold 15px/34px arial;
         margin-left: 45px;
         font-family: -apple-system;
-        margin-bottom:52px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > div {
@@ -399,10 +404,9 @@
 /* height: 563px; */
 
     .Story-container > .Story-components > div:nth-child(1) > div > a > img{
-        width:580px;
+        width:500px;
         height: 70vw;
         transform: rotate(0deg) translateY(0vh);
-
         overflow-x: scroll;
         margin-bottom:20px;
         float:left;
@@ -430,7 +434,7 @@
         color:#ffffff;
         left:200px;
         top:10px;
-        font-size:30px;
+        font-size:24px;
         font-weight: bold;
         text-transform: uppercase;
         z-index: 1;
@@ -451,13 +455,13 @@
     /* NFT 버튼 Bid-Node 버튼 */
     .Story-container > .Story-components >  div > button:last-child  {
         width:271px;
-        height:63px;
+        height:53px;
         margin:78px 0px 91px 0px;
         border-radius: 34px 34px 34px 34px;
         position:relative;
-        left:250px;
+        left:240px;
         top:0px;
-        font-size:30px;
+        font-size:24px;
         font-weight: bold;
         text-transform: uppercase;
         background: #db154a;
@@ -519,32 +523,31 @@
     }
 
     .Story-container > .Story-components > div:nth-child(1) {
-        margin-top:109px;
+        margin-top:89px;
         font-size: 20px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > h1 {
         color:red;
         margin-top:10px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         margin-left: 50px;
 
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
-
-        font:  bold 16px/34px arial;
+        font:  bold 14px/34px arial;
         margin-left: -10px;
         font-family: -apple-system;
         margin-bottom:82px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > div {
-        width:423px;
+        width:420px;
         display:flex;
-        margin-left:-20px;
         overflow-x: scroll;
         scroll-behavior: smooth;
         overflow-scrolling: touch;
+        margin-left: -20px;
 
     }
 
@@ -566,16 +569,139 @@
         transition: 0.5s;
     }
     .Story-container > .Story-components > div >  button  {
-        width:300px;
+        width:250px;
         height:63px;
-        margin-bottom:44px;
+        margin-bottom:64px;
         border-radius: 34px 34px 34px 34px;
         border: 2px solid #db154a;
         position:relative;
         background:#db154a;
         color:#ffffff;
+        left:50px;
+        bottom:50px;
+        font-size:15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    .Story-container > .Story-components > div >  button:hover {
+        background: #ffffff;
+        border:2px solid #db154a;
+        color:#db154a;
+
+    }
+    .Story-container > .Story-components > div >  button:first-child:hover > a {
+        color:#db154a;
+    }
+    .Story-container > .Story-components > div > button:first-child > a {
+        color:#ffffff;
+    }
+
+    /* NFT 버튼 Bid-Node 버튼 */
+    .Story-container > .Story-components >  div > button:last-child  {
+        width:271px;
+        height:63px;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:40px;
+        top:0px;
+        font-size:30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #db154a;
+    }
+    .Story-container > .Story-components >  div > button:last-child > a {
+
+    }
+
+    .Story-container > .Story-components >  div > button:last-child:hover {
+        color:#db154a;
+        background: #ffffff;
+    }
+    .Story-container > .Story-components >  div > button:last-child > a {
+        color:#ffffff;
+    }
+    .Story-container > .Story-components >  div > button:last-child:hover > a {
+        color: #db154a;
+    }
+
+
+}
+
+@media screen and (max-width: 414px) {
+    .Story-container {
+        width:100%;
+
+        min-height: 960px;
+        overflow: hidden;
+    }
+
+    .Story-container > .Story-components {
+        max-width:375px;
+        min-height: 950px;
+        margin:auto;
+    }
+
+    .Story-container > .Story-components > div:nth-child(1) {
+        margin-top:59px;
+        font-size: 20px;
+    }
+
+    .Story-container > .Story-components > div:nth-child(1) > h1 {
+        color:red;
+        margin-top:10px;
+        margin-bottom: 40px;
+        margin-left: 50px;
+        position: relative;
         left:20px;
-        font-size:20px;
+    }
+    .Story-container > .Story-components > div:nth-child(1) > p {
+        font:  bold 12px/32px arial;
+        margin-left: -10px;
+        font-family: -apple-system;
+        margin-bottom:22px;
+    }
+
+    .Story-container > .Story-components > div:nth-child(1) > div {
+        width:420px;
+        display:flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        overflow-scrolling: touch;
+        margin-left: -20px;
+
+    }
+
+
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img{
+        max-width:400px;
+        height: 400px;
+        margin-bottom:20px;
+        float:left;
+        border:none;
+        overflow-x: scroll;
+        margin-left: 20px;
+        margin-right: -10px;
+
+    }
+
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+    .Story-container > .Story-components > div >  button  {
+        width:250px;
+        height:63px;
+        margin-bottom:64px;
+        border-radius: 34px 34px 34px 34px;
+        border: 2px solid #db154a;
+        position:relative;
+        background:#db154a;
+        color:#ffffff;
+        left:50px;
+        bottom:50px;
+        font-size:15px;
         font-weight: bold;
         text-transform: uppercase;
         z-index: 1;
@@ -626,95 +752,11 @@
 }
 
 
-
-/** Media Query Iphone X (375px) */
-@media screen and (max-width:375px) {
-    .Story-container {
-        width:100%;
-        min-height: 920px;
-        overflow: hidden;
-    }
-
-    .Story-container > .Story-components {
-        max-width:375px;
-        min-height: 940px;
-        margin:auto;
-    }
-
-    .Story-container > .Story-components > div:nth-child(1) {
-        margin-top:49px;
-        font-size: 20px;
-    }
-
-    .Story-container > .Story-components > div:nth-child(1) > h1 {
-        color:red;
-        margin-top:10px;
-        margin-bottom: 20px;
-        margin-left: 24px;
-
-    }
-    .Story-container > .Story-components > div:nth-child(1) > p {
-        font:  bold 15px/38px arial;
-        margin-left: 24px;
-        font-family: -apple-system;
-        margin-bottom:52px;
-    }
-
-    .Story-container > .Story-components > div:nth-child(1) > div {
-        max-width:400px;
-        min-height: 200px;
-        display:flex;
-        margin-left:-50px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        overflow-scrolling: touch;
-
-    }
-
-
-    .Story-container > .Story-components > div:nth-child(1) > div > a > img{
-        max-width:300px;
-        height: 200px;
-        margin-bottom:20px;
-        float:left;
-        border:none;
-        overflow-x: scroll;
-        margin-left: 80px;
-        margin-right: 20px;
-
-    }
-
-    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
-        transform: scale(1.05);
-        transition: 0.5s;
-    }
-    /* NFT 버튼 */
-    .Story-container > .Story-components >  button {
-        width:160px;
-        height:63px;
-        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
-        margin:78px 0px 91px 0px;
-        border-radius: 34px 34px 34px 34px;
-        border: 2px solid #db154a;
-        position:relative;
-        left:100px;
-        top:20px;
-        font-size:20px;
-        font-weight: bold;
-        color:#db154a;
-        text-transform: uppercase;
-    }
-    .NFT-Button-container > .Link {
-        color:#fff;
-
-    }
-}
-
 /** Media Query Galaxy Fold (280) */
 @media screen and (max-width:375px) {
     .Story-container {
         width:100%;
-        min-height: 920px;
+        min-height: 960px;
         overflow: hidden;
     }
 
@@ -722,48 +764,51 @@
         max-width:375px;
         min-height: 940px;
         margin:auto;
+
     }
 
     .Story-container > .Story-components > div:nth-child(1) {
-        margin-top:49px;
-        font-size: 20px;
+
     }
 
     .Story-container > .Story-components > div:nth-child(1) > h1 {
         color:red;
         margin-top:10px;
-        margin-bottom: 20px;
-        margin-left: 24px;
-
+        margin-bottom: 40px;
+        margin-left: 50px;
+        position: relative;
+        left:20px;
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
-        font:  bold 15px/38px arial;
-        margin-left: 24px;
+        font:  bold 9px/12px arial;
+        margin-left: -10px;
+
         font-family: -apple-system;
-        margin-bottom:52px;
+        margin-bottom:22px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > div {
-        max-width:400px;
-        min-height: 200px;
+        width:420px;
         display:flex;
-        margin-left:-50px;
         overflow-x: scroll;
         scroll-behavior: smooth;
         overflow-scrolling: touch;
+        margin-left: -20px;
 
     }
 
 
     .Story-container > .Story-components > div:nth-child(1) > div > a > img{
-        max-width:300px;
-        height: 200px;
+        width:400px;
+        height: 400px;
         margin-bottom:20px;
         float:left;
         border:none;
         overflow-x: scroll;
-        margin-left: 80px;
-        margin-right: 20px;
+        margin-left: 20px;
+        margin-right: -10px;
+        position: relative;
+        left:-10px;
 
     }
 
@@ -771,24 +816,63 @@
         transform: scale(1.05);
         transition: 0.5s;
     }
-    /* NFT 버튼 */
-    .Story-container > .Story-components >  button {
-        width:160px;
+    .Story-container > .Story-components > div >  button  {
+        width:250px;
         height:63px;
-        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
-        margin:78px 0px 91px 0px;
+        margin-bottom:64px;
         border-radius: 34px 34px 34px 34px;
         border: 2px solid #db154a;
         position:relative;
-        left:100px;
-        top:20px;
-        font-size:20px;
+        background:#db154a;
+        color:#ffffff;
+        left:50px;
+        bottom:50px;
+        font-size:12px;
         font-weight: bold;
-        color:#db154a;
         text-transform: uppercase;
+        z-index: 1;
     }
-    .NFT-Button-container > .Link {
-        color:#fff;
+    .Story-container > .Story-components > div >  button:hover {
+        background: #ffffff;
+        border:2px solid #db154a;
+        color:#db154a;
 
     }
+    .Story-container > .Story-components > div >  button:first-child:hover > a {
+        color:#db154a;
+    }
+    .Story-container > .Story-components > div > button:first-child > a {
+        color:#ffffff;
+    }
+
+    /* NFT 버튼 Bid-Node 버튼 */
+    .Story-container > .Story-components >  div > button:last-child  {
+        width:271px;
+        height:53px;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:40px;
+        top:0px;
+        font-size:15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #db154a;
+    }
+    .Story-container > .Story-components >  div > button:last-child > a {
+
+    }
+
+    .Story-container > .Story-components >  div > button:last-child:hover {
+        color:#db154a;
+        background: #ffffff;
+    }
+    .Story-container > .Story-components >  div > button:last-child > a {
+        color:#ffffff;
+    }
+    .Story-container > .Story-components >  div > button:last-child:hover > a {
+        color: #db154a;
+    }
+
+
 }

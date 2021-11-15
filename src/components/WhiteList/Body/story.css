@@ -3,7 +3,7 @@
     min-height: 900px;
     background:#fff;
     margin-top:-400px;
-    padding-bottom:240px;
+    padding-bottom:400px;
     z-index:-999;
     display:block;
     border:1px solid white;
@@ -66,21 +66,21 @@
 
 
 /* click 버튼 */
-.WhiteList-container > div:nth-child(1) >  div > button:last-child  {
+.WhiteList-container > div:nth-child(1) >  button:last-child  {
     width:271px;
     height:63px;
     margin:78px 0px 91px 0px;
     border-radius: 34px 34px 34px 34px;
     position:relative;
-    left:450px;
-    top:0px;
+    left:100px;
+    top:200px;
     font-size:30px;
     font-weight: bold;
     text-transform: uppercase;
     background:#db154a;
 
 }
-.WhiteList-container > div:nth-child(1) >  div > button:last-child:hover {
+.WhiteList-container > div:nth-child(1) > button:last-child:hover {
     color:#ffffff;
     background: red;
     transition: 1.5s;
@@ -137,7 +137,7 @@ div:nth-child(1) > .subscribe > div > h1 {
     border:0.5px solid gray;
 
 }
-div:nth-child(1) > .subscribe > div > button:last-child  {
+div:nth-child(1) > .subscribe > div >button:last-child  {
     float:right;
     border:none;
     position:relative;
@@ -161,9 +161,9 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
 @media screen and (max-width: 1440px) {
     .WhiteList-container {
         width:100%;
-        min-height: 1109px;
+        min-height: 1000px;
         overflow: hidden;
-        margin-top:-500px;
+        margin-top:-400px;
     }
 
     .WhiteList-container > div:nth-child(1) {
@@ -237,6 +237,20 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
         color:#fff;
 
     }
+    .WhiteList-container > div:nth-child(1) >  button:last-child  {
+        width:271px;
+        height:63px;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:140px;
+        top:200px;
+        font-size:30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background:#db154a;
+
+    }
 
 }
 
@@ -305,14 +319,14 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
         color:#ffffff;
     }
     /* NFT 버튼 */
-    .WhiteList-container > div:nth-child(1) >  div > button:last-child  {
+    .WhiteList-container > div:nth-child(1) >  button:last-child  {
         width:271px;
         height:63px;
         margin:78px 0px 91px 0px;
         border-radius: 34px 34px 34px 34px;
         position:relative;
-        left:350px;
-        top:0px;
+        left:100px;
+        top:200px;
         font-size:30px;
         font-weight: bold;
         text-transform: uppercase;
@@ -435,7 +449,20 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
         transform: scale(1.05);
         transition: 0.5s;
     }
+    .WhiteList-container > div:nth-child(1) >  button:last-child  {
+        width:271px;
+        height:63px;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:-50px;
+        top:200px;
+        font-size:30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background:#db154a;
 
+    }
     /* NFT 버튼 */
     .WhiteList-container > div:nth-child(1) >  div > button:last-child  {
         width:271px;
@@ -465,10 +492,81 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
 
 /** Media Query MoblieL (425px) */
 @media screen and (max-width: 425px) {
+
+
+    .WhiteList-container > div:nth-child(1) {
+        max-width:728px;
+        margin-left: 20px;
+        min-height: 524px;
+    }
+
+    .WhiteList-container > div:nth-child(1)> div:nth-child(1) {
+        margin-top:165px;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    .WhiteList-container > div:nth-child(1) > div:nth-child(1) > h1 {
+        color:red;
+        margin-top:10px;
+        margin-bottom: 20px;
+        margin-left: 45px;
+
+    }
+    .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
+        margin-bottom:24px;
+        font:  bold 18px/34px arial;
+        margin-left: 45px;
+        font-family: -apple-system;
+        margin-bottom:52px;
+    }
+
+
+    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+    .WhiteList-container > div:nth-child(1) >  button:last-child  {
+        width:271px;
+        height:63px;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:-50px;
+        top:200px;
+        font-size:30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background:#db154a;
+
+    }
+    /* NFT 버튼 */
+    .WhiteList-container > div:nth-child(1) >  div > button:last-child  {
+        width:271px;
+        height:63px;
+        margin:78px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:280px;
+        top:0px;
+        font-size:30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background:#db154a;
+
+    }
+    .WhiteList-container > div:nth-child(1) >  div > button:last-child:hover {
+        color:#ffffff;
+        background: red;
+        transition: 1.5s;
+    }
+    .WhiteList-container > div:nth-child(1) >  div > button:last-child > a {
+        color:#ffffff;
+    }
+
     .WhiteList-container {
         width:100%;
-        border:1px solid red;
-        min-height: 860px;
+        min-height: 250px;
         overflow: hidden;
     }
 
@@ -487,16 +585,18 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
         color:blue;
         margin-top:10px;
         margin-bottom: 20px;
-        margin-left: 30px;
+        margin-left: -30px;
 
 
     }
     .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
-        font:  bold 15px/24px arial;
+        font:  bold 19px/24px arial;
         font-family: -apple-system;
+        margin-left: -20px;
+        color:#000000;
     }
     div:nth-child(1) > .subscribe > div > h1 {
-        font-size:10px;
+        font-size:14px;
         text-align: left;
         padding-bottom:20px;
         padding-top: 10px;
@@ -506,10 +606,10 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
 
     div:nth-child(1) > .subscribe > div > button:first-child {
              width:120px;
-             height:46px;
+             height:50px;
              padding:10px 10px;
              float:left;
-             font-size:14px;
+             font-size:16px;
              font-weight: 500;
              text-transform: uppercase;
              color:#ffffff;
@@ -538,7 +638,7 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
         background:#db154a;
     }
     div:nth-child(1) > .subscribe > div > button:last-child > a {
-        font-size:14px;
+        font-size:16px;
         color:#ffffff;
     }
     div:nth-child(1) > .subscribe > div > button:last-child:hover{
@@ -574,84 +674,108 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
 
 /** Media Query Iphone X (375px) */
 @media screen and (max-width:375px) {
-    .Story-container {
+    .WhiteList-container {
         width:100%;
-        min-height: 920px;
+        min-height: 160px;
         overflow: hidden;
     }
 
-    .Story-container > .Story-components {
+    .WhiteList-container > div:nth-child(1) {
         max-width:375px;
-        min-height: 940px;
+        min-height: 160px;
         margin:auto;
     }
 
-    .Story-container > .Story-components > div:nth-child(1){
-        margin-top:49px;
+    .WhiteList-container > div:nth-child(1)> div:nth-child(1) {
+        margin-top:29px;
         font-size: 20px;
     }
 
-    .Story-container > .Story-components > div:nth-child(1) > h1 {
-        color:red;
+    .WhiteList-container > div:nth-child(1) > div:nth-child(1) > h1 {
+        color:blue;
         margin-top:10px;
         margin-bottom: 20px;
-        margin-left: 24px;
+        margin-left: -30px;
+
 
     }
-    .Story-container > .Story-components > div:nth-child(1) > p {
-        font:  bold 14px/38px arial;
-        margin-left: 24px;
+    .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
+        font:  bold 12px/24px arial;
         font-family: -apple-system;
-        margin-bottom:52px;
+        margin-left: -20px;
+        color:#000000;
+    }
+    div:nth-child(1) > .subscribe > div > h1 {
+        font-size:14px;
+        text-align: left;
+        padding-bottom:20px;
+        padding-top: 10px;
+        border:0.5px solid gray;
+
     }
 
-    .Story-container > .Story-components > div:nth-child(1) > div {
-        max-width:400px;
-        min-height: 200px;
-        display:flex;
-        margin-left:-50px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        overflow-scrolling: touch;
-
-    }
-
-
-    .Story-container > .Story-components > div:nth-child(1) > div > a > img{
-        max-width:300px;
-        height: 200px;
-        margin-bottom:20px;
+    div:nth-child(1) > .subscribe > div > button:first-child {
+        width:120px;
+        height:50px;
+        padding:10px 10px;
         float:left;
-        border:none;
-        overflow-x: scroll;
-        margin-left: 80px;
-        margin-right: 20px;
-
-    }
-
-    .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
-        transform: scale(1.05);
-        transition: 0.5s;
-    }
-    /* NFT 버튼 */
-    .Story-container > .Story-components >  button {
-        width:160px;
-        height:63px;
-        background: linear-gradient(135deg, transparent 15px, #ffffff 0) top left;
-        margin:78px 0px 91px 0px;
-        border-radius: 34px 34px 34px 34px;
-        border: 2px solid #db154a;
-        position:relative;
-        left:100px;
-        top:20px;
-        font-size:20px;
-        font-weight: bold;
-        color:#db154a;
+        font-size:16px;
+        font-weight: 500;
         text-transform: uppercase;
+        color:#ffffff;
+        border:none;
+        line-height: 0px;
+        margin-bottom: 30px;
+        background:#db154a;
+        margin-right: 50px;
     }
-    .NFT-Button-container > .Link {
-        color:#fff;
+    div:nth-child(1) > .subscribe > div >  button:first-child > .icon {
+        margin-right: 0px;
+    }
+    div:nth-child(1) > .subscribe > div > button:first-child:active {
+        border:none;
+        opacity:80%;
+    }
+    div:nth-child(1) > .subscribe > div > button:last-child  {
+        float:right;
+        border:none;
+        position:relative;
+        right:20px;
+        bottom:47px;
+        padding:6px;
+        color:#ffffff;
+        font-size:30px;
+        background:#db154a;
+    }
+    div:nth-child(1) > .subscribe > div > button:last-child > a {
+        font-size:16px;
+        color:#ffffff;
+    }
+    div:nth-child(1) > .subscribe > div > button:last-child:hover{
+        border:none;
+        opacity: 80%;
 
+    }
+    .WhiteList-container > div:nth-child(1) >  div > button:last-child  {
+        width:271px;
+        height:46px;
+        margin:8px 0px 91px 0px;
+        border-radius: 34px 34px 34px 34px;
+        position:relative;
+        left:50px;
+        top:10px;
+        font-size:15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background:#db154a;
+
+    }
+    .WhiteList-container > div:nth-child(1) >  div > button:last-child:hover {
+        color:#ffffff;
+        transition: 1.5s;
+    }
+    .WhiteList-container > div:nth-child(1) >  div > button:last-child > a {
+        color:#ffffff;
     }
 }
 
@@ -734,6 +858,15 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
     }
     .NFT-Button-container > .Link {
         color:#fff;
+
+    }
+
+    div:nth-child(1) > .subscribe > div > h1 {
+        font-size:14px;
+        text-align: left;
+        padding-bottom:20px;
+        padding-top: 10px;
+        border:0.5px solid gray;
 
     }
 }

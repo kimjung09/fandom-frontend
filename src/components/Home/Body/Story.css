@@ -60,7 +60,7 @@
     float:left;
     display:grid;
     grid-template-columns: 150px 150px 150px;
-    margin-left:50px;
+    margin-left:60px;
     margin-right: -20px;
     margin-bottom:20px;
     position:relative;
@@ -176,7 +176,6 @@
     .Story-container > .Story-components > div:nth-child(1) > div > a > img{
         max-width:900px;
         height: 250px;
-        border:1px solid red;
         grid-template-columns: 150px 150px 150px;
         margin-left:50px;
         margin-right: -20px;
@@ -233,9 +232,9 @@
         margin-right: 20px;
     }
     .Story-container > .Story-components > div:nth-child(1) > h1 {
-        margin-bottom: 20px;
-        margin-top: 90px;
-        margin-right: 10px;
+        margin-bottom: 40px;
+        margin-top: 80px;
+        margin-right: 100px;
         text-align: center;
         text-transform: uppercase;
         color:#eb1a53;
@@ -256,8 +255,8 @@
         width:100%;
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
-        font:  bold 18px/34px arial;
-        margin-left:100px;
+        font:  bold 17px/34px arial;
+        margin-left:40px;
         font-family: -apple-system;
         margin-bottom:52px;
     }
@@ -357,7 +356,7 @@
     .Story-container {
         width:100%;
         min-height: 1422px;
-        overflow: hidden;
+
 
     }
 
@@ -375,12 +374,12 @@
         color:red;
         margin-top:10px;
         margin-bottom: 20px;
-        margin-left: 45px;
+        margin-left: 100px;
 
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
         margin-bottom:24px;
-        font:  bold 18px/34px arial;
+        font:  bold 16px/34px arial;
         margin-left: 45px;
         font-family: -apple-system;
         margin-bottom:52px;
@@ -390,25 +389,29 @@
 
         display:flex;
         max-width:700px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        overflow-scrolling: touch;
         margin:0px 80px 0px 0px ;
         position:relative;
-        left:50px;
+        left:20px;
+
+
     }
 
+/* height: 563px; */
 
     .Story-container > .Story-components > div:nth-child(1) > div > a > img{
-        max-width:700px;
-        height: 563px;
         width:580px;
+        height: 70vw;
+        transform: rotate(0deg) translateY(0vh);
+
+        overflow-x: scroll;
         margin-bottom:20px;
         float:left;
         border:none;
-        overflow-x: scroll;
         position:relative;
+
         left:-50px;
+        flex-direction: row;
+
     }
 
     .Story-container > .Story-components > div:nth-child(1) > div > a > img:hover {
@@ -505,40 +508,40 @@
 @media screen and (max-width: 425px) {
     .Story-container {
         width:100%;
-        min-height: 1200px;
+        min-height: 960px;
         overflow: hidden;
     }
 
     .Story-container > .Story-components {
         max-width:375px;
-        min-height: 1340px;
+        min-height: 1000px;
         margin:auto;
     }
 
     .Story-container > .Story-components > div:nth-child(1) {
-        margin-top:199px;
+        margin-top:109px;
         font-size: 20px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > h1 {
         color:red;
         margin-top:10px;
-        margin-bottom: 20px;
-        margin-left: 14px;
+        margin-bottom: 40px;
+        margin-left: 50px;
 
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
 
-        font:  bold 18px/34px arial;
-        margin-left: 14px;
+        font:  bold 16px/34px arial;
+        margin-left: -10px;
         font-family: -apple-system;
-        margin-bottom:52px;
+        margin-bottom:82px;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > div {
         width:423px;
         display:flex;
-        margin-left:-50px;
+        margin-left:-20px;
         overflow-x: scroll;
         scroll-behavior: smooth;
         overflow-scrolling: touch;
@@ -547,15 +550,14 @@
 
 
     .Story-container > .Story-components > div:nth-child(1) > div > a > img{
-        max-width:480px;
-        height: 480px;
+        max-width:400px;
+        height: 400px;
         margin-bottom:20px;
         float:left;
         border:none;
         overflow-x: scroll;
-
-        margin-left: -20px;
-        margin-right: 80px;
+        margin-left: 20px;
+        margin-right: 10px;
 
     }
 

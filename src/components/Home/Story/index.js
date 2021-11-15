@@ -16,9 +16,7 @@ const getItems = async() => {
 const [item, setItem] = useState('');
 
 
-useEffect(() => {
 
-})
 
 function Story(){
     return (

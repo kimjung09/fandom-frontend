@@ -7,12 +7,9 @@ import itemList  from '../../item.json';
 import {getNftList, getNftInfo} from "../../../utils/axios";
 
 
-const Body = (match) => {
+const Body = () => {
     const [dataList, setDataList] = useState([]);
     const [change, setChange] = useState(true);
-
-
-
 
 
 //onClick="location.href='http://webtong.kr'"
@@ -23,7 +20,6 @@ const Body = (match) => {
             .finally(res =>{console.log("ssss");})
         console.log(await getNftList(id));
     }
-    console.log(match.params);
 
 
     useEffect(() => {
@@ -73,6 +69,9 @@ const Body = (match) => {
        // alert('비드되었습니다')
     //}
 
+    const nextId = useRef(6);
+
+
 
     return (
         <>
@@ -86,7 +85,7 @@ const Body = (match) => {
                         <p className="time">
                             <span className="live">LIVE</span>
                             <span className="clock">
-                                 {hours}: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</span>
+                                 {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</span>
                         </p>
                         <div className="video">
 
@@ -114,9 +113,9 @@ const Body = (match) => {
                             </p>
                             <div>
                                 {dataList ? itemList.map((res, index) =>
-                                        <React.Fragment key={index} >
-                                            <a href={`/fandom/${res.id}`} onClick={connect} dataList={dataList} >
-                                                <img key={res.id} id={res.id} src={res.img} />
+                                        <React.Fragment key={index}>
+                                            <a href={`/fandom/${res.id}`} onClick={connect} dataList={dataList}>
+                                                <img key={res.id} id={res.id} src={res.img}/>
                                             </a>
                                         </React.Fragment>
                                     ) :  (

@@ -5,15 +5,15 @@ import ItemList from '../../item.json'
 import {MdLocalOffer} from 'react-icons/md'
 import {AiOutlineClose} from 'react-icons/ai'
 import {AiOutlineIssuesClose} from 'react-icons/ai'
+import {getNftInfo, getNftList} from "../../../utils/axios";
 
 
-
-const Body = ({match, id}) => {
-
-
+const Body = ({match, connect}) => {
     // ItemList.find(item => item.id === match.params.id);
     // itemList match 함수를 불러 ItemList json 파일에 배치된 id 값을 숫자로 불러 - 1씩 뺸 값을 불러온다.
-    const item = ItemList[parseInt(match.params.id) - 1];
+     const item = ItemList[parseInt(match.params.id) - 1];
+
+     ItemList.find(item => item.id === match.params.data);
 
 
     const [showModal, setShowModal] = useState(false);
@@ -23,22 +23,43 @@ const Body = ({match, id}) => {
     const closeModal = () => {
         setShowModal(false);
     }
-
     const [isVisible, setIsVisible] = useState(false);
     const onSetIsVisible = (active) => {
         setIsVisible(false);
     }
-
-
     const [showPopup, setShowPopup] = useState(false);
-
     const togglePopup = (event) => {
         setShowPopup(event.target.value);
     }
+    const [hours, setHours] = useState(24);
+    const [minutes, setMinutes] = useState(60);
+    const [seconds, setSeconds] = useState(0);
+    useEffect(() => {
+        const countdown = setInterval(() => {
+            if (parseInt(seconds) > 0) {
+                setSeconds(parseInt(seconds) - 1);
+            }
 
+            if (parseInt(seconds) === 0) {
+                if (parseInt(minutes) === 0) {
+                    clearInterval(countdown);
+                } else {
+                    setMinutes(parseInt(minutes) - 1);
+                    setSeconds(59);
+                }
+            }
 
-
-
+            if (parseInt(seconds) === 0) {
+                if (parseInt(minutes) === 0) {
+                    clearInterval(countdown);
+                } else {
+                    setMinutes(parseInt(minutes) - 1);
+                    setSeconds(59);
+                }
+            }
+        }, 1000);
+        return () => clearInterval(countdown);
+    }, [hours,minutes, seconds]);
 
 
 
@@ -46,7 +67,7 @@ const Body = ({match, id}) => {
         <>
            <div className="background">
             <div className="SubBody-Container" onClick={() => onSetIsVisible(true)} >
-                <h1><span>LIVE</span> 00:00:00:00</h1>
+                <h1><span>LIVE</span>  {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h1>
                 <div className="Container">
                     <img className="Image"
                          src={item.img}/>
@@ -62,7 +83,7 @@ const Body = ({match, id}) => {
                             </button>
                         </div>
 
-                        <form >
+                        <form>
                             <table>
                                 <thead>
                                 <tr>
@@ -72,38 +93,16 @@ const Body = ({match, id}) => {
                                     <th>bidding</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>{item.amount}</th>
-                                    <th>{item.price}</th>
-                                    <th>{item.time}</th>
-                                    <th>{item.bidding}</th>
-                                </tr>
-                                <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>100.11 SOL</th>
-                                    <th>$3,333</th>
-                                    <th>1 hour ago</th>
-                                    <th>0x2732300...</th>
-                                </tr>
-                                <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>100.11 SOL</th>
-                                    <th>$3,333</th>
-                                    <th>1 hour ago</th>
-                                    <th>0x2732300...</th>
-                                </tr>
-                                <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>100.11 SOL</th>
-                                    <th>$3,333</th>
-                                    <th>1 hour ago</th>
-                                    <th>0x2732300...</th>
-                                </tr>
-                                <tr>
-                                    <th className="bold"><i className="fas fa-user"></i>{item.amount}</th>
-                                    <th>{item.price}</th>
-                                    <th>{item.time}</th>
-                                    <th>{item.bidding}</th>
-                                </tr>
-                                </tbody>
+                                {ItemList.map((res,index) =>
+                                    <tbody  key={index}>
+                                    <tr>
+                                        <th className="bold"><i className="fas fa-user"></i>{res.amount}</th>
+                                        <th>{res.price}</th>
+                                        <th>{res.time}</th>
+                                        <th className="bold"><i className="fas fa-user"></i>{res.bidding}</th>
+                                    </tr>
+                                    </tbody>
+                                )}
                             </table>
                         </form>
                         {
@@ -131,7 +130,6 @@ const Body = ({match, id}) => {
                                 </div>
                                 : null
                         }
-
                         {
                             showPopup ? (
                                 <div className="popup">
@@ -140,7 +138,6 @@ const Body = ({match, id}) => {
                                     </div>
                                 </div>
                             ): null}
-
                     </div>
                 </div>
                 <button type="button" className="Item-Left">

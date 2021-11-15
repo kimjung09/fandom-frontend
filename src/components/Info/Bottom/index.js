@@ -10,11 +10,11 @@ const Bottom = ({match}) => {
       <div className="Bottom-container" id="Story">
             <form>
                 <div>
-               <h1>{item.story + 1}</h1>
+               <h1>{item.story} 1</h1>
                 <p>{item.description}</p>
                 <p>{item.description}</p>
 
-                <h1>{item.story + 2}</h1>
+                <h1>{item.story} 2</h1>
                 <p>{item.description}</p>
                 <p>{item.description}</p>
                 <p>{item.description}</p>

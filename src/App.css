@@ -14,7 +14,7 @@ body {
 }
 
 .SubPage {
-    background-image: url("http://junghorooms.io/images/background3.jpg");
+    background-image: url("/src/components/images/background3.jpg");
     background-size: cover;
     min-height: 1300px;
     width:100%;

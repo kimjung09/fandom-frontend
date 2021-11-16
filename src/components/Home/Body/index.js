@@ -17,9 +17,9 @@ const Body = () => {
             <div className="Body-container">
                 <div>
                     <form>
-                        <h1>own the most</h1>
+                        <h1>Sở hữu những</h1>
                         <br/>
-                        <h1>special moments!</h1>
+                        <h1>khoảnh khắc đặc biệt nhất</h1>
                         <p>own the most special moments!</p>
                         <p className="time">
                             <Timer/>
@@ -40,15 +40,16 @@ const Body = () => {
                     <div>
                         <button>
                             <NavLink to="/whitelist">
-                                white listing <FaGift color={"none"}/>
+                                danh sách trắng <FaGift color={"none"}/>
                             </NavLink>
                         </button>
 
                         <h1>1st Story</h1>
                         <p>
-                            길거리에서 복권을 팔던 평범한 베트남 소녀, 국민 영웅이 되기까지 Nguyen Thi ThuNhi.
+                            Những khoảnh khắc đặc biệt của NHI qua NFT.
+                            Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~  23:59, ngày 30/11
                             <br/>
-                            그녀는 이제 하나의 계단만을 남겨두고 있습니다. 그녀의 WHO벨트 세계 타이틀전을 응원하며, 기념합니다.
+                            Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
                         </p>
                         <div>
                             {item ? item.map((res, index) =>
@@ -66,7 +67,7 @@ const Body = () => {
                         </div>
                         <button>
                             <NavLink to="/whitelist">
-                                bid now
+                                Đấu giá ngay bây giờ
                             </NavLink>
                         </button>
                     </div>

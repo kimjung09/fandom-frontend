@@ -12,7 +12,7 @@ import Timer from "./Timer";
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
-const InfoPage = ({match}) => {
+const InfoPage = ({history, location, match}) => {
     const asyncData = useAsync(getNftInfo, [match.params.id]);
     const item = asyncData.result
 
@@ -32,6 +32,19 @@ const InfoPage = ({match}) => {
         setShowPopup(event.target.value);
     }
 
+    const goPage = (params, e) => {
+        const pageId = Number(match.params.id)
+        if (pageId === 1 && params === -1) {
+            params = 6;
+        } else if (pageId === 6 && params === 1) {
+            params = 1;
+        } else {
+            params = pageId + params;
+        }
+        history.push(`/fandom/${params}`)
+    }
+
+
     return (
         <>
             {item ?
@@ -46,13 +59,13 @@ const InfoPage = ({match}) => {
                                          src={item.list_img}/>
                                     <div className="Description">
                                         <h2>{item.title}</h2>
-                                        <p>{item.title}</p>
+                                        <p>{item.sub_title}</p>
                                         <div className="ButtonContainer">
                                             <input type="text" name='inputNum' placeholder="BSC"/>
                                             <button type="button" onClick={openModal} value='false'>
-                                <span>
-                                    <MdLocalOffer/>
-                                </span>Make Offer
+                                                <span>
+                                                    <MdLocalOffer/>
+                                                </span>Make Offer
                                             </button>
                                         </div>
 
@@ -89,18 +102,18 @@ const InfoPage = ({match}) => {
                                                     <div>
                                                         <h1>bid now</h1>
                                                         <button onClick={closeModal}>
-                                        <span>
-                                        <AiOutlineClose size={40}/>
-                                        </span>
+                                                            <span>
+                                                            <AiOutlineClose size={40}/>
+                                                            </span>
                                                         </button>
-                                                        <p>{item.subTitle}</p>
+                                                        <p>{item.sub_title}</p>
                                                         <input type="text" name='bsc' placeholder="0.00001" required/>
                                                         <span className="number">
-                                         ETH
-                                     </span>
+                                                             ETH
+                                                         </span>
                                                         <span className="icon">
-                                     <AiOutlineIssuesClose/>
-                                     </span>
+                                                            <AiOutlineIssuesClose/>
+                                                         </span>
                                                         <button type="button" onClick={closeModal}>
                                                             Make Offer
                                                         </button>
@@ -118,12 +131,12 @@ const InfoPage = ({match}) => {
                                             ) : null}
                                     </div>
                                 </div>
-                                <button type="button" className="Item-Left">
+                                <button type="button" className="Item-Left" onClick={(e) => goPage(-1, e)}>
                                     <div>
                                         <CgChevronLeft size={"48px"}/>
                                     </div>
                                 </button>
-                                <button type="button" className="Item-Right">
+                                <button type="button" className="Item-Right" onClick={(e) => goPage(1, e)}>
                                     <div>
                                         <CgChevronRight size={"48px"}/>
                                     </div>
@@ -138,7 +151,6 @@ const InfoPage = ({match}) => {
                             </div>
                             <img src={item.first_info_img}/>
                             <img src={item.second_info_img}/>
-
                         </form>
 
                     </div>

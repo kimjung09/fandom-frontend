@@ -1,10 +1,12 @@
 import React from "react";
 import "./Body.css"
 import "./Story.css"
-import {FaPlay, FaGift,} from 'react-icons/fa'
+import {FaPlay, FaGift} from 'react-icons/fa'
 import {getNftList} from "../../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "./Timer";
+import {NavLink} from 'react-router-dom';
+
 
 const Body = () => {
     const asyncData = useAsync(getNftList);
@@ -22,10 +24,13 @@ const Body = () => {
                         <p className="time">
                             <Timer/>
                         </p>
+
                         <div className="video">
+                            {/*<video src="/images/video.mp4" width="900" height="600" controls>*/}
+                            {/*</video>*/}
                             <span>
                               <FaPlay size={"40"}/>
-                          </span>
+                            </span>
                         </div>
                     </form>
                 </div>
@@ -34,9 +39,9 @@ const Body = () => {
                 <form className="Story-components">
                     <div>
                         <button>
-                            <a href="whitelist">
+                            <NavLink to="/whitelist">
                                 white listing <FaGift color={"none"}/>
-                            </a>
+                            </NavLink>
                         </button>
 
                         <h1>1st Story</h1>
@@ -48,9 +53,9 @@ const Body = () => {
                         <div>
                             {item ? item.map((res, index) =>
                                 <React.Fragment key={index}>
-                                    <a href={`/fandom/${res.id}`}>
+                                    <NavLink to={`/fandom/${res.id}`}>
                                         <img src={res.list_img}/>
-                                    </a>
+                                    </NavLink>
                                 </React.Fragment>
                             ) : (
                                 <React.Fragment>
@@ -60,9 +65,9 @@ const Body = () => {
                             }
                         </div>
                         <button>
-                            <a href="whitelist">
+                            <NavLink to="/whitelist">
                                 bid now
-                            </a>
+                            </NavLink>
                         </button>
                     </div>
                 </form>

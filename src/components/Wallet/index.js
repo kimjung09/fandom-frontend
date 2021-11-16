@@ -76,7 +76,7 @@ const WalletBtn = () => {
                     <ParseAccount/>
                 </a>
                 :
-                <a style={{cursor: 'pointer'}} onClick={connect}>
+                <a className="wallet-btn" style={{cursor: 'pointer'}} onClick={connect}>
                     <img src="/images/icon/wallet.png"/>
                     Ví
                 </a>

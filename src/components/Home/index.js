@@ -16,24 +16,20 @@ const MainPage = (props) => {
     return (
         <>
             <div className="Body-container">
-                <div>
-                    <form>
-                        <h1>Sở hữu những</h1>
-                        <br/>
-                        <h1>khoảnh khắc đặc biệt nhất</h1>
-                        <p>own the most special moments!</p>
-                        <p className="time">
-                            <Timer/>
-                        </p>
-
-                        <div className="video">
-                            {/*<video src="/images/video.mp4" width="900" height="600" controls>*/}
-                            {/*</video>*/}
-                            <span>
-                              <FaPlay size={"40"}/>
-                            </span>
-                        </div>
-                    </form>
+                <div className="title-area">
+                    <h1>Sở hữu những</h1>
+                    <h1>khoảnh khắc đặc biệt nhất</h1>
+                    <h3>own the most special moments!</h3>
+                    <p className="time">
+                        <Timer/>
+                    </p>
+                </div>
+                <div className="video">
+                    {/*<video src="/images/video.mp4" width="900" height="600" controls>*/}
+                    {/*</video>*/}
+                    <span>
+                        <FaPlay size={"40"}/>
+                    </span>
                 </div>
             </div>
             {

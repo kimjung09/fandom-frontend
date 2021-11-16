@@ -1395,7 +1395,6 @@
         z-index:-999;
     }
     .Container > .Description  > form > table > thead  > tr > th:nth-child(4) {
-        display: none;
     }
     .Container > .Description  > form > table > thead > tr:first-child {
         background: #efefef;

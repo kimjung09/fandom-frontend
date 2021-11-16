@@ -99,7 +99,7 @@ const Body = ({match}) => {
                                         <th className="bold"><i className="fas fa-user"></i>{res.amount}</th>
                                         <th>{res.price}</th>
                                         <th>{res.time}</th>
-                                        <th className="bold"><i className="fas fa-user"></i>{res.bidding}</th>
+                                        <th className="bold"><i className="fas fa-user"></i>{res.amount}</th>
                                     </tr>
                                     </tbody>
                                 )}

@@ -5,11 +5,11 @@ import {FaPlay,FaGift,} from 'react-icons/fa'
 import itemList  from '../../item.json';
 // import { detailPage } from "../../../utils/api/api";
 import {getNftList, getNftInfo} from "../../../utils/axios";
+import CountDownTimer from "../Time/CountDownTimer";
 
 
 const Body = () => {
     const [datalist, setDataList] = useState([]);
-    const [change, setChange] = useState(true);
 
 
 //onClick="location.href='http://webtong.kr'"
@@ -27,35 +27,6 @@ const Body = () => {
     }, [])
 
 
-    const [hours, setHours] = useState(24);
-    const [minutes, setMinutes] = useState(60);
-    const [seconds, setSeconds] = useState(0);
-    useEffect(() => {
-        const countdown = setInterval(() => {
-            if (parseInt(seconds) > 0) {
-                setSeconds(parseInt(seconds) - 1);
-            }
-
-            if (parseInt(seconds) === 0) {
-                if (parseInt(minutes) === 0) {
-                    clearInterval(countdown);
-                } else {
-                    setMinutes(parseInt(minutes) - 1);
-                    setSeconds(59);
-                }
-            }
-
-            if (parseInt(seconds) === 0) {
-                if (parseInt(minutes) === 0) {
-                    clearInterval(countdown);
-                } else {
-                    setMinutes(parseInt(minutes) - 1);
-                    setSeconds(59);
-                }
-            }
-        }, 1000);
-        return () => clearInterval(countdown);
-    }, [hours,minutes, seconds]);
 
 
     // 컴포넌트 전환
@@ -71,6 +42,8 @@ const Body = () => {
 
     const nextId = useRef(6);
 
+    const hoursMinSecs = {hours:24, minutes: 0, seconds:0}
+
 
 
     return (
@@ -82,11 +55,12 @@ const Body = () => {
                         <br/>
                         <h1>special moments!</h1>
                         <p>own the most special moments!</p>
-                        <p className="time">
-                            <span className="live">LIVE</span>
-                            <span className="clock">
-                                 {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</span>
-                        </p>
+                        {/*<p className="time">*/}
+                        {/*    <span className="live">LIVE</span>*/}
+                        {/*    <span className="clock">*/}
+                        {/*         {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</span>*/}
+                        {/*</p>*/}
+                        <CountDownTimer hoursMinSecs={hoursMinSecs} />
                         <div className="video">
 
                             <span>
@@ -99,7 +73,7 @@ const Body = () => {
             <div className="Story-container" id="Story">
                 <form className="Story-components">
                     <div>
-                        <button onClick={() => setChange(true)}>
+                        <button  onClick={() => {history.push("whitelist")}}>
                             <a href="whitelist">
                                 white listing <FaGift color={"none"} />
                             </a>
@@ -127,7 +101,9 @@ const Body = () => {
                                     )
                                 }
                             </div>
-                        <button onClick="location.href='http://webtong.kr'" >
+                        <button onClick="location.href='http://webtong.kr'"
+
+                        >
                             <a href="whitelist">
                                 bid now
                             </a>

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import "./style/body.css"
+// import "./style/body.css"
 import "./style/story.css"
 import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet,FaHandPointer} from 'react-icons/fa'
 import {registerWhiteList} from "../../utils/axios";
@@ -30,7 +30,7 @@ const WhiteList = () => {
             account: userAccount
         }
         await registerWhiteList(params).then(res => {
-            location.href = '/'
+            window.location.href = '/'
         });
     }
 
@@ -56,7 +56,7 @@ const WhiteList = () => {
 
     return (
         <div className="white-list-container">
-            <div>
+            <div className="white-list-inner">
                 <div className="main-font">
                     <h1>Tham gia Whitelist</h1>
                     <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng lịch sử của NHI khi trở thành nhà vô địch thế giới.

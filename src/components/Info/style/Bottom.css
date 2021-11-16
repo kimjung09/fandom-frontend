@@ -1,32 +1,33 @@
 .Bottom-container {
-    width:100%;
+    width: 100%;
 }
 
 .Bottom-container > form {
     max-width: 1225px;
     min-height: 1311px;
     background: #fff;
-    margin:-100px auto;
+    margin: -100px auto;
     position: relative;
-    top:-290px;
+    top: -290px;
 
 
 }
+
 .Bottom-container > form > div {
-    padding:50px;
-    float:left;
+    padding: 50px;
+    float: left;
 }
 
 .Bottom-container > form > div > h1 {
     font-size: 38px;
 
-    margin-top:50px;
+    margin-top: 50px;
     margin-bottom: 22px;
 
 }
 
 .Bottom-container > form > div > p {
-    font-size:18px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 60px;
     line-height: 36px;
@@ -34,28 +35,31 @@
     max-width: 600px;
 
 }
+
 .Bottom-container > form > div > p:nth-child(4) {
-    font-size:18px;
+    font-size: 18px;
 
     font-weight: 600;
     margin-bottom: 25px;
     margin-left: 7px;
     max-width: 600px;
 }
+
 .Bottom-container > form > div > p:nth-child(5) {
-    font-size:18px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 24px;
     line-height: 36px;
     margin-left: 7px;
     max-width: 600px;
 }
-.Bottom-container > form  > img {
-     position:relative;
-    left:50px;
-    bottom:-120px;
-    width:400px;
-    height:400px;
+
+.Bottom-container > form > img {
+    position: relative;
+    left: 50px;
+    bottom: -120px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 80px;
 }
 
@@ -68,7 +72,7 @@
 /** Media Query LatTop (1440px) **/
 @media screen and (max-width: 1440px) {
     .Bottom-container {
-        width:100%;
+        width: 100%;
         margin-top: 23px;
         padding-bottom: -80px;
 
@@ -77,22 +81,22 @@
     .Bottom-container > form {
         max-width: 1100px;
         min-height: 1107px;
-        background:#fff;
-        margin:-120px auto;
+        background: #fff;
+        margin: -120px auto;
     }
 
-    .Bottom-container > form > div  {
-        padding:45px;
+    .Bottom-container > form > div {
+        padding: 45px;
     }
 
     .Bottom-container > form > div > h1 {
         font-size: 38px;
-        margin-top:50px;
+        margin-top: 50px;
 
     }
 
-    .Bottom-container > form > div > p  {
-        font-size:16px;
+    .Bottom-container > form > div > p {
+        font-size: 16px;
 
         font-weight: 600;
         margin-bottom: 25px;
@@ -102,7 +106,7 @@
     }
 
     .Bottom-container > form > div > p:nth-child(4) {
-        font-size:16px;
+        font-size: 16px;
 
         font-weight: 600;
         margin-bottom: 25px;
@@ -110,20 +114,22 @@
         margin-left: 7px;
         max-width: 767px;
     }
+
     .Bottom-container > form > div > p:nth-child(5) {
-        font-size:18px;
+        font-size: 18px;
         font-weight: 600;
         margin-bottom: 24px;
         line-height: 36px;
         margin-left: 7px;
         max-width: 767px;
     }
-    .Bottom-container > form  > img {
-        position:relative;
-        left:50px;
-        bottom:-20px;
-        width:400px;
-        height:400px;
+
+    .Bottom-container > form > img {
+        position: relative;
+        left: 50px;
+        bottom: -20px;
+        width: 400px;
+        height: 400px;
         margin-bottom: 80px;
         margin-right: 80px;
     }
@@ -133,7 +139,7 @@
 /* Media Query  LatTop (1024px) */
 @media screen and (max-width: 1024px) {
     .Bottom-container {
-        width:100%;
+        width: 100%;
         margin-top: 43px;
 
     }
@@ -142,17 +148,17 @@
         max-width: 960px;
         min-height: 1507px;
         padding-bottom: 20px;
-        background:#fff;
-        margin:-200px auto;
+        background: #fff;
+        margin: -200px auto;
 
     }
 
-    .Bottom-container > form > div  {
-        padding:25px;
+    .Bottom-container > form > div {
+        padding: 25px;
     }
 
-    .Bottom-container > form > div > p  {
-        font-size:20px;
+    .Bottom-container > form > div > p {
+        font-size: 20px;
         font-weight: bold;
         margin-bottom: 50px;
         line-height: 40px;
@@ -161,30 +167,33 @@
 
     .Bottom-container > form > div > h1 {
         font-size: 28px;
-        margin-top:50px;
+        margin-top: 50px;
     }
+
     .Bottom-container > form > div > p:nth-child(4) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 25px;
         line-height: 36px;
         margin-left: 7px;
         max-width: 767px;
     }
+
     .Bottom-container > form > div > p:nth-child(5) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 24px;
         line-height: 36px;
         margin-left: 7px;
         max-width: 767px;
     }
-    .Bottom-container > form  > img {
-        position:relative;
-        left:50px;
-        bottom:-20px;
-        width:300px;
-        height:300px;
+
+    .Bottom-container > form > img {
+        position: relative;
+        left: 50px;
+        bottom: -20px;
+        width: 300px;
+        height: 300px;
         margin-bottom: 50px;
         margin-right: 80px;
     }
@@ -194,52 +203,54 @@
 /* Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
     .Bottom-container {
-        width:100%;
+        width: 100%;
         margin-top: 413px;
         padding-bottom: 210px;
-        z-index:-999;
+        z-index: -999;
     }
 
-    .Bottom-container > form  {
-        max-width:680px;
+    .Bottom-container > form {
+        max-width: 680px;
         min-height: 656px;
-        background:#fff;
-        margin:-300px auto;
-        z-index:-999;
+        background: #fff;
+        margin: -300px auto;
+        z-index: -999;
 
     }
 
     .Bottom-container > form > div {
-        padding:15px;
-        z-index:-999;
+        padding: 15px;
+        z-index: -999;
     }
 
 
     .Bottom-container > form > div > p {
-        font-size:14px;
+        font-size: 14px;
         font-weight: bold;
         margin-bottom: 10px;
         line-height: 24px;
         margin-left: 7px;
-        z-index:-999;
+        z-index: -999;
     }
+
     .Bottom-container > form > div > p:nth-child(4) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 10px;
         margin-left: 7px;
         max-width: 767px;
-        display:none;
+        display: none;
 
     }
+
     .Bottom-container > form > div > p:nth-child(5) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 24px;
         line-height: 36px;
         margin-left: 7px;
         max-width: 767px;
-        display:none;
+        display: none;
     }
 
     .Bottom-container > form > div > p:nth-child(2) {
@@ -249,44 +260,47 @@
 /* @media Query MobileL (425px) */
 @media screen and (max-width: 425px) {
     .Bottom-container {
-        width:100%;
+        width: 100%;
         margin-top: 200px;
         margin-bottom: -240px;
         padding-bottom: -1000px;
     }
 
     .Bottom-container > form {
-        max-width:380px;
+        max-width: 380px;
         min-height: 741px;
-        background:#fff;
-        margin:-100px auto;
+        background: #fff;
+        margin: -100px auto;
     }
 
     .Bottom-container > form > div {
-        padding:25px;
+        padding: 25px;
     }
 
 
     .Bottom-container > form > div > p {
-        font-size:14px;
+        font-size: 14px;
         margin-bottom: 20px;
         line-height: 20px;
         margin-left: 7px;
     }
+
     .Bottom-container > form > div > h1 {
         font-size: 28px;
-        margin-top:50px;
+        margin-top: 50px;
     }
+
     .Bottom-container > form > div > p:nth-child(4) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 25px;
         line-height: 36px;
         margin-left: 7px;
         max-width: 767px;
     }
+
     .Bottom-container > form > div > p:nth-child(5) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 24px;
         line-height: 36px;
@@ -298,7 +312,7 @@
 /* @media Query Iphone6/7/8 (375px) */
 @media screen and (max-width: 375px) {
     .Bottom-container {
-        width:100%;
+        width: 100%;
         margin-top: 100px;
         margin-bottom: -500px;
     }
@@ -312,15 +326,16 @@
     }
 
     .Bottom-container > form > div {
-        padding:25px;
+        padding: 25px;
     }
 
     .Bottom-container > form > div > h1 {
         font-size: 18px;
-        margin-top:20px;
+        margin-top: 20px;
     }
+
     .Bottom-container > form > div > p {
-        font-size:12px;
+        font-size: 12px;
         font-weight: bold;
         margin-bottom: 10px;
         line-height: 24px;
@@ -328,35 +343,89 @@
     }
 
     .Bottom-container > form > div > p:nth-child(4) {
-        font-size:14px;
+        font-size: 14px;
         font-weight: 600;
         margin-bottom: 25px;
         line-height: 24px;
         margin-left: 7px;
         max-width: 767px;
     }
+
     .Bottom-container > form > div > p:nth-child(5) {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         margin-bottom: 24px;
         line-height: 24px;
         margin-left: 7px;
         max-width: 767px;
     }
-    .Bottom-container > form  > img {
-        position:relative;
-        left:15px;
-        bottom:-20px;
-        width:250px;
-        height:220px;
+
+    .Bottom-container > form > img {
+        position: relative;
+        left: 15px;
+        bottom: -20px;
+        width: 250px;
+        height: 220px;
         margin-bottom: 80px;
         margin-right: 80px;
     }
 }
 
+@media screen and (min-width: 285px) {
+    .bottom-content {
+        padding:15px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .bottom-content .left {
+
+    }
+
+    .bottom-content .right {
+        /*width: 250px;*/
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .bottom-content .right {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .bottom-content {
+        justify-self: center;
+        display: flex;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 36px;
+        margin-bottom: 30px;
+    }
+
+    .bottom-content .left {
+        flex: 2;
+    }
+
+    .bottom-content .right {
+        width: 400px;
+        flex: 1;
+    }
+
+}
+
+.bottom-container {
+    max-width: 1225px;
+    min-height: 1311px;
+    background: #fff;
+}
 
 .info-bottom-area {
+    padding:10px;
     margin-top: 50px;
     width: 100%;
+    min-height: 500px;
     background-color: #f4f4f4;
 }

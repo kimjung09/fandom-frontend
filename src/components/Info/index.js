@@ -145,12 +145,20 @@ const InfoPage = ({history, location, match}) => {
                         </div>
                     </div>
 
-                    <div className="Bottom-container" id="Story">
-                        <form>
-                            <div dangerouslySetInnerHTML={{__html: item.description}}>
+                    <div className="bottom-container" id="Story">
+
+                            <div className="bottom-content">
+                                <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                </div>
+                                <img className="right" src={item.first_info_img}/>
                             </div>
-                            <img src={item.first_info_img}/>
-                            <img src={item.second_info_img}/>
+
+                            <div className="bottom-content">
+                                <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                </div>
+                                <img className="right" src={item.second_info_img}/>
+                            </div>
+
                             {
                                 match.params.id > 1 ?
                                     <div className="info-bottom-area">
@@ -183,7 +191,7 @@ const InfoPage = ({history, location, match}) => {
                                     </div>
                                     : ''
                             }
-                        </form>
+
                     </div>
                 </div>
                 : ''

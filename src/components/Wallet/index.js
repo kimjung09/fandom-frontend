@@ -1,6 +1,6 @@
 import {BiWalletAlt} from 'react-icons/bi'
 import {useSelector, useDispatch} from 'react-redux'
-import {setUserAccount} from '../../stores/global'
+import {setUserAccount, setWhiteListCheck} from '../../stores/global'
 import {InjectedConnector} from '@web3-react/injected-connector'
 import {useWeb3React} from "@web3-react/core";
 import {useEffect} from 'react';
@@ -9,8 +9,9 @@ import {BSC_CHAIN_ID} from 'config'
 import {useState} from 'react'
 import {getNftInfo, getNftList} from '../../utils/axios'
 /* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
-import {store,getBlockNumber, bidAction} from "../../utils/calls";
+import {store, getBlockNumber, bidAction} from "../../utils/calls";
 import {parseAccount} from "../../utils/util";
+import {getWhiteListCheck} from "../../utils/axios";
 
 const WalletBtn = () => {
     const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
@@ -26,7 +27,7 @@ const WalletBtn = () => {
     const connect = async () => {
         try {
             let network = await setupNetwork();
-            if(!network){
+            if (!network) {
                 window.open('https://metamask.io/');
             }
             await activate(injected);
@@ -39,6 +40,7 @@ const WalletBtn = () => {
     const disconnect = async () => {
         try {
             localStorage.removeItem('local-account');
+            dispatch(setUserAccount(''))
             deactivate();
         } catch (err) {
             console.log(err)
@@ -55,6 +57,9 @@ const WalletBtn = () => {
             }
             localStorage.setItem('local-account', account);
             dispatch(setUserAccount(account))
+            await getWhiteListCheck(account).then(value => {
+                dispatch(setWhiteListCheck(value))
+            })
         },
         [account]
     );

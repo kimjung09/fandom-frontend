@@ -61,7 +61,7 @@ const InfoPage = ({history, location, match}) => {
                                         <h2>{item.title}</h2>
                                         <p>{item.sub_title}</p>
                                         <div className="ButtonContainer">
-                                            <input type="text" name='inputNum' placeholder="BSC"/>
+                                            <input type="text" name='inputNum' placeholder="BNB"/>
                                             <button type="button" onClick={openModal} value='false'>
                                                 <span>
                                                     <MdLocalOffer/>
@@ -109,7 +109,7 @@ const InfoPage = ({history, location, match}) => {
                                                         <p>{item.sub_title}</p>
                                                         <input type="text" name='bsc' placeholder="0.00001" required/>
                                                         <span className="number">
-                                                             ETH
+                                                             BNB
                                                          </span>
                                                         <span className="icon">
                                                             <AiOutlineIssuesClose/>
@@ -151,10 +151,40 @@ const InfoPage = ({history, location, match}) => {
                             </div>
                             <img src={item.first_info_img}/>
                             <img src={item.second_info_img}/>
+                            {
+                                match.params.id > 1 ?
+                                    <div className="info-bottom-area">
+                                        <p style={{margin: 0}}>* Các điều khoản và điều kiện</p>
+                                        1) Người thắng cuộc trong phiên đấu giá sẽ được thông báo qua Telegram trong
+                                        vòng 7
+                                        ngày làm việc sau khi kết thúc sự kiện. Sau khi nhận được tin nhắn, người trúng
+                                        thầu
+                                        phải điền chính xác địa chỉ và thông tin liên hệ trong vòng 7 ngày. Danh sách
+                                        này có
+                                        thể sẽ bị hủy nếu thông tin không được nhập đầy đủ trong khoảng thời gian quy
+                                        định.
+                                        <br/><br/>
+                                        2) Sau đó, lịch trình phân phối sẽ được thông báo qua kênh Telegram chính thức
+                                        của
+                                        Fandom.
+                                        <br/><br/>
+                                        3) Nếu người thắng cuộc thay đổi hoặc xóa Twitter và / hoặc ID Telegram đã nhập
+                                        trên
+                                        Whitelist trước khi công bố kết quả sự kiện và / hoặc nhận giải, giải thưởng có
+                                        thể
+                                        bị hủy.
+                                        <br/><br/>
+                                        4) Fandom không chịu trách nhiệm về những bất lợi do thông tin gửi không chính
+                                        xác
+                                        hoặc có sự thay đổi, ID bị xóa sau khi đã nhập trên Whitelist trước khi công bố.
+                                        (Để biết thêm chi tiết, hãy tham khảo chính sách hoạt động và trang điều khoản
+                                        sử
+                                        dụng ở cuối trang web.)
+                                    </div>
+                                    : ''
+                            }
                         </form>
-
                     </div>
-
                 </div>
                 : ''
             }

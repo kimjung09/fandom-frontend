@@ -39,8 +39,8 @@
 form > h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 60px;
-    line-height: 40px;
+    font-size: 72px;
+    line-height: 60px;
     font-weight: bold;
     margin-top: 10px;
     color:#fff;
@@ -97,7 +97,7 @@ form > div  {
     z-index:1;
 }
 form > .video  {
-    max-width:1025px;
+    max-width:1098px;
     max-height:580px;
     margin-top:20px;
     margin-bottom: -120px;
@@ -171,8 +171,8 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 1440px ) {
     .Body-container {
         width:100%;
-        min-height: 1480px;
-        margin-top: -10px;
+        min-height: 1380px;
+        margin-top: -5px;
         border: 1px solid #000000;
     }
     .Body-container::before {
@@ -226,7 +226,7 @@ form > div > div > div:nth-child(1):after {
         margin-right: 32px;
         padding-left:20px;
         padding-right: 20px;
-        padding-top: -40px;
+        padding-top: -50px;
         padding-bottom: -10px;
         line-height: 14px;
         background:#db154a;
@@ -269,7 +269,7 @@ form > div > div > div:nth-child(1):after {
         margin-bottom: -120px;
         position:relative;
         left:20px;
-        top:20px;
+        top:0px;
         opacity: 90%;
         background-size:100%;
         background-repeat: no-repeat;
@@ -405,7 +405,7 @@ form > div > div > div:nth-child(1):after {
     }
     form > .video {
         max-width: 980px;
-        min-height:400px;
+        min-height:500px;
         background-image: url("/src/components/images/background.jpg");
         background-size:cover;
         margin-top:40px;
@@ -722,14 +722,14 @@ form > div > div > div:nth-child(1):after {
 
     form > .video {
         max-width: 400px;
-        height:120px;
+        height:140px;
         background-image: url("/src/components/images/background.jpg");
         background-size:cover;
         margin-top:60px;
         margin-bottom: 10px;
         z-index:1;
         left:10px;
-        top:-80px;
+        top:-20px;
 
     }
 
@@ -741,7 +741,7 @@ form > div > div > div:nth-child(1):after {
     .Body-VideoBackground:after {
         content: "";
         position: absolute;
-        top: 320px;
+        top: 120px;
         left:0px;
         right: 0px;
         bottom: 0px;
@@ -808,7 +808,7 @@ form > div > div > div:nth-child(1):after {
 @media screen and (max-width: 414px) {
     .Body-container {
         width:100%;
-        min-height: 1116px;
+        min-height: 1024px;
         margin-top: 60px;
     }
     .Body-container > div {
@@ -895,7 +895,7 @@ form > div > div > div:nth-child(1):after {
         margin-bottom: 10px;
         z-index:1;
         left:12px;
-        top:-80px;
+        top:-40px;
 
     }
 
@@ -976,17 +976,16 @@ form > div > div > div:nth-child(1):after {
         width:100%;
         min-height: 1024px;
         margin-top: 0px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
     .Body-container > div {
         margin:auto;
-        max-width: 300px;
+        max-width: 320px;
         text-align: center;
     }
     .Body-container > div > form {
-          margin-top: -60px;
+          margin-top: 21px;
         position: relative;
-        bottom:90px;
     }
     .Body-container::after {
         content: "";
@@ -1073,7 +1072,7 @@ form > div > div > div:nth-child(1):after {
         margin-bottom: 10px;
         z-index:1;
         left:10px;
-        top:-120px;
+        top:-20px;
 
     }
 

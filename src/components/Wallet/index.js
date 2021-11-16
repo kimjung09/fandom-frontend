@@ -94,10 +94,7 @@ const WalletBtn = () => {
                     WALLET
                 </a>
             }
-            <a style={{cursor: 'pointer'}}
-               onClick={test}>
-                TEST BTN
-            </a>
+
         </>
     )
 }

@@ -4,13 +4,13 @@ import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
 
  function Footer() {
   return (
-      <div className="Footer" id="Shop">
-          <div>
+      <div className="Footer">
+          <div className="container">
               <a href="#">TERMS</a>
               <span></span>
               <a href="#">PRIVACY</a>
           </div>
-          <div>
+          <div className="bottom">
               <a href="https://www.fandom.io">
                   <span>
                    <FaHome color={"#d90a42"} size={"30"}/>
@@ -31,7 +31,6 @@ import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
                    <FaDiscord color={"#fffff"} size={"30"}/>
                   </span>
               </a>
-
           </div>
 
       </div>

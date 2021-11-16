@@ -2,46 +2,46 @@
     width: 100%;
     min-height: 151px;
     background:#000000;
-    padding-bottom: 0px;
+    padding-bottom: 42px;
 
 }
 
 .Footer > div {
-    max-width:1363px;
+    max-width:1210px;
     margin:auto;
     text-align: center;
 }
 
-.Footer > div:nth-child(1) >  a {
+.Footer > .container >  a {
     color:#ffffff;
     text-transform: uppercase;
     text-align: center;
-    margin-right: 100px;
-    margin-left: -50px;
+    margin-right: 110px;
+    margin-left: -70px;
     font:18px/108px arial;
 }
-.Footer > div:nth-child(2) >  a {
+.Footer > .bottom >  a {
     color:#ffffff;
     text-transform: uppercase;
     text-align: center;
     margin-right: 20px;
-    font:18px/108px arial;
+    font:18px/98px arial;
 }
 
-.Footer > div:nth-child(2) > a > span {
+.Footer > .bottom > a > span {
     width:100px;
     height: 45px;
     /*position:relative;*/
     /*top:-20px;*/
     /*left:-4%;*/
-    margin:-40px 50px 20px -50px;
+    margin:-50px 50px 20px -50px;
     padding:30px 20px 20px 20px;
     border:none;
     background:#ffffff;
-    line-height: 90px;
+    line-height: 20px;
     border-radius: 100%;
 }
-.Footer > div:nth-child(2) > a:nth-child(3) > span {
+.Footer > .bottom > a:nth-child(3) > span {
     background: #24a1de;
 
 }
@@ -63,7 +63,7 @@
     }
 
     .Footer > div {
-        max-width:1024px;
+        max-width:1210px;
         margin:auto;
     }
 
@@ -71,15 +71,37 @@
         color:#ffffff;
         text-transform: uppercase;
         text-align: center;
-        margin-right: 30px;
-        margin-left: 30px;
+        margin-right: 20px;
+        margin-left: 10px;
         font:18px/108px arial;
     }
     .Footer > div:nth-child(2) > a  {
         margin:50px -30px 0px 50px;
     }
 
+    .Footer > div:nth-child(2) > a > span {
+        width:100px;
+        height: 45px;
+        /*position:relative;*/
+        /*top:-20px;*/
+        /*left:-4%;*/
+        margin:-40px 50px 20px -50px;
+        padding:30px 20px 20px 20px;
+        border:none;
+        background:#ffffff;
+        line-height: 50px;
+        border-radius: 100%;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(3) > span {
+        background: #24a1de;
 
+    }
+    .Footer > div:nth-child(2) > a:nth-child(4) > span {
+        background:#6881d8;
+    }
+    .Footer > div:nth-child(2) > a:nth-child(5) > span {
+        background:#ffc017;
+    }
 
 }
 /** Media Query LatTop L(1024) */
@@ -191,7 +213,7 @@
 
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 18px/100px arial;
+        font:bold 16px/100px arial;
         margin-left: 80px;
         margin-right: -60px;
     }
@@ -230,7 +252,7 @@
 
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 18px/138px arial;
+        font:bold 18px/128px arial;
         margin-left: 80px;
         margin-right: -60px;
     }

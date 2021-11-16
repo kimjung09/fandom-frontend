@@ -6,7 +6,7 @@
     max-width: 1225px;
     min-height: 1311px;
     background: #fff;
-    margin:-100px auto;
+    margin:-50px auto;
     position: relative;
     top:-290px;
 
@@ -19,7 +19,6 @@
 
 .Bottom-container > form > div > h1 {
     font-size: 38px;
-
     margin-top:50px;
     margin-bottom: 22px;
 
@@ -67,7 +66,7 @@
     .Bottom-container {
         width:100%;
         margin-top: 23px;
-        padding-bottom: -80px;
+        padding-bottom: -100px;
 
     }
 
@@ -90,7 +89,6 @@
 
     .Bottom-container > form > div > p  {
         font-size:16px;
-
         font-weight: 600;
         margin-bottom: 25px;
         line-height: 36px;
@@ -99,7 +97,7 @@
     }
 
     .Bottom-container > form > div > p:nth-child(4) {
-        font-size:16px;
+        font-size:14px;
 
         font-weight: 600;
         margin-bottom: 25px;
@@ -180,7 +178,7 @@
         position:relative;
         left:50px;
         bottom:-20px;
-        width:300px;
+        width:400px;
         height:300px;
         margin-bottom: 50px;
         margin-right: 80px;
@@ -240,6 +238,15 @@
     }
 
     .Bottom-container > form > div > p:nth-child(2) {
+    }
+    .Bottom-container > form  > img {
+        position:relative;
+        left:50px;
+        bottom:-20px;
+        width:400px;
+        height:300px;
+        margin-bottom: 50px;
+        margin-right: 80px;
     }
 }
 

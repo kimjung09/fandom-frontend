@@ -46,7 +46,7 @@
     padding:0;
     position:relative;
     top:480px;
-    right:340px;
+    right:200px;
 }
 .Container > .Description {
     width:550px;
@@ -1050,7 +1050,7 @@
         float: left;
         background: #ffffff;
         position:relative;
-        right:40px;
+        right:20px;
         top:120px;
         opacity: 80%;
         user-select: none;
@@ -1448,7 +1448,7 @@
         float: left;
         background: #ffffff;
         position:relative;
-        right:40px;
+        right:20px;
         top:220px;
         opacity: 80%;
         border-radius: 50%;

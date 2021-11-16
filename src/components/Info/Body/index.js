@@ -69,8 +69,7 @@ const Body = ({match}) => {
                 <div className="SubBody-Container" onClick={() => onSetIsVisible(true)} >
                     <h1><span>LIVE</span>  {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h1>
                     <div className="Container">
-                        <img className="Image"
-                             src={item.img}/>
+                        <img src={item.img} className="image"/>
                         <div className="Description">
                             <h2>{item.title}</h2>
                             <p>{item.subTitle}</p>

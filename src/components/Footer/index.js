@@ -10,17 +10,17 @@ function Footer() {
                 <a href="#">PRIVACY</a>
             </div>
             <div className="sns-btn">
-                <a href="https://www.fandom.io">
+                <a href="https://www.fandom.co">
                     <img src="/images/sns1.png"/>
                 </a>
                 <a href="https://twitter.com/Fandom_CRTR">
-                    <img src="/images/sns2.png"/>
+                    <img src="/images/sns4.png"/>
                 </a>
                 <a href="https://t.me/Fandom_vietnam">
-                    <img src="/images/sns3.png"/>
+                    <img src="/images/sns2.png"/>
                 </a>
                 <a href="https://medium.com/@Fandom_CRTR">
-                    <img src="/images/sns4.png"/>
+                    <img src="/images/sns3.png"/>
                 </a>
             </div>
         </div>

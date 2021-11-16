@@ -2,48 +2,35 @@
     width: 100%;
     min-height: 151px;
     background:#000000;
-    padding-bottom: 0px;
-
+    padding: 50px 0 50px 0;
 }
 
-.Footer > div {
-    max-width:1300px;
-    margin:auto;
+.Footer .privacy {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.Footer > div >  a {
-    margin-right:20px;
-    color:#ffffff;
+.Footer .privacy .bar {
+    border-right: 2px solid red;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Footer .privacy > a {
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    font:18px/108px arial;
-    position: relative;
-    left:35%;
-
-}
-.Footer > div:nth-child(1) >  a:nth-child(1) {
-    border-right: 2px solid red;
-    padding-right: 30px;
+    font-size: 18px;
 }
 
-
-.Footer > div:nth-child(2) {
-    margin:auto;
-
+.Footer .sns-btn {
+    text-align: center;
 }
 
-.Footer > div:nth-child(2) > a > span {
-    width:100px;
-    height: 45px;
-    position:relative;
-    top:-20px;
-    left:-4%;
-    padding:30px 20px 20px 20px;
-    border:none;
-    background:#ffffff;
-    line-height: 90px;
-    border-radius: 100%;
+.Footer .sns-btn > a {
+    margin: 0 6px 0 6px;
 }
+
 .Footer > div:nth-child(2) > a:nth-child(3) > span {
     background: #ffffff;
 

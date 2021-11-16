@@ -9,16 +9,7 @@ function Header() {
         <div className="Header-container">
             <div>
                 <a href="/">
-                    <MdOutlineTipsAndUpdates className="icon" />
-                    fandom
-                </a>
-                <a
-                    href=""
-                    className="Header-H1"
-                >
-                    <FaTiktok className="icon" />
-
-                    Tik Tok
+                    <img src="/images/logo.png"/>
                 </a>
                 <WalletBtn/>
             </div>

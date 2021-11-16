@@ -40,9 +40,7 @@
     width:100%;
 }
 .Story-container > .Story-components > div:nth-child(1) > p {
-    margin-bottom:24px;
     font:  bold 18px/34px arial;
-    font-family: -apple-system;
     margin-bottom:52px;
     text-align: center;
     margin-left:72px;
@@ -159,10 +157,8 @@
 
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
-        margin-bottom:24px;
         font:  bold 18px/34px arial;
         margin-left:120px;
-        font-family: -apple-system;
         margin-bottom:52px;
     }
 
@@ -263,7 +259,6 @@
     .Story-container > .Story-components > div:nth-child(1) > p {
         font:  bold 16px/34px arial;
         margin-left:40px;
-        font-family: -apple-system;
         margin-bottom:52px;
     }
     .Story-components > .Story-components > .form > span {
@@ -387,7 +382,6 @@
         margin-bottom:24px;
         font:  bold 15px/34px arial;
         margin-left: 45px;
-        font-family: -apple-system;
     }
 
     .Story-container > .Story-components > div:nth-child(1) > div {
@@ -537,7 +531,6 @@
     .Story-container > .Story-components > div:nth-child(1) > p {
         font:  bold 14px/34px arial;
         margin-left: -10px;
-        font-family: -apple-system;
         margin-bottom:82px;
     }
 
@@ -659,7 +652,6 @@
     .Story-container > .Story-components > div:nth-child(1) > p {
         font:  bold 12px/32px arial;
         margin-left: -10px;
-        font-family: -apple-system;
         margin-bottom:22px;
     }
 
@@ -784,7 +776,6 @@
         font:  bold 12px/24px arial;
         margin-left: 10px;
 
-        font-family: -apple-system;
         margin-bottom:22px;
     }
 

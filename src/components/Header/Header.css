@@ -3,11 +3,11 @@
     width: 100%;
     min-height: 111px;
     z-index: 99999;
-    opacity: 1.0;
+    position: absolute;
 }
 
 .Header-container > div {
-    max-width: 1350px;
+    max-width: 1120px;
     width:100%;
     margin: auto;
     background: transparent;

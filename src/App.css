@@ -19,14 +19,14 @@ body {
     min-height: 1300px;
     width:100%;
     background-repeat: no-repeat;
-    background-position: 0px -100px;
+    background-position: 0 -100px;
     position:relative;;
     bottom:250px;
 }
 
 @media screen and (max-width:1440px) {
 .SubPage{
-    background-position: 0px 50px;
+    background-position: 0 50px;
     position:relative;;
     bottom:280px;
 }
@@ -58,7 +58,6 @@ body {
 html {
     overflow-x: hidden;
     word-break: keep-all;
-    overflow-x: hidden;
     -ms-overflow-style: none;
 }
 

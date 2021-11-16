@@ -10,26 +10,25 @@ import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
               <span></span>
               <a href="#">PRIVACY</a>
           </div>
-
           <div>
               <a href="https://www.fandom.io">
                   <span>
-                   <FaHome color={"d7144e"} size={"30"}/>
+                   <FaHome color={"#d90a42"} size={"30"}/>
                   </span>
               </a>
               <a href="https://twitter.com/Fandom_CRTR">
                    <span>
-                   <FaTwitter color={"d7144e"} size={"30"}  />
+                   <FaTwitter color={"#6881d8"} size={"30"}  />
                   </span>
               </a>
               <a href="https://t.me/Fandom_vietnam">
                     <span>
-                   <FaTelegramPlane color={"d7144e"} size={"30"} />
+                   <FaTelegramPlane color={"#fffff"} size={"30"} />
                   </span>
               </a>
               <a href="https://medium.com/@Fandom_CRTR">
                    <span>
-                   <FaDiscord color={"d7144e"} size={"30"}/>
+                   <FaDiscord color={"#fffff"} size={"30"}/>
                   </span>
               </a>
 

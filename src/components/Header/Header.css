@@ -288,7 +288,7 @@
 
     .Header-container > div > a {
         color: #fff;
-        margin: 40px 20px 0px 0px;
+        margin: 40px 10px 0px 0px;
         font-size: 12px;
         position: relative;
         float: left;
@@ -318,8 +318,15 @@
         left:20px;
         top: 3px;
         z-index: 1;
-
     }
+
+    .Header-container > div > a > .icon {
+        margin-left: 5px;
+        padding-right: 10px;
+        font-size:20px;
+        line-height: 30px;
+    }
+
 }
 
 /*  Media Query iPoneX (375 x 812) */
@@ -332,7 +339,7 @@
     }
 
     .Header-container > div  {
-        max-width: 300px;
+        max-width: 350px;
         margin: 14px auto;
         line-height: 32px;
         color: #fff;
@@ -340,19 +347,19 @@
 
     .Header-container > div > a {
         color: #fff;
-        margin: 40px 9px 0px 0px;
+        margin: 40px 10px 0px 0px;
         font-size: 12px;
         position: relative;
         float: left;
-        left:-20px;
+        left:20px;
 
     }
 
     .Header-container > div > a:nth-child(3) {
         float: right;
-        width: 70px;
+        width: 80px;
         height: 50px;
-        margin: 30px -5px 10px 0px;
+        margin: 30px 30px 10px 0px;
         font-size: 10px;
         line-height: 40px;
         color: #fff;

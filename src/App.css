@@ -14,14 +14,22 @@ body {
 }
 
 .SubPage {
-    background-image: url("http://junghorooms.io/images/background3.jpg");
+    background-image: url("/src/components/images/background3.jpg");
     background-size: cover;
     min-height: 1300px;
     width:100%;
     background-repeat: no-repeat;
-    background-position: 0px -300px;
+    background-position: 0px -100px;
     position:relative;;
     bottom:250px;
+}
+
+@media screen and (max-width:1440px) {
+.SubPage{
+    background-position: 0px 50px;
+    position:relative;;
+    bottom:280px;
+}
 }
 
 @media screen and (min-width:425px){
@@ -29,7 +37,22 @@ body {
       min-height: 1300px;
 
   }
+  .SubPage {
+
+      background-size: cover;
+      min-height: 1200px;
+  }
 }
+@media screen and (max-width:425px){
+
+    .SubPage {
+
+        background-size: cover;
+        min-height: 1000px;
+    }
+}
+
+
 
 
 html {

@@ -381,7 +381,7 @@
         display: block;
         margin:220px auto;
         position: relative;
-        top:300px;
+        top:320px;
     }
     .SubBody-Container > h1 {
         text-align: center;
@@ -1099,16 +1099,16 @@
     .SubBody-Container {
         width:100%;
         max-width: 680px;
-        min-height:950px;
+        min-height:980px;
         color:#000000;
         background:#ffffff;
         border:none;
         display: block;
-        margin:240px auto;
+        margin:300px auto;
         position: relative;
         top:300px;
         z-index:2;
-        padding-bottom: 90px;
+        padding-bottom: 100px;
 
     }
     .SubBody-Container > h1 {
@@ -1198,7 +1198,7 @@
         font-weight: bold;
         color:#fff;
         position:absolute;
-        bottom:300px;
+        bottom:400px;
         z-index:1;
 
     }
@@ -1222,16 +1222,16 @@
     }
     .Description > .ButtonContainer   > button {
         width:768px;
-        height:120px;
+        height:80px;
         margin-left: 15px;
-        font-size:40px;
+        font-size:24px;
         font-weight: bold;
         border:none;
         color:#ffffff;
         position:absolute;
         left:-165px;
         margin-top: 80px;
-        top:1225px;
+        top:1700px;
 
     }
     .Description > .ButtonContainer   > button > span {
@@ -1248,7 +1248,6 @@
     .Description > .Modal {
         height:2490px;
         width: 1900px;
-
         z-index: 999;
         position:fixed;
         bottom:-140px;
@@ -1394,8 +1393,9 @@
         padding:0;
         margin-top: 30px;
         z-index:-999;
-
-
+    }
+    .Container > .Description  > form > table > thead  > tr > th:nth-child(4) {
+        display: none;
     }
     .Container > .Description  > form > table > thead > tr:first-child {
         background: #efefef;
@@ -1498,9 +1498,9 @@
         color:#000000;
         background:#ffffff;
         display: block;
-        margin:200px auto;
+        margin:260px auto;
         position: relative;
-        top:280px;
+        top:250px;
     }
     .SubBody-Container > h1 {
         text-align: center;
@@ -1605,7 +1605,7 @@
         position:absolute;
        /* left:-165px; */
         margin-top: 80px;
-        top:1460px;
+        top:1850px;
         left:0;
         bottom:900px;
 
@@ -1631,8 +1631,7 @@
         min-height: 400px;
         background: #ffffff;
         position: fixed;
-        bottom:300px;
-
+        bottom:320px;
         z-index: 999;
         left:40px;
         color:#000000;
@@ -1744,7 +1743,7 @@
         min-height: 195px;
         margin-left: -24px;
         position:relative;
-        bottom:100px;
+        bottom:120px;
     }
     .Container > .Description  > form > table {
         border-collapse: separate;
@@ -1767,7 +1766,7 @@
     }
     .Container > .Description  > form > table > thead  > tr > th {
         width:500px;
-        font-size:15px;
+        font-size:12px;
         line-height: 32px;
         font-weight: normal;
         text-transform: capitalize;
@@ -1780,7 +1779,7 @@
     }
     .Container > .Description  > form > table > tbody > tr > th {
         width:500px;
-        font-size:13px;
+        font-size:11px;
         line-height: 32px;
         font-weight: normal;
         text-transform: capitalize;
@@ -1941,14 +1940,14 @@
     .SubBody-Container {
         width:100%;
         max-width: 300px;
-        min-height:720px;
+        min-height:800px;
         color:#000000;
         background:#ffffff;
         border:none;
         display: block;
-        margin:200px auto;
+        margin:280px auto;
         position: relative;
-        top:250px;
+        top:200px;
     }
     .SubBody-Container > h1 {
         text-align: center;
@@ -2055,9 +2054,9 @@
         position:absolute;
         /* left:-165px; */
         margin-top: 80px;
-        top:1460px;
+        top:1000px;
         left:0;
-        bottom:900px;
+        bottom:600px;
 
     }
     .Description > .ButtonContainer   > button > span {

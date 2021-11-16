@@ -1,7 +1,6 @@
 /* Header Conatiner 배경 */
 .Header-container {
     width: 100%;
-    min-height: 111px;
     position: absolute;
     z-index: 99999;
     margin-top: 30px;

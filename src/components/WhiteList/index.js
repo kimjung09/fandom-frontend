@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import "./style/body.css"
 import "./style/story.css"
 import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet,FaHandPointer} from 'react-icons/fa'
 import {registerWhiteList} from "../../utils/axios";
@@ -30,7 +29,7 @@ const WhiteList = () => {
             account: userAccount
         }
         await registerWhiteList(params).then(res => {
-            location.href = '/'
+            window.location.href = '/'
         });
     }
 

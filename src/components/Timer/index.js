@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import moment from 'moment';
+import "./style/Timer.css"
 
-const Timer = () => {
+const Index = () => {
     const formatTime = (time) => {
         if (time < 10) {
             return '0' + time
@@ -20,7 +21,7 @@ const Timer = () => {
         }
         duration = moment.duration(duration.asSeconds() - 1, 'seconds');
         return (
-            duration.days() + 'D ' + formatTime(duration.hours()) + ':' + formatTime(duration.minutes()) + ':' + formatTime(duration.seconds())
+            duration.days() + 'D ' + formatTime(duration.hours()) + ':' + formatTime(duration.minutes()) + ':' +formatTime(duration.seconds())
         );
     }
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -29,10 +30,14 @@ const Timer = () => {
             setTimeLeft(calculateTimeLeft());
         }, 1000);
     });
+
     return (
-        <>
-            <h1><span>LIVE</span>{timeLeft}</h1>
-        </>
+        <div className="timer">
+            <span className="live">LIVE</span>
+            <span className="clock">
+                {timeLeft}
+            </span>
+        </div>
     )
 }
-export default Timer;
+export default Index;

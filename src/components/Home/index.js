@@ -111,7 +111,7 @@ const MainPage = (props) => {
             </div>
             {
                 props.match.path === '/whitelist' ? (
-                    <WhiteList/>
+                    <WhiteList />
                 ) : (
                     <div className="Story-container" id="Story">
                         <div className="Story-components">

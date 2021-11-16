@@ -55,7 +55,7 @@ const WhiteList = () => {
 
     return (
         <div className="white-list-container">
-            <div>
+            <div className="white-list-inner">
                 <div className="main-font">
                     <h1>Tham gia Whitelist</h1>
                     <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng lịch sử của NHI khi trở thành nhà vô địch thế giới.

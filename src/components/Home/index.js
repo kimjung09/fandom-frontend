@@ -6,11 +6,10 @@ import {getNftList} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "./Timer";
 import {NavLink} from 'react-router-dom';
+import WhiteList from "../WhiteList";
 
 
-
-const MainPage = (location, match) => {
-    console.log(location,match)
+const MainPage = (props) => {
     const asyncData = useAsync(getNftList);
     const item = asyncData.result
 
@@ -37,47 +36,51 @@ const MainPage = (location, match) => {
                     </form>
                 </div>
             </div>
-
-            {/*<WhiteList />*/}
-
-            <div className="Story-container" id="Story">
-                <form className="Story-components">
-                    <div>
-                        <button>
-                            <NavLink to="/whitelist">
-                                danh sách trắng <FaGift color={"none"}/>
-                            </NavLink>
-                        </button>
-
-                        <h1>1st Story</h1>
-                        <p>
-                            Những khoảnh khắc đặc biệt của NHI qua NFT.
-                            Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~  23:59, ngày 30/11
-                            <br/>
-                            Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
-                        </p>
-                        <div>
-                            {item ? item.map((res, index) =>
-                                <React.Fragment key={index}>
-                                    <NavLink to={`/fandom/${res.id}`}>
-                                        <img src={res.list_img}/>
+            {
+                props.match.path === '/whitelist' ? (
+                    <WhiteList/>
+                ) : (
+                    <div className="Story-container" id="Story">
+                        <form className="Story-components">
+                            <div>
+                                <button>
+                                    <NavLink to="/whitelist">
+                                        danh sách trắng <FaGift color={"none"}/>
                                     </NavLink>
-                                </React.Fragment>
-                            ) : (
-                                <React.Fragment>
+                                </button>
 
-                                </React.Fragment>
-                            )
-                            }
-                        </div>
-                        <button>
-                            <NavLink to="/whitelist">
-                                Đấu giá ngay bây giờ
-                            </NavLink>
-                        </button>
+                                <h1>1st Story</h1>
+                                <p>
+                                    Những khoảnh khắc đặc biệt của NHI qua NFT.
+                                    Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~ 23:59, ngày 30/11
+                                    <br/>
+                                    Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI từ
+                                    trước
+                                    khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
+                                </p>
+                                <div>
+                                    {item ? item.map((res, index) =>
+                                        <React.Fragment key={index}>
+                                            <NavLink to={`/fandom/${res.id}`}>
+                                                <img src={res.list_img}/>
+                                            </NavLink>
+                                        </React.Fragment>
+                                    ) : (
+                                        <React.Fragment>
+
+                                        </React.Fragment>
+                                    )
+                                    }
+                                </div>
+                                <button>
+                                    <NavLink to="/whitelist">
+                                        Đấu giá ngay bây giờ
+                                    </NavLink>
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
+                )}
         </>
     )
 }

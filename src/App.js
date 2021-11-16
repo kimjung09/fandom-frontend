@@ -1,6 +1,5 @@
 import React from "react";
 import MainPage from "./components/Home/index";
-import WhiteList from "./components/WhiteList";
 import SubPage from "./components/Info";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {Web3ReactProvider} from '@web3-react/core'

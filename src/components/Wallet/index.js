@@ -10,6 +10,7 @@ import {useState} from 'react'
 import {getNftInfo, getNftList} from '../../utils/axios'
 /* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
 import {store,getBlockNumber, bidAction} from "../../utils/calls";
+import {parseAccount} from "../../utils/util";
 
 const WalletBtn = () => {
     const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
@@ -73,7 +74,7 @@ const WalletBtn = () => {
         if (mouseOverCheck) {
             return (<span>Disconnect</span>)
         }
-        return (<span>{`${account.substring(0, 5)}...${account.substring(account.length - 4)}`}</span>)
+        return (<span>{parseAccount(account)}</span>)
     }
 
     return (

@@ -42,7 +42,7 @@ const Body = () => {
 
     const nextId = useRef(6);
 
-    const hoursMinSecs = {hours:24, minutes: 0, seconds:0}
+  //  const hoursMinSecs = {hours:24, minutes: 0, seconds:0}
 
 
 
@@ -60,9 +60,7 @@ const Body = () => {
                         {/*    <span className="clock">*/}
                         {/*         {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</span>*/}
                         {/*</p>*/}
-                        <CountDownTimer hoursMinSecs={hoursMinSecs} />
                         <div className="video">
-
                             <span>
                               <FaPlay size={"40"}/>
                           </span>

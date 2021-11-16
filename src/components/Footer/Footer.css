@@ -2,345 +2,50 @@
     width: 100%;
     min-height: 151px;
     background:#000000;
-    padding-bottom: 0px;
-
+    padding: 50px 0 50px 0;
 }
 
-.Footer > div {
-    max-width:1300px;
-    margin:auto;
+.Footer .privacy {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.Footer > div >  a {
-    margin-right:20px;
-    color:#ffffff;
+.Footer .privacy .bar {
+    border-right: 2px solid red;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Footer .privacy > a {
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    font:18px/108px arial;
-    position: relative;
-    left:35%;
-
-}
-.Footer > div:nth-child(1) >  a:nth-child(1) {
-    border-right: 2px solid red;
-    padding-right: 30px;
+    font-size: 18px;
 }
 
-
-.Footer > div:nth-child(2) {
-    margin:auto;
-
+.Footer .sns-btn {
+    text-align: center;
 }
 
-.Footer > div:nth-child(2) > a > span {
-    width:100px;
-    height: 45px;
-    position:relative;
-    top:-20px;
-    left:-4%;
-    padding:30px 20px 20px 20px;
-    border:none;
-    background:#ffffff;
-    line-height: 90px;
-    border-radius: 100%;
+.Footer .sns-btn > a {
+    margin: 0 6px 0 6px;
 }
-.Footer > div:nth-child(2) > a:nth-child(3) > span {
-    background: #ffffff;
-
-}
-.Footer > div:nth-child(2) > a:nth-child(4) > span {
-    background:#ffffff;
-}
-.Footer > div:nth-child(2) > a:nth-child(5) > span {
-    background:#ffc017;
-}
-
 
 /** Media Query LatTop L(1440px) */
 @media screen and (max-width: 1440px){
-    .Footer {
-        width: 100%;
-        min-height: 200px;
-        background:#000000;
-
-    }
-
-    .Footer > div {
-        max-width:1200px;
-        margin:auto;
-    }
-
-    .Footer > div >  a {
-
-        color:#ffffff;
-        text-transform: uppercase;
-        font:bold 18px/138px arial;
-        margin-left: 70px;
-        margin-right: -50px;
-
-    }
-
-    .Footer > div:nth-child(1) >  a:nth-child(1) {
-        border-right: 2px solid red;
-        padding-right: 40px;
-    }
-
-
-    .Footer > div:nth-child(2) {
-        margin:auto;
-
-    }
-    .Footer > div:nth-child(2) > a > span {
-        width:100px;
-        height: 45px;
-        position:relative;
-        top:-30px;
-        left:-6%;
-        padding:30px 20px 20px 20px;
-        border:none;
-        background:#ffffff;
-        line-height: 80px;
-        border-radius: 100%;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(3) > span {
-        background: #24a1df;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(4) > span {
-        background:#7289d9;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(5) > span {
-        background:#ffc017;
-    }
-
 }
 /** Media Query LatTop L(1024) */
 @media screen and (max-width: 1024px){
-    .Footer {
-        width: 100%;
-        min-height: 200px;
-        background:#000000;
-
-    }
-
-    .Footer > div {
-        max-width:1200px;
-        margin:auto;
-    }
-
-    .Footer > div >  a {
-
-        color:#ffffff;
-        text-transform: uppercase;
-        font:bold 18px/138px arial;
-        margin-left: 70px;
-        margin-right: -60px;
-    }
-
-    .Footer > div:nth-child(1) >  a:nth-child(1) {
-        border-right: 2px solid red;
-        padding-right: 10px;
-    }
-
-
-    .Footer > div:nth-child(2) {
-        margin:auto;
-
-    }
-    .Footer > div:nth-child(2) > a > span {
-        width:100px;
-        height: 45px;
-        position:relative;
-        top:-30px;
-        left:-6%;
-        padding:30px 20px 20px 20px;
-        border:none;
-        background:#ffffff;
-        line-height: 80px;
-        border-radius: 100%;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(3) > span {
-        background: #24a1df;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(4) > span {
-        background:#7289d9;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(5) > span {
-        background:#ffc017;
-    }
 }
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
-    .Footer {
-        width: 100%;
-        min-height: 166px;
-        background:#000000;
-
-    }
-
-    .Footer > div {
-        max-width:500px;
-        margin:auto;
-    }
-    .Footer > div >  a {
-        color:#ffffff;
-        text-transform: uppercase;
-        font:bold 18px/140px arial;
-        border:none;
-    }
-
-    .Footer > div:nth-child(1) >  a {
-        border-right: 2px solid red;
-        padding-right: 20px;
-        display: none;
-
-    }
-    .Footer > div:nth-child(2) {
-        margin:auto;
-    }
-    .Footer > div:nth-child(2) > a > span {
-        width:100px;
-        height: 15px;
-        position:relative;
-        top:15px;
-        left:-30%;
-        padding:30px 20px 20px 20px;
-        border:none;
-        background:#ffffff;
-        line-height: 120px;
-        border-radius: 100%;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(3) > span {
-        background: #24a1df;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(4) > span {
-        background:#7289d9;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(5) > span {
-        background:#ffc017;
-    }
 }
 
 /** Media Query MobileL (425px) */
 @media screen and (max-width: 425px) {
-    .Footer {
-        width: 100%;
-        min-height: 120px;
-        background:#000000;
-
-    }
-
-    .Footer > div {
-        max-width:400px;
-        margin:auto;
-    }
-
-    .Footer > div >  a {
-        margin-right: -50px;
-        margin-left: 50px;
-        color:#ffffff;
-        text-transform: uppercase;
-        font:bold 14px/18px arial;
-        position:relative;
-        left:-0px;
-    }
-    .Footer > div >  a:nth-child(4) {
-        margin-right: -50px;
-    }
-
-    .Footer > div:nth-child(1) >  a {
-
-
-
-    }
-
-
-    .Footer > div:nth-child(2) {
-        margin:auto;
-
-    }
-    .Footer > div:nth-child(2) > a > span {
-        width:40px;
-        height: 20px;
-        position:relative;
-        top:20px;
-        margin-left: 10px;
-        left:-10px;
-        padding:30px 20px 20px 20px;
-        border:none;
-        background:#ffffff;
-        line-height: 80px;
-        border-radius: 100%;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(3) > span {
-        background: #24a1df;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(4) > span {
-        background:#7289d9;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(5) > span {
-        background:#ffc017;
-    }
 }
 
 /** Media Query Iphone X (375px) */
 @media screen and (max-width: 375px) {
-    .Footer {
-        width: 100%;
-        max-height: 180px;
-        background:#000000;
-
-    }
-
-    .Footer > div {
-        max-width:330px;
-        margin:auto;
-    }
-
-
-    .Footer > div >  a {
-        margin-right: -35px;
-        margin-left: 30px;
-        color:#ffffff;
-        text-transform: uppercase;
-        font:bold 14px/138px arial;
-        position:relative;
-        left:-0px;
-    }
-    .Footer > div >  a:nth-child(4) {
-        margin-right: -35px;
-    }
-
-    .Footer > div:nth-child(1) >  a {
-
-
-
-    }
-
-
-    .Footer > div:nth-child(2) {
-        margin:auto;
-
-    }
-    .Footer > div:nth-child(2) > a > span {
-        width:15px;
-        height: 15px;
-        position:relative;
-        top:15px;
-        left:-20px;
-        padding:30px 20px 20px 20px;
-        border:none;
-        background:#ffffff;
-        line-height: 80px;
-        border-radius: 100%;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(3) > span {
-        background: #24a1df;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(4) > span {
-        background:#7289d9;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(5) > span {
-        background:#ffc017;
-    }
 }

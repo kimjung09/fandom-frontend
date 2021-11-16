@@ -7,18 +7,9 @@ import {MdOutlineTipsAndUpdates} from 'react-icons/md'
 function Header() {
     return (
         <div className="Header-container">
-            <div>
+            <div className="Header">
                 <a href="/">
-                    <MdOutlineTipsAndUpdates className="icon" />
-                    fandom
-                </a>
-                <a
-                    href=""
-                    className="Header-H1"
-                >
-                    <FaTiktok className="icon" />
-
-                    Tik Tok
+                    <img src="/images/logo.png" className="logo"/>
                 </a>
                 <WalletBtn/>
             </div>

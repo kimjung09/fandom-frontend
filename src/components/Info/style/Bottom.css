@@ -59,7 +59,10 @@
     margin-bottom: 80px;
 }
 
-
+.notice-font {
+    font-size: 13px !important;
+    font-weight: normal;
+}
 
 
 /** Media Query LatTop (1440px) **/

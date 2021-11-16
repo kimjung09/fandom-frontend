@@ -80,7 +80,7 @@ const WalletBtn = () => {
                     <span>
                         <BiWalletAlt/>
                     </span>
-                    WALLET
+                    Ví
                 </a>
             }
         </>

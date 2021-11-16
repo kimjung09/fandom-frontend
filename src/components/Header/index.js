@@ -7,9 +7,9 @@ import {MdOutlineTipsAndUpdates} from 'react-icons/md'
 function Header() {
     return (
         <div className="Header-container">
-            <div>
+            <div className="Header">
                 <a href="/">
-                    <img src="/images/logo.png"/>
+                    <img src="/images/logo.png" className="logo"/>
                 </a>
                 <WalletBtn/>
             </div>

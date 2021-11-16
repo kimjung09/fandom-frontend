@@ -1,5 +1,5 @@
 .Body-container {
-    width:100%;
+    width: 100%;
     min-height: 1412px;
     background-size: cover;
 
@@ -16,7 +16,7 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    width:100%;
+    width: 100%;
     height: 925px;
     background-image: url("/src/components/images/background3.jpg");
     background-size: cover;
@@ -29,9 +29,9 @@
     margin: auto;
 }
 .Body-container > div > form {
-    position:relative;
-    top:100px;
-    z-index:1;
+    position: relative;
+    top: 100px;
+    z-index: 1;
 }
 form > h1 {
     text-align: center;
@@ -40,44 +40,44 @@ form > h1 {
     line-height: 40px;
     font-weight: bold;
     margin-top: 10px;
-    color:#fff;
-    z-index:-999;
+    color: #fff;
+    z-index: -999;
 
 }
 form > p {
     text-transform: uppercase;
-    font-size:20px;
+    font-size: 20px;
     line-height: 42px;
     margin-top: 30px;
     margin-bottom: 84px;
     text-align: center;
-    color:#fff;
+    color: #fff;
 }
 form > .time > .live {
-    max-width:169px;
-    height:33px;
+    max-width: 169px;
+    height: 33px;
     margin-right: 92px;
     line-height: 14px;
-    background:#db154a;
+    background: #db154a;
     border-radius: 14px 14px 14px 14px;
-    margin:20px;
+    margin: 20px;
 }
 form > .time {
     text-transform: uppercase;
-    font-size:85px;
+    font-size: 85px;
     font-weight: 400;
 
-    font-weight:bold;
+    font-weight: bold;
     text-align: center;
-    z-index:1;
+    z-index: 1;
 }
 form > p:nth-child(2) > span {
-    background:#db154a;
-    max-width:171px;
+    background: #db154a;
+    max-width: 171px;
     border-radius: 5%;
     height: 80px;
-    font:bold 40px/23px arial;
-    padding:0px 90px;
+    font: bold 40px/23px arial;
+    padding: 0px 90px;
 }
 form > p:nth-child(2) > span:nth-child(2) {
     background: linear-gradient(to right, #ffffff, #ffffff);
@@ -85,52 +85,52 @@ form > p:nth-child(2) > span:nth-child(2) {
     -webkit-text-fill-color: transparent;
 }
 form > p:nth-child(2) > span:nth-child(1) {
-    margin-left:28px;
-    color:#fff;
+    margin-left: 28px;
+    color: #fff;
 }
-form > div  {
-    max-width:1130px;
+form > div {
+    max-width: 1130px;
     min-height: 562px;
-    z-index:1;
+    z-index: 1;
 }
-form > .video  {
-    max-width:1025px;
-    max-height:580px;
-    margin-top:20px;
+form > .video {
+    max-width: 1025px;
+    max-height: 580px;
+    margin-top: 20px;
     margin-bottom: -120px;
-    position:relative;
-    left:80px;
-    top:20px;
+    position: relative;
+    left: 80px;
+    top: 20px;
     opacity: 90%;
-    background-size:100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     z-index: -999;
     background-image: url("../../images/background.jpg");
 }
 form > .video > span {
-    border:none;
-    width:117px;
+    border: none;
+    width: 117px;
     height: 103px;
     border-radius: 100%;
-    color:#fff;
+    color: #fff;
     background: #02050d;
-    padding:45px 20px 20px 30px;
+    padding: 45px 20px 20px 30px;
     opacity: 70%;
-    content:"";
-    position:relative;
-    left:44%;
-    top:280px;
+    content: "";
+    position: relative;
+    left: 44%;
+    top: 280px;
     z-index: 1;
-    bottom:0px;
+    bottom: 0px;
 }
 form > .video > span:before {
-    position:relative;
-    left:45%;
-    top:200px;
+    position: relative;
+    left: 45%;
+    top: 200px;
 }
 
 .play-button {
-    margin:auto;
+    margin: auto;
     text-align: center;
     opacity: 100%;
 }
@@ -141,11 +141,11 @@ form > div > div > div:nth-child(1):before {
     left: 80px;
     right: 0px;
     bottom: 20px;
-    max-width:1110px;
-    min-height:580px;
+    max-width: 1110px;
+    min-height: 580px;
     opacity: 80%;
     background-color: #6e1133;
-    z-index:2;
+    z-index: 2;
 }
 form > div > div > div:nth-child(1):after {
     content: "";
@@ -155,11 +155,11 @@ form > div > div > div:nth-child(1):after {
     left: -120px;
     right: 0px;
     bottom: 10px;
-    max-width:1110px;
-    min-height:580px;
+    max-width: 1110px;
+    min-height: 580px;
     opacity: 80%;
     background: #1e4a4f;
-    z-index:3;
+    z-index: 3;
 
 }
 
@@ -167,14 +167,13 @@ form > div > div > div:nth-child(1):after {
 /* Media Query LafeTop (1440px) */
 @media screen and (max-width: 1440px ) {
     .Body-container {
-        width:100%;
+        width: 100%;
         min-height: 1480px;
-        margin-top: -10px;
         border: 1px solid #000000;
     }
     .Body-container::before {
         background: #000000;
-        z-index:-9999;
+        z-index: -9999;
     }
     .Body-container::after {
         content: "";
@@ -184,66 +183,65 @@ form > div > div > div:nth-child(1):after {
         left: 0px;
         right: 0px;
         bottom: 0px;
-        width:100%;
+        width: 100%;
         height: 760px;
         background-color: #000;
-        margin-top:100px;
     }
     .Body-container > div {
-        max-width:1000px;
-        margin:auto;
+        max-width: 1000px;
+        margin: auto;
     }
     .Body-container > div > form {
         margin-top: 0px;
     }
     form > h1 {
-         text-align: center;
-         text-transform: uppercase;
-         font-size: 65px;
-         line-height: 60px;
-         font-weight: 500;
-         margin-top: 10px;
-         color:#fff;
-         z-index:-999;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 60px;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #fff;
+        z-index: -999;
 
-     }
+    }
     form > p {
         text-transform: uppercase;
-        font-size:20px;
+        font-size: 20px;
         font-weight: bold;
         line-height: 42px;
         margin-top: 30px;
         margin-bottom: 54px;
         text-align: center;
-        color:#fff;
+        color: #fff;
     }
     form > .time > .live {
-        max-width:169px;
-        height:43px;
+        max-width: 169px;
+        height: 43px;
         margin-right: 32px;
-        padding-left:20px;
+        padding-left: 20px;
         padding-right: 20px;
         padding-top: -40px;
         padding-bottom: -10px;
         line-height: 14px;
-        background:#db154a;
+        background: #db154a;
         border-radius: 24px 24px 24px 24px;
     }
     form > .time {
         text-transform: uppercase;
-        font-size:60px;
+        font-size: 60px;
         font-weight: 400;
-        font-weight:bold;
+        font-weight: bold;
         text-align: center;
-        z-index:1;
+        z-index: 1;
     }
     form > p:nth-child(2) > span {
-        background:#db154a;
-        max-width:171px;
+        background: #db154a;
+        max-width: 171px;
         border-radius: 5%;
         height: 80px;
-        font:bold 60px/23px arial;
-        padding:0px 20px;
+        font: bold 60px/23px arial;
+        padding: 0px 20px;
     }
     form > p:nth-child(2) > span:nth-child(2) {
         background: linear-gradient(to right, #ffffff, #ffffff);
@@ -251,52 +249,52 @@ form > div > div > div:nth-child(1):after {
         -webkit-text-fill-color: transparent;
     }
     form > p:nth-child(2) > span:nth-child(1) {
-        margin-left:28px;
-        color:#fff;
+        margin-left: 28px;
+        color: #fff;
     }
-    form > div  {
-        max-width:1130px;
+    form > div {
+        max-width: 1130px;
         min-height: 562px;
-        z-index:1;
+        z-index: 1;
     }
-    form > .video  {
-        max-width:1100px;
-        max-height:580px;
-        margin-top:20px;
+    form > .video {
+        max-width: 1100px;
+        max-height: 580px;
+        margin-top: 20px;
         margin-bottom: -120px;
-        position:relative;
-        left:20px;
-        top:20px;
+        position: relative;
+        left: 20px;
+        top: 20px;
         opacity: 90%;
-        background-size:100%;
+        background-size: 100%;
         background-repeat: no-repeat;
         z-index: -999;
         background-image: url("../../images/background.jpg");
     }
     form > .video > span {
-        border:none;
-        width:117px;
+        border: none;
+        width: 117px;
         height: 103px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:44%;
-        top:280px;
+        content: "";
+        position: relative;
+        left: 44%;
+        top: 280px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
     }
     form > .video > span:before {
-        position:relative;
-        left:45%;
-        top:200px;
+        position: relative;
+        left: 45%;
+        top: 200px;
     }
 
     .play-button {
-        margin:auto;
+        margin: auto;
         text-align: center;
         opacity: 100%;
     }
@@ -307,11 +305,11 @@ form > div > div > div:nth-child(1):after {
         left: 80px;
         right: 0px;
         bottom: 20px;
-        max-width:1110px;
-        min-height:580px;
+        max-width: 1110px;
+        min-height: 580px;
         opacity: 80%;
         background-color: #6e1133;
-        z-index:2;
+        z-index: 2;
     }
     form > div > div > div:nth-child(1):after {
         content: "";
@@ -321,21 +319,21 @@ form > div > div > div:nth-child(1):after {
         left: -120px;
         right: 0px;
         bottom: 10px;
-        max-width:1110px;
-        min-height:580px;
+        max-width: 1110px;
+        min-height: 580px;
         opacity: 80%;
         background: #1e4a4f;
-        z-index:3;
+        z-index: 3;
 
     }
     form > div > div:nth-child(1) {
         max-width: 1008px;
-        min-height:500px;
+        min-height: 500px;
 
-        z-index:1;
-        position:relative;
-        left:10px;
-        top:50%;
+        z-index: 1;
+        position: relative;
+        left: 10px;
+        top: 50%;
         margin: 58px auto;
 
     }
@@ -346,16 +344,15 @@ form > div > div > div:nth-child(1):after {
 /* Media Query LafeTop (1024px) */
 @media screen and (max-width: 1024px) {
     .Body-container {
-        width:100%;
-        z-index:1;
+        width: 100%;
+        z-index: 1;
         min-height: 1248px;
-        margin-top: -10px;
     }
-    .Body-container > div  {
+    .Body-container > div {
         max-width: 870px;
-        margin:auto;
+        margin: auto;
     }
-    .Body-container > div > form  {
+    .Body-container > div > form {
         margin-top: 0px;
     }
     form > h1 {
@@ -364,121 +361,120 @@ form > div > div > div:nth-child(1):after {
         font-size: 50px;
         line-height: 50px;
         font-weight: 500;
-        color:#fff;
+        color: #fff;
     }
     form > p {
         text-transform: uppercase;
-        font-size:26px;
+        font-size: 26px;
         font-weight: 600;
         line-height: 92px;
         margin-top: -10px;
         margin-bottom: 10px;
         text-align: center;
-        color:#fff;
+        color: #fff;
     }
     form > .time {
         text-transform: uppercase;
-        font-size:40px;
+        font-size: 40px;
         font-weight: 400;
         line-height: 72px;
         margin-top: -10px;
         margin-bottom: -20px;
-        font-weight:bold;
-        color:#fff;
+        font-weight: bold;
+        color: #fff;
         text-align: center;
     }
     form > .time > .live {
-        background:#db154a;
-        max-width:171px;
+        background: #db154a;
+        max-width: 171px;
         border-radius: 5%;
         height: 80px;
-        font:bold 40px/25px arial;
-        padding:0px 20px;
+        font: bold 40px/25px arial;
+        padding: 0px 20px;
 
     }
     form > p:nth-child(2) > span {
-        margin-left:18px;
-        color:#fff;
+        margin-left: 18px;
+        color: #fff;
     }
     form > .video {
         max-width: 980px;
-        min-height:400px;
+        min-height: 400px;
         background-image: url("/src/components/images/background.jpg");
-        background-size:cover;
-        margin-top:40px;
+        background-size: cover;
+        margin-top: 40px;
         margin-bottom: 10px;
-        z-index:1;
-        left:0px;
+        z-index: 1;
+        left: 0px;
     }
     form > .video:before {
         content: "";
         position: absolute;
         top: 340px;
-        left:-30px;
+        left: -30px;
         right: 0px;
         bottom: 20px;
-        width:900px;
-        min-height:450px;
+        width: 900px;
+        min-height: 450px;
         opacity: 80%;
     }
     form > .video:after {
         content: "";
         position: absolute;
         top: 360px;
-        left:20px;
+        left: 20px;
         right: 0px;
         bottom: 20px;
-        width:880px;
-        min-height:450px;
+        width: 880px;
+        min-height: 450px;
         opacity: 80%;
     }
 
 
     form > .video > span {
         background: red;
-        width:120px;
-        height:120px;
-        border:none;
-        width:110px;
+        width: 120px;
+        height: 120px;
+        border: none;
+        width: 110px;
         height: 110px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
 
-        padding:35px;
+        padding: 35px;
         opacity: 70%;
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:42%;
-        top:190px;
-        bottom:10px;
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 42%;
+        top: 190px;
+        bottom: 10px;
     }
 
     .play-button {
-        margin:auto;
+        margin: auto;
         text-align: center;
         opacity: 100%;
     }
-
 
 
 }
 
 
 /** Media Qurey Medium (992px) */
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
     .Body-container {
-        width:100%;
+        width: 100%;
         min-height: 1228px;
-        margin-top: 60px;
     }
     .Body-container > div {
         max-width: 680px;
-        margin:auto;
+        margin: auto;
     }
     .Body-container > div > form {
         margin-top: -35px;
@@ -491,10 +487,9 @@ form > div > div > div:nth-child(1):after {
         left: 0px;
         right: 0px;
         bottom: 0px;
-        width:100%;
+        width: 100%;
         height: 730px;
         background-color: #000;
-        margin-top:100px;
     }
 
 
@@ -504,30 +499,30 @@ form > div > div > div:nth-child(1):after {
         font-size: 48px;
         line-height: 55px;
         font-weight: 500;
-        color:#fff;
+        color: #fff;
     }
     form > p {
         text-transform: uppercase;
-        font-size:18px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 92px;
         margin-top: -10px;
         margin-bottom: 80px;
         text-align: center;
-        display:block;
-        color:#fff;
+        display: block;
+        color: #fff;
     }
 
     form > .time > .live {
-        background:#db154a;
-        max-width:120px;
+        background: #db154a;
+        max-width: 120px;
         border-radius: 5%;
         height: 59px;
-        font:bold 30px/25px arial;
-        padding:0px 30px;
-        position:relative;
-        left:200px;
-        bottom:100px;
+        font: bold 30px/25px arial;
+        padding: 0px 30px;
+        position: relative;
+        left: 200px;
+        bottom: 100px;
 
     }
     form > .time > .clock {
@@ -537,30 +532,30 @@ form > div > div > div:nth-child(1):after {
         line-height: 92px;
         margin-top: -30px;
         margin-bottom: -40px;
-        font-weight:bold;
-        color:#fff;
-        position:relative;
-        bottom:0px;
-        left:-75px;
+        font-weight: bold;
+        color: #fff;
+        position: relative;
+        bottom: 0px;
+        left: -75px;
         text-align: center;
     }
 
     form > p:nth-child(2) > span {
-        margin-left:18px;
-        color:#fff;
+        margin-left: 18px;
+        color: #fff;
     }
 
 
     form > .video {
         max-width: 980px;
-        min-height:364px;
+        min-height: 364px;
         background-image: url("/src/components/images/background.jpg");
-        background-size:cover;
-        margin-top:60px;
+        background-size: cover;
+        margin-top: 60px;
         margin-bottom: 10px;
-        z-index:1;
-        left:10px;
-        top:0px;
+        z-index: 1;
+        left: 10px;
+        top: 0px;
 
     }
 
@@ -573,11 +568,11 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 320px;
-        left:0px;
+        left: 0px;
         right: 0px;
         bottom: 0px;
-        width:700px;
-        min-height:400px;
+        width: 700px;
+        min-height: 400px;
         opacity: 80%;
         background-color: #1e4a4f;
 
@@ -586,50 +581,50 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 300px;
-        left:-30px;
+        left: -30px;
         right: 0px;
         bottom: 20px;
-        width:700px;
-        min-height:400px;;
+        width: 700px;
+        min-height: 400px;;
         opacity: 80%;
         background-color: #6e1133;
     }
     form > .video > span {
-        border:none;
-        width:117px;
+        border: none;
+        width: 117px;
         height: 103px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:44%;
-        top:150px;
+        content: "";
+        position: relative;
+        left: 44%;
+        top: 150px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
     }
     form > .video > span:before {
-        position:relative;
-        left:45%;
-        top:200px;
+        position: relative;
+        left: 45%;
+        top: 200px;
     }
     form > .video > span:hover {
 
-        width:100px;
-        height:100px;
-        border:none;
+        width: 100px;
+        height: 100px;
+        border: none;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #592e25;
-        padding:35px;
+        padding: 35px;
         opacity: 70%;
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:40%;
-        top:150px;
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 40%;
+        top: 150px;
 
     }
 
@@ -638,12 +633,11 @@ form > div > div > div:nth-child(1):after {
 /** Media Query MoblieL (425px) */
 @media screen and (max-width: 425px) {
     .Body-container {
-        width:100%;
+        width: 100%;
         min-height: 1116px;
-        margin-top: 60px;
     }
     .Body-container > div {
-        margin:auto;
+        margin: auto;
     }
     .Body-container > div > form {
         margin-top: -40px;
@@ -656,10 +650,9 @@ form > div > div > div:nth-child(1):after {
         left: 0px;
         right: 0px;
         bottom: 0px;
-        width:100%;
+        width: 100%;
         height: 730px;
         background-color: #000;
-        margin-top:100px;
     }
 
 
@@ -670,30 +663,30 @@ form > div > div > div:nth-child(1):after {
         line-height: 18px;
         font-weight: 500;
 
-        color:#fff;
+        color: #fff;
     }
     form > p {
         text-transform: uppercase;
-        font-size:18px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 92px;
         margin-top: -10px;
         margin-bottom: 80px;
         text-align: center;
-        display:block;
-        color:#fff;
+        display: block;
+        color: #fff;
     }
 
     form > .time > .live {
-        background:#db154a;
-        max-width:120px;
+        background: #db154a;
+        max-width: 120px;
         border-radius: 5%;
         height: 59px;
-        font:bold 24px/25px arial;
-        padding:0px 30px;
-        position:relative;
-        left:90px;
-        bottom:100px;
+        font: bold 24px/25px arial;
+        padding: 0px 30px;
+        position: relative;
+        left: 90px;
+        bottom: 100px;
 
     }
     form > .time > .clock {
@@ -703,30 +696,30 @@ form > div > div > div:nth-child(1):after {
         line-height: 92px;
         margin-top: -50px;
         margin-bottom: 10px;
-        font-weight:bold;
-        color:#fff;
-        position:relative;
-        bottom:40px;
-        left:-80px;
+        font-weight: bold;
+        color: #fff;
+        position: relative;
+        bottom: 40px;
+        left: -80px;
         text-align: center;
     }
 
     form > p:nth-child(2) > span {
-        margin-left:18px;
-        color:#fff;
+        margin-left: 18px;
+        color: #fff;
     }
 
 
     form > .video {
         max-width: 400px;
-        height:120px;
+        height: 120px;
         background-image: url("/src/components/images/background.jpg");
-        background-size:cover;
-        margin-top:60px;
+        background-size: cover;
+        margin-top: 60px;
         margin-bottom: 10px;
-        z-index:1;
-        left:10px;
-        top:-80px;
+        z-index: 1;
+        left: 10px;
+        top: -80px;
 
     }
 
@@ -739,11 +732,11 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 320px;
-        left:0px;
+        left: 0px;
         right: 0px;
         bottom: 0px;
-        width:700px;
-        min-height:400px;
+        width: 700px;
+        min-height: 400px;
         opacity: 80%;
         background-color: #1e4a4f;
 
@@ -752,50 +745,50 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 300px;
-        left:-30px;
+        left: -30px;
         right: 0px;
         bottom: 20px;
-        width:700px;
-        min-height:400px;;
+        width: 700px;
+        min-height: 400px;;
         opacity: 80%;
         background-color: #6e1133;
     }
     form > .video > span {
-        border:none;
-        width:117px;
+        border: none;
+        width: 117px;
         height: 103px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:40%;
-        top:150px;
+        content: "";
+        position: relative;
+        left: 40%;
+        top: 150px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
     }
     form > .video > span:before {
-        position:relative;
-        left:45%;
-        top:200px;
+        position: relative;
+        left: 45%;
+        top: 200px;
     }
     form > .video > span:hover {
-        border:none;
-        width:117px;
+        border: none;
+        width: 117px;
         height: 103px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:40%;
-        top:150px;
+        content: "";
+        position: relative;
+        left: 40%;
+        top: 150px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
 
     }
 
@@ -804,12 +797,11 @@ form > div > div > div:nth-child(1):after {
 /** Media Query iPhone 6/7/8 */
 @media screen and (max-width: 414px) {
     .Body-container {
-        width:100%;
+        width: 100%;
         min-height: 1116px;
-        margin-top: 60px;
     }
     .Body-container > div {
-        margin:auto;
+        margin: auto;
     }
     .Body-container > div > form {
         margin-top: -40px;
@@ -822,10 +814,9 @@ form > div > div > div:nth-child(1):after {
         left: 0px;
         right: 0px;
         bottom: 0px;
-        width:100%;
+        width: 100%;
         height: 530px;
         background-color: #000;
-        margin-top:100px;
     }
 
 
@@ -836,30 +827,30 @@ form > div > div > div:nth-child(1):after {
         line-height: 12px;
         font-weight: 500;
 
-        color:#fff;
+        color: #fff;
     }
     form > p {
         text-transform: uppercase;
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         line-height: 92px;
         margin-top: -10px;
         margin-bottom: 80px;
         text-align: center;
-        display:block;
-        color:#fff;
+        display: block;
+        color: #fff;
     }
 
     form > .time > .live {
-        background:#db154a;
-        max-width:120px;
+        background: #db154a;
+        max-width: 120px;
         border-radius: 5%;
         height: 59px;
-        font:bold 24px/25px arial;
-        padding:0px 30px;
-        position:relative;
-        left:90px;
-        bottom:100px;
+        font: bold 24px/25px arial;
+        padding: 0px 30px;
+        position: relative;
+        left: 90px;
+        bottom: 100px;
 
     }
     form > .time > .clock {
@@ -869,30 +860,30 @@ form > div > div > div:nth-child(1):after {
         line-height: 92px;
         margin-top: -50px;
         margin-bottom: 10px;
-        font-weight:bold;
-        color:#fff;
-        position:relative;
-        bottom:40px;
-        left:-80px;
+        font-weight: bold;
+        color: #fff;
+        position: relative;
+        bottom: 40px;
+        left: -80px;
         text-align: center;
     }
 
     form > p:nth-child(2) > span {
-        margin-left:18px;
-        color:#fff;
+        margin-left: 18px;
+        color: #fff;
     }
 
 
     form > .video {
         max-width: 390px;
-        height:90px;
+        height: 90px;
         background-image: url("/src/components/images/background.jpg");
-        background-size:cover;
-        margin-top:60px;
+        background-size: cover;
+        margin-top: 60px;
         margin-bottom: 10px;
-        z-index:1;
-        left:12px;
-        top:-80px;
+        z-index: 1;
+        left: 12px;
+        top: -80px;
 
     }
 
@@ -905,11 +896,11 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 320px;
-        left:0px;
+        left: 0px;
         right: 0px;
         bottom: 0px;
-        width:700px;
-        min-height:400px;
+        width: 700px;
+        min-height: 400px;
         opacity: 80%;
         background-color: #1e4a4f;
 
@@ -918,50 +909,50 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 300px;
-        left:-30px;
+        left: -30px;
         right: 0px;
         bottom: 20px;
-        width:700px;
-        min-height:400px;;
+        width: 700px;
+        min-height: 400px;;
         opacity: 80%;
         background-color: #6e1133;
     }
     form > .video > span {
-        border:none;
-        width:117px;
+        border: none;
+        width: 117px;
         height: 103px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:40%;
-        top:150px;
+        content: "";
+        position: relative;
+        left: 40%;
+        top: 150px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
     }
     form > .video > span:before {
-        position:relative;
-        left:45%;
-        top:200px;
+        position: relative;
+        left: 45%;
+        top: 200px;
     }
     form > .video > span:hover {
-        border:none;
-        width:117px;
+        border: none;
+        width: 117px;
         height: 103px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:40%;
-        top:150px;
+        content: "";
+        position: relative;
+        left: 40%;
+        top: 150px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
 
     }
 
@@ -970,20 +961,19 @@ form > div > div > div:nth-child(1):after {
 /*  Media Query iPoneX (375 x 812) */
 @media screen and (max-width: 375px) {
     .Body-container {
-        width:100%;
+        width: 100%;
         min-height: 1024px;
-        margin-top: 0px;
         padding-bottom: 30px;
     }
     .Body-container > div {
-        margin:auto;
+        margin: auto;
         max-width: 300px;
         text-align: center;
     }
     .Body-container > div > form {
-          margin-top: -60px;
+        margin-top: -60px;
         position: relative;
-        bottom:90px;
+        bottom: 90px;
     }
     .Body-container::after {
         content: "";
@@ -994,8 +984,7 @@ form > div > div > div:nth-child(1):after {
         right: 0px;
         bottom: 0px;
         height: 425px;
-        margin-top:100px;
-        background-image: url("/src/components/images/background3.jpg") ;
+        background-image: url("/src/components/images/background3.jpg");
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -1007,37 +996,37 @@ form > div > div > div:nth-child(1):after {
         font-size: 19px;
         line-height: 5px;
         font-weight: 500;
-        color:#fff;
+        color: #fff;
     }
     form > h1:nth-child(2) {
         margin-left: -0px;
     }
     form > h1:first-child {
-        margin-left:68px;
+        margin-left: 68px;
         text-align: center;
     }
     form > p {
         text-transform: uppercase;
-        font-size:12px;
+        font-size: 12px;
         font-weight: 600;
         line-height: 82px;
         margin-top: -10px;
         margin-bottom: 80px;
         text-align: center;
-        display:block;
-        color:#fff;
+        display: block;
+        color: #fff;
     }
 
     form > .time > .live {
-        background:#db154a;
-        max-width:80px;
+        background: #db154a;
+        max-width: 80px;
         border-radius: 5%;
         height: 59px;
-        font:bold 12px/25px arial;
-        padding:0px 30px;
-        position:relative;
-        left:-10px;
-        bottom:110px;
+        font: bold 12px/25px arial;
+        padding: 0px 30px;
+        position: relative;
+        left: -10px;
+        bottom: 110px;
 
     }
     form > .time > .clock {
@@ -1047,30 +1036,30 @@ form > div > div > div:nth-child(1):after {
         line-height: 92px;
         margin-top: -50px;
         margin-bottom: 10px;
-        font-weight:bold;
-        color:#fff;
-        position:relative;
-        bottom:110px;
-        left:-10px;
+        font-weight: bold;
+        color: #fff;
+        position: relative;
+        bottom: 110px;
+        left: -10px;
         text-align: center;
     }
 
     form > p:nth-child(2) > span {
-        margin-left:18px;
-        color:#fff;
+        margin-left: 18px;
+        color: #fff;
     }
 
 
     form > .video {
         max-width: 280px;
-        min-height:260px;
+        min-height: 260px;
         background-image: url("/src/components/images/background.jpg");
-        background-size:cover;
-        margin-top:40px;
+        background-size: cover;
+        margin-top: 40px;
         margin-bottom: 10px;
-        z-index:1;
-        left:10px;
-        top:-120px;
+        z-index: 1;
+        left: 10px;
+        top: -120px;
 
     }
 
@@ -1083,11 +1072,11 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 300px;
-        left:0px;
+        left: 0px;
         right: 10px;
         bottom: 0px;
-        width:700px;
-        min-height:400px;
+        width: 700px;
+        min-height: 400px;
         opacity: 80%;
         background-color: #1e4a4f;
 
@@ -1096,44 +1085,44 @@ form > div > div > div:nth-child(1):after {
         content: "";
         position: absolute;
         top: 300px;
-        left:-30px;
+        left: -30px;
         right: 0px;
         bottom: 20px;
-        width:700px;
-        min-height:400px;;
+        width: 700px;
+        min-height: 400px;;
         opacity: 80%;
         background-color: #6e1133;
     }
     form > .video > span {
-        border:none;
-        width:60px;
+        border: none;
+        width: 60px;
         height: 60px;
         border-radius: 100%;
-        color:#fff;
+        color: #fff;
         background: #02050d;
-        padding:45px 20px 20px 30px;
+        padding: 45px 20px 20px 30px;
         opacity: 70%;
-        content:"";
-        position:relative;
-        left:5%;
-        top:120px;
+        content: "";
+        position: relative;
+        left: 5%;
+        top: 120px;
         z-index: 1;
-        bottom:0px;
+        bottom: 0px;
     }
 
     form > .video > span:hover {
         opacity: 70%;
-        content:"";
-        position:relative;
-        border:none;
-        width:80px;
-        padding:45px 20px 20px 30px;
+        content: "";
+        position: relative;
+        border: none;
+        width: 80px;
+        padding: 45px 20px 20px 30px;
         height: 80px;
         border-radius: 100%;
-        color:#fff;
-        z-index:1;
-        left:5%;
-        top:120px;
+        color: #fff;
+        z-index: 1;
+        left: 5%;
+        top: 120px;
         background: #592e25;
 
 
@@ -1144,88 +1133,88 @@ form > div > div > div:nth-child(1):after {
 
 /** Story **/
 .Story-container {
-    width:100%;
+    width: 100%;
     min-height: 1409px;
-    background:#fff;
-    margin-top:-500px;
-    z-index:-999;
-    display:block;
-    border:1px solid white;
+    background: #fff;
+    margin-top: -500px;
+    z-index: -999;
+    display: block;
+    border: 1px solid white;
 }
 .Story-container > div {
-    max-width:1345px;
+    max-width: 1345px;
     min-height: 1124px;
-    margin:auto;
+    margin: auto;
 
 }
 .Story-container > .Story-components > .form {
-    margin-top:225px;
+    margin-top: 225px;
     font-size: 32px;
 }
 .Story-container > .Story-components > .form > h1 {
     margin-bottom: 20px;
-    margin-left:40px;
+    margin-left: 40px;
     text-transform: uppercase;
-    color:#eb1a53;
+    color: #eb1a53;
     text-shadow: 5px -5px #93f7f3;
 
 }
 .Story-container > .Story-components > .form > h1:before {
-    color:red;
+    color: red;
 }
 .Story-container > .Story-components > .form > h1:after {
-    content:"";
-    color:#eb1a53;
+    content: "";
+    color: #eb1a53;
     position: absolute;
     top: 0px;
     left: 10px;
     right: 0px;
     bottom: 0px;
-    width:100%;
+    width: 100%;
 }
 .Story-container > .Story-components > .form > p {
-    font:  bold 18px/34px arial;
-    margin-bottom:52px;
-    margin-left:50px;
+    font: bold 18px/34px arial;
+    margin-bottom: 52px;
+    margin-left: 50px;
 }
 .Story-components > .Image-Container {
-    width:100%;
+    width: 100%;
     min-height: 400px;
-    display:block;
-    max-width:340px;
+    display: block;
+    max-width: 340px;
 
 }
 .Story-components > .Image-Form {
-    width:375px;
+    width: 375px;
     height: 400px;
 
-    float:left;
-    display:none;
+    float: left;
+    display: none;
 
 }
 .Story-components > .Image-Small-Form {
-    width:250px;
-    min-height:341px;
-    float:left;
-    display:grid;
+    width: 250px;
+    min-height: 341px;
+    float: left;
+    display: grid;
     grid-template-columns: 150px 150px 150px;
-    margin-left:50px;
+    margin-left: 50px;
     margin-right: -20px;
-    margin-bottom:20px;
-    position:relative;
-    left:-0px;
+    margin-bottom: 20px;
+    position: relative;
+    left: -0px;
 }
 .Story-components > .Story-components > .More-Button {
     text-transform: uppercase;
-    float:right;
-    border:5px solid ;
-    width:131px;
-    height:133px;
+    float: right;
+    border: 5px solid;
+    width: 131px;
+    height: 133px;
     position: relative;
-    bottom:52px;
-    display:none;
-    text-align:center;
-    color:#787878;
+    bottom: 52px;
+    display: none;
+    text-align: center;
+    color: #787878;
     line-height: 120px;
 
 }
@@ -1233,564 +1222,562 @@ form > div > div > div:nth-child(1):after {
 
 /* NFT 버튼 */
 .NFT-Button-container {
-    width:271px;
-    height:63px;
-    background:#db154a;
+    width: 271px;
+    height: 63px;
+    background: #db154a;
     background: linear-gradient(135deg, transparent 15px, #db154a 0) top left;
-    margin:78px 0px 91px 0px;
+    margin: 78px 0px 91px 0px;
     border: none;
-    position:relative;
-    left:-600px;
-    top:300px;
-    font-size:30px;
+    position: relative;
+    left: -600px;
+    top: 300px;
+    font-size: 30px;
     font-weight: bold;
-    color:#fff;
+    color: #fff;
     text-transform: uppercase;
 
 
 }
 .NFT-Button-container > .Link {
-    color:#fff;
+    color: #fff;
 
 }
 
 /** Media Query LatTop L(1440px) */
 @media screen and (max-width: 1440px) {
     .Story-container {
-        width:100%;
+        width: 100%;
         min-height: 1409px;
     }
 
     .Story-container > .Story-components {
-        max-width:1200px;
+        max-width: 1200px;
         min-height: 1124px;
-        margin:auto;
+        margin: auto;
     }
 
     .Story-container > .Story-components > .form {
-        margin-top:50px;
+        margin-top: 50px;
         font-size: 32px;
-        padding-top:150px;
+        padding-top: 150px;
     }
 
     .Story-container > .Story-components > .form > h1 {
-        color:red;
-        margin-top:100px;
+        color: red;
+        margin-top: 100px;
         margin-bottom: 20px;
         margin-left: 100px;
     }
     .Story-container > .Story-components > .form > p {
-        font:  bold 18px/34px arial;
-        margin-left:100px;
-        margin-bottom:52px;
+        font: bold 18px/34px arial;
+        margin-left: 100px;
+        margin-bottom: 52px;
     }
 
     .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
+        width: 100%;
+        display: block;
+        max-width: 1223px;
     }
 
 
     .Story-components > .Image-Container {
-        width:100%;
+        width: 100%;
         min-height: 400px;
-        display:block;
+        display: block;
 
-        margin:auto;
+        margin: auto;
 
 
     }
     .Story-components > .Image-Form {
-        max-width:900px;
+        max-width: 900px;
         height: 400px;
 
     }
     .Story-components > .Image-Small-Form {
-        max-width:150px;
-        min-height:325px;
-        float:left;
+        max-width: 150px;
+        min-height: 325px;
+        float: left;
         margin-left: 150px;
         margin-right: 50px;
-        position:relative;
-        left:-50px;
+        position: relative;
+        left: -50px;
     }
 
     .Story-components > .Image-Small-Form:hover {
-        background:red;
+        background: red;
     }
 
     .Story-components > .Story-components > .More-Button {
         text-transform: uppercase;
-        float:right;
-        width:131px;
-        height:133px;
+        float: right;
+        width: 131px;
+        height: 133px;
         position: relative;
-        bottom:102px;
-        text-align:center;
-        color:#787878;
+        bottom: 102px;
+        text-align: center;
+        color: #787878;
         line-height: 120px;
     }
 
     /* NFT 버튼 */
     .NFT-Button-container {
-        width:268px;
-        height:90px;
-        background:#db154a;
-        margin:60px -150px auto;
+        width: 268px;
+        height: 90px;
+        background: #db154a;
+        margin: 60px -150px auto;
         border: none;
-        position:relative;
-        left:-500px;
-        top:300px;
-        font-size:30px;
-        color:#fff;
+        position: relative;
+        left: -500px;
+        top: 300px;
+        font-size: 30px;
+        color: #fff;
 
     }
     .NFT-Button-container > .Link {
-        color:#fff;
+        color: #fff;
     }
 }
 
 /** Media Query LatTop (1024px) */
 @media screen and (max-width: 1024px) {
     .Story-container {
-        width:100%;
+        width: 100%;
         min-height: 540px;
 
     }
     .Story-container > .Story-components {
-        max-width:1200px;
+        max-width: 1200px;
         min-height: 1344px;
-        margin:auto;
+        margin: auto;
     }
     .Story-container > .Story-components > .form {
-        margin-top:13px;
+        margin-top: 13px;
         font-size: 28px;
-        padding-top:129px;
+        padding-top: 129px;
     }
     .Story-container > .Story-components > .form > h1 {
-        margin-top:100px;
+        margin-top: 100px;
         margin-bottom: 20px;
         margin-left: 80px;
     }
     .Story-container > .Story-components > .form > p {
-        font:  bold 18px/34px arial;
-        margin-left:80px;
-        margin-bottom:52px;
+        font: bold 18px/34px arial;
+        margin-left: 80px;
+        margin-bottom: 52px;
     }
     .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
+        width: 100%;
+        display: block;
+        max-width: 1223px;
     }
     .Story-components > .Image-Container {
-        width:100%;
+        width: 100%;
         min-height: 400px;
-        display:block;
-        margin:auto;
+        display: block;
+        margin: auto;
     }
 
     .Story-components > .Image-Small-Form {
-        width:320px;
-        float:left;
+        width: 320px;
+        float: left;
         margin-left: 100px;
         margin-right: 20px;
-        position:relative;
-        left:-0px;
+        position: relative;
+        left: -0px;
     }
     .Story-components > .Image-Small-Form > img {
-        width:250px;
-        float:left;
+        width: 250px;
+        float: left;
         margin-right: 20px;
-        position:relative;
+        position: relative;
 
     }
 
     .Story-components > .Story-components > .More-Button {
         text-transform: uppercase;
-        float:right;
-        width:131px;
-        height:133px;
+        float: right;
+        width: 131px;
+        height: 133px;
         position: relative;
-        bottom:0px;
-        top:50px;
-        left:200px;
-        text-align:center;
-        color:#787878;
+        bottom: 0px;
+        top: 50px;
+        left: 200px;
+        text-align: center;
+        color: #787878;
         line-height: 120px;
     }
 
     /* NFT 버튼 */
     .NFT-Button-container {
-        width:268px;
-        height:90px;
-        background:#db154a;
-        margin:10px -150px auto;
+        width: 268px;
+        height: 90px;
+        background: #db154a;
+        margin: 10px -150px auto;
         border: none;
-        position:relative;
-        left:-300px;
-        top:300px;
-        font-size:30px;
-        color:#fff;
+        position: relative;
+        left: -300px;
+        top: 300px;
+        font-size: 30px;
+        color: #fff;
 
     }
     .NFT-Button-container > .Link {
-        color:#fff;
+        color: #fff;
     }
 }
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
     .Story-container {
-        width:100%;
+        width: 100%;
         min-height: 640px;
 
     }
     .Story-container > .Story-components {
-        max-width:1200px;
+        max-width: 1200px;
         min-height: 1544px;
-        margin:auto;
+        margin: auto;
     }
     .Story-container > .Story-components > .form {
-        margin-top:13px;
+        margin-top: 13px;
         font-size: 28px;
-        padding-top:20px;
+        padding-top: 20px;
     }
     .Story-container > .Story-components > .form > h1 {
-        margin-top:100px;
+        margin-top: 100px;
         margin-bottom: 20px;
         margin-left: 50px;
     }
     .Story-container > .Story-components > .form > p {
-        font:  bold 18px/34px arial;
-        margin-left:50px;
-        margin-bottom:52px;
+        font: bold 18px/34px arial;
+        margin-left: 50px;
+        margin-bottom: 52px;
     }
     .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
+        width: 100%;
+        display: block;
+        max-width: 1223px;
     }
     .Story-components > .Image-Container {
-        width:100%;
+        width: 100%;
         min-height: 300px;
-        display:block;
-        max-width:960px;
-        margin:20px auto;
+        display: block;
+        max-width: 960px;
+        margin: 20px auto;
 
     }
     .Story-components > .Image-Form {
-        max-width:360px;
+        max-width: 360px;
         height: 450px;
         background: #d4d4d4;
 
     }
     .Story-components > .Image-Small-Form {
-        width:320px;
-        float:left;
+        width: 320px;
+        float: left;
         margin-left: 100px;
         margin-right: 20px;
-        position:relative;
-        left:-0px;
+        position: relative;
+        left: -0px;
     }
     .Story-components > .Image-Small-Form > img {
-        width:250px;
-        float:left;
+        width: 250px;
+        float: left;
         margin-right: 20px;
-        position:relative;
+        position: relative;
 
     }
 
     .Story-components > .Story-components > .More-Button {
         text-transform: uppercase;
-        float:right;
-        width:131px;
-        height:133px;
+        float: right;
+        width: 131px;
+        height: 133px;
         position: relative;
-        bottom:0px;
-        top:50px;
-        left:200px;
-        text-align:center;
-        color:#787878;
+        bottom: 0px;
+        top: 50px;
+        left: 200px;
+        text-align: center;
+        color: #787878;
         line-height: 120px;
     }
 
     /* NFT 버튼 */
     .NFT-Button-container {
-        width:268px;
-        height:90px;
-        background:#db154a;
-        margin:10px -150px auto;
+        width: 268px;
+        height: 90px;
+        background: #db154a;
+        margin: 10px -150px auto;
         border: none;
-        position:relative;
-        left:-150px;
-        top:650px;
-        font-size:30px;
-        color:#fff;
+        position: relative;
+        left: -150px;
+        top: 650px;
+        font-size: 30px;
+        color: #fff;
     }
     .NFT-Button-container > .Link {
-        color:#fff;
+        color: #fff;
     }
 }
 
 /** Media Query MoblieL (425px) */
 @media screen and (max-width: 425px) {
     .Story-container {
-        width:100%;
+        width: 100%;
         min-height: 300px;
 
     }
     .Story-container > .Story-components {
-        max-width:960px;
+        max-width: 960px;
         min-height: 1124px;
         margin: auto;
     }
     .Story-container > .Story-components > .form {
-        margin-top:3px;
+        margin-top: 3px;
         font-size: 28px;
-
-
     }
     .Story-container > .Story-components > .form > h1 {
-        margin-top:60px;
+        margin-top: 60px;
         margin-bottom: 20px;
         margin-left: 20px;
     }
     .Story-container > .Story-components > .form > p {
-        font:  bold 14px/30px arial;
-        margin-left:30px;
-        margin-bottom:52px;
+        font: bold 14px/30px arial;
+        margin-left: 30px;
+        margin-bottom: 52px;
     }
     .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
+        width: 100%;
+        display: block;
+        max-width: 1223px;
     }
     .Story-components > .Image-Container {
-        max-width:360px;
+        max-width: 360px;
         min-height: 200px;
-        display:block;
-        margin:10px auto;
+        display: block;
+        margin: 10px auto;
 
     }
     .Story-components > .Image-Form {
-        max-width:50px;
+        max-width: 50px;
         height: 440px;
         background: #d4d4d4;
 
     }
     .Story-components > .Image-Small-Form {
-        width:100px;
-        min-height:50px;
-        float:left;
-        margin-left:50px;
+        width: 100px;
+        min-height: 50px;
+        float: left;
+        margin-left: 50px;
         margin-right: 0px;
-        margin-bottom:20px;
-        position:relative;
-        left:-50px;
+        margin-bottom: 20px;
+        position: relative;
+        left: -50px;
 
     }
 
     /* NFT 버튼 */
     .NFT-Button-container {
-        width:200px;
-        height:70px;
-        background:#db154a;
-        margin:50px -150px auto;
+        width: 200px;
+        height: 70px;
+        background: #db154a;
+        margin: 50px -150px auto;
         border: none;
-        position:relative;
-        left:-50px;
-        top:450px;
-        font-size:30px;
-        color:#fff;
+        position: relative;
+        left: -50px;
+        top: 450px;
+        font-size: 30px;
+        color: #fff;
 
     }
     .NFT-Button-container > .Link {
-        color:#fff;
+        color: #fff;
     }
 }
 
 /** Media Query Iphone X (375px) */
-@media screen and (min-width:375px) {
+@media screen and (min-width: 375px) {
     .Story-container {
-        width:100%;
+        width: 100%;
         min-height: 540px;
 
     }
     .Story-container > .Story-components {
-        max-width:300px;
+        max-width: 300px;
         min-height: 960px;
 
     }
     .Story-container > .Story-components > .form {
-        margin-top:-93px;
+        margin-top: -93px;
         font-size: 28px;
-        padding-top:0px;
+        padding-top: 0px;
 
     }
     .Story-container > .Story-components > .form > h1 {
-        margin-top:0px;
+        margin-top: 0px;
         margin-bottom: 20px;
         margin-left: 20px;
     }
     .Story-container > .Story-components > .form > p {
-        font:  bold 14px/30px arial;
-        margin-left:30px;
-        margin-bottom:52px;
+        font: bold 14px/30px arial;
+        margin-left: 30px;
+        margin-bottom: 52px;
     }
     .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
+        width: 100%;
+        display: block;
+        max-width: 1223px;
     }
     .Story-components > .Image-Container {
-        width:100%;
+        width: 100%;
         min-height: 250px;
-        display:block;
-        max-width:960px;
-        margin:10px auto;
+        display: block;
+        max-width: 960px;
+        margin: 10px auto;
 
     }
     .Story-components > .Image-Form {
-        max-width:180px;
+        max-width: 180px;
         height: 450px;
         background: #d4d4d4;
 
     }
     .Story-components > .Image-Small-Form {
-        width:160px;
-        min-height:200px;
+        width: 160px;
+        min-height: 200px;
         background: #d4d4d4;
-        float:left;
-        margin-left:10px;
+        float: left;
+        margin-left: 10px;
         margin-right: 0px;
-        margin-bottom:20px;
-        position:relative;
-        left:10px;
+        margin-bottom: 20px;
+        position: relative;
+        left: 10px;
 
     }
 
     .Story-components > .Story-components > .More-Button {
         text-transform: uppercase;
-        float:right;
-        width:100px;
-        height:133px;
+        float: right;
+        width: 100px;
+        height: 133px;
         position: relative;
-        bottom:0px;
-        left:20px;
-        text-align:center;
-        color:#787878;
+        bottom: 0px;
+        left: 20px;
+        text-align: center;
+        color: #787878;
         line-height: 120px;
     }
 
     /* NFT 버튼 */
     .NFT-Button-container {
-        width:200px;
-        height:70px;
-        background:#db154a;
-        margin:50px -150px auto;
+        width: 200px;
+        height: 70px;
+        background: #db154a;
+        margin: 50px -150px auto;
         border: none;
-        position:relative;
-        left:-100px;
-        top:350px;
-        font-size:30px;
-        color:#fff;
+        position: relative;
+        left: -100px;
+        top: 350px;
+        font-size: 30px;
+        color: #fff;
 
     }
     .NFT-Button-container > .Link {
-        color:#fff;
+        color: #fff;
     }
 }
 
 /** Media Query Galxy Fold(280 x 653) */
 @media screen and (max-width: 280px) {
     .Story-container {
-        width:100%;
+        width: 100%;
         min-height: 540px;
 
     }
     .Story-container > .Story-components {
-        max-width:250px;
+        max-width: 250px;
         min-height: 960px;
-        border:1px solid red;
+        border: 1px solid red;
 
     }
     .Story-container > .Story-components > .form {
-        margin-top:-93px;
+        margin-top: -93px;
         font-size: 28px;
-        padding-top:0px;
+        padding-top: 0px;
 
     }
     .Story-container > .Story-components > .form > h1 {
-        margin-top:0px;
+        margin-top: 0px;
         margin-bottom: 20px;
         margin-left: 20px;
     }
     .Story-container > .Story-components > .form > p {
-        font:  bold 14px/30px arial;
-        margin-left:30px;
-        margin-bottom:52px;
+        font: bold 14px/30px arial;
+        margin-left: 30px;
+        margin-bottom: 52px;
     }
     .Story-components > .Story-components > .form > span {
-        width:100%;
-        display:block;
-        max-width:1223px;
+        width: 100%;
+        display: block;
+        max-width: 1223px;
     }
     .Story-components > .Image-Container {
-        width:100%;
+        width: 100%;
         min-height: 250px;
-        display:block;
-        max-width:960px;
-        margin:10px auto;
+        display: block;
+        max-width: 960px;
+        margin: 10px auto;
 
     }
     .Story-components > .Image-Form {
-        max-width:180px;
+        max-width: 180px;
         height: 450px;
         background: #d4d4d4;
 
     }
     .Story-components > .Image-Small-Form {
-        width:160px;
-        min-height:200px;
+        width: 160px;
+        min-height: 200px;
         background: #d4d4d4;
-        float:left;
-        margin-left:10px;
+        float: left;
+        margin-left: 10px;
         margin-right: 0px;
-        margin-bottom:20px;
-        position:relative;
-        left:10px;
+        margin-bottom: 20px;
+        position: relative;
+        left: 10px;
 
     }
 
     .Story-components > .Story-components > .More-Button {
         text-transform: uppercase;
-        float:right;
-        width:100px;
-        height:133px;
+        float: right;
+        width: 100px;
+        height: 133px;
         position: relative;
-        bottom:0px;
-        left:20px;
-        text-align:center;
-        color:#787878;
+        bottom: 0px;
+        left: 20px;
+        text-align: center;
+        color: #787878;
         line-height: 120px;
     }
 
     /* NFT 버튼 */
     .NFT-Button-container {
-        width:200px;
-        height:70px;
-        background:#db154a;
-        margin:50px -150px auto;
+        width: 200px;
+        height: 70px;
+        background: #db154a;
+        margin: 50px -150px auto;
         border: none;
-        position:relative;
-        left:-100px;
-        top:350px;
-        font-size:30px;
-        color:#fff;
+        position: relative;
+        left: -100px;
+        top: 350px;
+        font-size: 30px;
+        color: #fff;
 
     }
     .NFT-Button-container > .Link {
-        color:#fff;
+        color: #fff;
     }
 }

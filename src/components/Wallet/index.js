@@ -69,17 +69,15 @@ const WalletBtn = () => {
     return (
         <>
             {active ?
-                <a style={{cursor: 'pointer'}}
+                <a className="wallet-btn" style={{cursor: 'pointer'}}
                    onClick={disconnect}
                    onMouseOver={() => setMouseOverCheck(true)}
                    onMouseLeave={() => setMouseOverCheck(false)}>
                     <ParseAccount/>
                 </a>
                 :
-                <a style={{cursor: 'pointer'}} onClick={connect}>
-                    <span>
-                        <BiWalletAlt/>
-                    </span>
+                <a className="wallet-btn" style={{cursor: 'pointer'}} onClick={connect}>
+                    <img src="/images/icon/wallet.png"/>
                     WALLET
                 </a>
             }

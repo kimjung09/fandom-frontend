@@ -1,5 +1,5 @@
 import React from "react";
-import MainPage from "./components/Home";
+import MainPage from "./components/Home/index";
 import WhiteList from "./components/WhiteList";
 import SubPage from "./components/Info";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -21,7 +21,7 @@ const App = () => {
                     <Switch>
                         <Route exact path="/" component={MainPage}/>
                         <Route exact path="/fandom/:id" component={SubPage}/>
-                        <Route exact path="/whitelist" component={WhiteList} />
+                        <Route exact path="/whitelist" component={MainPage} />
                     </Switch>
                 </Router>
                 <Footer/>

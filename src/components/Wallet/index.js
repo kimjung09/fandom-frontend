@@ -25,11 +25,11 @@ const WalletBtn = () => {
 
     const connect = async () => {
         try {
-            await setupNetwork();
+            let network = await setupNetwork();
+            if(!network){
+                window.open('https://metamask.io/');
+            }
             await activate(injected);
-            // await getGasPrice();
-            await getBlockNumber();
-            // localStorage.setItem('login-account',account)
 
         } catch (err) {
             console.log(err)
@@ -43,17 +43,6 @@ const WalletBtn = () => {
         } catch (err) {
             console.log(err)
         }
-    }
-
-    const test = async () => {
-        console.log(await getNftList())
-        console.log(await getNftInfo(1))
-
-        // const provider = window.web3.currentProvider
-        //
-        // console.log(provider)
-        // console.log(await store(account));
-        // await bidAction(account)
     }
 
     useEffect(
@@ -94,10 +83,6 @@ const WalletBtn = () => {
                     WALLET
                 </a>
             }
-            <a style={{cursor: 'pointer'}}
-               onClick={test}>
-                TEST BTN
-            </a>
         </>
     )
 }

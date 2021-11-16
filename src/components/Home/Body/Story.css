@@ -773,15 +773,16 @@
 
     .Story-container > .Story-components > div:nth-child(1) > h1 {
         color:red;
-        margin-top:10px;
-        margin-bottom: 40px;
+        font-size:30px;
+        margin-top:0px;
+        margin-bottom: 20px;
         margin-left: 50px;
         position: relative;
         left:20px;
     }
     .Story-container > .Story-components > div:nth-child(1) > p {
-        font:  bold 9px/12px arial;
-        margin-left: -10px;
+        font:  bold 12px/24px arial;
+        margin-left: 10px;
 
         font-family: -apple-system;
         margin-bottom:22px;

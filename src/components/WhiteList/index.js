@@ -1,61 +1,165 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "./style/body.css"
 import "./style/story.css"
-import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet} from 'react-icons/fa'
+import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet,FaHandPointer} from 'react-icons/fa'
+import {registerWhiteList} from "../../utils/axios";
+import ReCAPTCHA from "react-google-recaptcha";
+import {useSelector, useDispatch} from 'react-redux'
 
 const WhiteList = () => {
+    const [inputTwitter, setInputTwitter] = useState('');
+    const [inputTelegram, setInputTelegram] = useState('');
+
+    const [checkJoinTelegram, setCheckJoinTelegram] = useState(false);
+    const [checkFollowTwitter, setCheckFollowTwitter] = useState(false);
+    const [checkRetweetTwitter, setCheckRetweetTwitter] = useState(false);
+    const [checkSubmitBtn, setCheckSubmitBtn] = useState(false);
+    const [checkRecaptcha, setCheckRecaptcha] = useState(false)
+
+
+    const userAccount = useSelector((state) => state.global.userAccount)
+    const checkRegisterWhiteList = useSelector((state) => state.global.whiteListCheck)
+
+    const submit = async () => {
+        if (!checkSubmitBtn) {
+            return;
+        }
+        let params = {
+            telegram_id: inputTelegram,
+            twitter_id: inputTwitter,
+            account: userAccount
+        }
+        await registerWhiteList(params).then(res => {
+            location.href = '/'
+        });
+    }
+
+    const follow = () => {
+        setCheckFollowTwitter(true)
+    }
+    const retweet = () => {
+        setCheckRetweetTwitter(true)
+    }
+    const join = () => {
+        setCheckJoinTelegram(true)
+    }
+
+    useEffect(() => {
+        if (!checkRegisterWhiteList && checkRetweetTwitter && checkFollowTwitter && checkJoinTelegram && inputTelegram.length && inputTwitter.length && userAccount.length && checkRecaptcha) {
+            setCheckSubmitBtn(true);
+            return;
+        }
+        setCheckSubmitBtn(false)
+
+    }, [inputTelegram, inputTwitter, checkRetweetTwitter, checkFollowTwitter, checkJoinTelegram, checkRecaptcha, userAccount])
+
+
     return (
-        <div className="WhiteList-container" id="Story">
+        <div className="white-list-container">
             <div>
-                <div>
-                    <h1>Join the whit list</h1>
-                    <p>Nhi 의 세계챔피언을 기념하는 NFT Single Auction!
-                        화이트리스팅을 완료하여 참여 할수 있는 기회를 획득하세요!
-                        화이트 리스트 작성을 통해 $9,900 상당의 에어드랍을 받으세요~</p>
-                    <div className="subscribe">
-                        <div>
-                            <button>
-                                <FaRetweet className='icon'/>
-                                FOLLOW
-                            </button>
-                            <h1>Follow out twitter</h1>
-                            <button>Click</button>
-                        </div>
-                        <div>
-                            <button>
-                                <FaRetweet className='icon'/>
-                                RETWEET
-                            </button>
-                            <h1>Retweet our twitter</h1>
-                            <button>Click</button>
-                        </div>
-                        <div>
-                            <button>
-                                <FaRetweet className='icon'/>
-                                SUBSCRIBE
-                            </button>
-                            <h1>Write your twitter ID</h1>
-                            <button>Click</button>
-                        </div>
-                        <div>
-                            <button>
-                                <FaRetweet className='icon'/>
-                                JOIN
-                            </button>
-                            <h1>Join our telegram</h1>
-                            <button>Click</button>
-                        </div>
-                        <div>
-                            <button>
-                                <FaRetweet className='icon'/>
-                                SUBSCRIBE
-                            </button>
-                            <h1>Write your telegram ID</h1>
-                            <button>Click</button>
-                        </div>
+                <div className="main-font">
+                    <h1>Tham gia Whitelist</h1>
+                    <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng lịch sử của NHI khi trở thành nhà vô địch thế giới.
+                        Đăng ký Whitelist để có cơ hội tham gia đấu giá!
+                        Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của chúng tôi!</p>
+                </div>
+                <div className="check-bar">
+                    <div className="left">
+                        <FaPlus className='icon' style={{marginRight: '5px'}}/>
+                        Theo dõi
+                    </div>
+                    <div className="center">
+                        Theo dõi chúng tôi trên Twitter
+                    </div>
+                    <div className="right" onClick={follow}>
+                        {checkFollowTwitter ? <FaCheck className='icon'/> : <FaHandPointer className='icon'/>}
                     </div>
                 </div>
-                <button>Submit</button>
+
+                <div className="check-bar">
+                    <div className="left">
+                        <FaRetweet className='icon' style={{marginRight: '5px'}}/>
+                        Retweet
+                    </div>
+                    <div className="center">
+                        Retweet bài post của chúng tôi trên twitter
+                    </div>
+                    <div className="right" onClick={retweet}>
+                        {checkRetweetTwitter ? <FaCheck className='icon'/> : <FaHandPointer className='icon'/>}
+                    </div>
+                </div>
+
+                <div className="check-bar">
+                    <div className="left">
+                        <FaCheck className='icon' style={{marginRight: '5px'}}/>
+                        SUBSCRIBE
+                    </div>
+                    <div className="center">
+                        <input placeholder="Điền ID Twitter của bạn" onChange={(e) => setInputTwitter(e.target.value)}
+                               value={inputTwitter}/>
+                    </div>
+                    <div className="right">
+                        {inputTwitter.length ? <FaCheck className='icon'/> : <FaHandPointer className='icon'/>}
+                    </div>
+                </div>
+
+                <div className="check-bar">
+                    <div className="left">
+                        <FaTelegramPlane className='icon' style={{marginRight: '5px'}}/>
+                        Tham gia
+                    </div>
+                    <div className="center">
+                        Tham gia kênh telegram của chúng tôi
+                    </div>
+                    <div className="right" onClick={join}>
+                        {checkJoinTelegram ? <FaCheck className='icon'/> : <FaHandPointer className='icon'/>}
+                    </div>
+                </div>
+
+                <div className="check-bar">
+                    <div className="left">
+                        <FaCheck className='icon' style={{marginRight: '5px'}}/>
+                        SUBSCRIBE
+                    </div>
+                    <div className="center">
+                        <input placeholder="Điền ID Telegram của bạn" onChange={(e) => setInputTelegram(e.target.value)}
+                               value={inputTelegram}/>
+                    </div>
+                    <div className="right">
+                        {inputTelegram.length ? <FaCheck className='icon'/> : <FaHandPointer className='icon'/>}
+                    </div>
+                </div>
+
+                <div className="check-recaptcha">
+                    <ReCAPTCHA
+                        sitekey={process.env.REACT_APP_SITE_KEY}
+                        onChange={val => {
+                            setCheckRecaptcha(true)
+                        }}
+                        onExpired={exp => {
+                            setCheckRecaptcha(false)
+                        }}
+                        onErrored={err => {
+                            setCheckRecaptcha(false)
+                        }}
+                        theme="light"
+                    />
+                </div>
+
+                {checkRegisterWhiteList ? (
+                    <div className="submit-area">
+                        <button className="submit-btn-inactive">Success</button>
+                    </div>
+                ) : (
+                    <div className="submit-area">
+                        <button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-inactive"}
+                                onClick={submit}>xác nhận
+                        </button>
+                    </div>
+                )
+                }
+
+
             </div>
         </div>
     )

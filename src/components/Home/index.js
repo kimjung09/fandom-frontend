@@ -92,8 +92,7 @@ const MainPage = (props) => {
             <div className="Body-container">
                 <div className="title-area">
                     <h1>Sở hữu những</h1>
-                    <h1>khoảnh khắc đặc biệt nhất</h1>
-                    <h3>own the most special moments!</h3>
+                    <h1 className="mb-3">khoảnh khắc đặc biệt nhất</h1>
                     <Timer/>
                 </div>
                 <div className="video-area">
@@ -118,11 +117,12 @@ const MainPage = (props) => {
                                     <img src="/images/icon/giftbox-on.png" className="on"/>
                                 </button>
                             </NavLink>
-                            <h1>1ST STORY</h1>
+                            <h3 className="mb-3">Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của chúng tôi!</h3>
+                            <h2>Những khoảnh khắc đặc biệt của NHI qua NFT.</h2>
                             <div className="desc">
-                                Những khoảnh khắc đặc biệt của NHI qua NFT.<br/>
-                                Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~ 23:59, ngày 30/11<br/>
-                                Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
+                                &lt;Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~  23:59, ngày 30/11&gt;<br/><br/>
+                                Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI<br/>
+                                từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
                             </div>
                             <div className="list-wrap" ref={sliderWrap} onTouchStart={sliderSwipe} onTouchMove={sliderSwipe} onTouchEnd={sliderSwipe}>
                                 <div className="list" ref={slider}>

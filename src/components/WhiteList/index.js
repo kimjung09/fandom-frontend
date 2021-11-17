@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import "./style/story.css"
-import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet,FaHandPointer} from 'react-icons/fa'
+import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet, FaHandPointer} from 'react-icons/fa'
 import {registerWhiteList} from "../../utils/axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import {useSelector, useDispatch} from 'react-redux'
@@ -34,12 +34,14 @@ const WhiteList = () => {
     }
 
     const follow = () => {
+        window.open('https://twitter.com/Fandom_CRTR');
         setCheckFollowTwitter(true)
     }
     const retweet = () => {
         setCheckRetweetTwitter(true)
     }
     const join = () => {
+        window.open('https://t.me/Fandom_Vietnam');
         setCheckJoinTelegram(true)
     }
 
@@ -58,9 +60,10 @@ const WhiteList = () => {
             <div className="white-list-inner">
                 <div className="main-font">
                     <h1>Tham gia Whitelist</h1>
-                    <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng lịch sử của NHI khi trở thành nhà vô địch thế giới.
-                        Đăng ký Whitelist để có cơ hội tham gia đấu giá!
-                        Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của chúng tôi!</p>
+                    <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng<br/>lịch sử của NHI khi trở thành nhà
+                        vô địch thế giới.<br/><br/>
+                        Đăng ký Whitelist để có cơ hội tham gia đấu giá!<br/>
+                        Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của<br/> chúng tôi!</p>
                 </div>
                 <div className="check-bar">
                     <div className="left">

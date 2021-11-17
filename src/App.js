@@ -15,7 +15,7 @@ const App = () => {
     return (
         <>
             <Web3ReactProvider getLibrary={getLibrary}>
-                 <Header/>
+                <Header/>
                 <Router>
                     <Switch>
                         <Route exact path="/" component={MainPage}/>

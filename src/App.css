@@ -5,6 +5,13 @@
     box-sizing: border-box;
 
 }
+
+html {
+    overflow-x: hidden;
+    word-break: keep-all;
+    -ms-overflow-style: none;
+}
+
 body {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -13,23 +20,11 @@ body {
     z-index: -99999;
 }
 
-.SubPage {
-    background-image: url("/src/components/images/background3.jpg");
-    background-size: cover;
-    min-height: 1300px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 -100px;
-    position: relative;;
-    bottom: 250px;
+h1, h2, h3, h4, a {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1440px) {
-    .SubPage {
-        background-position: 0 50px;
-        position: relative;;
-        bottom: 280px;
-    }
 }
 
 @media screen and (min-width: 425px) {
@@ -37,26 +32,6 @@ body {
         min-height: 1300px;
 
     }
-    .SubPage {
-        background-size: cover;
-        min-height: 1200px;
-    }
 }
 @media screen and (max-width: 425px) {
-
-    .SubPage {
-        background-size: cover;
-        min-height: 1000px;
-    }
-}
-
-
-html {
-    overflow-x: hidden;
-    word-break: keep-all;
-    -ms-overflow-style: none;
-}
-
-h1, h2, h3, h4, a {
-    text-decoration: none;
 }

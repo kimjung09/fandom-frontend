@@ -3,7 +3,7 @@ import "./style/Body.css"
 import "./style/Story.css"
 import {getNftList} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
-import Timer from "./Timer";
+import Timer from "../Timer";
 import {NavLink} from 'react-router-dom';
 import WhiteList from "../WhiteList";
 
@@ -42,13 +42,9 @@ const MainPage = (props) => {
         } else {
             setPlayBtnDisplay('none');
         }
-        console.log('testat')
     };
 
     const moveSlider = (x) => {
-
-        console.log('moveSlider : ' + x);
-
         let tmpCurrentSlider = [],
             offsetWidth = sliderItem.current.offsetWidth + 1;
         slider.current.style.marginLeft = (offsetWidth * x * -1) + 'px';
@@ -98,9 +94,7 @@ const MainPage = (props) => {
                     <h1>Sở hữu những</h1>
                     <h1>khoảnh khắc đặc biệt nhất</h1>
                     <h3>own the most special moments!</h3>
-                    <p className="time">
-                        <Timer/>
-                    </p>
+                    <Timer/>
                 </div>
                 <div className="video-area">
                     <div className="btn-play" style={{display: playBtnDisplay}} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur}>

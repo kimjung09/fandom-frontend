@@ -2,46 +2,49 @@
     width: 100%;
     min-height: 151px;
     background:#000000;
-    padding-bottom: 42px;
-
+    padding-bottom: 0px;
 }
 
 .Footer > div {
-    max-width:1210px;
-    margin:auto;
+    max-width:1120px;
+    margin: 40px auto;
     text-align: center;
+
+
 }
 
-.Footer > .container >  a {
+.Footer > div:nth-child(1) >  a {
     color:#ffffff;
     text-transform: uppercase;
     text-align: center;
-    margin-right: 110px;
-    margin-left: -70px;
-    font:18px/108px arial;
+    margin:38px 20px 0px 20px;
+    font-size:24px;
+    font-weight: bold;
+
 }
-.Footer > .bottom >  a {
+.Footer > div:nth-child(2) >  a {
     color:#ffffff;
     text-transform: uppercase;
     text-align: center;
     margin-right: 20px;
-    font:18px/98px arial;
+
 }
 
-.Footer > .bottom > a > span {
+.Footer > div:nth-child(2) > a > span {
     width:100px;
     height: 45px;
     /*position:relative;*/
     /*top:-20px;*/
     /*left:-4%;*/
-    margin:-50px 50px 20px -50px;
+    margin:auto;
     padding:30px 20px 20px 20px;
     border:none;
     background:#ffffff;
-    line-height: 20px;
+    line-height: 90px;
     border-radius: 100%;
+
 }
-.Footer > .bottom > a:nth-child(3) > span {
+.Footer > div:nth-child(2) > a:nth-child(3) > span {
     background: #24a1de;
 
 }
@@ -63,7 +66,7 @@
     }
 
     .Footer > div {
-        max-width:1210px;
+        max-width:1024px;
         margin:auto;
     }
 
@@ -71,37 +74,29 @@
         color:#ffffff;
         text-transform: uppercase;
         text-align: center;
-        margin-right: 20px;
-        margin-left: 10px;
+        margin-right: 30px;
+        margin-left: 20px;
         font:18px/108px arial;
     }
     .Footer > div:nth-child(2) > a  {
         margin:50px -30px 0px 50px;
     }
-
     .Footer > div:nth-child(2) > a > span {
         width:100px;
         height: 45px;
         /*position:relative;*/
         /*top:-20px;*/
         /*left:-4%;*/
-        margin:-40px 50px 20px -50px;
+        margin-right: 20px;
+        margin-left: -20px;
         padding:30px 20px 20px 20px;
         border:none;
         background:#ffffff;
-        line-height: 50px;
+        line-height: 90px;
         border-radius: 100%;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(3) > span {
-        background: #24a1de;
 
     }
-    .Footer > div:nth-child(2) > a:nth-child(4) > span {
-        background:#6881d8;
-    }
-    .Footer > div:nth-child(2) > a:nth-child(5) > span {
-        background:#ffc017;
-    }
+
 
 }
 /** Media Query LatTop L(1024) */
@@ -213,7 +208,7 @@
 
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 16px/100px arial;
+        font:bold 18px/100px arial;
         margin-left: 80px;
         margin-right: -60px;
     }
@@ -252,7 +247,7 @@
 
         color:#ffffff;
         text-transform: uppercase;
-        font:bold 18px/128px arial;
+        font:bold 18px/138px arial;
         margin-left: 80px;
         margin-right: -60px;
     }

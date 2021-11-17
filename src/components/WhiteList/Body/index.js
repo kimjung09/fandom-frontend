@@ -74,31 +74,31 @@ const Body = (match) => {
             <div className="WhiteList-container" id="Story">
                 <div>
                     <div>
-                    <h1>{whiteList.title}</h1>
+                        <h1>{whiteList.title}</h1>
                         <p>{whiteList.subTitle}<br /></p>
                         <div className="subscribe">
-                                {whiteList ? dataList.map((res, index) =>
-                                        <div >
-                                        <React.Fragment key={index}>
-                                                <button type="submit">
-                                                    <FaRetweet className='icon' />
-                                                </button>
+                            {whiteList ? dataList.map((res, index) =>
+                                <div >
+                                    <React.Fragment key={index}>
+                                        <button type="submit">
+                                            <FaRetweet className='icon' />
+                                        </button>
 
-                                            <h1>{whiteList.title}</h1>
-                                            <button>Click</button>
-                                        </React.Fragment>
+                                        <h1>{whiteList.title}</h1>
+                                        <button>Click</button>
+                                    </React.Fragment>
 
-                                        </div>
-                                        ) : (
-                                        <React.Fragment>
-                                            <h1>
-                                                sdkskds
-                                            </h1>
-                                        </React.Fragment>
-                                )
-                                }
+                                </div>
+                            ) : (
+                                <React.Fragment>
+                                    <h1>
+                                        sdkskds
+                                    </h1>
+                                </React.Fragment>
+                            )
+                            }
 
-                      </div>
+                        </div>
                     </div>
                     <button>Submit</button>
 

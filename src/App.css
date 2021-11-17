@@ -1,15 +1,15 @@
-*{
+* {
     scroll-behavior: smooth;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 
 }
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    width:100%;
-    background: rgba(0,0,0,1.0);
+    width: 100%;
+    background: rgba(0, 0, 0, 1.0);
     z-index: -99999;
 }
 
@@ -17,51 +17,46 @@ body {
     background-image: url("/src/components/images/background3.jpg");
     background-size: cover;
     min-height: 1300px;
-    width:100%;
+    width: 100%;
     background-repeat: no-repeat;
-    background-position: 0px -100px;
-    position:relative;;
-    bottom:250px;
+    background-position: 0 -100px;
+    position: relative;;
+    bottom: 250px;
 }
 
-@media screen and (max-width:1440px) {
-.SubPage{
-    background-position: 0px 50px;
-    position:relative;;
-    bottom:280px;
-}
+@media screen and (max-width: 1440px) {
+    .SubPage {
+        background-position: 0 50px;
+        position: relative;;
+        bottom: 280px;
+    }
 }
 
-@media screen and (min-width:425px){
-  body {
-      min-height: 1300px;
+@media screen and (min-width: 425px) {
+    body {
+        min-height: 1300px;
 
-  }
-  .SubPage {
-
-      background-size: cover;
-      min-height: 1200px;
-  }
+    }
+    .SubPage {
+        background-size: cover;
+        min-height: 1200px;
+    }
 }
-@media screen and (max-width:425px){
+@media screen and (max-width: 425px) {
 
     .SubPage {
-
         background-size: cover;
         min-height: 1000px;
     }
 }
 
 
-
-
 html {
     overflow-x: hidden;
     word-break: keep-all;
-    overflow-x: hidden;
     -ms-overflow-style: none;
 }
 
-h1,h2,h3,h4, a {
+h1, h2, h3, h4, a {
     text-decoration: none;
 }

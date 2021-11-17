@@ -25,11 +25,11 @@ const WalletBtn = () => {
 
     const connect = async () => {
         try {
-            await setupNetwork();
+            let network = await setupNetwork();
+            if(!network){
+                window.open('https://metamask.io/');
+            }
             await activate(injected);
-            // await getGasPrice();
-            await getBlockNumber();
-            // localStorage.setItem('login-account',account)
 
         } catch (err) {
             console.log(err)
@@ -43,17 +43,6 @@ const WalletBtn = () => {
         } catch (err) {
             console.log(err)
         }
-    }
-
-    const test = async () => {
-        console.log(await getNftList())
-        console.log(await getNftInfo(1))
-
-        // const provider = window.web3.currentProvider
-        //
-        // console.log(provider)
-        // console.log(await store(account));
-        // await bidAction(account)
     }
 
     useEffect(
@@ -80,21 +69,18 @@ const WalletBtn = () => {
     return (
         <>
             {active ?
-                <a style={{cursor: 'pointer'}}
+                <a className="wallet-btn" style={{cursor: 'pointer'}}
                    onClick={disconnect}
                    onMouseOver={() => setMouseOverCheck(true)}
                    onMouseLeave={() => setMouseOverCheck(false)}>
                     <ParseAccount/>
                 </a>
                 :
-                <a style={{cursor: 'pointer'}} onClick={connect}>
-                    <span>
-                        <BiWalletAlt/>
-                    </span>
-                    WALLET
+                <a className="wallet-btn" style={{cursor: 'pointer'}} onClick={connect}>
+                    <img src="/images/icon/wallet.png"/>
+                    Ví
                 </a>
             }
-
         </>
     )
 }

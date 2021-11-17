@@ -41,7 +41,9 @@
     width:100%;
 }
 .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
+    margin-bottom:24px;
     font:  bold 18px/34px arial;
+    font-family: -apple-system;
     margin-bottom:52px;
     text-align: center;
     margin-left:-40px;
@@ -186,8 +188,10 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
 
     }
     .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
+        margin-bottom:24px;
         font:  bold 18px/34px arial;
         margin-left:120px;
+        font-family: -apple-system;
         margin-bottom:52px;
     }
 
@@ -291,7 +295,9 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
         width:100%;
     }
     .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
+        margin-bottom:24px;
         font:  bold 15px/34px arial;
+        font-family: -apple-system;
         margin-bottom:52px;
         text-align: center;
         margin-left:-40px;
@@ -436,8 +442,10 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
 
     }
     .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
+        margin-bottom:24px;
         font:  bold 18px/34px arial;
         margin-left: 45px;
+        font-family: -apple-system;
         margin-bottom:52px;
     }
 
@@ -610,6 +618,7 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
     }
     .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
         font:  bold 12px/24px arial;
+        font-family: -apple-system;
         margin-left: -20px;
         color:#000000;
     }
@@ -724,6 +733,7 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover{
     }
     .WhiteList-container > div:nth-child(1) > div:nth-child(1) > p {
         font:  bold 14px/24px arial;
+        font-family: -apple-system;
         margin-left: -20px;
         color:#000000;
     }

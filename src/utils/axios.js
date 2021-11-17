@@ -1,7 +1,7 @@
 // axios
 import axios from 'axios'
 
-const url = process.env.REACT_APP_API_URL
+const url = "http://3.35.194.80:8000/api"
 
 export const getNftList = async () => {
     try {

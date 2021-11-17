@@ -1001,7 +1001,7 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover {
 
 @media screen and (min-width: 375px) {
     .white-list-inner {
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
 }
@@ -1131,6 +1131,6 @@ div:nth-child(1) > .subscribe > div > button:last-child:hover {
 
 @media screen and (min-width: 1000px) {
     .white-list-inner {
-        margin-top: 150px;
+        margin-top: 200px;
     }
 }

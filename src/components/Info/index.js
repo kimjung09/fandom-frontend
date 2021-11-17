@@ -1,14 +1,11 @@
 import "App.css"
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./style/Info.css"
 import "./style/Bottom.css"
-import {CgChevronLeft, CgChevronRight} from 'react-icons/cg';
-import {MdLocalOffer} from 'react-icons/md'
 import {AiOutlineClose} from 'react-icons/ai'
-import {AiOutlineIssuesClose} from 'react-icons/ai'
 import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
-import Timer from "./Timer";
+import Timer from "../Timer";
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
@@ -16,8 +13,10 @@ const InfoPage = ({history, location, match}) => {
     const asyncData = useAsync(getNftInfo, [match.params.id]);
     const item = asyncData.result
 
+    const [currentSlider, setCurrentSlider] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const openModal = () => {
+        window.scrollTo(0, 0);
         setShowModal(true);
     };
     const closeModal = () => {
@@ -32,6 +31,15 @@ const InfoPage = ({history, location, match}) => {
         setShowPopup(event.target.value);
     }
 
+    const initSlider = () => {
+        const pageId = Number(match.params.id);
+        let tmpCurrentSlider = [];
+        for (let iLoop = 0;iLoop < 6;iLoop++) {
+            tmpCurrentSlider[iLoop] = iLoop === (pageId - 1) ? '/images/icon/page-on1.png' : '/images/icon/page-off1.png';
+        }
+        setCurrentSlider(tmpCurrentSlider);
+    }
+
     const goPage = (params, e) => {
         const pageId = Number(match.params.id)
         if (pageId === 1 && params === -1) {
@@ -41,112 +49,119 @@ const InfoPage = ({history, location, match}) => {
         } else {
             params = pageId + params;
         }
-        history.push(`/fandom/${params}`)
+        history.push(`/fandom/${params}`);
     }
 
+    const movePage = (pageId) => {
+        window.location.href = `/fandom/${pageId}`;
+        // history.push(`/fandom/${pageId}`);
+        // initSlider();
+    }
+
+    useEffect(() => {
+        initSlider();
+    }, []);
 
     return (
         <>
             {item ?
                 <div>
-                    <div className="SubPage">
-                        <div className="background">
+                    <div className="bid-btn-mobile">
+                        <button type="button" onClick={openModal}>
+                            MUA NGAY
+                        </button>
+                    </div>
 
-                            <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
-                                <Timer time="여기에 END DATE를 넣자"/>
-                                <div className="Container">
-                                    <img className="Image"
-                                         src={item.list_img}/>
-                                    <div className="Description">
-                                        <h2>{item.title}</h2>
-                                        <p>{item.sub_title}</p>
-                                        <div className="ButtonContainer">
-                                            <input type="text" name='inputNum' placeholder="BNB"/>
-                                            <button type="button" onClick={openModal} value='false'>
-                                                <span>
-                                                    <MdLocalOffer/>
-                                                </span>Make Offer
+                    <div className="SubPage">
+                        <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
+                            <Timer time="여기에 END DATE를 넣자"/>
+                            <div className="Container">
+                                <div className="Image">
+                                    <img src={item.list_img}/>
+                                </div>
+                                <div className="Description">
+                                    <h2>{item.title}</h2>
+                                    <p className="subTitle">{item.sub_title}</p>
+                                    <div className="ButtonContainer">
+                                        <div className="input">
+                                            <input type="text" name="inputNum" placeholder="BNB"/>
+                                        </div>
+                                        <div className="btn">
+                                            <button type="button" onClick={openModal}>
+                                                MUA NGAY
                                             </button>
                                         </div>
-
-                                        <form>
-                                            <table>
-                                                <thead>
-                                                <tr>
-                                                    <th className="bold">Amount</th>
-                                                    <th>Usd price</th>
-                                                    <th>time</th>
-                                                    <th>bidding</th>
-                                                </tr>
-                                                </thead>
-                                                {item.bid.map((value, index) =>
-                                                    <tbody key={index}>
-                                                    <tr>
-                                                        <th className="bold"><i
-                                                            className="fas fa-user"></i>{parseAmount(value.amount)}
-                                                        </th>
-                                                        <th>{parseUSD(value.amount)}</th>
-                                                        <th>{parseDate(value.block_time)}</th>
-                                                        <th className="bold">
-                                                            <i className="fas fa-user"></i>
-                                                            {parseAccount(value.account)}
-                                                        </th>
-                                                    </tr>
-                                                    </tbody>
-                                                )}
-                                            </table>
-                                        </form>
-                                        {
-                                            showModal ?
+                                    </div>
+                                    <table className="bid-table">
+                                        <thead>
+                                        <tr>
+                                            <th className="bold">Amount</th>
+                                            <th>Usd price</th>
+                                            <th>time</th>
+                                            <th>bidding</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {item.bid.map((value, index) =>
+                                            <tr key={index}>
+                                                <td className="bold">
+                                                    {parseAmount(value.amount)}
+                                                </td>
+                                                <td>{parseUSD(value.amount)}</td>
+                                                <td>{parseDate(value.block_time)}</td>
+                                                <td className="bold">
+                                                    {parseAccount(value.account)}
+                                                </td>
+                                            </tr>
+                                        )}
+                                        </tbody>
+                                    </table>
+                                    {
+                                        showModal ?
+                                            <div className="Modal-wrap">
                                                 <div className="Modal">
-                                                    <div>
-                                                        <h1>bid now</h1>
-                                                        <button onClick={closeModal}>
-                                                            <span>
-                                                            <AiOutlineClose size={40}/>
-                                                            </span>
-                                                        </button>
-                                                        <p>{item.sub_title}</p>
-                                                        <input type="text" name='bsc' placeholder="0.00001" required/>
-                                                        <span className="number">
-                                                             BNB
-                                                         </span>
-                                                        <span className="icon">
-                                                            <AiOutlineIssuesClose/>
-                                                         </span>
-                                                        <button type="button" onClick={closeModal}>
-                                                            Make Offer
-                                                        </button>
-                                                    </div>
+                                                    <button className="close-btn" onClick={closeModal}>
+                                                        <AiOutlineClose size={40}/>
+                                                    </button>
+                                                    <h1>BID NOW</h1>
+                                                    <p className="sub-title">{item.sub_title}</p>
+                                                    <input type="text" name='bsc' placeholder="0.00001 BNB" required className="input"/>
                                                 </div>
-                                                : null
-                                        }
-                                        {
-                                            showPopup ? (
-                                                <div className="popup">
-                                                    <div className="popup_inner">
-                                                        dsadsdk
-                                                    </div>
+                                                <button className="bid-btn" type="button" onClick={closeModal}>
+                                                    BID NOW
+                                                </button>
+                                            </div>
+                                            : null
+                                    }
+                                    {
+                                        showPopup ? (
+                                            <div className="popup">
+                                                <div className="popup_inner">
+                                                    dsadsdk
                                                 </div>
-                                            ) : null}
-                                    </div>
+                                            </div>
+                                        ) : null}
                                 </div>
-                                <button type="button" className="Item-Left" onClick={(e) => goPage(-1, e)}>
-                                    <div>
-                                        <CgChevronLeft size={"48px"}/>
-                                    </div>
-                                </button>
-                                <button type="button" className="Item-Right" onClick={(e) => goPage(1, e)}>
-                                    <div>
-                                        <CgChevronRight size={"48px"}/>
-                                    </div>
-                                </button>
+                                <div className="left-btn">
+                                    <button type="button" onClick={(e) => goPage(-1, e)}>
+                                        <img src="/images/icon/left_off.png"/>
+                                    </button>
+                                </div>
+                                <div className="right-btn">
+                                    <button type="button" onClick={(e) => goPage(1, e)}>
+                                        <img src="/images/icon/right_off.png"/>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="pagination">
+                                {currentSlider.map((res, index) =>
+                                    <span onClick={() => movePage(index + 1)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
+                                )}
                             </div>
                         </div>
                     </div>
 
                     <div className="bottom-container" id="Story">
-
                         <div className="bottom-content">
                             <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
                             </div>
@@ -200,7 +215,6 @@ const InfoPage = ({history, location, match}) => {
 
     )
 }
-
 
 
 export default InfoPage;

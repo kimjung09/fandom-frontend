@@ -1,0 +1,207 @@
+.Story-container {
+    width:100%;
+    min-height: 1000px;
+    background:#fff;
+    display:block;
+    padding: 210px 0 110px 0;
+}
+
+.Story-container .Story-components {
+    max-width:1120px;
+    min-height: 1000px;
+    margin:auto;
+    text-align: center;
+}
+
+.Story-container .Story-components button {
+    width:340px;
+    height:63px;
+    margin-bottom:44px;
+    border-radius: 34px 34px 34px 34px;
+    border: 2px solid #db154a;
+    background:#db154a;
+    color:#ffffff;
+    font-size:26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Story-container .Story-components button:hover {
+    background: #ffffff;
+    border: 2px solid #db154a;
+    color: #db154a;
+}
+
+.Story-container .Story-components button img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.Story-container .Story-components button img.on {
+    display: none;
+}
+
+.Story-container .Story-components button img.off {
+    display: inline;
+}
+
+.Story-container .Story-components button:hover img.on {
+    display: inline;
+}
+
+.Story-container .Story-components button:hover img.off {
+    display: none;
+}
+
+.Story-container .Story-components h1 {
+    text-align: center;
+    color:#eb1a53;
+    text-shadow: 10px 0 #93f7f3;
+    font-size: 76px;
+    margin-bottom: 50px;
+}
+
+.Story-container .Story-components .desc {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.Story-container .Story-components .list {
+    width: 100%;
+    max-width: 1120px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    margin-bottom: 80px;
+}
+
+.Story-container .Story-components .list a > img {
+    width: 100%;
+    max-width: 340px;
+}
+
+.Story-container .Story-components .list a > img:hover {
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+.Story-container .Story-components .list-wrap .pagination {
+    display: none;
+}
+
+/* Media Query LapTop(1440px) */
+@media screen and (max-width: 1440px) {
+}
+
+/* Media Query LapTop(1024px) */
+@media screen and (max-width: 1024px) {
+    .Story-container .Story-components .list a > img {
+        width: 100%;
+        max-width: 310px;
+    }
+}
+
+/** Media Qurey Medium (992px) */
+@media screen and (max-width: 992px) {
+}
+
+/** Media Query Tablet (768px) */
+@media screen and (max-width: 768px) {
+    .Story-container .Story-components .list-wrap {
+        width: 100vw;
+        position: relative;
+    }
+
+    .Story-container .Story-components .list {
+        width: 600vw;
+        max-width: 600vw;
+        height: auto;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 40px;
+        transition: 1s;
+    }
+
+    .Story-container .Story-components .list .list-item {
+        width:85vw;
+        float: left;
+    }
+
+    .Story-container .Story-components .list a > img {
+        width: 80vw;
+        max-width: 80vw;
+        margin: 0 40px 0 40px;
+    }
+
+    .Story-container .Story-components .list-wrap .pagination {
+        width: 100vw;
+        margin-bottom: 80px;
+        display: block;
+    }
+
+    .Story-container .Story-components .list-wrap .pagination span {
+        margin: 0 3px;
+        cursor: pointer;
+    }
+
+    .Story-container .Story-components .list-wrap .pagination span img {
+        vertical-align: middle;
+    }
+}
+
+/** Media Query Tablet (425px) */
+@media screen and (max-width: 425px) {
+    .Story-container {
+        padding: 120px 0 50px 0;
+    }
+
+    .Story-container .Story-components .list a > img {
+        margin: 0 22px 0 22px;
+    }
+}
+
+/*  Media Query iPoneX (375 x 812) */
+@media screen and (max-width: 375px) {
+    .Story-container {
+        padding: 100px 0 40px 0;
+    }
+
+    .Story-container .Story-components .list a > img {
+        margin: 0 17px 0 17px;
+    }
+
+    .Story-container .Story-components button {
+        width:300px;
+        height:55px;
+        margin-bottom:30px;
+        font-size:20px;
+    }
+
+    .Story-container .Story-components button img {
+        max-width: 25px;
+    }
+
+    .Story-container .Story-components h1 {
+        font-size: 55px;
+    }
+}
+
+/** Media Query Galxy Fold(280 x 653) */
+@media screen and (max-width: 280px){
+    .Story-container {
+        padding: 80px 0 30px 0;
+    }
+
+    .Story-container .Story-components .list a > img {
+        margin: 0 14px 0 14px;
+    }
+
+    .Story-container .Story-components button {
+        width:270px;
+    }
+
+    .Story-container .Story-components h1 {
+        font-size: 48px;
+    }
+}

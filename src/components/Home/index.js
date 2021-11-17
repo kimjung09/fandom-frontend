@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./style/Body.css"
 import "./style/Story.css"
-import {FaPlay, FaGift} from 'react-icons/fa'
 import {getNftList} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "./Timer";
@@ -12,6 +11,85 @@ import WhiteList from "../WhiteList";
 const MainPage = (props) => {
     const asyncData = useAsync(getNftList);
     const item = asyncData.result
+    const videoPlayer = useRef();
+    const sliderWrap = useRef();
+    const slider = useRef();
+    const sliderItem = useRef();
+
+    const [playBtnDisplay, setPlayBtnDisplay] = useState('block');
+    const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
+    const [currentSlider, setCurrentSlider] = useState(['/images/icon/page-on.png', '/images/icon/page-off.png', '/images/icon/page-off.png', '/images/icon/page-off.png', '/images/icon/page-off.png', '/images/icon/page-off.png']);
+    const [sliderTouchStart, setSliderTouchStart] = useState(0);
+    const [sliderTouchMove, setSliderTouchMove] = useState(0);
+
+    const onPlayClick = () => {
+        if (videoPlayer) {
+            if (videoPlayer.current.paused) {
+                videoPlayer.current.play();
+                setPlayBtnDisplay('none');
+            } else {
+                videoPlayer.current.pause();
+                setPlayBtnDisplay('block');
+            }
+        }
+    };
+    const videoMouseOn = () => {
+        setPlayBtnDisplay('block');
+    };
+    const videoMouseBlur = () => {
+        if (videoPlayer.current.paused) {
+            setPlayBtnDisplay('block');
+        } else {
+            setPlayBtnDisplay('none');
+        }
+        console.log('testat')
+    };
+
+    const moveSlider = (x) => {
+
+        console.log('moveSlider : ' + x);
+
+        let tmpCurrentSlider = [],
+            offsetWidth = sliderItem.current.offsetWidth + 1;
+        slider.current.style.marginLeft = (offsetWidth * x * -1) + 'px';
+
+        for (let iLoop = 0;iLoop < 6;iLoop++) {
+            tmpCurrentSlider[iLoop] = iLoop === x ? '/images/icon/page-on.png' : '/images/icon/page-off.png';
+        }
+        setCurrentSlider(tmpCurrentSlider);
+        setCurrentSliderIndex(x);
+    }
+
+    const sliderSwipe = (event) => {
+        switch (event.type) {
+            case 'touchstart':
+                setSliderTouchStart(event.touches[0].pageX);
+                break;
+            case 'touchmove':
+                setSliderTouchMove(event.touches[0].pageX);
+                break;
+            case 'touchend':
+                let idx = 0,
+                    move = sliderTouchStart - sliderTouchMove;
+
+                if (move > 20) {
+                    idx = currentSliderIndex + 1;
+                    if (idx > 5) {
+                        idx = 0;
+                    }
+                    moveSlider(idx);
+                }
+
+                if (move < -20) {
+                    idx = currentSliderIndex - 1;
+                    if (idx < 0) {
+                        idx = 5;
+                    }
+                    moveSlider(idx);
+                }
+                break;
+        }
+    }
 
     return (
         <>
@@ -24,59 +102,64 @@ const MainPage = (props) => {
                         <Timer/>
                     </p>
                 </div>
-                <div className="video">
-                    {/*<video src="/images/video.mp4" width="900" height="600" controls>*/}
-                    {/*</video>*/}
-                    <span>
-                        <FaPlay size={"40"}/>
-                    </span>
+                <div className="video-area">
+                    <div className="btn-play" style={{display: playBtnDisplay}} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur}>
+                        <img src="/images/home/btn-play.png" onClick={onPlayClick}/>
+                    </div>
+                    <div className="video">
+                        <video className="player" src="/video/WBO_NHI_edited.mp4" ref={videoPlayer} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur} onEnded={videoMouseOn}/>
+                    </div>
                 </div>
             </div>
             {
                 props.match.path === '/whitelist' ? (
-                    <WhiteList/>
+                    <WhiteList />
                 ) : (
                     <div className="Story-container" id="Story">
-                        <form className="Story-components">
-                            <div>
+                        <div className="Story-components">
+                            <NavLink to="/whitelist">
                                 <button>
-                                    <NavLink to="/whitelist">
-                                        danh sách trắng <FaGift color={"none"}/>
-                                    </NavLink>
+                                    danh sách trắng
+                                    <img src="/images/icon/giftbox.png" className="off"/>
+                                    <img src="/images/icon/giftbox-on.png" className="on"/>
                                 </button>
-
-                                <h1>1st Story</h1>
-                                <p>
-                                    Những khoảnh khắc đặc biệt của NHI qua NFT.
-                                    Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~ 23:59, ngày 30/11
-                                    <br/>
-                                    Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI từ
-                                    trước
-                                    khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
-                                </p>
-                                <div>
-                                    {item ? item.map((res, index) =>
-                                        <React.Fragment key={index}>
-                                            <NavLink to={`/fandom/${res.id}`}>
-                                                <img src={res.list_img}/>
-                                            </NavLink>
-                                        </React.Fragment>
-                                    ) : (
-                                        <React.Fragment>
-
-                                        </React.Fragment>
-                                    )
-                                    }
-                                </div>
-                                <button>
-                                    <NavLink to="/whitelist">
-                                        Đấu giá ngay bây giờ
-                                    </NavLink>
-                                </button>
+                            </NavLink>
+                            <h1>1ST STORY</h1>
+                            <div className="desc">
+                                Những khoảnh khắc đặc biệt của NHI qua NFT.<br/>
+                                Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~ 23:59, ngày 30/11<br/>
+                                Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
                             </div>
-                        </form>
+                            <div className="list-wrap" ref={sliderWrap} onTouchStart={sliderSwipe} onTouchMove={sliderSwipe} onTouchEnd={sliderSwipe}>
+                                <div className="list" ref={slider}>
+                                    {item ? item.map((res, index) =>
+                                        <div className="list-item" key={index} ref={sliderItem}>
+                                            <React.Fragment>
+                                                <NavLink to={`/fandom/${res.id}`}>
+                                                    <img src={res.list_img}/>
+                                                </NavLink>
+                                            </React.Fragment>
+                                        </div>
+
+                                    ) : (
+                                        <React.Fragment/>
+                                    )}
+                                </div>
+                                <div className="pagination">
+                                    {currentSlider.map((res, index) =>
+                                        <span onClick={() => moveSlider(index)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
+                                    )}
+                                </div>
+                            </div>
+                            <NavLink to="/whitelist">
+                                <button>
+                                    Đấu giá ngay bây giờ
+                                </button>
+                            </NavLink>
+                        </div>
                     </div>
-                )}
+                )
+            }
         </>
     )
 }

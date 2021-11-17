@@ -21,3 +21,21 @@ export const getNftInfo = async (id) => {
         console.log(e);
     }
 }
+
+export const registerWhiteList = async (params) => {
+    try {
+        const response = await axios.post(`${url}/white_list`, params);
+        return response.data.data;
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+export const getWhiteListCheck = async (id) => {
+    try {
+        const response = await axios.get(`${url}/white_list/${id}`);
+        return response.data.data;
+    } catch (e) {
+        console.log(e);
+    }
+}

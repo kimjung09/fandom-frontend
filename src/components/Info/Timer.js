@@ -1,40 +1,37 @@
 import React, {useState, useEffect} from "react";
+import moment from 'moment';
 
-const Timer = (time) => {
+const Timer = () => {
+    const formatTime = (time) => {
+        if (time < 10) {
+            return '0' + time
+        }
+        return time;
+    }
 
-    const [hours, setHours] = useState(24);
-    const [minutes, setMinutes] = useState(59);
-    const [seconds, setSeconds] = useState(59);
-
+    const calculateTimeLeft = () => {
+        let eventTime = '1638291599';
+        let currentTime = (Math.floor(Date.now() / 1000)).toString();
+        let leftTime = eventTime - currentTime;
+        let duration = moment.duration(leftTime, 'seconds');
+        let interval = 1000;
+        if (duration.asSeconds() <= 0) {
+            clearInterval(interval);
+        }
+        duration = moment.duration(duration.asSeconds() - 1, 'seconds');
+        return (
+            duration.days() + 'D ' + formatTime(duration.hours()) + ':' + formatTime(duration.minutes()) + ':' + formatTime(duration.seconds())
+        );
+    }
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
     useEffect(() => {
-        const countdown = setInterval(() => {
-            if (parseInt(seconds) > 0) {
-                setSeconds(parseInt(seconds) - 1);
-            }
-
-            if (parseInt(seconds) === 0) {
-                if (parseInt(minutes) === 0) {
-                    clearInterval(countdown);
-                } else {
-                    setMinutes(parseInt(minutes) - 1);
-                    setSeconds(59);
-                }
-            }
-            if (parseInt(seconds) === 0) {
-                if (parseInt(minutes) === 0) {
-                    clearInterval(countdown);
-                } else {
-                    setMinutes(parseInt(minutes) - 1);
-                    setSeconds(59);
-                }
-            }
+        setTimeout(() => {
+            setTimeLeft(calculateTimeLeft());
         }, 1000);
-        return () => clearInterval(countdown);
-    }, [hours, minutes, seconds]);
-
+    });
     return (
         <>
-            <h1><span>LIVE</span> {hours}:{minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h1>
+            <h1><span>LIVE</span>{timeLeft}</h1>
         </>
     )
 }

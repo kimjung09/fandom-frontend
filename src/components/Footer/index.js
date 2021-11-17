@@ -37,6 +37,4 @@ import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
   )
 }
 
-
 export default Footer;
-

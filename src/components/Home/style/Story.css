@@ -3,7 +3,7 @@
     min-height: 1000px;
     background:#fff;
     display:block;
-    padding: 210px 0 110px 0;
+    padding: 180px 0 70px 0;
 }
 
 .Story-container .Story-components {
@@ -16,7 +16,7 @@
 .Story-container .Story-components button {
     width:340px;
     height:63px;
-    margin-bottom:44px;
+    margin-bottom:20px;
     border-radius: 34px 34px 34px 34px;
     border: 2px solid #db154a;
     background:#db154a;
@@ -61,6 +61,14 @@
     margin-bottom: 50px;
 }
 
+.Story-container .Story-components h2 {
+    text-align: center;
+    color:#eb1a53;
+    text-shadow: 10px 0 #93f7f3;
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
 .Story-container .Story-components .desc {
     font-size: 20px;
     text-align: center;
@@ -100,14 +108,33 @@
         width: 100%;
         max-width: 310px;
     }
+
+    .Story-container .Story-components h2 {
+        font-size: 40px;
+    }
 }
 
 /** Media Qurey Medium (992px) */
 @media screen and (max-width: 992px) {
+    .Story-container {
+        padding: 200px 0 30px 0;
+    }
+
+    .Story-container .Story-components h2 {
+        font-size: 30px;
+    }
+
+    .Story-container .Story-components .desc {
+        font-size: 18px;
+    }
 }
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
+    .Story-container {
+        padding: 190px 0 30px 0;
+    }
+
     .Story-container .Story-components .list-wrap {
         width: 100vw;
         position: relative;
@@ -153,18 +180,26 @@
 /** Media Query Tablet (425px) */
 @media screen and (max-width: 425px) {
     .Story-container {
-        padding: 120px 0 50px 0;
+        padding: 100px 0 50px 0;
     }
 
     .Story-container .Story-components .list a > img {
         margin: 0 22px 0 22px;
+    }
+
+    .Story-container .Story-components h2 {
+        font-size: 23px;
+    }
+
+    .Story-container .Story-components .desc {
+        font-size: 16px;
     }
 }
 
 /*  Media Query iPoneX (375 x 812) */
 @media screen and (max-width: 375px) {
     .Story-container {
-        padding: 100px 0 40px 0;
+        padding: 80px 0 40px 0;
     }
 
     .Story-container .Story-components .list a > img {
@@ -174,7 +209,7 @@
     .Story-container .Story-components button {
         width:300px;
         height:55px;
-        margin-bottom:30px;
+        margin-bottom:15px;
         font-size:20px;
     }
 
@@ -185,12 +220,21 @@
     .Story-container .Story-components h1 {
         font-size: 55px;
     }
+
+    .Story-container .Story-components h2 {
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+
+    .Story-container .Story-components h2 {
+        font-size: 20px;
+    }
 }
 
 /** Media Query Galxy Fold(280 x 653) */
 @media screen and (max-width: 280px){
     .Story-container {
-        padding: 80px 0 30px 0;
+        padding: 60px 0 30px 0;
     }
 
     .Story-container .Story-components .list a > img {

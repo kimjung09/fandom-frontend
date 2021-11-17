@@ -1,14 +1,11 @@
 import "App.css"
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./style/Info.css"
 import "./style/Bottom.css"
-import {CgChevronLeft, CgChevronRight} from 'react-icons/cg';
-import {MdLocalOffer} from 'react-icons/md'
 import {AiOutlineClose} from 'react-icons/ai'
-import {AiOutlineIssuesClose} from 'react-icons/ai'
 import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
-import Timer from "./Timer";
+import Timer from "../Timer";
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
@@ -16,8 +13,10 @@ const InfoPage = ({history, location, match}) => {
     const asyncData = useAsync(getNftInfo, [match.params.id]);
     const item = asyncData.result
 
+    const [currentSlider, setCurrentSlider] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const openModal = () => {
+        window.scrollTo(0, 0);
         setShowModal(true);
     };
     const closeModal = () => {
@@ -32,6 +31,15 @@ const InfoPage = ({history, location, match}) => {
         setShowPopup(event.target.value);
     }
 
+    const initSlider = () => {
+        const pageId = Number(match.params.id);
+        let tmpCurrentSlider = [];
+        for (let iLoop = 0;iLoop < 6;iLoop++) {
+            tmpCurrentSlider[iLoop] = iLoop === (pageId - 1) ? '/images/icon/page-on1.png' : '/images/icon/page-off1.png';
+        }
+        setCurrentSlider(tmpCurrentSlider);
+    }
+
     const goPage = (params, e) => {
         const pageId = Number(match.params.id)
         if (pageId === 1 && params === -1) {
@@ -41,13 +49,29 @@ const InfoPage = ({history, location, match}) => {
         } else {
             params = pageId + params;
         }
-        history.push(`/fandom/${params}`)
+        history.push(`/fandom/${params}`);
     }
+
+    const movePage = (pageId) => {
+        window.location.href = `/fandom/${pageId}`;
+        // history.push(`/fandom/${pageId}`);
+        // initSlider();
+    }
+
+    useEffect(() => {
+        initSlider();
+    }, []);
 
     return (
         <>
             {item ?
                 <div>
+                    <div className="bid-btn-mobile">
+                        <button type="button" onClick={openModal}>
+                            MUA NGAY
+                        </button>
+                    </div>
+
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
                             <Timer time="여기에 END DATE를 넣자"/>
@@ -118,8 +142,6 @@ const InfoPage = ({history, location, match}) => {
                                             </div>
                                         ) : null}
                                 </div>
-
-
                                 <div className="left-btn">
                                     <button type="button" onClick={(e) => goPage(-1, e)}>
                                         <img src="/images/icon/left_off.png"/>
@@ -130,21 +152,16 @@ const InfoPage = ({history, location, match}) => {
                                         <img src="/images/icon/right_off.png"/>
                                     </button>
                                 </div>
-
-
-
-
                             </div>
-
-
-
-
-
+                            <div className="pagination">
+                                {currentSlider.map((res, index) =>
+                                    <span onClick={() => movePage(index + 1)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
+                                )}
+                            </div>
                         </div>
                     </div>
 
                     <div className="bottom-container" id="Story">
-
                         <div className="bottom-content">
                             <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
                             </div>

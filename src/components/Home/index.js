@@ -42,13 +42,9 @@ const MainPage = (props) => {
         } else {
             setPlayBtnDisplay('none');
         }
-        console.log('testat')
     };
 
     const moveSlider = (x) => {
-
-        console.log('moveSlider : ' + x);
-
         let tmpCurrentSlider = [],
             offsetWidth = sliderItem.current.offsetWidth + 1;
         slider.current.style.marginLeft = (offsetWidth * x * -1) + 'px';

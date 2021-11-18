@@ -80,8 +80,9 @@ const InfoPage = ({history, location, match}) => {
                                     <img src={item.list_img}/>
                                 </div>
                                 <div className="Description">
-                                    <h2>{item.title}</h2>
-                                    <p className="subTitle">{item.sub_title}</p>
+                                    <h2 dangerouslySetInnerHTML={{__html: item.title}}>
+                                    </h2>
+                                    <div className="subTitle" dangerouslySetInnerHTML={{__html: item.sub_title}}/>
                                     <div className="ButtonContainer">
                                         <div className="input">
                                             <input type="text" name="inputNum" placeholder="BNB"/>
@@ -164,54 +165,59 @@ const InfoPage = ({history, location, match}) => {
                     </div>
 
                     <div className="bottom-container" id="Story">
-
-                        <div className="bottom-content">
-                            <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
+                        <div className="bottom-content-box">
+                            <div className="bottom-content">
+                                <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                </div>
+                                {
+                                    match.params.id > 1 ?
+                                        <img className="right" src={item.first_info_img}/> : ''
+                                }
                             </div>
-                            {
-                                match.params.id > 1 ?
-                                    <img className="right" src={item.first_info_img}/> : ''
-                            }
-                        </div>
 
-                        <div className="bottom-content">
-                            <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
+                            <div className="bottom-content">
+                                <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                </div>
+                                {
+                                    match.params.id > 1 ?
+                                        <img className="right" src={item.second_info_img}/> : ''
+                                }
                             </div>
-                            {
-                                match.params.id > 1 ?
-                                    <img className="right" src={item.second_info_img}/> : ''
-                            }
                         </div>
-
                         {
                             match.params.id > 1 ?
                                 <div className="info-bottom-area">
-                                    <p style={{margin: 0}}>* Các điều khoản và điều kiện</p>
-                                    1) Người thắng cuộc trong phiên đấu giá sẽ được thông báo qua Telegram trong
-                                    vòng 7
-                                    ngày làm việc sau khi kết thúc sự kiện. Sau khi nhận được tin nhắn, người trúng
-                                    thầu
-                                    phải điền chính xác địa chỉ và thông tin liên hệ trong vòng 7 ngày. Danh sách
-                                    này có
-                                    thể sẽ bị hủy nếu thông tin không được nhập đầy đủ trong khoảng thời gian quy
-                                    định.
-                                    <br/><br/>
-                                    2) Sau đó, lịch trình phân phối sẽ được thông báo qua kênh Telegram chính thức
-                                    của
-                                    Fandom.
-                                    <br/><br/>
-                                    3) Nếu người thắng cuộc thay đổi hoặc xóa Twitter và / hoặc ID Telegram đã nhập
-                                    trên
-                                    Whitelist trước khi công bố kết quả sự kiện và / hoặc nhận giải, giải thưởng có
-                                    thể
-                                    bị hủy.
-                                    <br/><br/>
-                                    4) Fandom không chịu trách nhiệm về những bất lợi do thông tin gửi không chính
-                                    xác
-                                    hoặc có sự thay đổi, ID bị xóa sau khi đã nhập trên Whitelist trước khi công bố.
-                                    (Để biết thêm chi tiết, hãy tham khảo chính sách hoạt động và trang điều khoản
-                                    sử
-                                    dụng ở cuối trang web.)
+                                    <p style={{fontSize: '12px', margin: 0, fontWeight: 'bold'}}>* Các điều khoản và
+                                        điều kiện</p>
+                                    <br/>
+                                    <p style={{fontSize: '10px'}}>1) Người thắng cuộc trong phiên đấu giá sẽ được thông
+                                        báo qua Telegram trong
+                                        vòng 7
+                                        ngày làm việc sau khi kết thúc sự kiện. Sau khi nhận được tin nhắn, người trúng
+                                        thầu
+                                        phải điền chính xác<br/>địa chỉ và thông tin liên hệ trong vòng 7 ngày. Danh
+                                        sách
+                                        này có
+                                        thể sẽ bị hủy nếu thông tin không được nhập đầy đủ trong khoảng thời gian quy
+                                        định.
+                                        <br/><br/>
+                                        2) Sau đó, lịch trình phân phối sẽ được thông báo qua kênh Telegram chính thức
+                                        của
+                                        Fandom.
+                                        <br/><br/>
+                                        3) Nếu người thắng cuộc thay đổi hoặc xóa Twitter và / hoặc ID Telegram đã nhập
+                                        trên
+                                        Whitelist trước khi công bố kết quả sự kiện và / hoặc nhận giải, giải thưởng có
+                                        thể
+                                        bị hủy.
+                                        <br/><br/>
+                                        4) Fandom không chịu trách nhiệm về những bất lợi do thông tin gửi không chính
+                                        xác
+                                        hoặc có sự thay đổi, ID bị xóa sau khi đã nhập trên Whitelist trước khi công bố.<br/>
+                                        (Để biết thêm chi tiết, hãy tham khảo chính sách hoạt động và trang điều khoản
+                                        sử
+                                        dụng ở cuối trang web.)
+                                    </p>
                                 </div>
                                 : ''
                         }

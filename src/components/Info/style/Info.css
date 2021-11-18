@@ -77,10 +77,11 @@
 }
 
 .Container .Description > h2 {
-    font-size:40px;
+    font-size:30px;
     margin-bottom: 35px;
     color:#000000;
     line-height: 1;
+    text-transform: uppercase;
 }
 
 .Container .Description .subTitle {
@@ -89,6 +90,11 @@
     font-size:16px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.Container .Description .subTitle .subtitle-bottom {
+    font-size:14px;
+    font-weight: 500;
 }
 
 .Container .Description .ButtonContainer {

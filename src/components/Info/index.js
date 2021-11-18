@@ -34,7 +34,7 @@ const InfoPage = ({history, location, match}) => {
     const initSlider = () => {
         const pageId = Number(match.params.id);
         let tmpCurrentSlider = [];
-        for (let iLoop = 0;iLoop < 6;iLoop++) {
+        for (let iLoop = 0; iLoop < 6; iLoop++) {
             tmpCurrentSlider[iLoop] = iLoop === (pageId - 1) ? '/images/icon/page-on1.png' : '/images/icon/page-off1.png';
         }
         setCurrentSlider(tmpCurrentSlider);
@@ -125,7 +125,8 @@ const InfoPage = ({history, location, match}) => {
                                                     </button>
                                                     <h1>BID NOW</h1>
                                                     <p className="sub-title">{item.sub_title}</p>
-                                                    <input type="text" name='bsc' placeholder="0.00001 BNB" required className="input"/>
+                                                    <input type="text" name='bsc' placeholder="0.00001 BNB" required
+                                                           className="input"/>
                                                 </div>
                                                 <button className="bid-btn" type="button" onClick={closeModal}>
                                                     BID NOW
@@ -155,23 +156,31 @@ const InfoPage = ({history, location, match}) => {
                             </div>
                             <div className="pagination">
                                 {currentSlider.map((res, index) =>
-                                    <span onClick={() => movePage(index + 1)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
+                                    <span onClick={() => movePage(index + 1)} key={'pageKey' + index}><img
+                                        src={currentSlider[index]}/></span>
                                 )}
                             </div>
                         </div>
                     </div>
 
                     <div className="bottom-container" id="Story">
+
                         <div className="bottom-content">
                             <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
                             </div>
-                            <img className="right" src={item.first_info_img}/>
+                            {
+                                match.params.id > 1 ?
+                                    <img className="right" src={item.first_info_img}/> : ''
+                            }
                         </div>
 
                         <div className="bottom-content">
                             <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
                             </div>
-                            <img className="right" src={item.second_info_img}/>
+                            {
+                                match.params.id > 1 ?
+                                    <img className="right" src={item.second_info_img}/> : ''
+                            }
                         </div>
 
                         {

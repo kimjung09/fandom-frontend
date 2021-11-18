@@ -4,17 +4,17 @@
 }
 
 .timer .live {
-    font-size: 50px;
+    font-size: 40px;
     background: #db154a;
     border-radius: 14px 14px 14px 14px;
-    padding: 5px 35px;
+    padding: 5px 25px;
     margin-right: 30px;
     vertical-align: bottom;
     line-height: 90px;
 }
 
 .timer .clock {
-    font-size: 100px;
+    font-size: 70px;
     font-weight: bold;
     text-shadow: 4px 0 #eb1a53;
     vertical-align: bottom;

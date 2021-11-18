@@ -13,6 +13,8 @@ const InfoPage = ({history, location, match}) => {
     const asyncData = useAsync(getNftInfo, [match.params.id]);
     const item = asyncData.result
 
+    console.log(asyncData)
+
     const [currentSlider, setCurrentSlider] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const openModal = () => {

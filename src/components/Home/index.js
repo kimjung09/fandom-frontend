@@ -33,6 +33,7 @@ const MainPage = (props) => {
             }
         }
     };
+
     const videoMouseOn = () => {
         setPlayBtnDisplay('block');
     };
@@ -44,12 +45,17 @@ const MainPage = (props) => {
         }
     };
 
+    // 모바일 화면에서 slider
     const moveSlider = (x) => {
+        // currentSlider 슬라이더 배열
         let tmpCurrentSlider = [],
+            // offeset 세팅한 Width 값 을 slideItem.current.offesetWidth 값에 + 1 = 클릭시 image + 1 씩 더해저 다음 상품으로 넘어감
             offsetWidth = sliderItem.current.offsetWidth + 1;
+
         slider.current.style.marginLeft = (offsetWidth * x * -1) + 'px';
 
         for (let iLoop = 0;iLoop < 6;iLoop++) {
+            // mouseSlide 가 적용되었을때  page-on 아이콘 / page-off 로 변환
             tmpCurrentSlider[iLoop] = iLoop === x ? '/images/icon/page-on.png' : '/images/icon/page-off.png';
         }
         setCurrentSlider(tmpCurrentSlider);
@@ -57,6 +63,7 @@ const MainPage = (props) => {
     }
 
     const sliderSwipe = (event) => {
+        // slide 액션에 대한 type 설정
         switch (event.type) {
             case 'touchstart':
                 setSliderTouchStart(event.touches[0].pageX);

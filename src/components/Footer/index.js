@@ -1,8 +1,11 @@
 import React from "react";
 import "./Footer.css"
-import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
+import {FaHome, FaTwitter,FaTelegramPlane} from 'react-icons/fa'
+import {SiMedium} from 'react-icons/si'
 
- function Footer() {
+/** SiMedium 4번쨰 Footer Icon Medium 아이콘 **/
+
+function Footer() {
   return (
       <div className="Footer">
           <div className="container">
@@ -28,7 +31,7 @@ import {FaHome, FaTwitter,FaTelegramPlane,FaDiscord} from 'react-icons/fa'
               </a>
               <a href="https://medium.com/@Fandom_CRTR">
                    <span>
-                   <FaDiscord color={"#fffff"} size={"30"}/>
+                   <SiMedium color={"#fffff"} size={"30"}/>
                   </span>
               </a>
           </div>

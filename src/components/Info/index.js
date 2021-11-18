@@ -6,6 +6,8 @@ import {AiOutlineClose} from 'react-icons/ai'
 import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "../Timer";
+import PopupBuy from "../Popup/PopupBuy";
+
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
@@ -14,7 +16,7 @@ const InfoPage = ({history, location, match}) => {
     const item = asyncData.result
 
     const [currentSlider, setCurrentSlider] = useState([]);
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
     const openModal = () => {
         window.scrollTo(0, 0);
         setShowModal(true);
@@ -30,6 +32,13 @@ const InfoPage = ({history, location, match}) => {
     const togglePopup = (event) => {
         setShowPopup(event.target.value);
     }
+
+
+
+
+    const [showHideDemo, setShowHideDemo] = useState(true);
+
+
 
     const initSlider = () => {
         const pageId = Number(match.params.id);
@@ -116,6 +125,12 @@ const InfoPage = ({history, location, match}) => {
                                         )}
                                         </tbody>
                                     </table>
+
+                                    {showHideDemo && <PopupBuy/>}
+
+
+
+
                                     {
                                         showModal ?
                                             <div className="Modal-wrap">

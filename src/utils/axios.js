@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const url = "http://3.35.194.80:8000/api"
 
+// NftList api
 export const getNftList = async () => {
     try {
         const response = await axios.get(`${url}/fandom`);
@@ -12,7 +13,7 @@ export const getNftList = async () => {
     }
 }
 
-
+// Nft상세페이지
 export const getNftInfo = async (id) => {
     try {
         const response =await axios.get(`${url}/fandom/${id}`);
@@ -22,6 +23,7 @@ export const getNftInfo = async (id) => {
     }
 }
 
+// whiteList
 export const registerWhiteList = async (params) => {
     try {
         const response = await axios.post(`${url}/white_list`, params);
@@ -30,6 +32,7 @@ export const registerWhiteList = async (params) => {
         console.log(e);
     }
 }
+
 
 export const getWhiteListCheck = async (id) => {
     try {

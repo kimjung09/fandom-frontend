@@ -14,6 +14,7 @@ export const globalSlice = createSlice({
         setUserAccount: (state, action) => {
             state.userAccount = action.payload
         },
+        // whiteListCheck === action 객체 선언
         setWhiteListCheck: (state, action) => {
             state.whiteListCheck = action.payload
         }

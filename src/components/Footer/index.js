@@ -1,43 +1,30 @@
 import React from "react";
 import "./Footer.css"
-import {FaHome, FaTwitter,FaTelegramPlane} from 'react-icons/fa'
-import {SiMedium} from 'react-icons/si'
-
-/** SiMedium 4번쨰 Footer Icon Medium 아이콘 **/
 
 function Footer() {
-  return (
-      <div className="Footer">
-          <div className="container">
-              <a href="#">TERMS</a>
-              <span></span>
-              <a href="#">PRIVACY</a>
-          </div>
-          <div className="bottom">
-              <a href="https://www.fandom.io">
-                  <span>
-                   <FaHome color={"#d90a42"} size={"30"}/>
-                  </span>
-              </a>
-              <a href="https://twitter.com/Fandom_CRTR">
-                   <span>
-                   <FaTwitter color={"#6881d8"} size={"30"}  />
-                  </span>
-              </a>
-              <a href="https://t.me/Fandom_vietnam">
-                    <span>
-                   <FaTelegramPlane color={"#fffff"} size={"30"} />
-                  </span>
-              </a>
-              <a href="https://medium.com/@Fandom_CRTR">
-                   <span>
-                   <SiMedium color={"#fffff"} size={"30"}/>
-                  </span>
-              </a>
-          </div>
-
-      </div>
-  )
+    return (
+        <div className="Footer" id="Shop">
+            <div className="privacy">
+                <a href="#">TERMS</a>
+                <span className="bar"></span>
+                <a href="#">PRIVACY</a>
+            </div>
+            <div className="sns-btn">
+                <a href="https://www.fandom.co">
+                    <img src="/images/sns1.png"/>
+                </a>
+                <a href="https://twitter.com/Fandom_CRTR">
+                    <img src="/images/sns4.png"/>
+                </a>
+                <a href="https://t.me/Fandom_vietnam">
+                    <img src="/images/sns2.png"/>
+                </a>
+                <a href="https://medium.com/@Fandom_CRTR">
+                    <img src="/images/sns3.png"/>
+                </a>
+            </div>
+        </div>
+    )
 }
 
 export default Footer;

@@ -6,9 +6,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 import {useSelector, useDispatch} from 'react-redux'
 
 const WhiteList = () => {
+    // 페이지 이동을 구현할 input은 2가지 == Twitter & Telegram
     const [inputTwitter, setInputTwitter] = useState('');
     const [inputTelegram, setInputTelegram] = useState('');
 
+    // 버튼 클릭스 check 아이콘이 활 성화되는 const 선언 == 기본값 false
     const [checkJoinTelegram, setCheckJoinTelegram] = useState(false);
     const [checkFollowTwitter, setCheckFollowTwitter] = useState(false);
     const [checkRetweetTwitter, setCheckRetweetTwitter] = useState(false);
@@ -19,24 +21,31 @@ const WhiteList = () => {
     const userAccount = useSelector((state) => state.global.userAccount)
     const checkRegisterWhiteList = useSelector((state) => state.global.whiteListCheck)
 
+
     const submit = async () => {
+        // Sumitbtn이 비활성화 되었을때
         if (!checkSubmitBtn) {
             return;
         }
+        // telegram_id , twitter_id 값 input 지역변수 선언 == 선언과동시에 초기화
         let params = {
             telegram_id: inputTelegram,
             twitter_id: inputTwitter,
             account: userAccount
         }
+        // 페이지 이동이 활성화된 params
         await registerWhiteList(params).then(res => {
             window.location.href = '/'
         });
     }
 
+    // twittter 버튼 클릭시 cehck버튼으로 변환
     const follow = () => {
         window.open('https://twitter.com/Fandom_CRTR');
         setCheckFollowTwitter(true)
     }
+
+    // 동일
     const retweet = () => {
         setCheckRetweetTwitter(true)
     }

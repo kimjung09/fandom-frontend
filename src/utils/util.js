@@ -20,3 +20,8 @@ export const parseAmount = (amount) => {
 export const parseUSD = (amount) => {
     return new BigNumber(amount).multipliedBy(0.003).toNumber();
 }
+
+export const showMetamaskSite = () => {
+    window.open('https://metamask.io/');
+}
+

@@ -6,6 +6,8 @@ import {Web3ReactProvider} from '@web3-react/core'
 import Web3 from 'web3'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import TermsPage from "./components/Terms/fadom_terms";
+import PrivacyPage from "./components/Terms/fandom_privacy";
 
 function getLibrary(provider) {
     return new Web3(provider)
@@ -20,7 +22,9 @@ const App = () => {
                     <Switch>
                         <Route exact path="/" component={MainPage}/>
                         <Route exact path="/fandom/:id" component={SubPage}/>
-                        <Route exact path="/whitelist" component={MainPage} />
+                        <Route exact path="/whitelist" component={MainPage}/>
+                        <Route exact path="/terms" component={TermsPage}/>
+                        <Route exact path="/privacy" component={PrivacyPage}/>
                     </Switch>
                 </Router>
                 <Footer/>

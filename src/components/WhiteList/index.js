@@ -34,7 +34,7 @@ const WhiteList = () => {
     }
 
     const follow = () => {
-        window.open('https://twitter.com/Fandom_CRTR');
+        window.open('https://twitter.com/Fandom_CRTR/status/1461539400312049669');
         setCheckFollowTwitter(true)
     }
     const retweet = () => {

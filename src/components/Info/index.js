@@ -10,11 +10,18 @@ import PopupBid from "../Popup/PopupBid";
 import Modal from '../Modal';
 
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
+import {bidAbleCheck, bidAction, buyAction, getBlockNumber, getBuyIndex, withdrawAction} from "../../utils/calls";
+import {useSelector, useDispatch} from 'react-redux'
+
+
 
 const InfoPage = ({history, location, match}) => {
     const [nftId, setNftId] = useState(null);
     const [currentSlider, setCurrentSlider] = useState([]);
     const [showBuyModal, setShowBuyModal] = useState(false);
+    const [inputAmount, setInputAmount] = useState('')
+
+
     const openBuyModal = () => {
         setShowBuyModal(true);
     };
@@ -35,11 +42,16 @@ const InfoPage = ({history, location, match}) => {
             openBidModal();
         }
     }
+    const [buyIndex, setBuyIndex] = useState('');
+    const [bidStatus, setBidStatus] = useState(false)
+
+    const userAccount = useSelector((state) => state.global.userAccount)
 
     const [isVisible, setIsVisible] = useState(false);
     const onSetIsVisible = (active) => {
         setIsVisible(false);
     }
+
 
     const initSlider = () => {
         const pageId = Number(match.params.id);
@@ -74,6 +86,38 @@ const InfoPage = ({history, location, match}) => {
     const asyncData = useAsync(getNftInfo, [nftId]);
     const item = asyncData.result;
 
+
+    const bid = async () => {
+        if (!item.auction_address) {
+            return;
+        }
+        if (isNaN(inputAmount) || inputAmount === '') {
+            return;
+        }
+        await bidAction(item.auction_address, inputAmount);
+    }
+
+    const withdraw = async () => {
+        await withdrawAction(item.auction_address);
+    }
+
+    const buy = async () => {
+        await buyAction(item.auction_address, item.nft_address, buyIndex);
+    }
+    console.log(asyncData)
+
+    if (asyncData.status === 'success') {
+        if (item.contract_type === 'BUY') {
+            getBuyIndex(item.auction_address).then(res => {
+                setBuyIndex(res);
+            })
+        } else {
+            // console.log(item)
+            bidAbleCheck(item.auction_address).then(res => {
+                setBidStatus(res)
+            })
+        }
+    }
     return (
         <>
             {item ?
@@ -96,16 +140,42 @@ const InfoPage = ({history, location, match}) => {
                                     <h2 dangerouslySetInnerHTML={{__html: item.title}}>
                                     </h2>
                                     <div className="subTitle" dangerouslySetInnerHTML={{__html: item.sub_title}}/>
-                                    <div className="ButtonContainer">
-                                        <div className="input">
-                                            <input type="text" name="inputNum" placeholder="BNB"/>
+                                    {item.contract_type === 'BID' ?
+                                        bidStatus ? //나중에 바꿔줘야함 일단 !userAccount
+                                            <div className="ButtonContainer">
+                                                <div className="input">
+                                                    <input type="text" name="inputNum" placeholder="BNB"
+                                                           value={inputAmount}
+                                                           onChange={(e) => setInputAmount(e.target.value)}/>
+                                                </div>
+                                                <div className="btn">
+                                                    <button type="button" className={userAccount ? '': ''} onClick={openModal}>
+                                                        {/*disabled-btn*/}
+                                                        THAM GIA ĐẤU GIÁ NGAY B Y GIỜ
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                            :
+                                            <div className="ButtonContainer">
+                                                <div className="btn">
+                                                    <button type="button" onClick={withdraw}>
+                                                        WITHDRAW
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        :
+                                        <div className="ButtonContainer">
+                                            <div className="btn">
+                                                <button type="button"
+                                                        // onClick={openModal}
+                                                        className={buyIndex ? 'disabled-btn' : 'disabled-btn'}
+                                                >
+                                                    MUA NGAY
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className="btn">
-                                            <button type="button" onClick={openModal}>
-                                                {(item.contract_type === 'BUY') ? 'MUA NGAY' : "THAM GIA ĐẤU GIÁ NGAY B Y GIỜ"}
-                                            </button>
-                                        </div>
-                                    </div>
+                                    }
                                     <table className="bid-table">
                                         <thead>
                                         <tr>
@@ -131,9 +201,9 @@ const InfoPage = ({history, location, match}) => {
                                         </tbody>
                                     </table>
                                     <Modal showModal={showBuyModal}>
-                                        <PopupBuy item={item} closeModal={closeBuyModal}/>
+                                        <PopupBuy item={item} buyIndex={buyIndex} closeModal={closeBuyModal}/>
                                     </Modal>
-                                    <Modal item={item} showModal={showBidModal}>
+                                    <Modal showModal={showBidModal}>
                                         <PopupBid item={item} closeModal={closeBidModal}/>
                                     </Modal>
                                 </div>

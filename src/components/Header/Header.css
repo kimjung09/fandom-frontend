@@ -55,6 +55,10 @@
         margin-top: 0;
     }
 
+    .Header-container.bg {
+        background-color: #000000;
+    }
+
     .Header-container .Header .logo {
         max-width: 300px;
         margin: 10px 0 0 10px;
@@ -72,6 +76,7 @@
 @media screen and (max-width: 768px) {
     .Header-container {
         margin-top: 0;
+        position: fixed;
     }
 
     .Header-container .Header .logo {

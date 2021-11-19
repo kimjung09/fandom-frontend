@@ -1,0 +1,79 @@
+.Popup-wrap {
+}
+
+.Popup-wrap .bid-btn {
+    width: 100%;
+    height: 80px;
+    background: #db154a;
+    color:#ffffff;
+    font-size:32px;
+    font-weight: bold;
+    border: 0;
+}
+
+.Popup-wrap .Popup {
+    display:block;
+    width: 100%;
+    max-width: 670px;
+    height: auto;
+    background: #ffffff;
+    color:#000000;
+    padding:30px 50px 30px 50px;
+    position:relative;
+}
+
+.Popup-wrap .Popup > h1 {
+    font-size: 34px;
+    text-align:center;
+}
+
+.Popup-wrap .Popup .close-btn {
+    border:none;
+    background: none;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.Popup-wrap .Popup .sub-title {
+    font-size: 16px;
+    font-weight: bold;
+    color:#a9a9a9;
+    text-align:center;
+    padding:30px;
+}
+
+.Popup-wrap .Popup .desc-tit {
+    font-size: 16px;
+    font-weight: bold;
+    color: #757575;
+    margin: 20px 0 10px 0;
+}
+
+.Popup-wrap .Popup .desc {
+    font-size: 16px;
+    color: #bababa;
+    text-align: left;
+    list-style-type: decimal;
+    padding: 0;
+    margin: 0 18px;
+}
+
+.Popup-wrap .Popup .input {
+    width:100%;
+    height:60px;
+    font-size:22px;
+    color:#000000;
+    font-weight: bold;
+    border:4px solid #000000;
+    background:#ffffff;
+    padding: 0 20px;
+}
+
+.Popup-wrap .Popup .icon {
+    position: absolute;
+    top:185px;
+    left:100px;
+    float:left;
+    z-index:-1;
+}

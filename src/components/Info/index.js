@@ -2,54 +2,51 @@ import "App.css"
 import React, {useState, useEffect} from "react";
 import "./style/Info.css"
 import "./style/Bottom.css"
-import {AiOutlineClose} from 'react-icons/ai'
 import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "../Timer";
+import PopupBuy from "../Popup/PopupBuy";
+import PopupBid from "../Popup/PopupBid";
+import Modal from '../Modal';
+
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 import {bidAbleCheck, bidAction, buyAction, getBlockNumber, getBuyIndex, withdrawAction} from "../../utils/calls";
 import {useSelector, useDispatch} from 'react-redux'
 
 
 
-
 const InfoPage = ({history, location, match}) => {
-
-    const asyncData = useAsync(getNftInfo, [match.params.id]);
-
-    if(asyncData.loading){
-
-
-    }
-
-    const userAccount = useSelector((state) => state.global.userAccount)
-    const item = asyncData.result
-
-    const [inputAmount, setInputAmount] = useState('');
+    const [nftId, setNftId] = useState(null);
     const [currentSlider, setCurrentSlider] = useState([]);
-    const [showModal, setShowModal] = useState(false);
-
+    const [showBuyModal, setShowBuyModal] = useState(false);
+    const openBuyModal = () => {
+        setShowBuyModal(true);
+    };
+    const closeBuyModal = () => {
+        setShowBuyModal(false);
+    }
+    const [showBidModal, setShowBidModal] = useState(false);
+    const openBidModal = () => {
+        setShowBidModal(true);
+    };
+    const closeBidModal = () => {
+        setShowBidModal(false);
+    }
+    const openModal = () => {
+        if (item.contract_type === 'BUY') {
+            openBuyModal();
+        } else {
+            openBidModal();
+        }
+    }
     const [buyIndex, setBuyIndex] = useState('');
     const [bidStatus, setBidStatus] = useState(false)
 
+    const userAccount = useSelector((state) => state.global.userAccount)
 
-    const openModal = () => {
-        if(!userAccount){
-            return
-        }
-        window.scrollTo(0, 0);
-        setShowModal(true);
-    };
-    const closeModal = () => {
-        setShowModal(false);
-    }
     const [isVisible, setIsVisible] = useState(false);
     const onSetIsVisible = (active) => {
         setIsVisible(false);
-    }
-    const [showPopup, setShowPopup] = useState(false);
-    const togglePopup = (event) => {
-        setShowPopup(event.target.value);
     }
 
 
@@ -75,10 +72,17 @@ const InfoPage = ({history, location, match}) => {
     }
 
     const movePage = (pageId) => {
-        window.location.href = `/fandom/${pageId}`;
-        // history.push(`/fandom/${pageId}`);
-        // initSlider();
+        history.push(`/fandom/${pageId}`);
     }
+
+    if (nftId !== match.params.id) {
+        setNftId(match.params.id);
+        initSlider();
+    }
+
+    const asyncData = useAsync(getNftInfo, [nftId]);
+    const item = asyncData.result;
+
 
     const bid = async () => {
         closeModal();
@@ -114,19 +118,6 @@ const InfoPage = ({history, location, match}) => {
             })
         }
     }
-
-    useEffect(() => {
-        initSlider();
-        /*return () => {
-            setInputAmount('')
-            setCurrentSlider([])
-            setShowModal(false)
-            setIsVisible(false)
-            setShowPopup(false)
-        };
-        */
-    }, []);
-
     return (
         <>
             {item ?
@@ -136,10 +127,11 @@ const InfoPage = ({history, location, match}) => {
                             MUA NGAY
                         </button>
                     </div>
-
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
-                            <Timer time="여기에 END DATE를 넣자"/>
+                            <div className="sub-timer">
+                                <Timer />
+                            </div>
                             <div className="Container">
                                 <div className="Image">
                                     <img src={item.list_img}/>
@@ -206,37 +198,12 @@ const InfoPage = ({history, location, match}) => {
                                         )}
                                         </tbody>
                                     </table>
-                                    {
-                                        showModal ?
-                                            <div className="Modal-wrap">
-                                                <div className="Modal">
-                                                    <button className="close-btn" onClick={closeModal}>
-                                                        <AiOutlineClose size={40}/>
-                                                    </button>
-                                                    <h1>BID NOW</h1>
-                                                    <p className="sub-title"
-                                                       dangerouslySetInnerHTML={{__html: item.sub_title}}/>
-                                                    <input type="text" name='bsc' placeholder="0.00001 BNB" required
-                                                           className="input" value={inputAmount}
-                                                           onChange={(e) => setInputAmount(e.target.value)}/>
-                                                </div>
-                                                <button className="bid-btn" type="button" onClick={bid}>
-                                                    BID NOW
-                                                </button>
-                                                <button className="bid-btn" type="button" onClick={withdraw}>
-                                                    WITHDRAW NOW
-                                                </button>
-                                            </div>
-                                            : null
-                                    }
-                                    {
-                                        showPopup ? (
-                                            <div className="popup">
-                                                <div className="popup_inner">
-                                                    dsadsdk
-                                                </div>
-                                            </div>
-                                        ) : null}
+                                    <Modal showModal={showBuyModal}>
+                                        <PopupBuy item={item} closeModal={closeBuyModal}/>
+                                    </Modal>
+                                    <Modal item={item} showModal={showBidModal}>
+                                        <PopupBid item={item} closeModal={closeBidModal}/>
+                                    </Modal>
                                 </div>
                                 <div className="left-btn">
                                     <button type="button" onClick={(e) => goPage(-1, e)}>
@@ -279,7 +246,7 @@ const InfoPage = ({history, location, match}) => {
                             </div>
                         </div>
                         {
-                            match.params.id > 1 ?
+                            item.contract_type === 'BID' ?
                                 <div className="info-bottom-area">
                                     <p style={{fontSize: '12px', margin: 0, fontWeight: 'bold'}}>* Các điều khoản và
                                         điều kiện</p>
@@ -321,9 +288,7 @@ const InfoPage = ({history, location, match}) => {
                 : ''
             }
         </>
-
     )
 }
-
 
 export default InfoPage;

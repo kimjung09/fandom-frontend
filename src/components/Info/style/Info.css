@@ -109,8 +109,8 @@
 
 .Description .ButtonContainer .input input {
     width: 100%;
-    height: 45px;
-    font-size: 18px;
+    height: 55px;
+    font-size: 20px;
     text-transform: uppercase;
     color: #000000;
     text-align: right;
@@ -123,13 +123,14 @@
 
 .Description .ButtonContainer .btn button {
     width: 100%;
-    height: 45px;
+    height: 55px;
     background: #db154a;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #ffffff;
     border: 0;
     cursor: pointer;
+    padding: 0 5px;
 }
 
 .Description .ButtonContainer .btn button:hover {
@@ -176,87 +177,12 @@
     padding: 3px 0;
 }
 
-.Description > .Modal {
-    width:100%;
-    height:2490px;
-    bottom:-140px;
-    left:50%;
-    z-index: 999;
-    position:absolute;
-}
-
-.Description .Modal-wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-}
-
-.Description .Modal-wrap .bid-btn {
-    width: 100%;
-    height: 120px;
-    background: #db154a;
-    color:#ffffff;
-    font-size:46px;
-    font-weight: bold;
-    border: 0;
-}
-
-.Description .Modal-wrap .Modal {
-    display:block;
-    width: 680px;
-    max-height: 450px;
-    background: #ffffff;
-    color:#000000;
-    padding:30px 50px 30px 50px;
-    position:relative;
-}
-
-.Description .Modal-wrap .Modal > h1 {
-    font-size: 34px;
-    text-align:center;
-}
-
-.Description .Modal-wrap .Modal .close-btn {
-    border:none;
-    background: none;
-    position: absolute;
-    right: 20px;
-}
-
-.Description .Modal-wrap .Modal .sub-title {
-    font-size: 16px;
-    font-weight: bold;
-    color:#a9a9a9;
-    text-align:center;
-    padding:30px;
-}
-
-.Description .Modal-wrap .Modal .input {
-    width:100%;
-    height:60px;
-    font-size:22px;
-    color:#000000;
-    font-weight: bold;
-    border:4px solid #000000;
-    background:#ffffff;
-    padding: 0 20px;
-}
-
-.Description .Modal-wrap .Modal .icon {
-    position: absolute;
-    top:185px;
-    left:100px;
-    float:left;
-    z-index:-1;
-}
-
 .bid-btn-mobile {
     width: 100%;
     height:100px;
     position: fixed;
     bottom: 0;
+    z-index: 1000;
 }
 
 .bid-btn-mobile button {
@@ -310,6 +236,9 @@
 
 /** Media Qurey Medium (992px) */
 @media screen and (max-width: 992px) {
+    .SubBody-Container {
+        padding-top: 100px;
+    }
 }
 
 /** Media Query Tablet (768px) */
@@ -355,10 +284,19 @@
 @media screen and (max-width: 425px) {
 }
 
-/*  Media Query iPoneX (375 x 812) */
+/** Media Query iPoneX (375 x 812) */
 @media screen and (max-width: 375px) {
 }
 
 /** Media Query Galxy Fold(280 x 653) */
 @media screen and (max-width: 280px){
+    .SubBody-Container {
+        padding-top: 70px;
+    }
+
+    .SubBody-Container .Container {
+        display:block;
+        padding: 70px 35px 40px 35px;
+        margin-top: 40px;
+    }
 }

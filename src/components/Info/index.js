@@ -112,7 +112,7 @@ const InfoPage = ({history, location, match}) => {
                                             <th className="bold">Amount</th>
                                             <th>Usd price</th>
                                             <th>time</th>
-                                            <th>bidding</th>
+                                            <th>{item.contract_type === 'BID' ? 'bidding' : 'buyer'}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -163,7 +163,7 @@ const InfoPage = ({history, location, match}) => {
                                 <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
                                 </div>
                                 {
-                                    match.params.id > 1 ?
+                                    item.contract_type === 'BID' ?
                                         <img className="right" src={item.first_info_img}/> : ''
                                 }
                             </div>
@@ -172,7 +172,7 @@ const InfoPage = ({history, location, match}) => {
                                 <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
                                 </div>
                                 {
-                                    match.params.id > 1 ?
+                                    item.contract_type === 'BID' ?
                                         <img className="right" src={item.second_info_img}/> : ''
                                 }
                             </div>

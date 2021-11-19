@@ -28,6 +28,9 @@ export const bidAction = async (contractAddress, amount) => {
 }
 
 export const bidAbleCheck = async (contractAddress) => {
+    //일단
+    return true;
+    /*
     if (!web3Provider) {
         return;
     }
@@ -45,6 +48,7 @@ export const bidAbleCheck = async (contractAddress) => {
         console.log(e)
         return false;
     }
+     */
 }
 
 export const withdrawAction = async (contractAddress) => {
@@ -67,9 +71,9 @@ export const buyAction = async (contractAddress, nftContractAddress, buyIndex) =
         return;
     }
     if (!buyIndex) {
-        console.log('buyIndex : ' + buyIndex)
         return;
     }
+
     try {
         const signer = web3Provider.getSigner();
         const buyContract = new ethers.Contract(contractAddress, nft_marketABI, signer);
@@ -87,12 +91,11 @@ export const getBuyIndex = async (contractAddress) => {
     try {
         const signer = web3Provider.getSigner();
         const buyContract = new ethers.Contract(contractAddress, nft_marketABI, signer);
-        let listingPrice = await buyContract.getListingPrice()
         let items = await buyContract.fetchMarketItems();
         if (items.length === 0) {
             return ''
         }
-        return listingPrice.toString()
+        return items[0][0].toString()
     } catch (e) {
         console.log(e)
         return ''

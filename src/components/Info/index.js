@@ -19,6 +19,9 @@ const InfoPage = ({history, location, match}) => {
     const [nftId, setNftId] = useState(null);
     const [currentSlider, setCurrentSlider] = useState([]);
     const [showBuyModal, setShowBuyModal] = useState(false);
+    const [inputAmount, setInputAmount] = useState('')
+
+
     const openBuyModal = () => {
         setShowBuyModal(true);
     };
@@ -85,7 +88,6 @@ const InfoPage = ({history, location, match}) => {
 
 
     const bid = async () => {
-        closeModal();
         if (!item.auction_address) {
             return;
         }
@@ -96,7 +98,6 @@ const InfoPage = ({history, location, match}) => {
     }
 
     const withdraw = async () => {
-        closeModal();
         await withdrawAction(item.auction_address);
     }
 
@@ -112,7 +113,6 @@ const InfoPage = ({history, location, match}) => {
             })
         } else {
             // console.log(item)
-            // console.log('BID')
             bidAbleCheck(item.auction_address).then(res => {
                 setBidStatus(res)
             })
@@ -141,7 +141,7 @@ const InfoPage = ({history, location, match}) => {
                                     </h2>
                                     <div className="subTitle" dangerouslySetInnerHTML={{__html: item.sub_title}}/>
                                     {item.contract_type === 'BID' ?
-                                        !userAccount || bidStatus ?
+                                        bidStatus ? //나중에 바꿔줘야함 일단 !userAccount
                                             <div className="ButtonContainer">
                                                 <div className="input">
                                                     <input type="text" name="inputNum" placeholder="BNB"
@@ -149,10 +149,12 @@ const InfoPage = ({history, location, match}) => {
                                                            onChange={(e) => setInputAmount(e.target.value)}/>
                                                 </div>
                                                 <div className="btn">
-                                                    <button type="button" className={userAccount ? '': 'disabled-btn'} onClick={openModal}>
-                                                        MUA NGAY
+                                                    <button type="button" className={userAccount ? '': ''} onClick={openModal}>
+                                                        {/*disabled-btn*/}
+                                                        THAM GIA ĐẤU GIÁ NGAY B Y GIỜ
                                                     </button>
                                                 </div>
+
                                             </div>
                                             :
                                             <div className="ButtonContainer">
@@ -166,10 +168,10 @@ const InfoPage = ({history, location, match}) => {
                                         <div className="ButtonContainer">
                                             <div className="btn">
                                                 <button type="button"
-                                                        onClick={buy}
-                                                        className={buyIndex ? '' : 'disabled-btn'}
+                                                        // onClick={openModal}
+                                                        className={buyIndex ? 'disabled-btn' : 'disabled-btn'}
                                                 >
-                                                    BUY NOW
+                                                    MUA NGAY
                                                 </button>
                                             </div>
                                         </div>
@@ -199,9 +201,9 @@ const InfoPage = ({history, location, match}) => {
                                         </tbody>
                                     </table>
                                     <Modal showModal={showBuyModal}>
-                                        <PopupBuy item={item} closeModal={closeBuyModal}/>
+                                        <PopupBuy item={item} buyIndex={buyIndex} closeModal={closeBuyModal}/>
                                     </Modal>
-                                    <Modal item={item} showModal={showBidModal}>
+                                    <Modal showModal={showBidModal}>
                                         <PopupBid item={item} closeModal={closeBidModal}/>
                                     </Modal>
                                 </div>

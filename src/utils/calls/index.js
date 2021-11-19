@@ -1,2 +1,2 @@
 export * from './nodeCall'
-export * from './storage'
+export * from './contractCall'

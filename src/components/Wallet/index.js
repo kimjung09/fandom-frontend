@@ -7,12 +7,10 @@ import {useEffect} from 'react';
 import {setupNetwork} from '../../utils/wallet'
 import {BSC_CHAIN_ID} from 'config'
 import {useState} from 'react'
-import {getNftInfo, getNftList} from '../../utils/axios'
 /* import { BscConnector } from '@binance-chain/bsc-connector' bsc 지갑을 원하면 이걸로 바꿔주자 */
-import {store, getBlockNumber, bidAction} from "../../utils/calls";
-import {parseAccount} from "../../utils/util";
+import {parseAccount, showMetamaskSite} from "../../utils/util";
 import {getWhiteListCheck} from "../../utils/axios";
-
+import {web3Provider} from "../../utils/web3Providers";
 const WalletBtn = () => {
     const injected = new InjectedConnector({supportedChainIds: [parseInt(BSC_CHAIN_ID, 10)]});
     /* const bscConnector = new BscConnector({ supportedChainIds: [BSC_CHAIN_ID] }) bsc 지갑을 원하면 이걸로 바꿔주자 */
@@ -27,8 +25,8 @@ const WalletBtn = () => {
     const connect = async () => {
         try {
             let network = await setupNetwork();
-            if (!network) {
-                window.open('https://metamask.io/');
+            if (!network && !web3Provider) {
+                showMetamaskSite()
             }
             await activate(injected);
 

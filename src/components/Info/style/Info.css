@@ -138,6 +138,15 @@
     color: #db154a;
 }
 
+.Description .ButtonContainer .btn .disabled-btn {
+    background: #bababa;
+}
+.Description .ButtonContainer .btn .disabled-btn:hover {
+    background: #bababa;
+    color: #ffffff;
+    border: 0;
+}
+
 /* table 컨텐츠 */
 .Container .Description .bid-table {
     width: 100%;

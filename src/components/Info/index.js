@@ -7,15 +7,36 @@ import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "../Timer";
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
+import {bidAbleCheck, bidAction, buyAction, getBlockNumber, getBuyIndex, withdrawAction} from "../../utils/calls";
+import {useSelector, useDispatch} from 'react-redux'
+
+
 
 
 const InfoPage = ({history, location, match}) => {
+
     const asyncData = useAsync(getNftInfo, [match.params.id]);
+
+    if(asyncData.loading){
+
+
+    }
+
+    const userAccount = useSelector((state) => state.global.userAccount)
     const item = asyncData.result
 
+    const [inputAmount, setInputAmount] = useState('');
     const [currentSlider, setCurrentSlider] = useState([]);
     const [showModal, setShowModal] = useState(false);
+
+    const [buyIndex, setBuyIndex] = useState('');
+    const [bidStatus, setBidStatus] = useState(false)
+
+
     const openModal = () => {
+        if(!userAccount){
+            return
+        }
         window.scrollTo(0, 0);
         setShowModal(true);
     };
@@ -30,6 +51,7 @@ const InfoPage = ({history, location, match}) => {
     const togglePopup = (event) => {
         setShowPopup(event.target.value);
     }
+
 
     const initSlider = () => {
         const pageId = Number(match.params.id);
@@ -58,8 +80,51 @@ const InfoPage = ({history, location, match}) => {
         // initSlider();
     }
 
+    const bid = async () => {
+        closeModal();
+        if (!item.auction_address) {
+            return;
+        }
+        if (isNaN(inputAmount) || inputAmount === '') {
+            return;
+        }
+        await bidAction(item.auction_address, inputAmount);
+    }
+
+    const withdraw = async () => {
+        closeModal();
+        await withdrawAction(item.auction_address);
+    }
+
+    const buy = async () => {
+        await buyAction(item.auction_address, item.nft_address, buyIndex);
+    }
+    console.log(asyncData)
+
+    if (asyncData.status === 'success') {
+        if (item.contract_type === 'BUY') {
+            getBuyIndex(item.auction_address).then(res => {
+                setBuyIndex(res);
+            })
+        } else {
+            // console.log(item)
+            // console.log('BID')
+            bidAbleCheck(item.auction_address).then(res => {
+                setBidStatus(res)
+            })
+        }
+    }
+
     useEffect(() => {
         initSlider();
+        /*return () => {
+            setInputAmount('')
+            setCurrentSlider([])
+            setShowModal(false)
+            setIsVisible(false)
+            setShowPopup(false)
+        };
+        */
     }, []);
 
     return (
@@ -83,16 +148,40 @@ const InfoPage = ({history, location, match}) => {
                                     <h2 dangerouslySetInnerHTML={{__html: item.title}}>
                                     </h2>
                                     <div className="subTitle" dangerouslySetInnerHTML={{__html: item.sub_title}}/>
-                                    <div className="ButtonContainer">
-                                        <div className="input">
-                                            <input type="text" name="inputNum" placeholder="BNB"/>
+                                    {item.contract_type === 'BID' ?
+                                        !userAccount || bidStatus ?
+                                            <div className="ButtonContainer">
+                                                <div className="input">
+                                                    <input type="text" name="inputNum" placeholder="BNB"
+                                                           value={inputAmount}
+                                                           onChange={(e) => setInputAmount(e.target.value)}/>
+                                                </div>
+                                                <div className="btn">
+                                                    <button type="button" className={userAccount ? '': 'disabled-btn'} onClick={openModal}>
+                                                        MUA NGAY
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            :
+                                            <div className="ButtonContainer">
+                                                <div className="btn">
+                                                    <button type="button" onClick={withdraw}>
+                                                        WITHDRAW
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        :
+                                        <div className="ButtonContainer">
+                                            <div className="btn">
+                                                <button type="button"
+                                                        onClick={buy}
+                                                        className={buyIndex ? '' : 'disabled-btn'}
+                                                >
+                                                    BUY NOW
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className="btn">
-                                            <button type="button" onClick={openModal}>
-                                                MUA NGAY
-                                            </button>
-                                        </div>
-                                    </div>
+                                    }
                                     <table className="bid-table">
                                         <thead>
                                         <tr>
@@ -125,12 +214,17 @@ const InfoPage = ({history, location, match}) => {
                                                         <AiOutlineClose size={40}/>
                                                     </button>
                                                     <h1>BID NOW</h1>
-                                                    <p className="sub-title">{item.sub_title}</p>
+                                                    <p className="sub-title"
+                                                       dangerouslySetInnerHTML={{__html: item.sub_title}}/>
                                                     <input type="text" name='bsc' placeholder="0.00001 BNB" required
-                                                           className="input"/>
+                                                           className="input" value={inputAmount}
+                                                           onChange={(e) => setInputAmount(e.target.value)}/>
                                                 </div>
-                                                <button className="bid-btn" type="button" onClick={closeModal}>
+                                                <button className="bid-btn" type="button" onClick={bid}>
                                                     BID NOW
+                                                </button>
+                                                <button className="bid-btn" type="button" onClick={withdraw}>
+                                                    WITHDRAW NOW
                                                 </button>
                                             </div>
                                             : null

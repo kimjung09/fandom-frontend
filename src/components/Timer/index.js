@@ -28,6 +28,10 @@ const Index = () => {
     useEffect(() => {
         setTimeout(() => {
             setTimeLeft(calculateTimeLeft());
+
+            return function cleanup(){
+                calculateTimeLeft()
+            }
         }, 1000);
     });
 

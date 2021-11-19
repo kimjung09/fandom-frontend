@@ -11,11 +11,8 @@ import Modal from '../Modal';
 
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
-
 const InfoPage = ({history, location, match}) => {
-    const asyncData = useAsync(getNftInfo, [match.params.id]);
-    const item = asyncData.result
-
+    const [nftId, setNftId] = useState(null);
     const [currentSlider, setCurrentSlider] = useState([]);
     const [showBuyModal, setShowBuyModal] = useState(false);
     const openBuyModal = () => {
@@ -66,14 +63,16 @@ const InfoPage = ({history, location, match}) => {
     }
 
     const movePage = (pageId) => {
-        window.location.href = `/fandom/${pageId}`;
-        // history.push(`/fandom/${pageId}`);
-        // initSlider();
+        history.push(`/fandom/${pageId}`);
     }
 
-    useEffect(() => {
+    if (nftId !== match.params.id) {
+        setNftId(match.params.id);
         initSlider();
-    }, []);
+    }
+
+    const asyncData = useAsync(getNftInfo, [nftId]);
+    const item = asyncData.result;
 
     return (
         <>
@@ -84,10 +83,11 @@ const InfoPage = ({history, location, match}) => {
                             MUA NGAY
                         </button>
                     </div>
-
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
-                            <Timer time="여기에 END DATE를 넣자"/>
+                            <div className="sub-timer">
+                                <Timer />
+                            </div>
                             <div className="Container">
                                 <div className="Image">
                                     <img src={item.list_img}/>
@@ -178,7 +178,7 @@ const InfoPage = ({history, location, match}) => {
                             </div>
                         </div>
                         {
-                            match.params.id > 1 ?
+                            item.contract_type === 'BID' ?
                                 <div className="info-bottom-area">
                                     <p style={{fontSize: '12px', margin: 0, fontWeight: 'bold'}}>* Các điều khoản và
                                         điều kiện</p>
@@ -220,9 +220,7 @@ const InfoPage = ({history, location, match}) => {
                 : ''
             }
         </>
-
     )
 }
-
 
 export default InfoPage;

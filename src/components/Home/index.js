@@ -92,7 +92,7 @@ const MainPage = (props) => {
             <div className="Body-container">
                 <div className="title-area">
                     <h1>Sở hữu những</h1>
-                    <h1 className="mb-3">khoảnh khắc đặc biệt nhất</h1>
+                    <h1 className="mb-5">khoảnh khắc đặc biệt nhất</h1>
                     <Timer/>
                 </div>
                 <div className="video-area">
@@ -112,17 +112,33 @@ const MainPage = (props) => {
                         <div className="Story-components">
                             <NavLink to="/whitelist">
                                 <button>
-                                    danh sách trắng
+                                    DANH SÁCH TRẮNG
                                     <img src="/images/icon/giftbox.png" className="off"/>
                                     <img src="/images/icon/giftbox-on.png" className="on"/>
                                 </button>
                             </NavLink>
-                            <h3 className="mb-3">Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của chúng tôi!</h3>
-                            <h2>Những khoảnh khắc đặc biệt của NHI qua NFT.</h2>
-                            <div className="desc">
-                                &lt;Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~  23:59, ngày 30/11&gt;<br/><br/>
-                                Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI<br/>
-                                từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
+                            <h3 className="mb-3">
+                                <span className="mobile-block">Nhận airdrop trị giá $ 9,900</span>
+                                <span className="mobile-block">bằng cách tham gia Whitelist của chúng tôi!</span>
+                            </h3>
+                            <h2>
+                                <span className="mobile-block">NHỮNG KHOẢNH KHẮC</span>
+                                <span className="mobile-block">ĐẶC BIỆT CỦA NHI QUA NFT.</span>
+                            </h2>
+                            <h3 className="mb-3">
+                                <span className="mobile-block">Thời gian tham gia đấu giá: 0:00,</span>
+                                <span className="mobile-block">ngày 22/11 ~  23:59, ngày 30/11</span>
+                            </h3>
+                            <div className="desc mobile-only">
+                                Hãy cùng chúng tôi điểm lại những khoảnh<br/>
+                                khắc trưởng thành ngoạn mục của NHI từ trước<br/>
+                                khi bắt đầu chơi quyền anh cho tới khi cô ấy trở<br/>
+                                thành nhà vô địch thế giới nhé!
+                            </div>
+                            <div className="desc pc-only">
+                                Hãy cùng chúng tôi điểm lại những khoảnh khắc<br/>
+                                trưởng thành ngoạn mục của NHI từ trước khi bắt đầu chơi quyền anh cho tới<br/>
+                                khi cô ấy trở thành nhà vô địch thế giới nhé!
                             </div>
                             <div className="list-wrap" ref={sliderWrap} onTouchStart={sliderSwipe} onTouchMove={sliderSwipe} onTouchEnd={sliderSwipe}>
                                 <div className="list" ref={slider}>
@@ -147,7 +163,7 @@ const MainPage = (props) => {
                             </div>
                             <NavLink to="/whitelist">
                                 <button>
-                                    Đấu giá ngay bây giờ
+                                    ĐẤU GIÁ NGAY BÂY GIỜ
                                 </button>
                             </NavLink>
                         </div>

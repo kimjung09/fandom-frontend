@@ -2,10 +2,13 @@ import "App.css"
 import React, {useState, useEffect} from "react";
 import "./style/Info.css"
 import "./style/Bottom.css"
-import {AiOutlineClose} from 'react-icons/ai'
 import {getNftInfo} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 import Timer from "../Timer";
+import PopupBuy from "../Popup/PopupBuy";
+import PopupBid from "../Popup/PopupBid";
+import Modal from '../Modal';
+
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
@@ -14,21 +17,31 @@ const InfoPage = ({history, location, match}) => {
     const item = asyncData.result
 
     const [currentSlider, setCurrentSlider] = useState([]);
-    const [showModal, setShowModal] = useState(false);
-    const openModal = () => {
-        window.scrollTo(0, 0);
-        setShowModal(true);
+    const [showBuyModal, setShowBuyModal] = useState(false);
+    const openBuyModal = () => {
+        setShowBuyModal(true);
     };
-    const closeModal = () => {
-        setShowModal(false);
+    const closeBuyModal = () => {
+        setShowBuyModal(false);
     }
+    const [showBidModal, setShowBidModal] = useState(false);
+    const openBidModal = () => {
+        setShowBidModal(true);
+    };
+    const closeBidModal = () => {
+        setShowBidModal(false);
+    }
+    const openModal = () => {
+        if (item.contract_type === 'BUY') {
+            openBuyModal();
+        } else {
+            openBidModal();
+        }
+    }
+
     const [isVisible, setIsVisible] = useState(false);
     const onSetIsVisible = (active) => {
         setIsVisible(false);
-    }
-    const [showPopup, setShowPopup] = useState(false);
-    const togglePopup = (event) => {
-        setShowPopup(event.target.value);
     }
 
     const initSlider = () => {
@@ -89,7 +102,7 @@ const InfoPage = ({history, location, match}) => {
                                         </div>
                                         <div className="btn">
                                             <button type="button" onClick={openModal}>
-                                                MUA NGAY
+                                                {(item.contract_type === 'BUY') ? 'MUA NGAY' : "THAM GIA ĐẤU GIÁ NGAY B Y GIỜ"}
                                             </button>
                                         </div>
                                     </div>
@@ -117,32 +130,12 @@ const InfoPage = ({history, location, match}) => {
                                         )}
                                         </tbody>
                                     </table>
-                                    {
-                                        showModal ?
-                                            <div className="Modal-wrap">
-                                                <div className="Modal">
-                                                    <button className="close-btn" onClick={closeModal}>
-                                                        <AiOutlineClose size={40}/>
-                                                    </button>
-                                                    <h1>BID NOW</h1>
-                                                    <p className="sub-title">{item.sub_title}</p>
-                                                    <input type="text" name='bsc' placeholder="0.00001 BNB" required
-                                                           className="input"/>
-                                                </div>
-                                                <button className="bid-btn" type="button" onClick={closeModal}>
-                                                    BID NOW
-                                                </button>
-                                            </div>
-                                            : null
-                                    }
-                                    {
-                                        showPopup ? (
-                                            <div className="popup">
-                                                <div className="popup_inner">
-                                                    dsadsdk
-                                                </div>
-                                            </div>
-                                        ) : null}
+                                    <Modal showModal={showBuyModal}>
+                                        <PopupBuy item={item} closeModal={closeBuyModal}/>
+                                    </Modal>
+                                    <Modal item={item} showModal={showBidModal}>
+                                        <PopupBid item={item} closeModal={closeBidModal}/>
+                                    </Modal>
                                 </div>
                                 <div className="left-btn">
                                     <button type="button" onClick={(e) => goPage(-1, e)}>

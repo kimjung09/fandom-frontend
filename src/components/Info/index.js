@@ -8,7 +8,7 @@ import Timer from "../Timer";
 import PopupBuy from "../Popup/PopupBuy";
 import PopupBid from "../Popup/PopupBid";
 import Modal from '../Modal';
-import {AiOutlineClose} from 'react-icons/ai'
+
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
@@ -53,7 +53,7 @@ const InfoPage = ({history, location, match}) => {
     const closeModal = () => {
         // close 버튼 클릭시 Modal 창을 닫아준다.
         setShowModal(false);
-        
+
         // item에 대한 type 이 buy 상태일때 액션 적용
         if (item.contract_type === 'BUY') {
             openBuyModal();
@@ -139,6 +139,7 @@ const InfoPage = ({history, location, match}) => {
                             MUA NGAY
                         </button>
                     </div>
+
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
                             <Timer time="여기에 END DATE를 넣자"/>
@@ -184,34 +185,6 @@ const InfoPage = ({history, location, match}) => {
                                         )}
                                         </tbody>
                                     </table>
-                                    {/* button 클릭시 나오는 Modal창 */}
-                                    {
-                                        showModal ?
-                                            <div className="Modal-wrap">
-                                                <div className="Modal">
-                                                    {/* close 아이콘 클릭시 closeModal 적용 */}
-                                                    <button className="close-btn" onClick={closeModal}>
-                                                        <AiOutlineClose size={40}/>
-                                                    </button>
-                                                    <h1>BID NOW</h1>
-                                                    <p className="sub-title">{item.sub_title}</p>
-                                                    <input type="text" name='bsc' placeholder="0.00001 BNB" required className="input"/>
-                                                </div>
-                                                <button className="bid-btn" type="button" onClick={closeModal}>
-                                                    BID NOW
-                                                </button>
-                                            </div>
-                                            : null
-                                    }
-                                    {
-                                        showPopup ? (
-                                            <div className="popup">
-                                                <div className="popup_inner">
-                                                    dsadsdk
-                                                </div>
-                                            </div>
-                                        ) : null}
-                                    {/* 처음 BuyButton을 클릭할시 순서대 popupBuy -> PopupBid 팝업이 실행된다. */}
                                     <Modal showModal={showBuyModal}>
                                         <PopupBuy item={item} closeModal={closeBuyModal}/>
                                     </Modal>
@@ -237,7 +210,8 @@ const InfoPage = ({history, location, match}) => {
                             <div className="pagination">
                                 {/* currentSlide에 map함수를 돌려서  */}
                                 {currentSlider.map((res, index) =>
-                                    <span onClick={() => movePage(index + 1)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
+                                    <span onClick={() => movePage(index + 1)} key={'pageKey' + index}><img
+                                        src={currentSlider[index]}/></span>
                                 )}
                             </div>
                         </div>
@@ -308,11 +282,13 @@ const InfoPage = ({history, location, match}) => {
                                 </div>
                                 : ''
                         }
+
                     </div>
                 </div>
                 : ''
             }
         </>
+
     )
 }
 

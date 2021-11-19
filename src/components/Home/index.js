@@ -1,4 +1,4 @@
-import React, { useState, useRef,useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./style/Body.css"
 import "./style/Story.css"
 import {getNftList} from "../../utils/axios";

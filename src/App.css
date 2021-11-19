@@ -103,6 +103,9 @@ h1, h2, h3, h4, a {
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
+    .mobile-block {
+        display: block;
+    }
 }
 
 /** Media Query Tablet (425px) */

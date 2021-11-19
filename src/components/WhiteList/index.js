@@ -60,10 +60,11 @@ const WhiteList = () => {
             <div className="white-list-inner">
                 <div className="main-font">
                     <h1>Tham gia Whitelist</h1>
-                    <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng<br/>lịch sử của NHI khi trở thành nhà
-                        vô địch thế giới.<br/><br/>
+                    <p>
+                        Sự kiện đấu giá NFT là một sự kiện để kỷ niệm<br/>
+                        chiến thắng lịch sử của NHI khi trở thành nhà vô địch thế giới.<br/>
                         Đăng ký Whitelist để có cơ hội tham gia đấu giá!<br/>
-                        Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của<br/> chúng tôi!</p>
+                    </p>
                 </div>
                 <div className="check-bar">
                     <div className="left">
@@ -130,6 +131,13 @@ const WhiteList = () => {
                     <div className="right">
                         {inputTelegram.length ? <FaCheck className='icon'/> : <FaHandPointer className='icon'/>}
                     </div>
+                </div>
+
+                <div className="main-font">
+                    <p>
+                        Airdrop BNB trị giá $30 cho 330 người may mắn được chọn ngẫu nhiên.<br/>
+                        Người chiến thắng Airdrop sẽ được công bố sau đó thông qua kênh Telegram chính thức của Fandom.
+                    </p>
                 </div>
 
                 <div className="check-recaptcha">

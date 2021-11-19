@@ -25,10 +25,14 @@ const MainPage = (props) => {
     const slider = useRef();
     const sliderItem = useRef();
 
-
+    // display 가로 영역
     const [playBtnDisplay, setPlayBtnDisplay] = useState('block');
+
+    // 슬라이더에 대한 index
     const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
     const [currentSlider, setCurrentSlider] = useState(['/images/icon/page-on.png', '/images/icon/page-off.png', '/images/icon/page-off.png', '/images/icon/page-off.png', '/images/icon/page-off.png', '/images/icon/page-off.png']);
+
+    // 모바일 반응형화면에서 touchSlider 적용
     const [sliderTouchStart, setSliderTouchStart] = useState(0);
     const [sliderTouchMove, setSliderTouchMove] = useState(0);
 
@@ -152,12 +156,13 @@ const MainPage = (props) => {
                     // whitelist 페이지 이동
                     <WhiteList />
                 ) : (
-                    // 메인페이지
+                    // 메인페이지 == story
                     <div className="Story-container" id="Story">
                         <div className="Story-components">
                             <NavLink to="/whitelist">
                                 <button>
                                     danh sách trắng
+                                    {/* mouse hover = on / off 시 해당되는 스타일 적용 */}
                                     <img src="/images/icon/giftbox.png" className="off"/>
                                     <img src="/images/icon/giftbox-on.png" className="on"/>
                                 </button>
@@ -175,6 +180,7 @@ const MainPage = (props) => {
                                     {item ? item.map((res, index) =>
                                         <div className="list-item" key={index} ref={sliderItem}>
                                             <React.Fragment>
+                                                {/* 링크가 활성화될때 서브페이지의 스타일 적용을 위한 NavLink */}
                                                 <NavLink to={`/fandom/${res.id}`}>
                                                     <img src={res.list_img}/>
                                                 </NavLink>

@@ -147,7 +147,7 @@
         font-size: 30px;
         font-weight: bold;
         text-transform: uppercase;
-        background: #db154a;
+
         color: #ffffff;
     }
 
@@ -155,6 +155,7 @@
         cursor: pointer;
         min-width: 300px;
         padding: 10px 30px 10px 30px;
+        border:none;
         border-radius: 34px 34px 34px 34px;
         font-size: 30px;
         font-weight: bold;

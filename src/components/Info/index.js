@@ -138,21 +138,21 @@ const InfoPage = ({history, location, match}) => {
                                             <th>bidding</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        {/* Table 컨테이너 */}
-                                        {item.bid.map((value, index) =>
-                                            <tr key={index}>
-                                                <td className="bold">
-                                                    {parseAmount(value.amount)}
-                                                </td>
-                                                <td>{parseUSD(value.amount)}</td>
-                                                <td>{parseDate(value.block_time)}</td>
-                                                <td className="bold">
-                                                    {parseAccount(value.account)}
-                                                </td>
-                                            </tr>
-                                        )}
-                                        </tbody>
+                                        {/*<tbody>*/}
+                                        {/*/!* Table 컨테이너 *!/*/}
+                                        {/*{item.bid.map((value, index) =>*/}
+                                        {/*    <tr key={index}>*/}
+                                        {/*        <td className="bold">*/}
+                                        {/*            {parseAmount(value.amount)}*/}
+                                        {/*        </td>*/}
+                                        {/*        <td>{parseUSD(value.amount)}</td>*/}
+                                        {/*        <td>{parseDate(value.block_time)}</td>*/}
+                                        {/*        <td className="bold">*/}
+                                        {/*            {parseAccount(value.account)}*/}
+                                        {/*        </td>*/}
+                                        {/*    </tr>*/}
+                                        {/*)}*/}
+                                        {/*</tbody>*/}
                                     </table>
                                     {/* button 클릭시 나오는 Modal창 */}
                                     {
@@ -205,6 +205,7 @@ const InfoPage = ({history, location, match}) => {
                         </div>
                     </div>
 
+                    {/* bottom 설명리스트 */}
                     <div className="bottom-container" id="Story">
                         <div className="bottom-content">
 

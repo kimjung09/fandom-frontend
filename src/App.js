@@ -17,7 +17,6 @@ const App = () => {
     return (
         <>
             {/* 이더리움 지갑을 연결해주기 위한 Web3ReactProvider ===> web3-react가 관리하는 Provider 컴포넌트 */}
-
             <Web3ReactProvider getLibrary={getLibrary}>
                 {/* MainPage와 Subpage에 동일한 Header Footer를 적용해 페이지 이동시 새로고침방지를 위해 분리 */}
                 <Header/>

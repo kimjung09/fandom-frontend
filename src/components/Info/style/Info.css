@@ -173,6 +173,7 @@
     height:100px;
     position: fixed;
     bottom: 0;
+    z-index: 1000;
 }
 
 .bid-btn-mobile button {
@@ -226,6 +227,9 @@
 
 /** Media Qurey Medium (992px) */
 @media screen and (max-width: 992px) {
+    .SubBody-Container {
+        padding-top: 100px;
+    }
 }
 
 /** Media Query Tablet (768px) */
@@ -271,10 +275,19 @@
 @media screen and (max-width: 425px) {
 }
 
-/*  Media Query iPoneX (375 x 812) */
+/** Media Query iPoneX (375 x 812) */
 @media screen and (max-width: 375px) {
 }
 
 /** Media Query Galxy Fold(280 x 653) */
 @media screen and (max-width: 280px){
+    .SubBody-Container {
+        padding-top: 70px;
+    }
+
+    .SubBody-Container .Container {
+        display:block;
+        padding: 70px 35px 40px 35px;
+        margin-top: 40px;
+    }
 }

@@ -4,17 +4,19 @@
 }
 
 .timer .live {
-    font-size: 40px;
+    font-size: 40pt;
     background: #db154a;
     border-radius: 14px 14px 14px 14px;
     padding: 5px 25px;
     margin-right: 30px;
     vertical-align: bottom;
     line-height: 90px;
+    max-width: 170px;
+    font-weight: bold;
 }
 
 .timer .clock {
-    font-size: 70px;
+    font-size: 70pt;
     font-weight: bold;
     text-shadow: 4px 0 #eb1a53;
     vertical-align: bottom;
@@ -33,57 +35,116 @@
 /** Media Qurey Medium (992px) */
 @media screen and (max-width: 992px) {
     .timer .live {
-        padding: 0;
-        margin: 0 auto 20px;
-        display: block;
-        max-width: 170px;
+        font-size: 35pt;
     }
 
     .timer .clock {
-        font-size: 100px;
-        line-height: 1;
+        font-size: 60pt;
     }
 }
 
 /** Media Query Tablet (768px) */
 @media screen and (max-width: 768px) {
     .timer .live {
-        font-size: 40px;
-        line-height: 1.5;
+        font-size: 40pt;
+        max-width: 170px;
+        margin: 0 auto 20px;
+        display: block;
+        line-height: 1;
+        padding: 3px 0 10px 0;
     }
 
     .timer .clock {
-        font-size: 70px;
+        font-size: 72pt;
+        line-height: 1;
+    }
+
+    .sub-timer .timer .live {
+        font-size: 33pt;
+        display: inline;
+        padding: 0 10px 5px 10px;
+        line-height: 70px;
+        margin: 0 10px 0 0;
+    }
+
+    .sub-timer .timer .clock {
+        font-size: 60pt;
+        line-height: 1;
     }
 }
 
 /** Media Query Tablet (425px) */
 @media screen and (max-width: 425px) {
     .timer .live {
-        font-size: 30px;
-        max-width: 140px;
-        line-height: 2;
+        font-size: 22pt;
+        max-width: 110px;
+        padding: 5px 0 10px 0;
     }
 
     .timer .clock {
-        font-size: 60px;
+        font-size: 40pt;
+    }
+
+    .sub-timer .timer .live {
+        font-size: 18pt;
+        display: inline;
+        padding: 0 10px 5px 10px;
+        line-height: 40px;
+        margin: 0 10px 0 0;
+    }
+
+    .sub-timer .timer .clock {
+        font-size: 33pt;
+        line-height: 1;
     }
 }
 
 /*  Media Query iPoneX (375 x 812) */
 @media screen and (max-width: 375px) {
     .timer .live {
-        font-size: 25px;
+        font-size: 20pt;
+        max-width: 83px;
     }
 
     .timer .clock {
-        font-size: 50px;
+        font-size: 35px;
+    }
+
+    .sub-timer .timer .live {
+        font-size: 16pt;
+        display: inline;
+        padding: 0 10px 5px 10px;
+        line-height: 35px;
+        margin: 0 10px 0 0;
+    }
+
+    .sub-timer .timer .clock {
+        font-size: 29pt;
+        line-height: 1;
     }
 }
 
 /** Media Query Galxy Fold(280 x 653) */
 @media screen and (max-width: 280px){
+    .timer .live {
+        font-size: 14pt;
+        max-width: 61px;
+    }
+
     .timer .clock {
-        font-size: 45px;
+        font-size: 26px;
+    }
+
+    .sub-timer .timer .live {
+        font-size: 12pt;
+        display: inline;
+        padding: 0 10px 5px 10px;
+        line-height: 35px;
+        margin: 0 10px 0 0;
+    }
+
+    .sub-timer .timer .clock {
+        font-size: 22pt;
+        line-height: 1;
     }
 }

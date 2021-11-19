@@ -1,43 +1,38 @@
 import React, {useState, useEffect} from "react";
-import moment from 'moment';
 import "./style/Popup.css"
+import {AiOutlineClose} from 'react-icons/ai'
 
-const Index = () => {
-    const formatTime = (time) => {
-        if (time < 10) {
-            return '0' + time
-        }
-        return time;
+const PopupBuy = ({item, closeModal}) => {
+    const procBuy = () => {
+        console.log(item);
     }
-
-    const calculateTimeLeft = () => {
-        let eventTime = '1638291599';
-        let currentTime = (Math.floor(Date.now() / 1000)).toString();
-        let leftTime = eventTime - currentTime;
-        let duration = moment.duration(leftTime, 'seconds');
-        let interval = 1000;
-        if (duration.asSeconds() <= 0) {
-            clearInterval(interval);
-        }
-        duration = moment.duration(duration.asSeconds() - 1, 'seconds');
-        return (
-            duration.days() + 'D ' + formatTime(duration.hours()) + ':' + formatTime(duration.minutes()) + ':' +formatTime(duration.seconds())
-        );
-    }
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-    useEffect(() => {
-        setTimeout(() => {
-            setTimeLeft(calculateTimeLeft());
-        }, 1000);
-    });
 
     return (
-        <div className="timer">
-            <span className="live">LIVE</span>
-            <span className="clock">
-                {timeLeft}
-            </span>
-        </div>
+        <>
+            <div className="Popup-wrap">
+                <div className="Popup">
+                    <button className="close-btn" onClick={() => closeModal()}>
+                        <AiOutlineClose size={40}/>
+                    </button>
+                    <h1>MUA NGAY</h1>
+                    <p className="sub-title">Giới hạn mua mỗi khách hàng một lần</p>
+                    <input type="text" placeholder="0.00001 BNB" required className="input"/>
+                    <div className="desc-tit">* Thông báo trước khi tham gia đấu giá</div>
+                    <ul className="desc">
+                        <li>Hủy hoặc hoàn trả không được phép sau khi tham gia đấu giá.</li>
+                        <li>
+                            Số tiền đấu giá sẽ bị đóng băng cho đến khi kết thúc đấu giá.<br/>
+                            Nếu bạn không trở thành người thắng cuộc trong phiên đấu giá,<br/>
+                            bạn sẽ nhận được toàn bộ tiền hoàn lại khi đăng ký KHIẾU NẠI.
+                        </li>
+                        <li>3) Đối với người chiến thắng, số tiền đấu thầu là không thể hoàn lại và có thể yêu cầu NFT thông qua ứng dụng CLAIM.</li>
+                    </ul>
+                </div>
+                <button className="bid-btn" type="button" onClick={procBuy}>
+                    MUA NGAY
+                </button>
+            </div>
+        </>
     )
 }
-export default Index;
+export default PopupBuy;

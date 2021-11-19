@@ -8,19 +8,15 @@ import Timer from "../Timer";
 import PopupBuy from "../Popup/PopupBuy";
 import PopupBid from "../Popup/PopupBid";
 import Modal from '../Modal';
-
+import {AiOutlineClose} from 'react-icons/ai'
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
 
 
 const InfoPage = ({history, location, match}) => {
     // NftInfo 상세페이지 id 페이지 asyncData에 담아두고 match를 적용 시킴
     const asyncData = useAsync(getNftInfo, [match.params.id]);
-    // item 변수에 asyncData 선언
+    // item 변수에 asyncData == 결과값으로 선언
     const item = asyncData.result
-
-    console.log(asyncData);
-
-    console.log(item);
 
     // 페이지 이동할 slider 값
     const [currentSlider, setCurrentSlider] = useState([]);
@@ -28,12 +24,19 @@ const InfoPage = ({history, location, match}) => {
 
     // Mobile화면에서 Button클릭시 작동되는 Modal 함수
     const [showBuyModal, setShowBuyModal] = useState(false);
+
+    const [loading, setLoading] = useState(true);
+
+
+    // BuyModal open & close
     const openBuyModal = () => {
         setShowBuyModal(true);
     };
     const closeBuyModal = () => {
         setShowBuyModal(false);
-    }
+    };
+
+    // BidModal === open 시 Bid Modal
     const [showBidModal, setShowBidModal] = useState(false);
     const openBidModal = () => {
         setShowBidModal(true);
@@ -50,6 +53,8 @@ const InfoPage = ({history, location, match}) => {
     const closeModal = () => {
         // close 버튼 클릭시 Modal 창을 닫아준다.
         setShowModal(false);
+        
+        // item에 대한 type 이 buy 상태일때 액션 적용
         if (item.contract_type === 'BUY') {
             openBuyModal();
         } else {
@@ -113,13 +118,17 @@ const InfoPage = ({history, location, match}) => {
         window.location.href = `/fandom/${pageId}`;
         // history.push(`/fandom/${pageId}`);
         // initSlider();
-
-
     }
 
+
     useEffect(() => {
-        initSlider();
+            initSlider();
     }, []);
+
+
+
+
+
 
     return (
         <>
@@ -130,7 +139,6 @@ const InfoPage = ({history, location, match}) => {
                             MUA NGAY
                         </button>
                     </div>
-
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
                             <Timer time="여기에 END DATE를 넣자"/>
@@ -161,21 +169,6 @@ const InfoPage = ({history, location, match}) => {
                                             <th>{item.contract_type === 'BID' ? 'bidding' : 'buyer'}</th>
                                         </tr>
                                         </thead>
-                                        {/*<tbody>*/}
-                                        {/*/!* Table 컨테이너 *!/*/}
-                                        {/*{item.bid.map((value, index) =>*/}
-                                        {/*    <tr key={index}>*/}
-                                        {/*        <td className="bold">*/}
-                                        {/*            {parseAmount(value.amount)}*/}
-                                        {/*        </td>*/}
-                                        {/*        <td>{parseUSD(value.amount)}</td>*/}
-                                        {/*        <td>{parseDate(value.block_time)}</td>*/}
-                                        {/*        <td className="bold">*/}
-                                        {/*            {parseAccount(value.account)}*/}
-                                        {/*        </td>*/}
-                                        {/*    </tr>*/}
-                                        {/*)}*/}
-                                        {/*</tbody>*/}
                                         <tbody>
                                         {item.list.map((value, index) =>
                                             <tr key={index}>
@@ -218,6 +211,7 @@ const InfoPage = ({history, location, match}) => {
                                                 </div>
                                             </div>
                                         ) : null}
+                                    {/* 처음 BuyButton을 클릭할시 순서대 popupBuy -> PopupBid 팝업이 실행된다. */}
                                     <Modal showModal={showBuyModal}>
                                         <PopupBuy item={item} closeModal={closeBuyModal}/>
                                     </Modal>
@@ -238,6 +232,7 @@ const InfoPage = ({history, location, match}) => {
                                     </button>
                                 </div>
                             </div>
+
                             {/* 현재 페이지를 알려주는 pagenation */}
                             <div className="pagination">
                                 {/* currentSlide에 map함수를 돌려서  */}
@@ -273,12 +268,8 @@ const InfoPage = ({history, location, match}) => {
                                     item.contract_type === 'BID' ?
                                         <img className="right" src={item.second_info_img}/> : ''
                                 }
-                        <div className="bottom-content">
-                            <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
                             </div>
-                            <img className="right" src={item.second_info_img}/>
                         </div>
-
                         {
                             // match.params.id 값이 1페이지를 제외한 모든 페이지에 matching
                             match.params.id > 1 ?
@@ -317,13 +308,11 @@ const InfoPage = ({history, location, match}) => {
                                 </div>
                                 : ''
                         }
-
                     </div>
                 </div>
                 : ''
             }
         </>
-
     )
 }
 

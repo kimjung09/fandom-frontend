@@ -24,12 +24,17 @@ const WalletBtn = () => {
     const {active, account, activate, deactivate, library} = useWeb3React()
     const dispatch = useDispatch()
 
+    // 지갑 연결
     const connect = async () => {
         try {
+            // 네트워크 가 연결되었을때 Network settings
             let network = await setupNetwork();
+
+            // 연결 되지 않았다면 Metamkask 창 open
             if (!network) {
                 window.open('https://metamask.io/');
             }
+            // 1초뒤 activate
             await activate(injected);
 
         } catch (err) {
@@ -37,10 +42,14 @@ const WalletBtn = () => {
         }
     }
 
+    // 지갑 로그아웃
     const disconnect = async () => {
         try {
+            // local 저장에서 local-account 정보 삭제
             localStorage.removeItem('local-account');
+            // dispatch == 정보없는 userAcoount로 보냄
             dispatch(setUserAccount(''))
+            // 연결 해제
             deactivate();
         } catch (err) {
             console.log(err)
@@ -48,7 +57,9 @@ const WalletBtn = () => {
     }
 
     useEffect(
+        // 비동기 처리
         async () => {
+            // account 비활성화 시
             if (!account) {
                 if (!!localStorage.getItem('local-account')) {
                     await activate(injected);
@@ -64,6 +75,8 @@ const WalletBtn = () => {
         [account]
     );
 
+
+    // 로그인된 상황에서 mouseover 시
     const ParseAccount = () => {
         if (mouseOverCheck) {
             return (<span>Disconnect</span>)

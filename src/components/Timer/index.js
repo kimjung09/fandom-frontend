@@ -39,6 +39,16 @@ const Index = () => {
         setTimeout(() => {
             setTimeLeft(calculateTimeLeft());
         }, 1000);
+
+        // 이동할때마다 메모리 누수가 발생하는 문제 == clean up 함수 이용
+        // 메모리 누수가 발생하는 이유 === router에서 이동후 이동전 state를 바꾸려고 시도할때
+        // 비동기 처리과정
+        // 페이지에서 할당된 메모리를 반환하지않고 누적되기때문에 발생하는 문제
+
+        return function cleanup() {
+            setTimeLeft(calculateTimeLeft());
+            console.log('2323')
+        }
     });
 
     return (

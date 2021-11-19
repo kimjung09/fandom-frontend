@@ -11,9 +11,10 @@ export const getNftList = async () => {
     } catch (e) {
         console.log(e);
     }
+   0
 }
 
-// Nft상세페이지
+// Nft 상세페이지
 export const getNftInfo = async (id) => {
     try {
         const response =await axios.get(`${url}/fandom/${id}`);
@@ -21,6 +22,7 @@ export const getNftInfo = async (id) => {
     } catch (e) {
         console.log(e);
     }
+
 }
 
 // whiteList

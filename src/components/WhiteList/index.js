@@ -18,6 +18,7 @@ const WhiteList = () => {
     const [checkRecaptcha, setCheckRecaptcha] = useState(false)
 
 
+    // useSelector를 사용해 상태값을 global 전역변수(어디서든 불러올 수 있는 값) 로 담아줌줌    const userAccount = useSelector((state) => state.global.userAccount)
     const userAccount = useSelector((state) => state.global.userAccount)
     const checkRegisterWhiteList = useSelector((state) => state.global.whiteListCheck)
 
@@ -40,6 +41,7 @@ const WhiteList = () => {
     }
 
     // twittter 버튼 클릭시 cehck버튼으로 변환
+    // window.open함수를 사용해 새창으로 페이지를 이동할 수 있도록 구현
     const follow = () => {
         window.open('https://twitter.com/Fandom_CRTR');
         setCheckFollowTwitter(true)
@@ -49,11 +51,15 @@ const WhiteList = () => {
     const retweet = () => {
         setCheckRetweetTwitter(true)
     }
+
+    // 텔레그램 참가 페이지로 넘어감
     const join = () => {
         window.open('https://t.me/Fandom_Vietnam');
         setCheckJoinTelegram(true)
     }
 
+
+    // 렌더링 될때마다 button 활성화
     useEffect(() => {
         if (!checkRegisterWhiteList && checkRetweetTwitter && checkFollowTwitter && checkJoinTelegram && inputTelegram.length && inputTwitter.length && userAccount.length && checkRecaptcha) {
             setCheckSubmitBtn(true);

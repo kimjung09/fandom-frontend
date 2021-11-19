@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import "./style/Body.css"
 import "./style/Story.css"
 import {getNftList} from "../../utils/axios";
@@ -18,6 +18,7 @@ const MainPage = (props) => {
     // item 변수에 asyncData.result 결과 값을 담아준다.
     const item = asyncData.result
 
+    const [loading, setLoading] = useState(false);
 
     // useRef를 사용해 값이 slider 와 videoPlayer값이 바뀌어도 리렌더링을 방지해준다.
     const videoPlayer = useRef();
@@ -39,7 +40,6 @@ const MainPage = (props) => {
 
     // Video에 PlayButton을 클릭할때에 함수
     const onPlayClick = () => {
-
         // if 만약 VideoPlayer안에
         if (videoPlayer) {
             // videoPlayer 상태가 paused 상태에서 onClick 시 PlayButton으로 변환되고 else, 아니라면 pause 상태로 변경됨
@@ -52,6 +52,7 @@ const MainPage = (props) => {
             }
         }
     };
+
 
 
     // Video에 마우스를 올릴때에 Diosplay값을 block상태 처리
@@ -68,7 +69,7 @@ const MainPage = (props) => {
         }
     };
 
-    // 모바일 화면에서 slider
+    // 모바일 화면에서 slider 이동 방식
     const moveSlider = (x) => {
         // currentSlider 슬라이더 배열
         let tmpCurrentSlider = [],
@@ -88,7 +89,8 @@ const MainPage = (props) => {
         setCurrentSlider(tmpCurrentSlider);
         // Slider에 이동할 위치값에 x 좌표로 선언
         setCurrentSliderIndex(x);
-    }
+
+    };
 
     // 반응형 모바일 페이지에서 Mouse를 이용해 움직일 수있는 const 선언
     const sliderSwipe = (event) => {
@@ -103,7 +105,6 @@ const MainPage = (props) => {
                 // touch후 움직일때 x 좌표로 마우스 슬라이더더
                setSliderTouchMove(event.touches[0].pageX);
                 break;
-
                 // touch 이동이 끝날때 상황
             case 'touchend':
                 // 초기 index 값 = 0
@@ -111,7 +112,6 @@ const MainPage = (props) => {
                     // touch 방향 시작하는 부분과 움직인 부분을 - 해서 나온 좌표 로 이동
                     move = sliderTouchStart - sliderTouchMove;
 
-                // move
                 if (move > 20) {
                     idx = currentSliderIndex + 1;
                     if (idx > 5) {
@@ -130,6 +130,14 @@ const MainPage = (props) => {
                 break;
         }
     }
+
+    useEffect(() => {
+        setLoading(false);
+        setLoading(item);
+
+    })
+
+
 
     return (
         <>

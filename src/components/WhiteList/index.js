@@ -4,6 +4,9 @@ import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet, FaHandPointer} from
 import {registerWhiteList} from "../../utils/axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import {useSelector, useDispatch} from 'react-redux'
+import Modal from "../Modal";
+import PopupBid from "../Popup/PopupBid";
+import PopupMsg from "../Popup/PopupMsg";
 
 const WhiteList = () => {
     const [inputTwitter, setInputTwitter] = useState('');
@@ -15,14 +18,25 @@ const WhiteList = () => {
     const [checkSubmitBtn, setCheckSubmitBtn] = useState(false);
     const [checkRecaptcha, setCheckRecaptcha] = useState(false)
 
+    const [showModal, setShowModal] = useState(false);
 
     const userAccount = useSelector((state) => state.global.userAccount)
     const checkRegisterWhiteList = useSelector((state) => state.global.whiteListCheck)
+
+    const closeModal = () => {
+        setShowModal(false);
+    }
 
     const submit = async () => {
         if (!checkSubmitBtn) {
             return;
         }
+        if(!userAccount.length){
+            setShowModal(true);
+            return;
+        }
+
+
         let params = {
             telegram_id: inputTelegram,
             twitter_id: inputTwitter,
@@ -46,13 +60,13 @@ const WhiteList = () => {
     }
 
     useEffect(() => {
-        if (!checkRegisterWhiteList && checkRetweetTwitter && checkFollowTwitter && checkJoinTelegram && inputTelegram.length && inputTwitter.length && userAccount.length && checkRecaptcha) {
+        if (!checkRegisterWhiteList && checkRetweetTwitter && checkFollowTwitter && checkJoinTelegram && inputTelegram.length && inputTwitter.length && checkRecaptcha) {
             setCheckSubmitBtn(true);
             return;
         }
         setCheckSubmitBtn(false)
 
-    }, [inputTelegram, inputTwitter, checkRetweetTwitter, checkFollowTwitter, checkJoinTelegram, checkRecaptcha, userAccount])
+    }, [inputTelegram, inputTwitter, checkRetweetTwitter, checkFollowTwitter, checkJoinTelegram, checkRecaptcha])
 
 
     return (
@@ -136,7 +150,7 @@ const WhiteList = () => {
                 <div className="main-font">
                     <p>
                         Airdrop BNB trị giá $30 cho 330 người may mắn được chọn ngẫu nhiên.<br/>
-                        Người chiến thắng Airdrop sẽ được công bố sau đó thông qua kênh Telegram chính thức của Fandom.
+                        Người chiến thắng Airdrop sẽ được công bố sau đó thông qua kênh Telegram chính thức của Fandom.
                     </p>
                 </div>
 
@@ -155,7 +169,9 @@ const WhiteList = () => {
                         theme="light"
                     />
                 </div>
-
+                <Modal showModal={showModal}>
+                    <PopupMsg title={'WALLET'} msg={'Vui lòng liên kết ví của bạn.'} closeModal={closeModal}/>
+                </Modal>
 
                 {checkRegisterWhiteList ? (
                     <div className="submit-area">
@@ -163,9 +179,14 @@ const WhiteList = () => {
                     </div>
                 ) : (
                     <div className="submit-area">
-                        <button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-active"}
+                        <button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-inactive"}
                                 onClick={submit}>xác nhận
                         </button>
+                        {/*<button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-active"}*/}
+                        {/*        onClick={() => {*/}
+                        {/*            setShowModal(true)*/}
+                        {/*        }}>테스트*/}
+                        {/*</button>*/}
                     </div>
                 )
                 }

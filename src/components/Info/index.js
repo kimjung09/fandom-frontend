@@ -102,7 +102,6 @@ const InfoPage = ({history, location, match}) => {
     const buy = async () => {
         await buyAction(item.auction_address, item.nft_address, buyIndex);
     }
-    console.log(asyncData)
 
     if (asyncData.status === 'success') {
         if (item.contract_type === 'BUY') {

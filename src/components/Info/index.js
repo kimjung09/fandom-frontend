@@ -224,7 +224,6 @@ const InfoPage = ({history, location, match}) => {
                             </div>
                         </div>
                     </div>
-
                     <div className="bottom-container" id="Story">
                         {
                             document.body.offsetWidth > 850 ?

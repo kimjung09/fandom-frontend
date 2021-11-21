@@ -91,8 +91,8 @@ const MainPage = (props) => {
         <>
             <div className="Body-container">
                 <div className="title-area">
-                    <h1>Sở hữu những</h1>
-                    <h1 className="mb-5">khoảnh khắc đặc biệt nhất</h1>
+                    <h1>Sở hữu những khoảnh</h1>
+                    <h1 className="mb-7">khắc đặc biệt nhất</h1>
                     <Timer/>
                 </div>
                 <div className="video-area">
@@ -122,12 +122,12 @@ const MainPage = (props) => {
                                 <span className="mobile-block">bằng cách tham gia Whitelist của chúng tôi!</span>
                             </h3>
                             <h2>
-                                <span className="mobile-block">NHỮNG KHOẢNH KHẮC</span>
-                                <span className="mobile-block">ĐẶC BIỆT CỦA NHI QUA NFT.</span>
+                                NHỮNG KHOẢNH KHẮC<br/>
+                                ĐẶC BIỆT CỦA NHI QUA NFT.
                             </h2>
                             <h3 className="mb-3">
                                 <span className="mobile-block">Thời gian tham gia đấu giá: 0:00,</span>
-                                <span className="mobile-block">ngày 22/11 ~  23:59, ngày 30/11</span>
+                                <span className="mobile-block">ngày 24/11 ~  23:59, ngày 30/11</span>
                             </h3>
                             <div className="desc mobile-only">
                                 Hãy cùng chúng tôi điểm lại những khoảnh<br/>

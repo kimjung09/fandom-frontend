@@ -58,14 +58,16 @@
     text-shadow: 5px 0 #93f7f3;
     font-size: 76px;
     margin-bottom: 50px;
+    line-height: 1;
 }
 
 .Story-container .Story-components h2 {
     text-align: center;
     color:#eb1a53;
     text-shadow: 5px 0 #93f7f3;
-    font-size: 40px;
+    font-size: 55pt;
     margin-bottom: 35px;
+    line-height: 1;
 }
 
 .Story-container .Story-components .desc {
@@ -123,7 +125,7 @@
 /** Media Qurey Medium (992px) */
 @media screen and (max-width: 992px) {
     .Story-container {
-        padding: 200px 0 30px 0;
+        padding: 160px 0 30px 0;
     }
 
     .Story-container .Story-components h2 {
@@ -145,11 +147,12 @@
     }
 
     .Story-container {
-        padding: 190px 0 30px 0;
+        padding: 120px 0 30px 0;
     }
 
     .Story-container .Story-components button {
-        font-size:26pt;
+        font-size:22pt;
+        padding: 10px 30px;
     }
 
     .Story-container .Story-components .list-wrap {

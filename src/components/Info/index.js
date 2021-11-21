@@ -226,7 +226,6 @@ const InfoPage = ({history, location, match}) => {
                             </div>
                         </div>
                     </div>
-
                     <div className="bottom-container" id="Story">
                         <div className="bottom-content-box">
                             <div className="bottom-content">

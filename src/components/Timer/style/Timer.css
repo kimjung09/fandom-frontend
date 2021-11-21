@@ -73,6 +73,32 @@
     }
 }
 
+/** Media Query Tablet (560px) */
+@media screen and (max-width: 560px) {
+    .timer .live {
+        font-size: 22pt;
+        max-width: 110px;
+        padding: 5px 0 10px 0;
+    }
+
+    .timer .clock {
+        font-size: 40pt;
+    }
+
+    .sub-timer .timer .live {
+        font-size: 18pt;
+        display: inline;
+        padding: 0 10px 5px 10px;
+        line-height: 40px;
+        margin: 0 10px 0 0;
+    }
+
+    .sub-timer .timer .clock {
+        font-size: 33pt;
+        line-height: 1;
+    }
+}
+
 /** Media Query Tablet (425px) */
 @media screen and (max-width: 425px) {
     .timer .live {

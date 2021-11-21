@@ -182,11 +182,6 @@ const WhiteList = () => {
                         <button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-inactive"}
                                 onClick={submit}>xác nhận
                         </button>
-                        {/*<button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-active"}*/}
-                        {/*        onClick={() => {*/}
-                        {/*            setShowModal(true)*/}
-                        {/*        }}>테스트*/}
-                        {/*</button>*/}
                     </div>
                 )
                 }

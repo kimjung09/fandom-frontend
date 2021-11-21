@@ -2,7 +2,7 @@
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
-    max-height: 1024px;
+    max-height: 1080px;
 }
 
 .Body-container::after {
@@ -47,7 +47,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 5px;
-    margin: 50px auto 0;
+    margin: 80px auto 0;
 }
 
 .Body-container .video-area .btn-play {

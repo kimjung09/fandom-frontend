@@ -150,7 +150,7 @@
     }
 
     .Body-container .title-area h1 {
-        font-size: 35pt;
+        font-size: 33pt;
     }
 
     .Body-container .title-area h3 {
@@ -170,11 +170,11 @@
     }
 
     .Body-container .title-area {
-        padding-top: 90px;
+        padding-top: 80px;
     }
 
     .Body-container .title-area h1 {
-        font-size: 35pt;
+        font-size: 33pt;
     }
 
     .Body-container .title-area h3 {
@@ -190,14 +190,14 @@
     }
 
     .Body-container .title-area h1 {
-        font-size: 31pt;
+        font-size: 30pt;
     }
 }
 
 /** Media Query Galxy Fold(280 x 653) */
 @media screen and (max-width: 280px){
     .Body-container {
-        height: 500px;
+        height: 480px;
     }
 
     .Body-container .title-area h1 {

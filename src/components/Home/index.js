@@ -100,7 +100,7 @@ const MainPage = (props) => {
                         <img src="/images/home/btn-play.png" onClick={onPlayClick}/>
                     </div>
                     <div className="video">
-                        <video className="player" src="/video/WBO_NHI_edited_v1.mp4" ref={videoPlayer} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur} onEnded={videoMouseOn}/>
+                        <video className="player" poster="/images/home/video-poster.jpg" src="/video/WBO_NHI_edited_v1.mp4" ref={videoPlayer} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur} onEnded={videoMouseOn}/>
                     </div>
                 </div>
             </div>

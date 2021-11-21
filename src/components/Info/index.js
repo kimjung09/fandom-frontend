@@ -14,13 +14,11 @@ import {bidAbleCheck, bidAction, buyAction, getBlockNumber, getBuyIndex, withdra
 import {useSelector, useDispatch} from 'react-redux'
 
 
-
 const InfoPage = ({history, location, match}) => {
     const [nftId, setNftId] = useState(null);
     const [currentSlider, setCurrentSlider] = useState([]);
     const [showBuyModal, setShowBuyModal] = useState(false);
     const [inputAmount, setInputAmount] = useState('')
-
 
     const openBuyModal = () => {
         setShowBuyModal(true);
@@ -130,7 +128,7 @@ const InfoPage = ({history, location, match}) => {
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
                             <div className="sub-timer">
-                                <Timer />
+                                <Timer/>
                             </div>
                             <div className="Container">
                                 <div className="Image">
@@ -149,9 +147,10 @@ const InfoPage = ({history, location, match}) => {
                                                            onChange={(e) => setInputAmount(e.target.value)}/>
                                                 </div>
                                                 <div className="btn">
-                                                    <button type="button" className={userAccount ? '': ''} onClick={openModal}>
+                                                    <button type="button" style={{fontSize:'16px'}} className={userAccount ? '' : ''}
+                                                            onClick={openModal}>
                                                         {/*disabled-btn*/}
-                                                        THAM GIA ĐẤU GIÁ NGAY B Y GIỜ
+                                                        THAM GIA ĐẤU GIÁ NGAY BÂY GIỜ
                                                     </button>
                                                 </div>
 
@@ -168,7 +167,7 @@ const InfoPage = ({history, location, match}) => {
                                         <div className="ButtonContainer">
                                             <div className="btn">
                                                 <button type="button"
-                                                        // onClick={openModal}
+                                                    // onClick={openModal}
                                                         className={buyIndex ? 'disabled-btn' : 'disabled-btn'}
                                                 >
                                                     MUA NGAY
@@ -228,25 +227,58 @@ const InfoPage = ({history, location, match}) => {
                     </div>
 
                     <div className="bottom-container" id="Story">
-                        <div className="bottom-content-box">
-                            <div className="bottom-content">
-                                <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
-                                </div>
-                                {
-                                    item.contract_type === 'BID' ?
-                                        <img className="right" src={item.first_info_img}/> : ''
-                                }
-                            </div>
+                        {
+                            document.body.offsetWidth > 850 ?
+                                <div className="bottom-content-box">
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                        </div>
+                                        {
+                                            item.contract_type === 'BID' ?
+                                                <img className="right" src={item.first_info_img}/> : ''
+                                        }
+                                    </div>
 
-                            <div className="bottom-content">
-                                <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                        </div>
+                                        {
+                                            item.contract_type === 'BID' ?
+                                                <img className="right" src={item.second_info_img}/> : ''
+                                        }
+                                    </div>
                                 </div>
-                                {
-                                    item.contract_type === 'BID' ?
-                                        <img className="right" src={item.second_info_img}/> : ''
-                                }
-                            </div>
-                        </div>
+                                :
+                                <div className="bottom-content-box">
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                        </div>
+                                    </div>
+
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                        </div>
+                                    </div>
+                                    {
+                                        item.contract_type === 'BID' ?
+                                            <>
+                                                <div className="bottom-content">
+                                                    <img className="right" src={item.first_info_img}/>
+                                                </div>
+                                                <div className="bottom-content">
+                                                    <img className="right" src={item.second_info_img}/>
+                                                </div>
+                                            </> :
+                                            ''
+                                    }
+
+
+                                </div>
+                        }
                         {
                             item.contract_type === 'BID' ?
                                 <div className="info-bottom-area">

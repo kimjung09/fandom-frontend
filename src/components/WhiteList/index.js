@@ -156,13 +156,14 @@ const WhiteList = () => {
                     />
                 </div>
 
+
                 {checkRegisterWhiteList ? (
                     <div className="submit-area">
                         <button className="submit-btn-inactive">Success</button>
                     </div>
                 ) : (
                     <div className="submit-area">
-                        <button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-inactive"}
+                        <button className={checkSubmitBtn ? "submit-btn-active" : "submit-btn-active"}
                                 onClick={submit}>xác nhận
                         </button>
                     </div>

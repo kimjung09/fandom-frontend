@@ -38,6 +38,10 @@ const Index = () => {
     useEffect(() => {
         setTimeout(() => {
             setTimeLeft(calculateTimeLeft());
+
+            return function cleanup(){
+                calculateTimeLeft()
+            }
         }, 1000);
 
         // 이동할때마다 메모리 누수가 발생하는 문제 == clean up 함수 이용

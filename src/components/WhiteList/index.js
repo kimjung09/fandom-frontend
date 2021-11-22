@@ -4,6 +4,9 @@ import {FaPlay, FaPlus, FaTelegramPlane, FaCheck, FaRetweet, FaHandPointer} from
 import {registerWhiteList} from "../../utils/axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import {useSelector, useDispatch} from 'react-redux'
+import Modal from "../Modal";
+import PopupBid from "../Popup/PopupBid";
+import PopupMsg from "../Popup/PopupMsg";
 
 const WhiteList = () => {
     // 페이지 이동을 구현할 input은 2가지 == Twitter & Telegram
@@ -17,11 +20,16 @@ const WhiteList = () => {
     const [checkSubmitBtn, setCheckSubmitBtn] = useState(false);
     const [checkRecaptcha, setCheckRecaptcha] = useState(false)
 
+    const [showModal, setShowModal] = useState(false);
 
     // useSelector를 사용해 상태값을 global 전역변수(어디서든 불러올 수 있는 값) 로 담아줌줌    const userAccount = useSelector((state) => state.global.userAccount)
     const userAccount = useSelector((state) => state.global.userAccount)
     const checkRegisterWhiteList = useSelector((state) => state.global.whiteListCheck)
 
+
+    const closeModal = () => {
+        setShowModal(false);
+    }
 
     const submit = async () => {
         // Sumitbtn이 비활성화 되었을때
@@ -29,6 +37,12 @@ const WhiteList = () => {
             return;
         }
         // telegram_id , twitter_id 값 input 지역변수 선언 == 선언과동시에 초기화
+        if(!userAccount.length){
+            setShowModal(true);
+            return;
+        }
+
+
         let params = {
             telegram_id: inputTelegram,
             twitter_id: inputTwitter,
@@ -43,7 +57,7 @@ const WhiteList = () => {
     // twittter 버튼 클릭시 cehck버튼으로 변환
     // window.open함수를 사용해 새창으로 페이지를 이동할 수 있도록 구현
     const follow = () => {
-        window.open('https://twitter.com/Fandom_CRTR');
+        window.open('https://twitter.com/Fandom_CRTR/status/1461539400312049669');
         setCheckFollowTwitter(true)
     }
 
@@ -61,13 +75,13 @@ const WhiteList = () => {
 
     // 렌더링 될때마다 button 활성화
     useEffect(() => {
-        if (!checkRegisterWhiteList && checkRetweetTwitter && checkFollowTwitter && checkJoinTelegram && inputTelegram.length && inputTwitter.length && userAccount.length && checkRecaptcha) {
+        if (!checkRegisterWhiteList && checkRetweetTwitter && checkFollowTwitter && checkJoinTelegram && inputTelegram.length && inputTwitter.length && checkRecaptcha) {
             setCheckSubmitBtn(true);
             return;
         }
         setCheckSubmitBtn(false)
 
-    }, [inputTelegram, inputTwitter, checkRetweetTwitter, checkFollowTwitter, checkJoinTelegram, checkRecaptcha, userAccount])
+    }, [inputTelegram, inputTwitter, checkRetweetTwitter, checkFollowTwitter, checkJoinTelegram, checkRecaptcha])
 
 
     return (
@@ -75,10 +89,11 @@ const WhiteList = () => {
             <div className="white-list-inner">
                 <div className="main-font">
                     <h1>Tham gia Whitelist</h1>
-                    <p>Sự kiện đấu giá NFT là một sự kiện để kỷ niệm chiến thắng<br/>lịch sử của NHI khi trở thành nhà
-                        vô địch thế giới.<br/><br/>
+                    <p>
+                        Sự kiện đấu giá NFT là một sự kiện để kỷ niệm<br/>
+                        chiến thắng lịch sử của NHI khi trở thành nhà vô địch thế giới.<br/>
                         Đăng ký Whitelist để có cơ hội tham gia đấu giá!<br/>
-                        Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của<br/> chúng tôi!</p>
+                    </p>
                 </div>
                 <div className="check-bar">
                     <div className="left">
@@ -147,6 +162,13 @@ const WhiteList = () => {
                     </div>
                 </div>
 
+                <div className="main-font">
+                    <p>
+                        Airdrop BNB trị giá $30 cho 330 người may mắn được chọn ngẫu nhiên.<br/>
+                        Người chiến thắng Airdrop sẽ được công bố sau đó thông qua kênh Telegram chính thức của Fandom.
+                    </p>
+                </div>
+
                 <div className="check-recaptcha">
                     <ReCAPTCHA
                         sitekey={process.env.REACT_APP_SITE_KEY}
@@ -162,6 +184,9 @@ const WhiteList = () => {
                         theme="light"
                     />
                 </div>
+                <Modal showModal={showModal}>
+                    <PopupMsg title={'WALLET'} msg={'Vui lòng liên kết ví của bạn.'} closeModal={closeModal}/>
+                </Modal>
 
                 {checkRegisterWhiteList ? (
                     <div className="submit-area">

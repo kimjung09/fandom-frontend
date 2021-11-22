@@ -123,7 +123,6 @@
     .white-list-inner {
         margin-top: 100px;
     }
-
 }
 
 @media screen and (min-width: 850px) {
@@ -140,22 +139,27 @@
     }
 
     .submit-area .submit-btn-active {
-        cursor: pointer;
-        min-width: 300px;
-        padding: 10px;
+        margin-bottom:20px;
         border-radius: 34px 34px 34px 34px;
-        font-size: 30px;
+        border: 2px solid #db154a !important;
+        background:#db154a;
+        color:#ffffff;
+        font-size:26pt;
+        padding: 10px 50px;
         font-weight: bold;
-        text-transform: uppercase;
+        cursor: pointer;
+    }
 
-        color: #ffffff;
+    .submit-area .submit-btn-active:hover {
+        background: #ffffff;
+        border: 2px solid #db154a !important;
+        color: #db154a;
     }
 
     .submit-area .submit-btn-inactive {
         cursor: pointer;
         min-width: 300px;
         padding: 10px 30px 10px 30px;
-        border:none;
         border-radius: 34px 34px 34px 34px;
         font-size: 30px;
         font-weight: bold;

@@ -10,33 +10,22 @@ import PopupBid from "../Popup/PopupBid";
 import Modal from '../Modal';
 
 import {parseAccount, parseAmount, parseDate, parseUSD} from "../../utils/util";
+import {bidAbleCheck, bidAction, buyAction, getBlockNumber, getBuyIndex, withdrawAction} from "../../utils/calls";
+import {useSelector, useDispatch} from 'react-redux'
 
 
 const InfoPage = ({history, location, match}) => {
-    // NftInfo 상세페이지 id 페이지 asyncData에 담아두고 match를 적용 시킴
-    const asyncData = useAsync(getNftInfo, [match.params.id]);
-    // item 변수에 asyncData == 결과값으로 선언
-    const item = asyncData.result
-
-    // 페이지 이동할 slider 값
+    const [nftId, setNftId] = useState(null);
     const [currentSlider, setCurrentSlider] = useState([]);
-    const [showModal, setShowModal] = useState(false);
-
-    // Mobile화면에서 Button클릭시 작동되는 Modal 함수
     const [showBuyModal, setShowBuyModal] = useState(false);
+    const [inputAmount, setInputAmount] = useState('')
 
-    const [loading, setLoading] = useState(true);
-
-
-    // BuyModal open & close
     const openBuyModal = () => {
         setShowBuyModal(true);
     };
     const closeBuyModal = () => {
         setShowBuyModal(false);
-    };
-
-    // BidModal === open 시 Bid Modal
+    }
     const [showBidModal, setShowBidModal] = useState(false);
     const openBidModal = () => {
         setShowBidModal(true);
@@ -45,35 +34,23 @@ const InfoPage = ({history, location, match}) => {
         setShowBidModal(false);
     }
     const openModal = () => {
-        // 0 x 0 좌표 상단으로 이동
-        window.scrollTo(0, 0);
-        // 이동 되는 동시에 Modal창을 띄움
-        setShowModal(true);
-    };
-    const closeModal = () => {
-        // close 버튼 클릭시 Modal 창을 닫아준다.
-        setShowModal(false);
-
-        // item에 대한 type 이 buy 상태일때 액션 적용
         if (item.contract_type === 'BUY') {
             openBuyModal();
         } else {
             openBidModal();
         }
     }
+    const [buyIndex, setBuyIndex] = useState('');
+    const [bidStatus, setBidStatus] = useState(false)
+
+    const userAccount = useSelector((state) => state.global.userAccount)
 
     const [isVisible, setIsVisible] = useState(false);
     const onSetIsVisible = (active) => {
         setIsVisible(false);
     }
 
-    // 팜업창 const
-    const [showPopup, setShowPopup] = useState(false);
-    const togglePopup = (event) => {
-        setShowPopup(event.target.value);
-    }
 
-    // 상세 페이지 Slider 기본 생성자 생성
     const initSlider = () => {
         // page에 대한 id 값 Number라는 변수에 matching
         const pageId = Number(match.params.id);
@@ -120,16 +97,45 @@ const InfoPage = ({history, location, match}) => {
         // initSlider();
     }
 
+    if (nftId !== match.params.id) {
+        setNftId(match.params.id);
+        initSlider();
+    }
 
-    useEffect(() => {
-            initSlider();
-    }, []);
+    const asyncData = useAsync(getNftInfo, [nftId]);
+    const item = asyncData.result;
 
 
+    const bid = async () => {
+        if (!item.auction_address) {
+            return;
+        }
+        if (isNaN(inputAmount) || inputAmount === '') {
+            return;
+        }
+        await bidAction(item.auction_address, inputAmount);
+    }
 
+    const withdraw = async () => {
+        await withdrawAction(item.auction_address);
+    }
 
+    const buy = async () => {
+        await buyAction(item.auction_address, item.nft_address, buyIndex);
+    }
 
-
+    if (asyncData.status === 'success') {
+        if (item.contract_type === 'BUY') {
+            getBuyIndex(item.auction_address).then(res => {
+                setBuyIndex(res);
+            })
+        } else {
+            // console.log(item)
+            bidAbleCheck(item.auction_address).then(res => {
+                setBidStatus(res)
+            })
+        }
+    }
     return (
         <>
             {item ?
@@ -139,10 +145,11 @@ const InfoPage = ({history, location, match}) => {
                             MUA NGAY
                         </button>
                     </div>
-
                     <div className="SubPage">
                         <div className="SubBody-Container" onClick={() => onSetIsVisible(true)}>
-                            <Timer time="여기에 END DATE를 넣자"/>
+                            <div className="sub-timer">
+                                <Timer/>
+                            </div>
                             <div className="Container">
                                 <div className="Image">
                                     <img src={item.list_img}/>
@@ -151,16 +158,43 @@ const InfoPage = ({history, location, match}) => {
                                     <h2 dangerouslySetInnerHTML={{__html: item.title}}>
                                     </h2>
                                     <div className="subTitle" dangerouslySetInnerHTML={{__html: item.sub_title}}/>
-                                    <div className="ButtonContainer">
-                                        <div className="input">
-                                            <input type="text" name="inputNum" placeholder="BNB"/>
+                                    {item.contract_type === 'BID' ?
+                                        bidStatus ? //나중에 바꿔줘야함 일단 !userAccount
+                                            <div className="ButtonContainer">
+                                                <div className="input">
+                                                    <input type="text" name="inputNum" placeholder="BNB"
+                                                           value={inputAmount}
+                                                           onChange={(e) => setInputAmount(e.target.value)}/>
+                                                </div>
+                                                <div className="btn">
+                                                    <button type="button" style={{fontSize:'16px'}} className={userAccount ? '' : ''}
+                                                            onClick={openModal}>
+                                                        {/*disabled-btn*/}
+                                                        THAM GIA ĐẤU GIÁ NGAY BÂY GIỜ
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                            :
+                                            <div className="ButtonContainer">
+                                                <div className="btn">
+                                                    <button type="button" onClick={withdraw}>
+                                                        WITHDRAW
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        :
+                                        <div className="ButtonContainer">
+                                            <div className="btn">
+                                                <button type="button"
+                                                    // onClick={openModal}
+                                                        className={buyIndex ? 'disabled-btn' : 'disabled-btn'}
+                                                >
+                                                    MUA NGAY
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className="btn">
-                                            <button type="button" onClick={openModal}>
-                                                {(item.contract_type === 'BUY') ? 'MUA NGAY' : "THAM GIA ĐẤU GIÁ NGAY B Y GIỜ"}
-                                            </button>
-                                        </div>
-                                    </div>
+                                    }
                                     <table className="bid-table">
                                         <thead>
                                         <tr>
@@ -186,9 +220,9 @@ const InfoPage = ({history, location, match}) => {
                                         </tbody>
                                     </table>
                                     <Modal showModal={showBuyModal}>
-                                        <PopupBuy item={item} closeModal={closeBuyModal}/>
+                                        <PopupBuy item={item} buyIndex={buyIndex} closeModal={closeBuyModal}/>
                                     </Modal>
-                                    <Modal item={item} showModal={showBidModal}>
+                                    <Modal showModal={showBidModal}>
                                         <PopupBid item={item} closeModal={closeBidModal}/>
                                     </Modal>
                                 </div>
@@ -219,31 +253,58 @@ const InfoPage = ({history, location, match}) => {
 
                     {/* bottom 설명리스트 */}
                     <div className="bottom-container" id="Story">
-                        <div className="bottom-content">
+                        {
+                            document.body.offsetWidth > 850 ?
+                                <div className="bottom-content-box">
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                        </div>
+                                        {
+                                            item.contract_type === 'BID' ?
+                                                <img className="right" src={item.first_info_img}/> : ''
+                                        }
+                                    </div>
 
-                            <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
-                            </div>
-                            <img className="right" src={item.first_info_img}/>
-                        </div>
-                        <div className="bottom-content-box">
-                            <div className="bottom-content">
-                                <div className="left" dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                        </div>
+                                        {
+                                            item.contract_type === 'BID' ?
+                                                <img className="right" src={item.second_info_img}/> : ''
+                                        }
+                                    </div>
                                 </div>
-                                {
-                                    item.contract_type === 'BID' ?
-                                        <img className="right" src={item.first_info_img}/> : ''
-                                }
-                            </div>
+                                :
+                                <div className="bottom-content-box">
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.first_description}}>
+                                        </div>
+                                    </div>
 
-                            <div className="bottom-content">
-                                <div className="left" dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                    <div className="bottom-content">
+                                        <div className="left"
+                                             dangerouslySetInnerHTML={{__html: item.second_description}}>
+                                        </div>
+                                    </div>
+                                    {
+                                        item.contract_type === 'BID' ?
+                                            <>
+                                                <div className="bottom-content">
+                                                    <img className="right" src={item.first_info_img}/>
+                                                </div>
+                                                <div className="bottom-content">
+                                                    <img className="right" src={item.second_info_img}/>
+                                                </div>
+                                            </> :
+                                            ''
+                                    }
+
+
                                 </div>
-                                {
-                                    item.contract_type === 'BID' ?
-                                        <img className="right" src={item.second_info_img}/> : ''
-                                }
-                            </div>
-                        </div>
+                        }
                         {
                             // match.params.id 값이 1페이지를 제외한 모든 페이지에 matching
                             match.params.id > 1 ?

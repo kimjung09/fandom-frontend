@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./style/Body.css"
 import "./style/Story.css"
 import {getNftInfo, getNftList} from "../../utils/axios";
@@ -7,6 +7,7 @@ import {useAsync} from 'react-async-hook';
 import Timer from "../Timer";
 import {NavLink} from 'react-router-dom';
 import WhiteList from "../WhiteList";
+import {FaTiktok, FaChevronDown} from 'react-icons/fa'
 
 
 // props를 사용해 현재 상태값을 저장해주도록 한다.
@@ -22,9 +23,9 @@ const MainPage = (props) => {
 
     // useRef를 사용해 값이 slider 와 videoPlayer값이 바뀌어도 리렌더링을 방지해준다.
     const videoPlayer = useRef();
-    const sliderWrap = useRef();
     const slider = useRef();
     const sliderItem = useRef();
+    const storyContainer = useRef();
 
     // display 가로 영역
     const [playBtnDisplay, setPlayBtnDisplay] = useState('block');
@@ -36,6 +37,10 @@ const MainPage = (props) => {
     // 모바일 반응형화면에서 touchSlider 적용
     const [sliderTouchStart, setSliderTouchStart] = useState(0);
     const [sliderTouchMove, setSliderTouchMove] = useState(0);
+
+    const scrollDownClick = () => {
+        storyContainer.current.scrollIntoView(true);
+    }
 
 
     // Video에 PlayButton을 클릭할때에 함수
@@ -150,66 +155,83 @@ const MainPage = (props) => {
                         <img src="/images/home/btn-play.png" onClick={onPlayClick}/>
                     </div>
                     <div className="video">
-                        <video className="player" src="/video/WBO_NHI_edited.mp4" ref={videoPlayer} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur} onEnded={videoMouseOn}/>
+                        <video className="player" poster="/images/home/video-poster.jpg" src="/video/WBO_NHI_edited_v1.mp4" ref={videoPlayer} onMouseOver={videoMouseOn} onMouseLeave={videoMouseBlur} onEnded={videoMouseOn}/>
                     </div>
                 </div>
             </div>
-            {
-                // whiteList 버트을 클릭시 컴포넌트 전환을위한 props.match에 path 값 설정
-                props.match.path === '/whitelist' ? (
-                    // whitelist 페이지 이동
-                    <WhiteList />
-                ) : (
-                    // 메인페이지 == story
-                    <div className="Story-container" id="Story">
-                        <div className="Story-components">
-                            <NavLink to="/whitelist">
-                                <button>
-                                    danh sách trắng
-                                    {/* mouse hover = on / off 시 해당되는 스타일 적용 */}
-                                    <img src="/images/icon/giftbox.png" className="off"/>
-                                    <img src="/images/icon/giftbox-on.png" className="on"/>
-                                </button>
-                            </NavLink>
-                            <h3 className="mb-3">Nhận airdrop trị giá $ 9,900 bằng cách tham gia Whitelist của chúng tôi!</h3>
-                            <h2>Những khoảnh khắc đặc biệt của NHI qua NFT.</h2>
-                            <div className="desc">
-                                &lt;Thời gian tham gia đấu giá: 0:00, ngày 22/11 ~  23:59, ngày 30/11&gt;<br/><br/>
-                                Hãy cùng chúng tôi điểm lại những khoảnh khắc trưởng thành ngoạn mục của NHI<br/>
-                                từ trước khi bắt đầu chơi quyền anh cho tới khi cô ấy trở thành nhà vô địch thế giới nhé!
-                            </div>
-                            {/* mobile 화면에서 Touch 액션 적용 */}
-                            <div className="list-wrap" ref={sliderWrap} onTouchStart={sliderSwipe} onTouchMove={sliderSwipe} onTouchEnd={sliderSwipe}>
-                                <div className="list" ref={slider}>
-                                    {item ? item.map((res, index) =>
-                                        <div className="list-item" key={index} ref={sliderItem}>
-                                            <React.Fragment>
-                                                {/* 링크가 활성화될때 서브페이지의 스타일 적용을 위한 NavLink */}
-                                                <NavLink to={`/fandom/${res.id}`}>
-                                                    <img src={res.list_img}/>
-                                                </NavLink>
-                                            </React.Fragment>
-                                        </div>
+            <div className="scroll-down-area">
+                <div className="scroll-down-btn" onClick={scrollDownClick}>
+                    <FaChevronDown className="icon"/>
+                </div>
+            </div>
+            <div ref={storyContainer}>
+                {
+                    props.match.path === '/whitelist' ? (
+                        <WhiteList />
+                    ) : (
+                        <div className="Story-container" id="Story">
+                            <div className="Story-components">
+                                <NavLink to="/whitelist">
+                                    <button>
+                                        DANH SÁCH TRẮNG
+                                        <img src="/images/icon/giftbox.png" className="off"/>
+                                        <img src="/images/icon/giftbox-on.png" className="on"/>
+                                    </button>
+                                </NavLink>
+                                <h3 className="mb-3">
+                                    <span className="mobile-block">Nhận airdrop trị giá $ 9,900</span>
+                                    <span className="mobile-block">bằng cách tham gia Whitelist của chúng tôi!</span>
+                                </h3>
+                                <h2>
+                                    NHỮNG KHOẢNH KHẮC<br/>
+                                    ĐẶC BIỆT CỦA NHI QUA NFT.
+                                </h2>
+                                <h3 className="mb-3">
+                                    <span className="mobile-block">Thời gian tham gia đấu giá: 0:00,</span>
+                                    <span className="mobile-block">ngày 24/11 ~  23:59, ngày 30/11</span>
+                                </h3>
+                                <div className="desc mobile-only">
+                                    Hãy cùng chúng tôi điểm lại những khoảnh<br/>
+                                    khắc trưởng thành ngoạn mục của NHI từ trước<br/>
+                                    khi bắt đầu chơi quyền anh cho tới khi cô ấy trở<br/>
+                                    thành nhà vô địch thế giới nhé!
+                                </div>
+                                <div className="desc pc-only">
+                                    Hãy cùng chúng tôi điểm lại những khoảnh khắc<br/>
+                                    trưởng thành ngoạn mục của NHI từ trước khi bắt đầu chơi quyền anh cho tới<br/>
+                                    khi cô ấy trở thành nhà vô địch thế giới nhé!
+                                </div>
+                                <div className="list-wrap" onTouchStart={sliderSwipe} onTouchMove={sliderSwipe} onTouchEnd={sliderSwipe}>
+                                    <div className="list" ref={slider}>
+                                        {item ? item.map((res, index) =>
+                                            <div className="list-item" key={index} ref={sliderItem}>
+                                                <React.Fragment>
+                                                    <NavLink to={`/fandom/${res.id}`}>
+                                                        <img src={res.list_img}/>
+                                                    </NavLink>
+                                                </React.Fragment>
+                                            </div>
 
-                                    ) : (
-                                        <React.Fragment/>
-                                    )}
+                                        ) : (
+                                            <React.Fragment/>
+                                        )}
+                                    </div>
+                                    <div className="pagination">
+                                        {currentSlider.map((res, index) =>
+                                            <span onClick={() => moveSlider(index)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
+                                        )}
+                                    </div>
                                 </div>
-                                <div className="pagination">
-                                    {currentSlider.map((res, index) =>
-                                        <span onClick={() => moveSlider(index)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
-                                    )}
-                                </div>
+                                <NavLink to="/whitelist">
+                                    <button>
+                                        ĐẤU GIÁ NGAY BÂY GIỜ
+                                    </button>
+                                </NavLink>
                             </div>
-                            <NavLink to="/whitelist">
-                                <button>
-                                    Đấu giá ngay bây giờ
-                                </button>
-                            </NavLink>
                         </div>
-                    </div>
-                )
-            }
+                    )
+                }
+            </div>
         </>
     )
 }

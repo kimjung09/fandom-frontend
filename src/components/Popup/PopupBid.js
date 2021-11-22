@@ -14,7 +14,7 @@ const PopupBuy = ({item, closeModal}) => {
                     <button className="close-btn" onClick={() => closeModal()}>
                         <AiOutlineClose size={40}/>
                     </button>
-                    <h1>Có chí thì nên</h1>
+                    <h1>THAM GIA ĐẤU GIÁ NGAY BÂY GIỜ</h1>
                     <p className="sub-title">MỨC GIÁ BẠN ĐƯA RA</p>
                     <input type="text" placeholder="0.00001 BNB" required className="input"/>
                     <div className="desc-tit">* Thông báo trước khi tham gia đấu giá</div>
@@ -29,7 +29,7 @@ const PopupBuy = ({item, closeModal}) => {
                     </ul>
                 </div>
                 <button className="bid-btn" type="button" onClick={procBID}>
-                    Có chí thì nên
+                    THAM GIA ĐẤU GIÁ NGAY BÂY GIỜ
                 </button>
             </div>
         </>

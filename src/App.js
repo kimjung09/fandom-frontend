@@ -6,6 +6,8 @@ import {Web3ReactProvider} from '@web3-react/core'
 import Web3 from 'web3'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import TermsPage from "./components/Terms/fadom_terms";
+import PrivacyPage from "./components/Terms/fandom_privacy";
 
 
 // web3에 getLibrary 함수를 전달해주어야 한다.
@@ -26,7 +28,9 @@ const App = () => {
                         {/* Route exact 정확하게 일치한 주소만 접속하도록 설정 */}
                         <Route exact path="/" component={MainPage}/>
                         <Route exact path="/fandom/:id" component={SubPage}/>
-                        <Route exact path="/whitelist" component={MainPage} />
+                        <Route exact path="/whitelist" component={MainPage}/>
+                        <Route exact path="/terms" component={TermsPage}/>
+                        <Route exact path="/privacy" component={PrivacyPage}/>
                     </Switch>
                 </Router>
                 <Footer/>

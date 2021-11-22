@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import MainPage from "./components/Home/index";
 import SubPage from "./components/Info";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 function getLibrary(provider) {
     return new Web3(provider)
 }
+
 
 const App = () => {
     return (

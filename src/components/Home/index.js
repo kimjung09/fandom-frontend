@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./style/Body.css"
 import "./style/Story.css"
-import {getNftList} from "../../utils/axios";
+import {getNftInfo, getNftList} from "../../utils/axios";
 import {useAsync} from 'react-async-hook';
 // 타이머 를 가지고 옴
 import Timer from "../Timer";
@@ -18,7 +18,7 @@ const MainPage = (props) => {
     // item 변수에 asyncData.result 결과 값을 담아준다.
     const item = asyncData.result
 
-    const [loading, setLoading] = useState(false);
+
 
     // useRef를 사용해 값이 slider 와 videoPlayer값이 바뀌어도 리렌더링을 방지해준다.
     const videoPlayer = useRef();
@@ -92,6 +92,8 @@ const MainPage = (props) => {
 
     };
 
+
+
     // 반응형 모바일 페이지에서 Mouse를 이용해 움직일 수있는 const 선언
     const sliderSwipe = (event) => {
         // slide 액션에 대한 type 설정
@@ -130,12 +132,6 @@ const MainPage = (props) => {
                 break;
         }
     }
-
-    useEffect(() => {
-        setLoading(false);
-        setLoading(item);
-
-    })
 
 
 
@@ -201,7 +197,6 @@ const MainPage = (props) => {
                                 </div>
                                 <div className="pagination">
                                     {currentSlider.map((res, index) =>
-                                        // 페이지 슬라이더 onClick 적용 // img 태그에 src 에 자동으로 이미지를 넘겨주기 위한 currentSlide[index] 선언
                                         <span onClick={() => moveSlider(index)} key={'pageKey' + index}><img src={currentSlider[index]}/></span>
                                     )}
                                 </div>

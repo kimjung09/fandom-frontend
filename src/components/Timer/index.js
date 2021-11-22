@@ -47,7 +47,6 @@ const Index = () => {
 
         return function cleanup() {
             setTimeLeft(calculateTimeLeft());
-            console.log('2323')
         }
     });
 
